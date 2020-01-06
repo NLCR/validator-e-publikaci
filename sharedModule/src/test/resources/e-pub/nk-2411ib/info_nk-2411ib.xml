@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.ndk.cz/standardy-digitalizace/info11.xsd">
+  <created>2017-06-09T09:18:43</created>
+  <metadataversion>2.3</metadataversion>
+  <packageid>nk-2411ib</packageid>    
+  <mainmets>mets_nk-2411ib.xml</mainmets>
+  <validation version='1_01' />
+  <titleid type="urnnbn">urn:nbn:cz:nk-2411ib</titleid>
+  <titleid type="uuid">mk819760-5769-2224-ac6b-2689a5693a96</titleid>
+  <titleid type="ccnb">cnb001782284</titleid>
+  <titleid type="issn">1803-1684</titleid>
+  <institution>NK ČR</institution>
+  <creator>ABA001</creator> 
+  <size>8365903</size>
+  <itemlist itemtotal="4">
+    <item>\info_nk-2411ib.xml</item>
+    <item>\md5_nk-2411ib.md5</item>
+    <item>\mets_nk-2411ib.xml</item>
+    <item>\original\nk-2411ib.epdf</item>
+  </itemlist>
+  <checksum type="MD5" checksum="10f004d014fa305bff122e6d4fc15323">md5_nk-2411ib.md5</checksum>
+</info>

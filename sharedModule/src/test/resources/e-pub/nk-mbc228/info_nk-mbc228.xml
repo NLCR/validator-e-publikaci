@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.ndk.cz/standardy-digitalizace/info11.xsd">
+  <created>2017-06-09T09:18:43</created>
+  <metadataversion>2.3</metadataversion>
+  <packageid>nk-mbc228</packageid>    
+  <mainmets>mets_nk-02228.xml</mainmets>
+  <validation version='1_01' />
+  <titleid type="urnnbn">urn:nbn:cz:nk-mbc228</titleid>
+  <titleid type="uuid">op946fbc-1cc2-4f83-8683-630fa09bbd51</titleid>
+  <titleid type="isbn">978-80-7532-710-1</titleid>
+  <titleid type="ccnb">cnb002031798</titleid>
+  <institution>NK ČR</institution>
+  <creator>ABA001</creator> 
+  <size>1184251</size>
+  <itemlist itemtotal="4">
+    <item>\info_nk-mbc228.xml</item>
+    <item>\md5_nk-mbc228.md5</item>
+    <item>\mets_nk-mbc228.xml</item>
+    <item>\original\nk-mbc228.epub</item>
+  </itemlist>
+  <checksum type="MD5" checksum="10f004d014fa305bff122e6d4fc15323">md5_nk-mbc228.md5</checksum>
+</info>

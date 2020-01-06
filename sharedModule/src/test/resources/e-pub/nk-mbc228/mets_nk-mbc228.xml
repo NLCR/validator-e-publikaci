@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<mets:mets xmlns:mets="http://www.loc.gov/METS/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:premis="info:lc/xmlns/premis-v2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" LABEL="Básně, 2011" TYPE="electronic_monograph" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://www.w3.org/2001/XMLSchema.xsd http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-6.xsd http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">  
+  <mets:metsHdr CREATEDATE="2017-06-09T09:16:27Z" LASTMODDATE="2017-06-09T09:16:27Z">
+	<mets:agent ROLE="CREATOR" TYPE="ORGANIZATION"> 
+	  <mets:name>ABA001</mets:name>   
+	</mets:agent>
+	<mets:agent ROLE="ARCHIVIST" TYPE="ORGANIZATION">
+      <mets:name>ABA001</mets:name>
+    </mets:agent>
+</mets:metsHdr>
+<mets:dmdSec ID="MODSMD_VOLUME_0001">
+    <mets:mdWrap MDTYPE="MODS" MDTYPEVERSION="3.6" MIMETYPE="text/xml">
+      <mets:xmlData>
+        <mods:mods ID="MODS_VOLUME_0001">
+          <mods:titleInfo>
+            <mods:title>Básně</mods:title>
+          </mods:titleInfo>
+          <mods:name type="personal" usage="primary">
+            <mods:namePart type="family">Villon</mods:namePart>
+            <mods:namePart type="given">Francois</mods:namePart>
+            <mods:namePart type="date">1850-1900</mods:namePart>
+			<mods:nameIdentifier>jn19990009794</mods:nameIdentifier>
+            <mods:role>
+              <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
+            </mods:role>
+          </mods:name>
+		  <mods:name type="personal">
+			<mods:namePart type="family">Fischer</mods:namePart>
+            <mods:namePart type="given">Otokar</mods:namePart>
+            <mods:namePart type="date">1883-1938</mods:namePart>
+			<mods:nameIdentifier>jk01031286</mods:nameIdentifier>
+            <mods:role>
+              <mods:roleTerm authority="marcrelator" type="code">trl</mods:roleTerm>
+            </mods:role>
+          </mods:name>
+          <mods:typeOfResource>text</mods:typeOfResource>
+		  <mods:genre>electronic volume</mods:genre>   
+          <mods:originInfo eventType="publication">
+            <mods:place>
+              <mods:placeTerm type="code" authority="marccountry">xr</mods:placeTerm>
+            </mods:place>
+            <mods:place>
+              <mods:placeTerm type="text">Praha</mods:placeTerm>
+            </mods:place>
+            <mods:publisher>Městská knihovna v Praze</mods:publisher>
+            <mods:dateIssued>2011</mods:dateIssued>
+            <mods:issuance>single unit</mods:issuance>
+			<mods:edition>V MKP 1. vyd</mods:edition>
+          </mods:originInfo>
+          <mods:language>
+            <mods:languageTerm authority="iso639-2b" type="code">cze</mods:languageTerm>
+          </mods:language>
+		  <mods:language objectPart="translation"> 
+            <mods:languageTerm authority="iso639-2b" type="code">frm</mods:languageTerm>
+          </mods:language>
+          <mods:physicalDescription>
+			<mods:form authority="marcform">electronic</mods:form>
+            <mods:form authority="rdamedia" type="media">bez média</mods:form>
+            <mods:form authority="rdacarrier" type="carrier">online zdroj</mods:form>
+            <mods:digitalOrigin>born digital</mods:digitalOrigin>
+            <mods:extent>64 s</mods:extent>  
+          </mods:physicalDescription>
+		  <mods:abstract>Výbor z díla francouzského básníka poloviny 15. století, známého svým nespoutaným a nekonvenčním životem. Jeho verše jsou soustředěny do několika tematických okruhů - píše šprýmové odkazy, úvahy o umírání, básně proti pomlouvačům, jindy zase líčí pomíjivost lásky, krásy a slávy. Často ve svých verších dává na odiv svou tělesnou i duševní bídu. Uspořádání tohoto výboru se snaží alespoň o přibližnou chronologii podle dostupných faktů z básníkova života.</abstract>
+		  <mods:identifier type="uuid">op946fbc-1cc2-4f83-8683-630fa09bbd51</mods:identifier>    
+          <mods:identifier type="urnnbn">urn:nbn:cz:nk-mbc228</mods:identifier>
+		  <mods:identifier type="isbn">978-80-7532-710-1</mods:identifier>
+		  <mods:identifier type="ccnb">cnb002031798</mods:identifier>
+		  <mods:subject authority="Konspekt">         
+            <mods:topic>francouzská poezie</mods:topic>
+          </mods:subject>
+          <mods:classification authority="udc" edition="Konspekt">821.133.1-1</mods:classification>
+          <mods:classification authority="Konspekt">25</mods:classification>
+          <mods:location>
+            <mods:physicalLocation authority="siglaADR">ABA001</mods:physicalLocation>
+            <mods:url usage="primary">http://kramerius4.nkp.cz/search/i.jsp?pid=uuid:op946fbc-1cc2-4f83-8683-630fa09bbd51</mods:url>
+          </mods:location>
+          <mods:recordInfo>
+            <mods:descriptionStandard>rda</mods:descriptionStandard>
+            <mods:recordContentSource authority="marcorg">ABA001</mods:recordContentSource>
+            <mods:recordCreationDate encoding="iso8601">2017-06-09T00:00:00Z</mods:recordCreationDate>
+			<mods:recordChangeDate encoding="iso8601">2017-06-10T08:00:00Z</mods:recordCreationDate>
+            <mods:recordIdentifier source="CZ-PrNK">0695690</mods:recordIdentifier>
+            <mods:recordOrigin>machine generated</mods:recordOrigin>
+            <mods:languageOfCataloging>
+              <mods:languageTerm authority="iso639-2b" type="code">cze</mods:languageTerm>
+            </mods:languageOfCataloging>
+          </mods:recordInfo>
+        </mods:mods>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:dmdSec>
+  <mets:dmdSec ID="DCMD_VOLUME_0001">
+    <mets:mdWrap MDTYPE="DC" MIMETYPE="text/xml">
+      <mets:xmlData>
+        <oai_dc:dc>
+          <dc:title>Básně</dc:title>
+          <dc:type>model:electronicmonograph</dc:type>
+          <dc:creator>Villon, Francois</dc:creator>
+          <dc:creator>jn19990009794</dc:creator>
+		  <dc:creator>Fischer, Otokar</dc:creator>
+          <dc:creator>jk01031286</dc:creator>
+          <dc:date>2011</dc:date>
+		  <dc:coverage>xr</dc:coverage>
+          <dc:coverage>Praha</dc:coverage>
+		  <dc:publisher>Městská knihovna v Praze</dc:publisher>
+		  <dc:language>cze</dc:language>
+		  <dc:language>frm</dc:language>
+		  <dc:format>electronic</dc:format>
+		  <dc:format>bez média</dc:format>
+          <dc:format>online zdroj</dc:format>
+          <dc:format>64 s</dc:format>
+          <dc:description>born digital</dc:description>
+		  <dc:identifier>uuid:op946fbc-1cc2-4f83-8683-630fa09bbd51</dc:identifier>
+          <dc:identifier>isbn:978-80-7532-710-1</dc:identifier>
+		  <dc:identifier>urnnbn:urn:nbn:cz:nk-mbc228</dc:identifier>
+		  <dc:identifier>ccnb:cnb002031798</dc:identifier>
+		  <dc:subject>francouzská poezie</dc:subject>
+		  <dc:subject>821.133.1-1</dc:subject>
+		  <dc:subject>25</dc:subject>
+          <dc:source>ABA001</dc:source>
+		  <dc:source>http://kramerius4.nkp.cz/search/i.jsp?pid=uuid:op946fbc-1cc2-4f83-8683-630fa09bbd51</dc:source>
+        </oai_dc:dc>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:dmdSec>
+ 
+ 
+  <mets:amdSec ID="VOLUME_0001">
+    <mets:techMD ID="OBJ_0001"> 
+     <mets:mdWrap> 
+       <mets:xmlData> 
+         <premis:object xsi:type="file" xmlns:premis="info:lc/xmlns/premis-v2">
+	       <premis:objectIdentifier>
+		     <premis:objectIdentifierType>file</premis:objectIdentifierType>
+		     <premis:objectIdentifierValue>00000001</premis:objectIdentifierValue>
+	       </premis:objectIdentifier>
+	       <premis:preservationLevel>
+		     <premis:preservationLevelValue>logical preservation</premis:preservationLevelValue>
+		     <premis:preservationLevelDateAssigned>2017-06-09</premis:preservationLevelDateAssigned>
+	       </premis:preservationLevel>
+	       <premis:objectCharacteristics>
+		     <premis:compositionLevel>0</premis:compositionLevel>
+		     <premis:fixity>
+			   <premis:messageDigestAlgorithm>CRC32</premis:messageDigestAlgorithm>
+			   <premis:messageDigest>a3329123</premis:messageDigest>
+			   <premis:messageDigestOriginator>JHOVE</premis:messageDigestOriginator>
+		     </premis:fixity>
+		     <premis:fixity>
+			   <premis:messageDigestAlgorithm>SHA-1</premis:messageDigestAlgorithm>
+			   <premis:messageDigest>9ae11fc37aab534f31ebb676ad57e98f37aaf4ac</premis:messageDigest>
+			   <premis:messageDigestOriginator>JHOVE</premis:messageDigestOriginator>
+		     </premis:fixity>
+		     <premis:fixity>
+			   <premis:messageDigestAlgorithm>MD5</premis:messageDigestAlgorithm>
+			   <premis:messageDigest>93868d4aed50a444fd8b8b282be0975b</premis:messageDigest>
+			   <premis:messageDigestOriginator>JHOVE</premis:messageDigestOriginator>
+		     </premis:fixity>
+		     <premis:size>120934</premis:size>
+		     <premis:format>
+			   <premis:formatDesignation>
+				 <premis:formatName>application/pdf</premis:formatName>
+				 <premis:formatVersion>1a</premis:formatVersion>
+			   </premis:formatDesignation>
+			   <premis:formatRegistry>
+				 <premis:formatRegistryName>PRONOM</premis:formatRegistryName>
+				 <premis:formatRegistryKey>fmt/95</premis:formatRegistryKey>
+			   </premis:formatRegistry>
+		     </premis:format>
+		     <premis:creatingApplication>
+			   <premis:creatingApplicationName>PDF Architect 4</premis:creatingApplicationName>    
+			   <premis:creatingApplicationVersion>PDF Architect 4</premis:creatingApplicationVersion>
+			   <premis:dateCreatedByApplication>2017-06-01T08:00:09Z</premis:dateCreatedByApplication>
+		     </premis:creatingApplication>
+		     <premis:objectCharacteristicsExtension>
+			   <doc xsi:schemaLocation="http://www.fcla.edu/dls/md/docmd.xsd">
+				<docmd:document xmlns:docmd="http://www.fcla.edu/docmd" xsi:schemaLocation="http://www.fcla.edu/docmd http://www.fcla.edu/dls/md/docmd.xsd">
+				  <docmd:PageCount>57</docmd:PageCount>
+				  <docmd:Font FontName="Cambria, 400" isEmbedded="true"/>
+				  <docmd:Font FontName="Cambria Bold, 700" isEmbedded="true"/>
+				  <docmd:Font FontName="Calibri, 400" isEmbedded="true"/>
+				  <docmd:documentMetadataExtension>
+				    <ndktech:ndktech xmlns:ndktech="http://www.ndk.cz/standardy-digitalizace/ndktech/1.1" xsi:schemaLocation="http://www.ndk.cz/standardy-digitalizace/ndktech/1.1 http://www.ndk.cz/standardydigitalizace/ndktech/ndktech-v1-1.xsd">
+					  <ndktech:filters>
+					    <ndktech:filter>DCTDecode</ndktech:filter>
+						<ndktech:mediatype>FlateDecode</ndktech:mediatype>
+					  </ndktech:filters>
+					  <ndktech:colorspaces>
+					    <ndktech:colorspace>RGB</ndktech:colorspace>
+					  </ndktech:colorspaces>
+					  <ndktech:iccprofile>
+					    <ndktech:iccprofilename>sRGB IEC61966-2.1</ndktech:iccprofilename>
+						<ndktech:iccprofileversion>sRGB IEC61966-2.1</ndktech:iccprofileversion>
+					  </ndktech:iccprofile>
+					  <ndktech:imagesCount>5</ndktech:imagesCount>
+					  <ndktech:indirectObjectsNumber>1944</ndktech:indirectObjectsNumber>
+					</ndktech:ndktech>
+				  </docmd:documentMetadataExtension>
+				</docmd:document>
+			  </doc>
+		    </premis:objectCharacteristicsExtension>
+	      </premis:objectCharacteristics>
+	      <premis:originalName>Basne-Francois Villon.pdf</premis:originalName>
+	      <premis:relationship>
+		    <premis:relationshipType>structural</premis:relationshipType>
+		    <premis:relationshipSubType>includes</premis:relationshipSubType>
+		    <premis:relatedObjectIdentification>
+			  <premis:relatedObjectIdentifierType>URI</premis:relatedObjectIdentifierType>   
+			  <premis:relatedObjectIdentifierValue>/tmp/Basne-Francois Villon.pdf/1</premis:relatedObjectIdentifierValue>
+		    </premis:relatedObjectIdentification>
+	      </premis:relationship>
+	      <premis:relationship>
+		    <premis:relationshipType>structural</premis:relationshipType>
+		    <premis:relationshipSubType>includes</premis:relationshipSubType>
+		    <premis:relatedObjectIdentification>
+			  <premis:relatedObjectIdentifierType>URI</premis:relatedObjectIdentifierType>   
+			  <premis:relatedObjectIdentifierValue>/tmp/Basne-Francois Villon.pdf/2</premis:relatedObjectIdentifierValue>
+		    </premis:relatedObjectIdentification>
+	      </premis:relationship>
+	      <premis:relationship>
+		    <premis:relationshipType>structural</premis:relationshipType>
+		    <premis:relationshipSubType>includes</premis:relationshipSubType>
+		    <premis:relatedObjectIdentification>
+			  <premis:relatedObjectIdentifierType>URI</premis:relatedObjectIdentifierType>   
+			  <premis:relatedObjectIdentifierValue>/tmp/Basne-Francois Villon.pdf/3</premis:relatedObjectIdentifierValue>
+		    </premis:relatedObjectIdentification>
+		  </premis:relationship>
+	      <premis:relationship>
+		    <premis:relationshipType>structural</premis:relationshipType>
+		    <premis:relationshipSubType>includes</premis:relationshipSubType>
+		    <premis:relatedObjectIdentification>
+			  <premis:relatedObjectIdentifierType>URI</premis:relatedObjectIdentifierType>   
+			  <premis:relatedObjectIdentifierValue>/tmp/Basne-Francois Villon.pdf/4</premis:relatedObjectIdentifierValue>
+		    </premis:relatedObjectIdentification>
+	      </premis:relationship>
+	      <premis:relationship>
+		    <premis:relationshipType>structural</premis:relationshipType>
+		    <premis:relationshipSubType>includes</premis:relationshipSubType>
+		    <premis:relatedObjectIdentification>
+			  <premis:relatedObjectIdentifierType>URI</premis:relatedObjectIdentifierType>   
+			  <premis:relatedObjectIdentifierValue>/tmp/Basne-Francois Villon.pdf/5</premis:relatedObjectIdentifierValue>
+		    </premis:relatedObjectIdentification>
+	      </premis:relationship>
+	      <premis:linkingEventIdentifier>
+		    <premis:linkingEventIdentifierType>EventID</premis:linkingEventIdentifierType>   
+		    <premis:linkingEventIdentifierValue>Event_01</premis:linkingEventIdentifierValue>
+	      </premis:linkingEventIdentifier>
+	      <premis:linkingEventIdentifier>
+		    <premis:linkingEventIdentifierType>EventID</premis:linkingEventIdentifierType>   
+		    <premis:linkingEventIdentifierValue>Event_02</premis:linkingEventIdentifierValue>
+	      </premis:linkingEventIdentifier>
+	      <premis:linkingEventIdentifier>
+		    <premis:linkingEventIdentifierType>EventID</premis:linkingEventIdentifierType>   
+		    <premis:linkingEventIdentifierValue>Event_03</premis:linkingEventIdentifierValue>
+	      </premis:linkingEventIdentifier>
+        </premis:object>
+      </mets:xmlData> 
+    </mets:mdWrap> 
+  </mets:techMD> 
+<mets:techMD ID="OBJ_002"> 
+  <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml"> 
+    <mets:xmlData>
+      <premis:object xsi:type="bitstream" xmlns:premis="info:lc/xmlns/premis-v2">
+	    <premis:objectIdentifier>
+		  <premis:objectIdentifierType>URI</premis:objectIdentifierType>
+		  <premis:objectIdentifierValue>/tmp/Basne-Francois Villon.pdf/1</premis:objectIdentifierValue>
+	    </premis:objectIdentifier>
+	    <premis:objectCharacteristics>
+		  <premis:format>
+	        <premis:formatDesignation>
+			  <premis:formatName>DCTDecode</premis:formatName>
+			</premis:formatDesignation>
+		  </premis:format>
+		  <premis:objectCharacteristicExtension>
+			<mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd">
+			  <mix:BasicDigitalObjectInformation>
+				<mix:ObjectIdentifier>
+				  <mix:objectIdentifierType>JHOVE</mix:objectIdentifierType>
+				</mix:ObjectIdentifier>
+				<mix:Compression>
+				  <mix:compressionScheme>JPEG</mix:compressionScheme>
+				</mix:Compression>
+			  </mix:BasicDigitalObjectInformation>
+			  <mix:BasicImageInformation>
+			    <mix:BasicImageCharacteristics>
+				  <mix:imageWidth>1169</mix:imageWidth>
+				  <mix:imageHeight>1654</mix:imageHeight>
+				  <mix:PhotometricInterpretation>
+				    <mix:colorSpace>RGB</mix:colorSpace>
+				  </mix:PhotometricInterpretation>
+				</mix:BasicImageCharacteristics>
+			  </mix:BasicImageInformation>
+              <mix:ImageAssessmentMetadata>
+			    <mix:ImageColorEncoding>
+				  <mix:BitsPerSample>
+				    <mix:bitsPerSampleValue>8</mix:bitsPerSampleValue>
+					<mix:bitsPerSampleUnit>integer</mix:bitsPerSampleValue>
+				  </mis:BitsPerSample>		
+				</mix:ImageColorEncoding>
+		      </mix:ImageAssessmentMetadata>
+		    </mix>
+		  </premis:objectCharacteristicExtension>
+	    </premis:objectCharacteristics>
+      </premis:object>
+    </mets:xmlData> 
+  </mets:mdWrap> 
+</mets:techMD> 
+<mets:techMD ID="OBJ_003"> 
+  <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml"> 
+    <mets:xmlData>
+      <premis:object xsi:type="bitstream" xmlns:premis="info:lc/xmlns/premis-v2">
+	    <premis:objectIdentifier>
+		  <premis:objectIdentifierType>URI</premis:objectIdentifierType>
+		  <premis:objectIdentifierValue>/tmp/Basne-Francois Villon.pdf/3</premis:objectIdentifierValue>
+	    </premis:objectIdentifier>
+	    <premis:objectCharacteristics>
+		  <premis:format>
+			<premis:formatDesignation>
+			  <premis:formatName>DCTDecode</premis:formatName>	
+			</premis:formatDesignation>
+		  </premis:format>
+		  <premis:objectCharacteristicExtension>
+			<mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd">
+			  <mix:BasicDigitalObjectInformation>
+				<mix:ObjectIdentifier>
+				  <mix:objectIdentifierType>JHOVE</mix:objectIdentifierType>
+				</mix:ObjectIdentifier>
+				<mix:Compression>
+				  <mix:compressionScheme>JPEG</mix:compressionScheme>
+				</mix:Compression>
+			  </mix:BasicDigitalObjectInformation>
+			  <mix:BasicImageInformation>
+			    <mix:BasicImageCharacteristics>
+			      <mix:imageWidth>1323</mix:imageWidth>
+				  <mix:imageHeight>1755</mix:imageHeight>
+				  <mix:PhotometricInterpretation>
+				    <mix:colorSpace>RGB</mix:colorSpace>
+				  </mix:PhotometricInterpretation>
+				</mix:BasicImageCharacteristics>
+			  </mix:BasicImageInformation>
+	          <mix:ImageAssessmentMetadata>
+				<mix:ImageColorEncoding>
+				  <mix:BitsPerSample>
+					<mix:bitsPerSampleValue>8</mix:bitsPerSampleValue>
+					<mix:bitsPerSampleUnit>integer</mix:bitsPerSampleValue>
+				  </mix:BitsPerSample>		
+				</mix:ImageColorEncoding>
+			  </mix:ImageAssessmentMetadata>
+			</mix>
+		  </premis:objectCharacteristicExtension>
+	    </premis:objectCharacteristics>
+      </premis:object>
+    </mets:xmlData> 
+  </mets:mdWrap> 
+</mets:techMD> 
+<mets:techMD ID="OBJ_004"> 
+  <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml"> 
+    <mets:xmlData>
+      <premis:object xsi:type="bitstream" xmlns:premis="info:lc/xmlns/premis-v2">
+	    <premis:objectIdentifier>
+		  <premis:objectIdentifierType>URI</premis:objectIdentifierType>
+		  <premis:objectIdentifierValue>/tmp/Basne-Francois Villon.pdf/4</premis:objectIdentifierValue>
+	    </premis:objectIdentifier>
+	    <premis:objectCharacteristics>
+		  <premis:format>
+			<premis:formatDesignation>
+		      <premis:formatName>FlateDecode</premis:formatName>
+			</premis:formatDesignation>
+		  </premis:format>
+		  <premis:objectCharacteristicExtension>
+			<mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd">
+			  <mix:BasicDigitalObjectInformation>
+			    <mix:ObjectIdentifier>
+				  <mix:objectIdentifierType>JHOVE</mix:objectIdentifierType>
+				</mix:ObjectIdentifier>
+				<mix:Compression>
+				  <mix:compressionScheme>FlateDecode</mix:compressionScheme>
+				</mix:Compression>
+			  </mix:BasicDigitalObjectInformation>
+			  <mix:BasicImageInformation>
+				<mix:BasicImageCharacteristics>
+				  <mix:imageWidth>88</mix:imageWidth>
+				  <mix:imageHeight>31</mix:imageHeight>
+				  <mix:PhotometricInterpretation>
+					<mix:colorSpace>RGB</mix:colorSpace>
+				  </mix:PhotometricInterpretation>
+				</mix:BasicImageCharacteristics>
+			  </mix:BasicImageInformation>
+              <mix:ImageAssessmentMetadata>
+			    <mix:ImageColorEncoding>
+			      <mix:BitsPerSample>
+				    <mix:bitsPerSampleValue>8</mix:bitsPerSampleValue>
+					<mix:bitsPerSampleUnit>integer</mix:bitsPerSampleValue>
+				  </mix:BitsPerSample>	
+				</mix:ImageColorEncoding>
+			  </mix:ImageAssessmentMetadata>
+			</mix>
+		  </premis:objectCharacteristicExtension>
+	    </premis:objectCharacteristics>
+      </premis:object>
+    </mets:xmlData> 
+  </mets:mdWrap> 
+</mets:techMD> 
+<mets:techMD ID="OBJ_005"> 
+  <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml"> 
+    <mets:xmlData>
+      <premis:object xsi:type="bitstream" xmlns:premis="info:lc/xmlns/premis-v2">
+	    <premis:objectIdentifier>
+		  <premis:objectIdentifierType>URI</premis:objectIdentifierType>
+		  <premis:objectIdentifierValue>/tmp/Basne-Francois Villon.pdf/5</premis:objectIdentifierValue>
+	    </premis:objectIdentifier>
+	    <premis:objectCharacteristics>
+		  <premis:format>
+			<premis:formatDesignation>
+			  <premis:formatName>FlateDecode</premis:formatName>
+			</premis:formatDesignation>	
+		  </premis:format>
+		  <premis:objectCharacteristicExtension>
+			<mix xsi:schemaLocation="http://www.loc.gov/mix/v20 http://www.loc.gov/standards/mix/mix20/mix20.xsd">
+		      <mix:BasicDigitalObjectInformation>
+			    <mix:ObjectIdentifier>
+				  <mix:objectIdentifierType>JHOVE</mix:objectIdentifierType>
+				</mix:ObjectIdentifier>
+				<mix:Compression>
+				  <mix:compressionScheme>FlateDecode</mix:compressionScheme>
+				</mix:Compression>
+			  </mix:BasicDigitalObjectInformation>
+			  <mix:BasicImageInformation>
+				<mix:BasicImageCharacteristics>
+				  <mix:imageWidth>88</mix:imageWidth>
+			      <mix:imageHeight>31</mix:imageHeight>
+				  <mix:PhotometricInterpretation>
+					<mix:colorSpace>RGB</mix:colorSpace>
+				  </mix:PhotometricInterpretation>
+				</mix:BasicImageCharacteristics>
+			  </mix:BasicImageInformation>
+	          <mix:ImageAssessmentMetadata>
+			    <mix:ImageColorEncoding>
+				  <mix:BitsPerSample>
+				    <mix:bitsPerSampleValue>8</mix:bitsPerSampleValue>
+				    <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleValue>
+				  </mix:BitsPerSample>	
+				</mix:ImageColorEncoding>
+			  </mix:ImageAssessmentMetadata>
+			</mix>
+		  </premis:objectCharacteristicExtension>
+	    </premis:objectCharacteristics>
+      </premis:object>
+    </mets:xmlData> 
+  </mets:mdWrap> 
+</mets:techMD> 
+<mets:digiprovMD ID="EVT_001"> 
+  <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml"> 
+    <mets:xmlData>
+      <premis:event xmlns:premis="info:lc/xmlns/premis-v2">
+	    <premis:eventIdentifier>
+		  <premis:eventIdentifierType>EventID</premis:eventIdentifierType>
+		  <premis:eventIdentifierValue>Event_01</premis:eventIdentifierValue>
+	    </premis:eventIdentifier>
+	    <premis:eventType>creation</premis:eventType>
+	    <premis:eventDateTime>2017-06-09T08:58:55Z</premis:eventDateTime>
+	    <premis:eventDetail>creation/pdf_creation</premis:eventDetail>
+	    <premis:eventOutcomeInformation>
+		  <premis:eventOutcome>successful</premis:eventOutcome>
+	    </premis:eventOutcomeInformation>
+	    <premis:linkingAgentIdentifier>
+		  <premis:linkingAgentIdentifierType>AgentID</premis:linkingAgentIdentifierType>
+		  <premis:linkingAgentIdentifierValue>agent_01</premis:linkingAgentIdentifierValue>
+	    </premis:linkingAgentIdentifier>
+	    <premis:linkingObjectIdentifier>
+		  <premis:linkingObjectIdentifierType>file</premis:linkingObjectIdentifierType>
+		  <premis:linkingObjectIdentifierValue>00000001</premis:linkingObjectIdentifierValue>
+	    </premis:linkingObjectIdentifier>
+      </premis:event>
+    </mets:xmlData> 
+  </mets:mdWrap> 
+</mets:digiprovMD> 
+<mets:digiprovMD ID="EVT_002"> 
+  <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml"> 
+    <mets:xmlData>
+      <premis:event xmlns:premis="info:lc/xmlns/premis-v2">
+	    <premis:eventIdentifier>
+		  <premis:eventIdentifierType>EventID</premis:eventIdentifierType>
+		  <premis:eventIdentifierValue>Event_02</premis:eventIdentifierValue>
+	    </premis:eventIdentifier>
+	    <premis:eventType>ingestion</premis:eventType>
+	    <premis:eventDateTime>2017-06-20T08:58:55Z</premis:eventDateTime>
+	    <premis:eventDetail>ingestion/pdf_ingestion</premis:eventDetail>
+	    <premis:eventOutcomeInformation>
+		  <premis:eventOutcome>successful</premis:eventOutcome>
+	    </premis:eventOutcomeInformation>
+	    <premis:linkingAgentIdentifier>
+		  <premis:linkingAgentIdentifierType>AgentID</premis:linkingAgentIdentifierType>
+		  <premis:linkingAgentIdentifierValue>agent_02</premis:linkingAgentIdentifierValue>
+	    </premis:linkingAgentIdentifier>
+	    <premis:linkingObjectIdentifier>
+		  <premis:linkingObjectIdentifierType>file</premis:linkingObjectIdentifierType>
+		  <premis:linkingObjectIdentifierValue>00000001</premis:linkingObjectIdentifierValue>
+	    </premis:linkingObjectIdentifier>
+      </premis:event>
+    </mets:xmlData> 
+  </mets:mdWrap> 
+</mets:digiprovMD> 
+<mets:digiprovMD ID="EVT_003"> 
+  <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml"> 
+    <mets:xmlData>
+      <premis:event xmlns:premis="info:lc/xmlns/premis-v2">
+	    <premis:eventIdentifier>
+		  <premis:eventIdentifierType>EventID</premis:eventIdentifierType>
+		  <premis:eventIdentifierValue>Event_03</premis:eventIdentifierValue>
+	    </premis:eventIdentifier>
+	    <premis:eventType>validation</premis:eventType>                           
+	    <premis:eventDateTime>2017-06-20T08:58:55Z</premis:eventDateTime>
+	    <premis:eventDetail>validation/format_validation</premis:eventDetail>
+	    <premis:eventOutcomeInformation>
+		  <premis:eventOutcome>successful</premis:eventOutcome>
+		  <premis:eventOutcomeDetail>
+			<premis:eventOutcomeDetailNote>profileName="PDF/A-1A validation profile" statement="PDF file is compliant with Validation Profile requirements." isCompliant="true"</premis:eventOutcomeDetailNote>
+		  </premis:eventOutcomeDetail>
+	    </premis:eventOutcomeInformation>
+	    <premis:linkingAgentIdentifier>
+		  <premis:linkingAgentIdentifierType>AgentID</premis:linkingAgentIdentifierType>
+		  <premis:linkingAgentIdentifierValue>agent_03</premis:linkingAgentIdentifierValue>
+	    </premis:linkingAgentIdentifier>
+	    <premis:linkingObjectIdentifier>
+		  <premis:linkingObjectIdentifierType>file</premis:linkingObjectIdentifierType>
+		  <premis:linkingObjectIdentifierValue>00000001</premis:linkingObjectIdentifierValue>
+	    </premis:linkingObjectIdentifier>
+      </premis:event>
+    </mets:xmlData> 
+  </mets:mdWrap> 
+</mets:digiprovMD> 
+<mets:digiprovMD ID="AGENT_001"> 
+  <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml"> 
+    <mets:xmlData>
+      <premis:agent xmlns:premis="info:lc/xmlns/premis-v2">
+	    <premis:agentIdentifier>
+		  <premis:agentIdentifierType>AgentID</premis:agentIdentifierType>
+		  <premis:agentIdentifierValue>agent_01</premis:agentIdentifierValue>
+	    </premis:agentIdentifier>
+	    <premis:agentName>unknown</premis:agentName>
+	    <premis:agentType>software</premis:agentType>
+      </premis:agent>
+    </mets:xmlData> 
+  </mets:mdWrap> 
+</mets:digiprovMD> 
+<mets:digiprovMD ID="AGENT_002"> 
+  <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml"> 
+    <mets:xmlData>
+      <premis:agent xmlns:premis="info:lc/xmlns/premis-v2">
+	    <premis:agentIdentifier>
+	 	  <premis:agentIdentifierType>AgentID</premis:agentIdentifierType>
+		  <premis:agentIdentifierValue>agent_02</premis:agentIdentifierValue>
+	    </premis:agentIdentifier>
+	    <premis:agentName>edeposit</premis:agentName>
+	    <premis:agentType>software</premis:agentType>
+      </premis:agent>
+    </mets:xmlData> 
+  </mets:mdWrap> 
+</mets:digiprovMD> 
+<mets:digiprovMD ID="AGENT_003"> 
+  <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml"> 
+    <mets:xmlData>
+      <premis:agent xmlns:premis="info:lc/xmlns/premis-v2">
+	    <premis:agentIdentifier>
+		  <premis:agentIdentifierType>AgentID</premis:agentIdentifierType>
+		  <premis:agentIdentifierValue>agent_03</premis:agentIdentifierValue>
+	    </premis:agentIdentifier>
+	    <premis:agentName>veraPdf 1.5</premis:agentName>
+    	<premis:agentType>software</premis:agentType>
+      </premis:agent>
+    </mets:xmlData> 
+  </mets:mdWrap> 
+</mets:digiprovMD> 
+</mets:amdSec>
+
+
+<mets:amdSec ID="AMD_MONOGRAPH_0001">
+  <mets:rightsMD ID="RIGHTS_0001">
+    <mets:mdWrap MIMETYPE="text/html" MDTYPE="OTHER" OTHERMDTYPE="CopyrightMD">
+	  <mets:xmlData>
+	    <copyrightMD:copyright copyright.status="unknown" publication.status="unknown"/>
+	  </mets:xmlData>
+	</mets:mdWrap>
+  </mets:rightsMD>
+</mets:amdSec>
+<mets:fileSec>
+  <mets:fileGrp ID="OC_EBGRP" USE="master">
+     <mets:file ID="nk-mbc228" MIMETYPE="epub" SIZE="1153721" CHECKSUMTYPE="MD5" CHECKSUM="d1c22a10d9b97f6ea39a7fdd971e53br" SEQ="1" CREATED="2017-06-08T00:00:00Z">
+	    <mets:Flocat xlink:ref="./original/nk-mbc228.epub" LOCTYPE="URL"/>
+	 </mets:file>
+  </mets:fileGrp>
+</mets:fileSec>
+<mets:structMap> 
+  <mets:div ID="VOLUME_0001" DMDID="MODSMD_VOLUME_0001" ADMID="RIGHTS_0001" TYPE="VOLUME">
+     <mets:div ID="DOCUMENT_0001" LABEL="nk-mbc228" TYPE="DOCUMENT">
+	     <mets:div ID="FILE_0001" ADMID="OBJ_0001" LABEL="nk-mbc228" TYPE="FILE">
+              <mets:fptr FILEID="nk-mbc228"/>
+         </mets:div>
+	 </mets:div>
+  </mets:div>
+</mets:structMap>
+</mets:mets>
+	
+		
+
