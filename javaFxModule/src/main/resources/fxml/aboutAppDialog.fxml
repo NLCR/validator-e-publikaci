@@ -22,7 +22,7 @@
 
         <Text styleClass="title"
               wrappingWidth="650"
-              text="Komplexní validátor byl vyvinut pro Národní Knihovnu České republiky. Nástroj je určený k validaci PSP balíků podle standardu Definice metadatových formátů pro digitalizaci."
+              text="Validátor e-publikací byl vyvinut pro Národní Knihovnu České republiky. Nástroj je určený k validaci PSP balíků podle standardu Definice metadatových formátů pro digitalizaci."
         />
         <GridPane alignment="CENTER" hgap="10" vgap="10">
             <padding>

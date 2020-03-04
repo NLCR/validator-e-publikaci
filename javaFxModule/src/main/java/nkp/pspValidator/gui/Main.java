@@ -66,7 +66,7 @@ public class Main extends Application {
         //System.out.println("mainWindow: " + primaryStage);
         try {
             //title
-            primaryStage.setTitle("Komplexní validátor " + Version.VERSION_CODE);
+            primaryStage.setTitle("Validátor e-publikací " + Version.VERSION_CODE);
             //icon
             addIconIfFound(primaryStage, "img/appIcon/appIcon16.png");
             addIconIfFound(primaryStage, "img/appIcon/appIcon32.png");
