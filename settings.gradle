@@ -1,4 +1,4 @@
-rootProject.name = 'KomplexniValidator'
+rootProject.name = 'ValidatorEpublikaci'
 include 'sharedModule'
 include 'javaFxModule'
 include 'cliModule'

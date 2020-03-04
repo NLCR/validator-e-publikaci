@@ -88,7 +88,7 @@
                    GridPane.rowIndex="5"
                    GridPane.columnIndex="0"
             />
-            <Text text="/Users/martin/IdeaProjects/komplexni-validator/sharedModule/src/main/resources/nkp/pspValidator/shared/validatorConfig"
+            <Text text="/Users/martin/IdeaProjects/validator-e-publikaci/sharedModule/src/main/resources/nkp/pspValidator/shared/validatorConfig"
                   GridPane.rowIndex="5"
                   GridPane.columnIndex="2"
                   GridPane.hgrow="ALWAYS"
@@ -107,7 +107,7 @@
                    GridPane.rowIndex="6"
                    GridPane.columnIndex="0"
             />
-            <Text text="/Users/martin/IdeaProjects/komplexni-validator/sharedModule/src/main/resources/nkp/pspValidator/shared/validatorConfig"
+            <Text text="/Users/martin/IdeaProjects/validator-e-publikaci/sharedModule/src/main/resources/nkp/pspValidator/shared/validatorConfig"
                   GridPane.rowIndex="6"
                   GridPane.columnIndex="2"
                   GridPane.hgrow="ALWAYS"

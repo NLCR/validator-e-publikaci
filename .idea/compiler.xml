@@ -26,6 +26,14 @@
       <module name="PspValidator.javaFxModule.test" target="1.8" />
       <module name="PspValidator.sharedModule.main" target="1.8" />
       <module name="PspValidator.sharedModule.test" target="1.8" />
+      <module name="ValidatorEpublikaci.cliModule.main" target="1.8" />
+      <module name="ValidatorEpublikaci.cliModule.test" target="1.8" />
+      <module name="ValidatorEpublikaci.javaFxModule.main" target="1.8" />
+      <module name="ValidatorEpublikaci.javaFxModule.test" target="1.8" />
+      <module name="ValidatorEpublikaci.main" target="1.8" />
+      <module name="ValidatorEpublikaci.sharedModule.main" target="1.8" />
+      <module name="ValidatorEpublikaci.sharedModule.test" target="1.8" />
+      <module name="ValidatorEpublikaci.test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

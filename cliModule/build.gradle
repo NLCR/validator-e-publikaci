@@ -34,11 +34,11 @@ version '2.1'
 //https://www.mkyong.com/gradle/gradle-create-a-jar-file-with-dependencies/
 task fatJar(type: Jar) {
     manifest {
-        attributes 'Implementation-Title': 'Komplexni validator CLI',
+        attributes 'Implementation-Title': 'Validator e-publikaci CLI',
                 'Implementation-Version': version,
                 'Main-Class': 'npk.pspValidator.cli.Main'
     }
-    baseName = 'KomplexniValidatorCLI'
+    baseName = 'ValidatorEpublikaciCLI'
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
 }

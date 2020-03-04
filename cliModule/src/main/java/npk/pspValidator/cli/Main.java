@@ -277,7 +277,7 @@ public class Main {
             if (line.hasOption(Params.HELP)) {
                 printHelp(options);
             } else if (line.hasOption(Params.VERSION)) {
-                System.out.println(String.format("Komplexni validator CLI verze %s, sestaveno: %s", Version.VERSION_CODE, Version.BUILD_DATE));
+                System.out.println(String.format("Validátor e-publikací CLI verze %s, sestaveno: %s", Version.VERSION_CODE, Version.BUILD_DATE));
             } else {
 
                 //action
@@ -565,7 +565,7 @@ public class Main {
         HelpFormatter formatter = new HelpFormatter();
         formatter.setWidth(100);
         formatter.setOptionComparator(null);
-        formatter.printHelp("java -jar KomplexniValidator.jar", header, options, footer, true);
+        formatter.printHelp("java -jar ValidatorEpublikaci.jar", header, options, footer, true);
     }
 
     private static void validatePspGroup(File pspGroup,
