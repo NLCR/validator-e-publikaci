@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mets:mets xmlns:mets="http://www.loc.gov/METS/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:mods="http://www.loc.gov/mods/v3"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:premis="info:lc/xmlns/premis-v2" xmlns:xlink="http://www.w3.org/1999/xlink"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" LABEL="Šalina, 2018" TYPE="electronic_periodical"
+           xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://www.w3.org/2001/XMLSchema.xsd http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-6.xsd http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+    <mets:metsHdr CREATEDATE="2017-06-21T21:39:56" LASTMODDATE="2017-06-29T10:39:56">
+        <mets:agent ROLE="CREATOR" TYPE="ORGANIZATION">
+            <mets:name>ABA001</mets:name>
+        </mets:agent>
+        <mets:agent ROLE="ARCHIVIST" TYPE="ORGANIZATION">
+            <mets:name>ABA001</mets:name>
+        </mets:agent>
+    </mets:metsHdr>
+    <mets:dmdSec ID="MODSMD_TITLE_0001">
+        <mets:mdWrap MDTYPE="MODS" MDTYPEVERSION="3.6" MIMETYPE="text/xml">
+            <mets:xmlData>
+                <mods:mods ID="MODS_TITLE_0001">>
+                    <mods:titleInfo>
+                        <mods:title>Šalina</mods:title>
+                        <mods:subTitle>čtrnástideník pro příjemné cestování městskou dopravou</mods:subTitle>
+                    </mods:titleInfo>
+                    <mods:titleInfo type="alternative">
+                        <mods:title>Šalina Brno</mods:title>
+                    </mods:titleInfo>
+                    <mods:typeOfResource>text</mods:typeOfResource>
+                    <mods:genre>electronic_title</mods:genre>
+                    <mods:originInfo eventType="publication">
+                        <mods:place>
+                            <mods:placeTerm type="code" authority="marccountry">xr-</mods:placeTerm>
+                        </mods:place>
+                        <mods:place>
+                            <mods:placeTerm type="text">Brno</mods:placeTerm>
+                        </mods:place>
+                        <mods:publisher>DPMB, a. s.</mods:publisher>
+                        <mods:dateIssued>2007-</mods:dateIssued>
+                        <mods:dateIssued encoding="marc" point="start">2007</mods:dateIssued>
+                        <mods:dateIssued encoding="marc" point="end">9999</mods:dateIssued>
+                        <mods:frequency>1x měsíčně</mods:frequency>
+                        <mods:frequency>Monthly</mods:frequency>
+                        <mods:issuance>continuing</mods:issuance>
+                    </mods:originInfo>
+                    <mods:language>
+                        <mods:languageTerm authority="iso639-2b" type="code">cze</mods:languageTerm>
+                    </mods:language>
+                    <mods:physicalDescription>
+                        <mods:form authority="rdacarrier" type="carrier">svazek</mods:form>
+                        <mods:form authority="rdamedia" type="media">bez média</mods:form>
+                        <mods:form authority="marcform">electronic</mods:form>
+                        <mods:digitalOrigin>born digital</mods:digitalOrigin>
+                    </mods:physicalDescription>
+                    <mods:subject authority="czenas">
+                        <mods:name>
+                            <mods:namePart>Dopravný podnik města Brna</mods:namePart>
+                        </mods:name>
+                    </mods:subject>
+                    <mods:subject authority="czenas">
+                        <mods:topic>městská hromadná doprava</mods:topic>
+                    </mods:subject>
+                    <mods:subject authority="czenas">
+                        <mods:geographic>Brno (Česko)</mods:geographic>
+                    </mods:subject>
+                    <mods:classification authority="udc" edition="Konspekt">050</mods:classification>
+                    <mods:classification authority="udc" edition="Konspekt">656.1/.5</mods:classification>
+                    <mods:location>
+                        <mods:physicalLocation authority="siglaADR">ABA001</mods:physicalLocation>
+                        <mods:url note="Adobe Acrobat required">http://www.salina-brno.cz/</mods:url>
+                    </mods:location>
+                    <mods:relatedItem type="preceding">
+                        <mods:titleInfo>
+                            <mods:title>Bez starostí</mods:title>
+                        </mods:titleInfo>
+                    </mods:relatedItem>
+                    <mods:identifier type="ccnb">cnb001782284</mods:identifier>
+                    <mods:identifier type="uuid">mk819760-5769-2224-ac6b-2689a5693a96</mods:identifier>
+                    <mods:identifier type="issn">1803-1684</mods:identifier>
+                    <mods:recordInfo>
+                        <mods:descriptionStandard>rda</mods:descriptionStandard>
+                        <mods:recordContentSource authority="marcorg">ABA001</mods:recordContentSource>
+                        <mods:recordCreationDate encoding="iso8601">2007-12-06T14:25:36Z</mods:recordCreationDate>
+                        <mods:recordChangeDate encoding="iso8601">2019-08-23T09:25:43Z</mods:recordChangeDate>
+                        <mods:recordIdentifier source="CZ-PrNK">cps20071782284</mods:recordIdentifier>
+                        <mods:recordOrigin>machine generated</mods:recordOrigin>
+                        <mods:languageOfCataloging>
+                            <mods:languageTerm authority="iso639-2b" type="code">cze</mods:languageTerm>
+                        </mods:languageOfCataloging>
+                    </mods:recordInfo>
+                </mods:mods>
+            </mets:xmlData>
+        </mets:mdWrap>
+    </mets:dmdSec>
+    <mets:dmdSec ID="DCMD_TITLE_0001">
+        <mets:mdWrap MDTYPE="DC" MIMETYPE="text/xml">
+            <mets:xmlData>
+                <oai_dc:dc>
+                    <dc:title>Šalina</dc:title>
+                    <dc:title>čtrnástideník pro příjemné cestování městskou dopravou</dc:title>
+                    <dc:title>Šalina Brno</dc:title>
+                    <dc:type>model:electronical_periodical</dc:type>
+                    <dc:coverage>xr</dc:coverage>
+                    <dc:coverage>Brno</dc:coverage>
+                    <dc:publisher>DPMB, a. s.</dc:publisher>
+                    <dc:date>2007-</dc:date>
+                    <dc:date>2007</dc:date>
+                    <dc:date>9999</dc:date>
+                    <dc:description>born digital</dc:description>
+                    <dc:identifier>uuid:mk819760-5769-2224-ac6b-2689a5693a96</dc:identifier>
+                    <dc:identifier>ccnb:cnb001782284</dc:identifier>
+                    <dc:identifier>issn:1803-1684</dc:identifier>
+                    <dc:source>http://www.salina-brno.cz/</dc:source>
+                    <dc:source>ABA001</dc:source>
+                    <dc:subject>Dopravný podnik města Brna</dc:subject>
+                    <dc:subject>městská hromadná doprava</dc:subject>
+                    <dc:subject>Brno (Česko)</dc:subject>
+                    <dc:subject>050</dc:subject>
+                    <dc:subject>656.1/.5</dc:subject>
+                </oai_dc:dc>
+            </mets:xmlData>
+        </mets:mdWrap>
+    </mets:dmdSec>
+    <mets:dmdSec ID="MODSMD_VOLUME_0001">
+        <mets:mdWrap MDTYPE="MODS" MDTYPEVERSION="3.6" MIMETYPE="text/xml">
+            <mets:xmlData>
+                <mods:mods ID="MODS_VOLUME_0001">
+                    <mods:titleInfo>
+                        <mods:partNumber>2018</mods:partNumber>
+                    </mods:titleInfo>
+                    <mods:genre>electronic_volume</mods:genre>
+                    <mods:originInfo>
+                        <mods:dateIssued>2018</mods:dateIssued>
+                    </mods:originInfo>
+                    <mods:identifier type="uuid">log81b52-376f-40c5-91bd-30411544c6c5</mods:identifier>
+                </mods:mods>
+            </mets:xmlData>
+        </mets:mdWrap>
+    </mets:dmdSec>
+    <mets:dmdSec ID="DCMD_VOLUME_0001">
+        <mets:mdWrap MDTYPE="DC" MIMETYPE="text/xml">
+            <mets:xmlData>
+                <oai_dc:dc>
+                    <dc:description>2018</dc:description>
+                    <dc:type>model:periodicalvolume</dc:type>
+                    <dc:date>2018</dc:date>
+                    <dc:identifier>uuid:log81b52-376f-40c5-91bd-30411544c6c5</dc:identifier>
+                </oai_dc:dc>
+            </mets:xmlData>
+        </mets:mdWrap>
+    </mets:dmdSec>
+    <mets:dmdSec ID="MODSMD_ISSUE_0001">
+        <mets:mdWrap MDTYPE="MODS" MDTYPEVERSION="3.6" MIMETYPE="text/xml">
+            <mets:xmlData>
+                <mods:mods ID="MODS_ISSUE_0001">
+                    <mods:titleInfo>
+                        <mods:title>Šalina</mods:title>
+                        <mods:subTitle>čtrnástideník pro příjemné cestování městskou dopravou</mods:subTitle>
+                        <mods:partNumber>3</mods:partNumber>
+                    </mods:titleInfo>
+                    <mods:name type="personal" usage="primary">
+                        <mods:namePart type="family">Veselá</mods:namePart>
+                        <mods:namePart type="given">Jiřina</mods:namePart>
+                        <mods:nameIdentifier>mzk2003194611</mods:nameIdentifier>
+                        <mods:role>
+                            <mods:roleTerm type="code" authority="marcrelator">edt</mods:roleTerm>
+                        </mods:role>
+                    </mods:name>
+                    <mods:name>
+                        <mods:etal>a kol.</mods:etal>
+                    </mods:name>
+                    <mods:genre type="normal">electronic_issue</mods:genre>
+                    <mods:originInfo>
+                        <mods:place>
+                            <mods:placeTerm type="code" authority="marccountry">xr</mods:placeTerm>
+                            <mods:placeTerm type="text">Brno</mods:placeTerm>
+                        </mods:place>
+                        <mods:publisher>DPMB, a.s.</mods:publisher>
+                        <mods:dateIssued>03.2018</mods:dateIssued>
+                    </mods:originInfo>
+                    <mods:language>
+                        <mods:languageTerm authority="iso639-2b" type="code">cze</mods:languageTerm>
+                    </mods:language>
+                    <mods:physicalDescription>
+                        <mods:extent>30 stran</mods:extent>
+                        <mods:digitalOrigin>born digital</mods:digitalOrigin>
+                    </mods:physicalDescription>
+                    <mods:identifier type="uuid">jgmdaeda-8be0-44ca-ae51-b071b6f31d00</mods:identifier>
+                    <mods:identifier type="urnnbn">urn:nbn:cz:nk-mbc228</mods:identifier>
+                    <mods:location>
+                        <mods:url usage="primary" note="Adobe Acrobat required">https://www.salina-brno.cz/images/casopis_pdf/03%20-%202018.pdf</mods:url>
+                        <mods:physicalLocation>ABA001</mods:physicalLocation>
+                        <mods:shelfLocator>P III 075312</mods:shelfLocator>
+                    </mods:location>
+                    <mods:recordInfo>
+                        <mods:descriptionStandard>rda</mods:descriptionStandard>
+                        <mods:recordContentSource authority="marcorg">ABA001</mods:recordContentSource>
+                        <mods:recordCreationDate encoding="iso8601">2007-12-06T14:25:40Z</mods:recordCreationDate>
+                        <mods:recordChangeDate encoding="iso8601">2019-08-23T09:25:59Z</mods:recordChangeDate>
+                        <mods:recordOrigin>human prepared</mods:recordOrigin>
+                    </mods:recordInfo>
+                </mods:mods>
+            </mets:xmlData>
+        </mets:mdWrap>
+    </mets:dmdSec>
+    <mets:dmdSec ID="DCMD_ISSUE_0001">
+        <mets:mdWrap MDTYPE="DC" MIMETYPE="text/xml">
+            <mets:xmlData>
+                <oai_dc:dc>
+                    <dc:title>Šalina</dc:title>
+                    <dc:title>čtrnástideník pro příjemné cestování městskou dopravou</dc:title>
+                    <dc:creator>Veselá, Jiřina</dc:creator>
+                    <dc:creator>mzk2003194611</dc:creator>
+                    <dc:type>model:periodicalitem</dc:type>
+                    <dc:coverage>xr</dc:coverage>
+                    <dc:coverage>Brno</dc:coverage>
+                    <dc:publisher>DPMB, a. s.</dc:publisher>
+                    <dc:date>03.2018</dc:date>
+                    <dc:format>30 stran</dc:format>
+                    <dc:description>born digital</dc:description>
+                    <dc:identifier>uuid:jgmdaeda-8be0-44ca-ae51-b071b6f31d00</dc:identifier>
+                    <dc:identifier>urnnbn:urn:nbn:cz:nk-mbc228</dc:identifier>
+                    <dc:source>https://www.salina-brno.cz/images/casopis_pdf/03%20-%202018.pdf</dc:source>
+                    <dc:source>ABA001</dc:source>
+                    <dc:source>P III 075312</dc:source>
+                </oai_dc:dc>
+            </mets:xmlData>
+        </mets:mdWrap>
+    </mets:dmdSec>
+    <mets:dmdSec ID="MODSMD_ART_0001">
+        <mets:mdWrap MDTYPE="MODS" MDTYPEVERSION="3.6" MIMETYPE="text/xml">
+            <mets:xmlData>
+                <mods:mods ID="MODS_ART_0001">
+                    <mods:titleInfo>
+                        <mods:title>Cvrčci jako krávy. Zatím do "chléva", brzy na talíř</mods:title>
+                        <mods:subTitle>M. Borkovcová: Jedlý hmyz není senzace</mods:subTitle>
+                        <mods:partNumber>1</mods:partNumber>
+                    </mods:titleInfo>
+                    <mods:name type="personal">
+                        <mods:namePart type="family">Borkovcová</mods:namePart>
+                        <mods:namePart type="given">Marie</mods:namePart>
+                        <mods:nameIdentifier>mzk2004148522</mods:nameIdentifier>
+                        <mods:affiliation>Mendelova univerzita v Brně</mods:affiliation>
+                        <mods:role>
+                            <mods:roleTerm type="code" authority="marcrelator">ive</mods:roleTerm>
+                        </mods:role>
+                    </mods:name>
+                    <mods:note>borkov@mendelu.cz</mods:note>
+                    <mods:name type="personal" usage="primary">
+                        <mods:namePart>jih</mods:namePart>
+                        <mods:role>
+                            <mods:roleTerm type="code" authority="marcrelator">ivr</mods:roleTerm>
+                        </mods:role>
+                    </mods:name>
+                    <mods:genre type="unspecified">electronic_article</mods:genre>
+                    <mods:language>
+                        <mods:languageTerm type="code" authority="iso639-2b">cze</mods:languageTerm>
+                    </mods:language>
+                    <mods:physicalDescription>
+                        <mods:form>electronic</mods:form>
+                        <mods:digitalOrigin>born digital</mods:digitalOrigin>
+                    </mods:physicalDescription>
+                    <mods:subject authority="czenas">
+                        <mods:topic>entomologie</moda:topic>
+                    </mods:subject>
+                    <mods:identifier type="uuid">6i6bro90-4dd6-bb33-es51-59703kjr5</mods:identifier>
+                    <mods:location>
+                        <mods:url>https://www.salina-brno.cz/images/casopis_pdf/03%20-%202018.pdf</mods:url>
+                    </mods:location>
+                    <mods:part>
+                        <mods:extent>
+                            <mods:start>6</mods:start>
+                            <mods:end>7</mods:end>
+                            <mods:total>2</mods:total>
+                        </mods:extent>
+                    </mods:part>
+                    <mods:relatedItem>
+                        <mods:titleInfo>
+                        <mods:title>Šalina</mods:title>
+                        <mods:partNumber>3</mods:title>
+                        <mods:titleInfo>
+                        <moda:originInfo>
+                            <mods:dateIssued>03.2018</mods:dateIssued>
+                        </mods:originInfo>
+                        <mods:identifier type="uuid">jgmdaeda-8be0-44ca-ae51-b071b6f31d00</mods:identifier>
+                    </mods:relatedItem>
+                </mods:mods>
+            </mets:xmlData>
+        </mets:mdWrap>
+    </mets:dmdSec>
+    <mets:dmdSec ID="DCMD_ART_0001">
+        <mets:mdWrap MDTYPE="DC" MIMETYPE="text/xml">
+            <mets:xmlData>
+                <oai_dc:dc>
+                    <dc:title>Cvrčci jako krávy. Zatím do "chléva", brzy na talíř</dc:title>
+                    <dc:title>M. Borkovcová: Jedlý hmyz není senzace</dc:title>
+                    <dc:creator>Borkovcová, Marie</dc:creator>
+                    <dc:creator>mzk2004148522</dc:creator>
+                    <dc:creator>jih</dc:creator>
+                    <dc:type>model:internalpart</dc:type>
+                    <dc:format>electronic</dc:format>
+                    <dc:description>born digital</dc:description>
+                    <dc:subject>entomologie</dc:subject>
+                    <dc:identifier>6i6bro90-4dd6-bb33-es51-59703kjr5</dc:identifier>
+                    <dc:source>https://www.salina-brno.cz/images/casopis_pdf/03%20-%202018.pdf</dc:source>
+                    <dc:coverage>6</dc:coverage>
+                    <dc:coverage>7</dc:coverage>
+                </oai_dc:dc>
+            </mets:xmlData>
+        </mets:mdWrap>
+    </mets:dmdSec>
+    <mets:dmdSec ID="MODSMD_ART_0002">
+        <mets:mdWrap MDTYPE="MODS" MDTYPEVERSION="3.6" MIMETYPE="text/xml">
+            <mets:xmlData>
+                <mods:mods ID="MODS_ART_0002">
+                    <mods:titleInfo>
+                        <mods:title>Dopravní dispečink je mozkem celé brněnské MHD</mods:title>
+                    </mods:titleInfo>
+                    <mods:name type="personal">
+                        <mods:namePart>red</mods:namePart>
+                        <mods:role>
+                            <mods:roleTerm type="code" authority="marcrelator">aut</mods:roleTerm>
+                        </mods:role>
+                    </mods:name>
+                    <mods:genre type="main article">electronic_article</mods:genre>
+                    <mods:language>
+                        <mods:languageTerm type="code" authority="iso639-2b">cze</mods:languageTerm>
+                    </mods:language>
+                    <mods:physicalDescription>
+                        <mods:form>electronic</mods:form>
+                        <mods:digitalOrigin>born digital</mods:digitalOrigin>
+                    </mods:physicalDescription>
+                    <mods:subject authority="czenas">
+                    <mods:topic>městská hromadná doprava</mods:topic>
+                    <mods:identifier type="uuid">si8793h2-4dd6-33bb-es51-m4op89350f54</mods:identifier>
+                    <mods:location>
+                        <mods:url>https://www.salina-brno.cz/images/casopis_pdf/03%20-%202018.pdf</mods:url>
+                    </mods:location>
+                    <mods:part>
+                        <mods:extent>
+                            <mods:start>18</mods:start>
+                            <mods:end>18</mods:end>
+                        </mods:extent>
+                    </mods:part>
+                    <mods:relatedItem>
+                        <mods:titleInfo>
+                        <mods:title>Šalina</mods:title>
+                        <mods:partNumber>3</mods:title>
+                        <mods:titleInfo>
+                        <moda:originInfo>
+                            <mods:dateIssued>03.2018</mods:dateIssued>
+                        </mods:originInfo>
+                        <mods:identifier type="uuid">jgmdaeda-8be0-44ca-ae51-b071b6f31d00</mods:identifier>
+                    </mods:relatedItem>
+                </mods:mods>
+            </mets:xmlData>
+        </mets:mdWrap>
+    </mets:dmdSec>
+    <mets:dmdSec ID="DCMD_ART_0002">
+        <mets:mdWrap MDTYPE="DC" MIMETYPE="text/xml">
+            <mets:xmlData>
+                <oai_dc:dc>
+                    <dc:title>Dopravní dipečink je mozkem celé brněnské MHD</dc:title>
+                    <dc:creator>red</dc:creator>
+                    <dc:type>model:internalpart</dc:type>
+                    <dc:format>electronic</dc:format>
+                    <dc:description>born digital</dc:description>
+                    <dc:subject>městská hromadná doprava</dc:subject>
+                    <dc:identifier>si8793h2-4dd6-33bb-es51-m4op89350f54</dc:identifier>
+                    <dc:source>https://www.salina-brno.cz/images/casopis_pdf/03%20-%202018.pdf</dc:source>
+                    <dc:coverage>18</dc:coverage>
+                    <dc:coverage>18</dc:coverage>
+                </oai_dc:dc>
+            </mets:xmlData>
+        </mets:mdWrap>
+    </mets:dmdSec>
+
+    <mets:amdSec ID="VOLUME_0001">
+        <mets:techMD ID="OBJ_0001">
+            <mets:mdWrap>
+                <mets:xmlData>
+                    <premis:object xsi:type="file">
+                        <premis:objectIdentifier>
+                            <premis:objectIdentifierType>file</premis:objectIdentifierType>
+                            <premis:objectIdentifierValue>00000001</premis:objectIdentifierValue>
+                        </premis:objectIdentifier>
+                        <premis:preservationLevel>
+                            <premis:preservationLevelValue>logical preservation</premis:preservationLevelValue>
+                            <premis:preservationLevelDateAssigned>2017-12-18</premis:preservationLevelDateAssigned>
+                        </premis:preservationLevel>
+                        <premis:objectCharacteristics>
+                            <premis:compositionLevel>0</premis:compositionLevel>
+                            <premis:fixity>
+                                <premis:messageDigestAlgorithm>CRC32</premis:messageDigestAlgorithm>
+                                <premis:messageDigest>a3329123</premis:messageDigest>
+                                <premis:messageDigestOriginator>JHOVE</premis:messageDigestOriginator>
+                            </premis:fixity>
+                            <premis:fixity>
+                                <premis:messageDigestAlgorithm>SHA-1</premis:messageDigestAlgorithm>
+                                <premis:messageDigest>9ae11fc37aab534f31ebb676ad57e98f37aaf4ac</premis:messageDigest>
+                                <premis:messageDigestOriginator>JHOVE</premis:messageDigestOriginator>
+                            </premis:fixity>
+                            <premis:fixity>
+                                <premis:messageDigestAlgorithm>MD5</premis:messageDigestAlgorithm>
+                                <premis:messageDigest>93868d4aed50a444fd8b8b282be0975b</premis:messageDigest>
+                                <premis:messageDigestOriginator>JHOVE</premis:messageDigestOriginator>
+                            </premis:fixity>
+                            <premis:size>120934</premis:size>
+                            <premis:format>
+                                <premis:formatDesignation>
+                                    <premis:formatName>application/pdf</premis:formatName>
+                                    <premis:formatVersion>1a</premis:formatVersion>
+                                </premis:formatDesignation>
+                                <premis:formatRegistry>
+                                    <premis:formatRegistryName>PRONOM</premis:formatRegistryName>
+                                    <premis:formatRegistryKey>fmt/95</premis:formatRegistryKey>
+                                </premis:formatRegistry>
+                            </premis:format>
+                            <premis:creatingApplication>
+                                <premis:creatingApplicationName>PDF Architect 4</premis:creatingApplicationName>
+                                <premis:creatingApplicationVersion>PDF Architect 4</premis:creatingApplicationVersion>
+                                <premis:dateCreatedByApplication>2017-06-01T08:00:09Z</premis:dateCreatedByApplication>
+                            </premis:creatingApplication>
+                            <premis:objectCharacteristicsExtension>
+                                <docmd:docmd>
+                                    <docmd:document xmlns:docmd="http://www.fcla.edu/docmd"
+                                                    xsi:schemaLocation="http://www.fcla.edu/docmd http://www.fcla.edu/dls/md/docmd.xsd">
+                                        <docmd:PageCount>57</docmd:PageCount>
+                                        <docmd:Font FontName="Cambria, 400" isEmbedded="true"/>
+                                        <docmd:Font FontName="Cambria Bold, 700" isEmbedded="true"/>
+                                        <docmd:Font FontName="Calibri, 400" isEmbedded="true"/>
+                                        <docmd:documentMetadataExtension>
+                                            <ndktech:ndktech xmlns:ndktech="http://www.ndk.cz/standardy-digitalizace/ndktech/1.1"
+                                                             xsi:schemaLocation="http://www.ndk.cz/standardy-digitalizace/ndktech/1.1 http://www.ndk.cz/standardydigitalizace/ndktech/ndktech-v1-1.xsd">
+                                                <ndktech:filters>
+                                                    <ndktech:filter>DCTDecode</ndktech:filter>
+                                                    <ndktech:mediatype>FlateDecode</ndktech:mediatype>
+                                                </ndktech:filters>
+                                                <ndktech:colorspaces>
+                                                    <ndktech:colorspace>RGB</ndktech:colorspace>
+                                                </ndktech:colorspaces>
+                                                <ndktech:iccprofile>
+                                                    <ndktech:iccprofilename>sRGB IEC61966-2.1</ndktech:iccprofilename>
+                                                    <ndktech:iccprofileversion>sRGB IEC61966-2.1</ndktech:iccprofileversion>
+                                                </ndktech:iccprofile>
+                                                <ndktech:imagesCount>5</ndktech:imagesCount>
+                                                <ndktech:indirectObjectsNumber>1944</ndktech:indirectObjectsNumber>
+                                            </ndktech:ndktech>
+                                        </docmd:documentMetadataExtension>
+                                    </docmd:document>
+                                </docmd:docmd>
+                            </premis:objectCharacteristicsExtension>
+                        </premis:objectCharacteristics>
+                        <premis:originalName>03 - 2018.pdf.pdf</premis:originalName>
+                        <premis:relationship>
+                            <premis:relationshipType>structural</premis:relationshipType>
+                            <premis:relationshipSubType>includes</premis:relationshipSubType>
+                            <premis:relatedObjectIdentification>
+                                <premis:relatedObjectIdentifierType>URI</premis:relatedObjectIdentifierType>
+                                <premis:relatedObjectIdentifierValue>/tmp/Basne-Francois Villon.pdf/1</premis:relatedObjectIdentifierValue>
+                            </premis:relatedObjectIdentification>
+                        </premis:relationship>
+                        <premis:relationship>
+                            <premis:relationshipType>structural</premis:relationshipType>
+                            <premis:relationshipSubType>includes</premis:relationshipSubType>
+                            <premis:relatedObjectIdentification>
+                                <premis:relatedObjectIdentifierType>URI</premis:relatedObjectIdentifierType>
+                                <premis:relatedObjectIdentifierValue>/tmp/Basne-Francois Villon.pdf/2</premis:relatedObjectIdentifierValue>
+                            </premis:relatedObjectIdentification>
+                        </premis:relationship>
+                        <premis:relationship>
+                            <premis:relationshipType>structural</premis:relationshipType>
+                            <premis:relationshipSubType>includes</premis:relationshipSubType>
+                            <premis:relatedObjectIdentification>
+                                <premis:relatedObjectIdentifierType>URI</premis:relatedObjectIdentifierType>
+                                <premis:relatedObjectIdentifierValue>/tmp/Basne-Francois Villon.pdf/3</premis:relatedObjectIdentifierValue>
+                            </premis:relatedObjectIdentification>
+                        </premis:relationship>
+                        <premis:relationship>
+                            <premis:relationshipType>structural</premis:relationshipType>
+                            <premis:relationshipSubType>includes</premis:relationshipSubType>
+                            <premis:relatedObjectIdentification>
+                                <premis:relatedObjectIdentifierType>URI</premis:relatedObjectIdentifierType>
+                                <premis:relatedObjectIdentifierValue>/tmp/Basne-Francois Villon.pdf/4</premis:relatedObjectIdentifierValue>
+                            </premis:relatedObjectIdentification>
+                        </premis:relationship>
+                        <premis:relationship>
+                            <premis:relationshipType>structural</premis:relationshipType>
+                            <premis:relationshipSubType>includes</premis:relationshipSubType>
+                            <premis:relatedObjectIdentification>
+                                <premis:relatedObjectIdentifierType>URI</premis:relatedObjectIdentifierType>
+                                <premis:relatedObjectIdentifierValue>/tmp/Basne-Francois Villon.pdf/5</premis:relatedObjectIdentifierValue>
+                            </premis:relatedObjectIdentification>
+                        </premis:relationship>
+                        <premis:linkingEventIdentifier>
+                            <premis:linkingEventIdentifierType>EventID</premis:linkingEventIdentifierType>
+                            <premis:linkingEventIdentifierValue>Event_01</premis:linkingEventIdentifierValue>
+                        </premis:linkingEventIdentifier>
+                        <premis:linkingEventIdentifier>
+                            <premis:linkingEventIdentifierType>EventID</premis:linkingEventIdentifierType>
+                            <premis:linkingEventIdentifierValue>Event_02</premis:linkingEventIdentifierValue>
+                        </premis:linkingEventIdentifier>
+                        <premis:linkingEventIdentifier>
+                            <premis:linkingEventIdentifierType>EventID</premis:linkingEventIdentifierType>
+                            <premis:linkingEventIdentifierValue>Event_03</premis:linkingEventIdentifierValue>
+                        </premis:linkingEventIdentifier>
+                    </premis:object>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:techMD>
+    </premis:object>
+</mets:xmlData>
+        </mets:mdWrap>
+        </mets:techMD>
+        </mets:amdSec>
+
+<mets:amdSec>
+<mets:rightsMD ID="RIGHTS_0001">
+    <mets:mdWrap MIMETYPE="text/html" MDTYPE="OTHER" OTHERMDTYPE="CopyrightMD">
+        <mets:xmlData>
+            <copyrightMD:copyright copyright.status="pd_holder" publication.status="unknown">
+                <copyrightMD:general.note>BY</copyrightMD:general.note>
+            </coprightMD:copyright>
+        </mets:xmlData>
+    </mets:mdWrap>
+</mets:rightsMD>
+</mets:amdSec>
+<mets:fileSec>
+<mets:fileGrp ID="OC_EBGRP" USE="master">
+    <mets:file ID="nk-2411ib" MIMETYPE="pdf" SIZE="8339866" CHECKSUMTYPE="MD5" CHECKSUM="1803fc66b3231fedo33e25b4a31ef8ae" SEQ="1"
+               CREATED="2018-07-10T10:46:15Z">
+        <mets:FLocat xlink:href="./original/nk-2411ib.pdf" LOCTYPE="URL"/>
+    </mets:file>
+</mets:fileGrp>
+</mets:fileSec>
+<mets:structMap>
+<mets:div ID="TITLE_0001" DMDID="MODSMD_TITLE_0001" ADMID="RIGHTS_0001" TYPE="TITLE">
+    <mets:div ID="VOLUME_0001" DMDID="MODSMD_VOLUME_0001" TYPE="VOLUME">
+        <mets:div ID="ISSUE_0001" LABEL="nk-2411ib" TYPE="DOCUMENT">
+            <mets:div ID="FILE_0001" ADMID="OBJ_0001" LABEL="nk-2411ib" TYPE="FILE">
+                <mets:fptr FILEID="nk-2411ib"/>
+            </mets:div>
+        </mets:div>
+    </mets:div>
+</mets:div>
+</mets:div>
+        </mets:structMap>
+        </mets:mets>

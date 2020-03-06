@@ -24,15 +24,15 @@ public class DmfDetector {
     public static final String DEFAULT_MONOGRAPH_VERSION = "1.0";
     public static final String DEFAULT_PERIODICAL_VERSION = "1.4";
     public static final String DEFAULT_SOUND_RECORDING_VERSION = "0.2";
-
+    public static final String DEFAULT_EMONOGRAPH_VERSION = "2.2.1";
+    public static final String DEFAULT_EPERIODICAL_VERSION = "2.2.1";
 
     /**
-     * Validátor zkontroluje hlavní mets soubor, konkrétně kořenový element <mets:mets> na hodnotu atributu TYPE. Možné hodnoty jsou „Monograph“ nebo „Periodical“. Platí:
+     * Validátor zkontroluje hlavní mets soubor, konkrétně kořenový element <mets:mets> na hodnotu atributu TYPE. Platí:
      * Pokud nenalezne atribut TYPE – chyba.
-     * Pokud se vyskytne jiná než povolená hodnota atributu – chyba.
-     * Pokud se vyskytuje hodnota „Monograph“, zachází validátor s balíčkem jako s monografií.
-     * Pokud se vyskytuje hodnota „Periodical“, zachází validátor s balíčkem jako s periodikem.
-     * Pokud se vyskytuje hodnota „sound recording“, zachází validátor s balíčkem jako se zvukovým dokumentem.
+     * Pokud se vyskytuje hodnota „electronic_monograph“, zachází validátor s balíčkem jako s elektronickou monografií.
+     * Pokud se vyskytuje hodnota „electronic_periodical“, zachází validátor s balíčkem jako s elektronickým periodikem.
+     * Pokud se vyskytne jiná hodnota atributu – chyba.
      */
     public Dmf.Type detectDmfType(File pspRootDir) throws PspDataException, XmlFileParsingException, InvalidXPathExpressionException {
 
@@ -41,14 +41,12 @@ public class DmfDetector {
             Document metsDoc = loadDocument(primaryMetsFile);
             XPathExpression xPathExpression = buildXpathIgnoringNamespaces("/mets/@TYPE");
             String docType = ((String) xPathExpression.evaluate(metsDoc, XPathConstants.STRING)).trim();
-            if ("Monograph".equals(docType)) {
-                return MONOGRAPH;
-            } else if ("Periodical".equals(docType)) {
-                return PERIODICAL;
-            } else if ("sound recording".equals(docType)) {
-                return SOUND_RECORDING;
+            if ("electronic_monograph".equals(docType)) {
+                return EMONOGRAPH;
+            } else if ("electronic_periodical".equals(docType)) {
+                return EPERIODICAL;
             } else {
-                throw new PspDataException(pspRootDir, String.format("atribut TYPE elementu mods neobsahuje korektní typ (Monograph/Periodical/sound recording), ale hodnotu '%s'", docType));
+                throw new PspDataException(pspRootDir, String.format("atribut TYPE elementu mods neobsahuje očekávaný typ (electronic_monograph/electronic_periodical), ale hodnotu '%s'", docType));
             }
         } catch (XPathExpressionException e) {
             throw new InvalidXPathExpressionException("", String.format("chyba v zápisu Xpath: %s", e.getMessage()));
@@ -59,14 +57,14 @@ public class DmfDetector {
         Pattern pattern = Pattern.compile(".*mets.*\\.xml", java.util.regex.Pattern.CASE_INSENSITIVE | java.util.regex.Pattern.UNICODE_CASE);
         File[] metsCandidates = pspRootDir.listFiles((dir, name) -> pattern.matcher(name).matches());
         if (metsCandidates.length >= 2) {
-            for(File metsCandidate: metsCandidates){
+            for (File metsCandidate : metsCandidates) {
                 System.out.println(metsCandidate.getAbsolutePath());
             }
             throw new PspDataException(pspRootDir,
-                    String.format("nalezeno více možných souborů PRIMARY-METS, není jasné, který použít pro zjištění typu dokumentu (monografie/periodikum/zvuk)"));
+                    String.format("nalezeno více možných souborů PRIMARY-METS, není jasné, který použít pro zjištění typu dokumentu (emonografie/eperiodikum)"));
         } else if (metsCandidates.length == 0) {
             throw new PspDataException(pspRootDir,
-                    String.format("nenalezen soubor PRIMARY-METS pro zjištění typu dokumentu (monografie/periodikum/zvuk)"));
+                    String.format("nenalezen soubor PRIMARY-METS pro zjištění typu dokumentu (emonografie/eperiodikum)"));
         } else {
             return metsCandidates[0];
         }
@@ -134,7 +132,7 @@ public class DmfDetector {
     public Dmf resolveDmf(File pspRoot, Params params) throws PspDataException, InvalidXPathExpressionException, XmlFileParsingException {
         Dmf.Type type = detectDmfType(pspRoot);
         switch (type) {
-            case MONOGRAPH: {
+            /*case MONOGRAPH: {
                 return chooseVersion(MONOGRAPH, pspRoot, params.forcedDmfMonVersion, params.preferredDmfMonVersion, DEFAULT_MONOGRAPH_VERSION);
             }
             case PERIODICAL: {
@@ -142,6 +140,12 @@ public class DmfDetector {
             }
             case SOUND_RECORDING: {
                 return chooseVersion(SOUND_RECORDING, pspRoot, params.forcedDmfSRVersion, params.preferredDmfSRVersion, DEFAULT_SOUND_RECORDING_VERSION);
+            }*/
+            case EMONOGRAPH: {
+                return chooseVersion(EMONOGRAPH, pspRoot, params.forcedDmfEmonVersion, params.preferredDmfEmonVersion, DEFAULT_EMONOGRAPH_VERSION);
+            }
+            case EPERIODICAL: {
+                return chooseVersion(EPERIODICAL, pspRoot, params.forcedDmfEperVersion, params.preferredDmfEperVersion, DEFAULT_EPERIODICAL_VERSION);
             }
             default:
                 throw new IllegalStateException();
@@ -165,12 +169,16 @@ public class DmfDetector {
 
 
     public static class Params {
-        public String preferredDmfMonVersion;
+        /*public String preferredDmfMonVersion;
         public String preferredDmfPerVersion;
-        public String preferredDmfSRVersion;
-        public String forcedDmfMonVersion;
+        public String preferredDmfSRVersion;*/
+        public String preferredDmfEmonVersion;
+        public String preferredDmfEperVersion;
+        /*public String forcedDmfMonVersion;
         public String forcedDmfPerVersion;
-        public String forcedDmfSRVersion;
+        public String forcedDmfSRVersion;*/
+        public String forcedDmfEmonVersion;
+        public String forcedDmfEperVersion;
     }
 
 }
