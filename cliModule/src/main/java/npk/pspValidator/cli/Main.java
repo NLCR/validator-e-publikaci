@@ -107,7 +107,7 @@ public class Main {
                 .withLongOpt(Params.QUIT_AFTER_NTH_INVALID_PSP)
                 .create());*/
 
-        options.addOption(OptionBuilder
+        /*options.addOption(OptionBuilder
                 .withDescription(replaceUmlaut(
                         "Preferovaná verze DMF pro validaci monografií. " +
                                 "Použije se k validaci, pokud je balík typu Monografie, data balíku neobsahují informaci o vhodné verzi DMF Monografie " +
@@ -115,9 +115,8 @@ public class Main {
                 .hasArg()
                 .withArgName("VERZE")
                 .withLongOpt(Params.PREFERRED_DMF_MON_VERSION)
-                .create());
-
-        options.addOption(OptionBuilder
+                .create());*/
+        /*options.addOption(OptionBuilder
                 .withDescription(replaceUmlaut(
                         "Preferovaná verze DMF pro validaci periodik. " +
                                 "Použije se k validaci, pokud je balík typu Periodikum, data balíku neobsahují informaci o vhodné verzi DMF Periodikum " +
@@ -125,8 +124,8 @@ public class Main {
                 .hasArg()
                 .withArgName("VERZE")
                 .withLongOpt(Params.PREFERRED_DMF_PER_VERSION)
-                .create());
-        options.addOption(OptionBuilder
+                .create());*/
+        /*options.addOption(OptionBuilder
                 .withDescription(replaceUmlaut(
                         "Preferovaná verze DMF pro validaci zvukových dokumentů. " +
                                 "Použije se k validaci, pokud je balík typu Zvukový dokument, data balíku neobsahují informaci o vhodné verzi DMF Zvukové dokumenty " +
@@ -134,30 +133,66 @@ public class Main {
                 .hasArg()
                 .withArgName("VERZE")
                 .withLongOpt(Params.PREFERRED_DMF_SR_VERSION)
+                .create());*/
+        options.addOption(OptionBuilder
+                .withDescription(replaceUmlaut(
+                        "Preferovaná verze DMF pro validaci e-monografií. " +
+                                "Použije se k validaci, pokud je balík typu E-Monografie, data balíku neobsahují informaci o vhodné verzi DMF E-Monografie " +
+                                "a parametr --forced-dmf-emon-version není vyplněn."))
+                .hasArg()
+                .withArgName("VERZE")
+                .withLongOpt(Params.PREFERRED_DMF_EMON_VERSION)
                 .create());
         options.addOption(OptionBuilder
+                .withDescription(replaceUmlaut(
+                        "Preferovaná verze DMF pro validaci e-periodik. " +
+                                "Použije se k validaci, pokud je balík typu E-Periodikum, data balíku neobsahují informaci o vhodné verzi DMF E-Periodikum " +
+                                "a parametr --forced-dmf-eper-version není vyplněn."))
+                .hasArg()
+                .withArgName("VERZE")
+                .withLongOpt(Params.PREFERRED_DMF_EPER_VERSION)
+                .create());
+
+
+        /*options.addOption(OptionBuilder
                 .withDescription(replaceUmlaut(
                         "Vynucená verze DMF pro validaci monografií. " +
                                 "Použije se k validaci všech balíků typu Monografie bez ohledu na data balíků a hodnotu parametru --preferred-dmf-mon-version."))
                 .hasArg()
                 .withArgName("VERZE")
                 .withLongOpt(Params.FORCED_DMF_MON_VERSION)
-                .create());
-        options.addOption(OptionBuilder
+                .create());*/
+        /*options.addOption(OptionBuilder
                 .withDescription(replaceUmlaut(
                         "Vynucená verze DMF pro validaci periodik. " +
                                 "Použije se k validaci všech balíků typu Periodikum bez ohledu na data balíků a hodnotu parametru --preferred-dmf-per-version."))
                 .hasArg()
                 .withArgName("VERZE")
                 .withLongOpt(Params.FORCED_DMF_PER_VERSION)
-                .create());
-        options.addOption(OptionBuilder
+                .create());*/
+        /*options.addOption(OptionBuilder
                 .withDescription(replaceUmlaut(
                         "Vynucená verze DMF pro validaci zvukových dokumentů. " +
                                 "Použije se k validaci všech balíků typu Zvukový dokument bez ohledu na data balíků a hodnotu parametru --preferred-dmf-sr-version."))
                 .hasArg()
                 .withArgName("VERZE")
                 .withLongOpt(Params.FORCED_DMF_SR_VERSION)
+                .create());*/
+        options.addOption(OptionBuilder
+                .withDescription(replaceUmlaut(
+                        "Vynucená verze DMF pro validaci e-monografií. " +
+                                "Použije se k validaci všech balíků typu E-Monografie bez ohledu na data balíků a hodnotu parametru --preferred-dmf-emon-version."))
+                .hasArg()
+                .withArgName("VERZE")
+                .withLongOpt(Params.FORCED_DMF_EMON_VERSION)
+                .create());
+        options.addOption(OptionBuilder
+                .withDescription(replaceUmlaut(
+                        "Vynucená verze DMF pro validaci e-periodik. " +
+                                "Použije se k validaci všech balíků typu E-Periodikum bez ohledu na data balíků a hodnotu parametru --preferred-dmf-eper-version."))
+                .hasArg()
+                .withArgName("VERZE")
+                .withLongOpt(Params.FORCED_DMF_EPER_VERSION)
                 .create());
 
         options.addOption(OptionBuilder
@@ -365,30 +400,47 @@ public class Main {
                 }*/
 
                 //preferred dmf versions
-                String preferDmfMonVersion = null;
+                /*String preferDmfMonVersion = null;
                 if (line.hasOption(Params.PREFERRED_DMF_MON_VERSION)) {
                     preferDmfMonVersion = line.getOptionValue(Params.PREFERRED_DMF_MON_VERSION);
-                }
-                String preferDmfPerVersion = null;
+                }*/
+                /*String preferDmfPerVersion = null;
                 if (line.hasOption(Params.PREFERRED_DMF_PER_VERSION)) {
                     preferDmfPerVersion = line.getOptionValue(Params.PREFERRED_DMF_PER_VERSION);
-                }
+                }*/
                 String preferDmfSrVersion = null;
-                if (line.hasOption(Params.PREFERRED_DMF_SR_VERSION)) {
+                /*if (line.hasOption(Params.PREFERRED_DMF_SR_VERSION)) {
                     preferDmfSrVersion = line.getOptionValue(Params.PREFERRED_DMF_SR_VERSION);
+                }*/
+                String preferDmfEmonVersion = null;
+                if (line.hasOption(Params.PREFERRED_DMF_EMON_VERSION)) {
+                    preferDmfEmonVersion = line.getOptionValue(Params.PREFERRED_DMF_EMON_VERSION);
                 }
+                String preferDmfEperVersion = null;
+                if (line.hasOption(Params.PREFERRED_DMF_EPER_VERSION)) {
+                    preferDmfEperVersion = line.getOptionValue(Params.PREFERRED_DMF_EPER_VERSION);
+                }
+
                 //force dmf versions
-                String forceDmfMonVersion = null;
+                /*String forceDmfMonVersion = null;
                 if (line.hasOption(Params.FORCED_DMF_MON_VERSION)) {
                     forceDmfMonVersion = line.getOptionValue(Params.FORCED_DMF_MON_VERSION);
-                }
-                String forceDmfPerVersion = null;
+                }*/
+                /*String forceDmfPerVersion = null;
                 if (line.hasOption(Params.FORCED_DMF_PER_VERSION)) {
                     forceDmfPerVersion = line.getOptionValue(Params.FORCED_DMF_PER_VERSION);
-                }
-                String forceDmfSrVersion = null;
+                }*/
+                /*String forceDmfSrVersion = null;
                 if (line.hasOption(Params.FORCED_DMF_SR_VERSION)) {
                     forceDmfSrVersion = line.getOptionValue(Params.FORCED_DMF_SR_VERSION);
+                }*/
+                String forceDmfEmonVersion = null;
+                if (line.hasOption(Params.FORCED_DMF_EMON_VERSION)) {
+                    forceDmfEmonVersion = line.getOptionValue(Params.FORCED_DMF_EMON_VERSION);
+                }
+                String forceDmfEperVersion = null;
+                if (line.hasOption(Params.FORCED_DMF_EPER_VERSION)) {
+                    forceDmfEperVersion = line.getOptionValue(Params.FORCED_DMF_EPER_VERSION);
                 }
 
                 //verbosity
@@ -462,12 +514,16 @@ public class Main {
                 }
 
                 DmfDetector.Params dmfDetectorParams = new DmfDetector.Params();
-                dmfDetectorParams.forcedDmfMonVersion = forceDmfMonVersion;
-                dmfDetectorParams.forcedDmfPerVersion = forceDmfPerVersion;
-                dmfDetectorParams.forcedDmfSRVersion = forceDmfSrVersion;
-                dmfDetectorParams.preferredDmfMonVersion = preferDmfMonVersion;
-                dmfDetectorParams.preferredDmfPerVersion = preferDmfPerVersion;
-                dmfDetectorParams.preferredDmfSRVersion = preferDmfSrVersion;
+                //dmfDetectorParams.forcedDmfMonVersion = forceDmfMonVersion;
+                //dmfDetectorParams.forcedDmfPerVersion = forceDmfPerVersion;
+                //dmfDetectorParams.forcedDmfSRVersion = forceDmfSrVersion;
+                dmfDetectorParams.forcedDmfEmonVersion = forceDmfEmonVersion;
+                dmfDetectorParams.forcedDmfEperVersion = forceDmfEperVersion;
+                //dmfDetectorParams.preferredDmfMonVersion = preferDmfMonVersion;
+                //dmfDetectorParams.preferredDmfPerVersion = preferDmfPerVersion;
+                //dmfDetectorParams.preferredDmfSRVersion = preferDmfSrVersion;
+                dmfDetectorParams.preferredDmfEmonVersion = preferDmfEmonVersion;
+                dmfDetectorParams.preferredDmfEperVersion = preferDmfEperVersion;
 
                 PrintStream out = System.out;
                 PrintStream err = System.err;

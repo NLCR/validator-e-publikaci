@@ -109,11 +109,15 @@ public class MainTest {
                 //, "1.4"
                 //, "1.6"
                 , null
+                , null
+                , null
                 //,"1.0"
                 //,"1.2"
                 , null
                 //, "1.4"
                 //, "1.6"
+                , null
+                , null
                 , 2 //verbosity
                 , "/tmp/protocols"
                 , null//"src/test/resources/protocol.xml" //xml protocol
@@ -131,7 +135,8 @@ public class MainTest {
     private String[] buildParams(Action action,
                                  String configDir, String tmpDir,
                                  String pspDir, String pspGroupDir,
-                                 String preferDmfModVersion, String preferDmfPerVersion, String forceDmfModVersion, String forceDmfPerVersion,
+                                 String preferDmfMonVersion, String preferDmfPerVersion, String preferDmfEmonVersion, String preferDmfEperVersion,
+                                 String forceDmfMonVersion, String forceDmfPerVersion, String forceDmfEmonVersion, String forceDmfEperVersion,
                                  Integer verbosity, String xmlProtocolDir, String xmlProtocolFile,
                                  String imageMagickPath, String jhovePath, String jpylyzerPath, String kakaduPath,
                                  boolean disableImageMagick, boolean disableJhove, boolean disableJpylyzer, boolean disableKakadu
@@ -173,21 +178,38 @@ public class MainTest {
         //TODO: quit-after-nth-invalid-psp
 
         //DMF versions
-        if (preferDmfModVersion != null) {
+        /*if (preferDmfMonVersion != null) {
             params.add(String.format("--%s", Params.PREFERRED_DMF_MON_VERSION));
-            params.add(preferDmfModVersion);
-        }
-        if (preferDmfPerVersion != null) {
+            params.add(preferDmfMonVersion);
+        }*/
+        /*if (preferDmfPerVersion != null) {
             params.add(String.format("--%s", Params.PREFERRED_DMF_PER_VERSION));
             params.add(preferDmfPerVersion);
+        }*/
+        if (preferDmfMonVersion != null) {
+            params.add(String.format("--%s", Params.PREFERRED_DMF_EMON_VERSION));
+            params.add(preferDmfEmonVersion);
         }
-        if (forceDmfModVersion != null) {
+        if (preferDmfEperVersion != null) {
+            params.add(String.format("--%s", Params.PREFERRED_DMF_EPER_VERSION));
+            params.add(preferDmfEperVersion);
+        }
+
+        /*if (forceDmfMonVersion != null) {
             params.add(String.format("--%s", Params.FORCED_DMF_MON_VERSION));
-            params.add(forceDmfModVersion);
-        }
-        if (forceDmfPerVersion != null) {
+            params.add(forceDmfMonVersion);
+        }*/
+        /*if (forceDmfPerVersion != null) {
             params.add(String.format("--%s", Params.FORCED_DMF_PER_VERSION));
             params.add(forceDmfPerVersion);
+        }*/
+        if (forceDmfEmonVersion != null) {
+            params.add(String.format("--%s", Params.FORCED_DMF_EMON_VERSION));
+            params.add(forceDmfEmonVersion);
+        }
+        if (forceDmfEperVersion != null) {
+            params.add(String.format("--%s", Params.FORCED_DMF_EPER_VERSION));
+            params.add(forceDmfEperVersion);
         }
 
         //verbosity
