@@ -13,19 +13,19 @@ import java.io.FilenameFilter;
 import java.io.IOException;
 import java.util.regex.Pattern;
 
-import static nkp.pspValidator.shared.Dmf.Type.*;
+import static nkp.pspValidator.shared.Dmf.Type.EMONOGRAPH;
+import static nkp.pspValidator.shared.Dmf.Type.EPERIODICAL;
 
 /**
  * Created by Martin Řehánek on 2.11.16.
  */
 public class DmfDetector {
 
-
     public static final String DEFAULT_MONOGRAPH_VERSION = "1.0";
     public static final String DEFAULT_PERIODICAL_VERSION = "1.4";
     public static final String DEFAULT_SOUND_RECORDING_VERSION = "0.2";
-    public static final String DEFAULT_EMONOGRAPH_VERSION = "2.2.1";
-    public static final String DEFAULT_EPERIODICAL_VERSION = "2.2.1";
+    public static final String DEFAULT_EMONOGRAPH_VERSION = "2.3";
+    public static final String DEFAULT_EPERIODICAL_VERSION = "2.3";
 
     /**
      * Validátor zkontroluje hlavní mets soubor, konkrétně kořenový element <mets:mets> na hodnotu atributu TYPE. Platí:
@@ -35,7 +35,6 @@ public class DmfDetector {
      * Pokud se vyskytne jiná hodnota atributu – chyba.
      */
     public Dmf.Type detectDmfType(File pspRootDir) throws PspDataException, XmlFileParsingException, InvalidXPathExpressionException {
-
         try {
             File primaryMetsFile = findPrimaryMetsFile(pspRootDir);
             Document metsDoc = loadDocument(primaryMetsFile);

@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<mets:mets xmlns:mets="http://www.loc.gov/METS/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:mods="http://www.loc.gov/mods/v3"
-           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:premis="info:lc/xmlns/premis-v2" xmlns:xlink="http://www.w3.org/1999/xlink"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" LABEL="Básně, 2011" TYPE="electronic_monograph"
-           xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://www.w3.org/2001/XMLSchema.xsd http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-6.xsd http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+<mets:mets LABEL="Básně, 2011" TYPE="electronic_monograph"
+           xmlns:mets="http://www.loc.gov/METS/"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:mods="http://www.loc.gov/mods/v3"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:premis="info:lc/xmlns/premis-v2"
+           xmlns:copyrightMD="http://www.cdlib.org/inside/diglib/copyrightMD"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://www.w3.org/2001/XMLSchema.xsd http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-6.xsd http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+>
     <mets:metsHdr CREATEDATE="2017-06-09T09:16:27Z" LASTMODDATE="2017-06-09T09:16:27Z">
         <mets:agent ROLE="CREATOR" TYPE="ORGANIZATION">
             <mets:name>ABA001</mets:name>
@@ -22,7 +29,8 @@
                         <mods:namePart type="family">Villon</mods:namePart>
                         <mods:namePart type="given">Francois</mods:namePart>
                         <mods:namePart type="date">1850-1900</mods:namePart>
-                        <mods:nameIdentifier>jn19990009794</mods:nameIdentifier>
+                        <!--TODO: fix-->
+                        <!--<mods:nameIdentifier>jn19990009794</mods:nameIdentifier>-->
                         <mods:role>
                             <mods:roleTerm authority="marcrelator" type="code">aut</mods:roleTerm>
                         </mods:role>
@@ -31,7 +39,8 @@
                         <mods:namePart type="family">Fischer</mods:namePart>
                         <mods:namePart type="given">Otokar</mods:namePart>
                         <mods:namePart type="date">1883-1938</mods:namePart>
-                        <mods:nameIdentifier>jk01031286</mods:nameIdentifier>
+                        <!--TODO: fix-->
+                        <!--<mods:nameIdentifier>jk01031286</mods:nameIdentifier>-->
                         <mods:role>
                             <mods:roleTerm authority="marcrelator" type="code">trl</mods:roleTerm>
                         </mods:role>
@@ -67,7 +76,7 @@
                         soustředěny do několika tematických okruhů - píše šprýmové odkazy, úvahy o umírání, básně proti pomlouvačům, jindy zase líčí pomíjivost
                         lásky, krásy a slávy. Často ve svých verších dává na odiv svou tělesnou i duševní bídu. Uspořádání tohoto výboru se snaží alespoň o
                         přibližnou chronologii podle dostupných faktů z básníkova života.
-                    </abstract>
+                    </mods:abstract>
                     <mods:identifier type="uuid">op946fbc-1cc2-4f83-8683-630fa09bbd51</mods:identifier>
                     <mods:identifier type="urnnbn">urn:nbn:cz:nk-mbc228</mods:identifier>
                     <mods:identifier type="isbn">978-80-7532-710-1</mods:identifier>
@@ -85,7 +94,7 @@
                         <mods:descriptionStandard>rda</mods:descriptionStandard>
                         <mods:recordContentSource authority="marcorg">ABA001</mods:recordContentSource>
                         <mods:recordCreationDate encoding="iso8601">2017-06-09T00:00:00Z</mods:recordCreationDate>
-                        <mods:recordChangeDate encoding="iso8601">2017-06-10T08:00:00Z</mods:recordCreationDate>
+                        <mods:recordChangeDate encoding="iso8601">2017-06-10T08:00:00Z</mods:recordChangeDate>
                         <mods:recordIdentifier source="CZ-PrNK">0695690</mods:recordIdentifier>
                         <mods:recordOrigin>machine generated</mods:recordOrigin>
                         <mods:languageOfCataloging>
@@ -130,8 +139,6 @@
             </mets:xmlData>
         </mets:mdWrap>
     </mets:dmdSec>
-
-
     <mets:amdSec ID="VOLUME_0001">
         <mets:techMD ID="OBJ_0001">
             <mets:mdWrap>
@@ -302,8 +309,8 @@
                                         <mix:ImageColorEncoding>
                                             <mix:BitsPerSample>
                                                 <mix:bitsPerSampleValue>8</mix:bitsPerSampleValue>
-                                                <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleValue>
-                                            </mis:BitsPerSample>
+                                                <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
+                                            </mix:BitsPerSample>
                                         </mix:ImageColorEncoding>
                                     </mix:ImageAssessmentMetadata>
                                 </mix>
@@ -350,7 +357,7 @@
                                         <mix:ImageColorEncoding>
                                             <mix:BitsPerSample>
                                                 <mix:bitsPerSampleValue>8</mix:bitsPerSampleValue>
-                                                <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleValue>
+                                                <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
                                             </mix:BitsPerSample>
                                         </mix:ImageColorEncoding>
                                     </mix:ImageAssessmentMetadata>
@@ -398,7 +405,7 @@
                                         <mix:ImageColorEncoding>
                                             <mix:BitsPerSample>
                                                 <mix:bitsPerSampleValue>8</mix:bitsPerSampleValue>
-                                                <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleValue>
+                                                <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
                                             </mix:BitsPerSample>
                                         </mix:ImageColorEncoding>
                                     </mix:ImageAssessmentMetadata>
@@ -446,7 +453,7 @@
                                         <mix:ImageColorEncoding>
                                             <mix:BitsPerSample>
                                                 <mix:bitsPerSampleValue>8</mix:bitsPerSampleValue>
-                                                <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleValue>
+                                                <mix:bitsPerSampleUnit>integer</mix:bitsPerSampleUnit>
                                             </mix:BitsPerSample>
                                         </mix:ImageColorEncoding>
                                     </mix:ImageAssessmentMetadata>
@@ -583,8 +590,6 @@
             </mets:mdWrap>
         </mets:digiprovMD>
     </mets:amdSec>
-
-
     <mets:amdSec ID="AMD_MONOGRAPH_0001">
         <mets:rightsMD ID="RIGHTS_0001">
             <mets:mdWrap MIMETYPE="text/html" MDTYPE="OTHER" OTHERMDTYPE="CopyrightMD">
@@ -602,6 +607,7 @@
             </mets:file>
         </mets:fileGrp>
     </mets:fileSec>
+
     <mets:structMap>
         <mets:div ID="VOLUME_0001" DMDID="MODSMD_VOLUME_0001" ADMID="RIGHTS_0001" TYPE="VOLUME">
             <mets:div ID="DOCUMENT_0001" LABEL="nk-mbc228" TYPE="DOCUMENT">

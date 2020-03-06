@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<mets:mets xmlns:mets="http://www.loc.gov/METS/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:mods="http://www.loc.gov/mods/v3"
-           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:premis="info:lc/xmlns/premis-v2" xmlns:xlink="http://www.w3.org/1999/xlink"
-           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" LABEL="Šalina, 2018" TYPE="electronic_periodical"
-           xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://www.w3.org/2001/XMLSchema.xsd http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-6.xsd http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+<mets:mets LABEL="Šalina, 2018" TYPE="electronic_periodical"
+           xmlns:mets="http://www.loc.gov/METS/"
+           xmlns:dc="http://purl.org/dc/elements/1.1/"
+           xmlns:mods="http://www.loc.gov/mods/v3"
+           xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/"
+           xmlns:premis="info:lc/xmlns/premis-v2"
+           xmlns:copyrightMD="http://www.cdlib.org/inside/diglib/copyrightMD"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance http://www.w3.org/2001/XMLSchema.xsd http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-6.xsd http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd"
+>
     <mets:metsHdr CREATEDATE="2017-06-21T21:39:56" LASTMODDATE="2017-06-29T10:39:56">
         <mets:agent ROLE="CREATOR" TYPE="ORGANIZATION">
             <mets:name>ABA001</mets:name>
@@ -258,7 +264,7 @@
                         <mods:digitalOrigin>born digital</mods:digitalOrigin>
                     </mods:physicalDescription>
                     <mods:subject authority="czenas">
-                        <mods:topic>entomologie</moda:topic>
+                        <mods:topic>entomologie</mods:topic>
                     </mods:subject>
                     <mods:identifier type="uuid">6i6bro90-4dd6-bb33-es51-59703kjr5</mods:identifier>
                     <mods:location>
@@ -273,10 +279,10 @@
                     </mods:part>
                     <mods:relatedItem>
                         <mods:titleInfo>
-                        <mods:title>Šalina</mods:title>
-                        <mods:partNumber>3</mods:title>
-                        <mods:titleInfo>
-                        <moda:originInfo>
+                            <mods:title>Šalina</mods:title>
+                            <mods:partNumber>3</mods:partNumber>
+                        </mods:titleInfo>
+                        <mods:originInfo>
                             <mods:dateIssued>03.2018</mods:dateIssued>
                         </mods:originInfo>
                         <mods:identifier type="uuid">jgmdaeda-8be0-44ca-ae51-b071b6f31d00</mods:identifier>
@@ -327,7 +333,7 @@
                         <mods:form>electronic</mods:form>
                         <mods:digitalOrigin>born digital</mods:digitalOrigin>
                     </mods:physicalDescription>
-                    <mods:subject authority="czenas">
+                    <!--<mods:subject authority="czenas"/>-->
                     <mods:topic>městská hromadná doprava</mods:topic>
                     <mods:identifier type="uuid">si8793h2-4dd6-33bb-es51-m4op89350f54</mods:identifier>
                     <mods:location>
@@ -341,10 +347,10 @@
                     </mods:part>
                     <mods:relatedItem>
                         <mods:titleInfo>
-                        <mods:title>Šalina</mods:title>
-                        <mods:partNumber>3</mods:title>
-                        <mods:titleInfo>
-                        <moda:originInfo>
+                            <mods:title>Šalina</mods:title>
+                            <mods:partNumber>3</mods:partNumber>
+                        </mods:titleInfo>
+                        <mods:originInfo>
                             <mods:dateIssued>03.2018</mods:dateIssued>
                         </mods:originInfo>
                         <mods:identifier type="uuid">jgmdaeda-8be0-44ca-ae51-b071b6f31d00</mods:identifier>
@@ -371,7 +377,6 @@
             </mets:xmlData>
         </mets:mdWrap>
     </mets:dmdSec>
-
     <mets:amdSec ID="VOLUME_0001">
         <mets:techMD ID="OBJ_0001">
             <mets:mdWrap>
@@ -505,41 +510,37 @@
                 </mets:xmlData>
             </mets:mdWrap>
         </mets:techMD>
-    </premis:object>
-</mets:xmlData>
-        </mets:mdWrap>
-        </mets:techMD>
-        </mets:amdSec>
+    </mets:amdSec>
+    <mets:amdSec>
+        <mets:rightsMD ID="RIGHTS_0001">
+            <mets:mdWrap MIMETYPE="text/html" MDTYPE="OTHER" OTHERMDTYPE="CopyrightMD">
+                <mets:xmlData>
+                    <copyrightMD:copyright copyright.status="pd_holder" publication.status="unknown">
+                        <copyrightMD:general.note>BY</copyrightMD:general.note>
+                    </copyrightMD:copyright>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:rightsMD>
+    </mets:amdSec>
+    <mets:fileSec>
+        <mets:fileGrp ID="OC_EBGRP" USE="master">
+            <mets:file ID="nk-2411ib" MIMETYPE="pdf" SIZE="8339866" CHECKSUMTYPE="MD5" CHECKSUM="1803fc66b3231fedo33e25b4a31ef8ae" SEQ="1"
+                       CREATED="2018-07-10T10:46:15Z">
+                <mets:FLocat xlink:href="./original/nk-2411ib.pdf" LOCTYPE="URL"/>
+            </mets:file>
+        </mets:fileGrp>
+    </mets:fileSec>
 
-<mets:amdSec>
-<mets:rightsMD ID="RIGHTS_0001">
-    <mets:mdWrap MIMETYPE="text/html" MDTYPE="OTHER" OTHERMDTYPE="CopyrightMD">
-        <mets:xmlData>
-            <copyrightMD:copyright copyright.status="pd_holder" publication.status="unknown">
-                <copyrightMD:general.note>BY</copyrightMD:general.note>
-            </coprightMD:copyright>
-        </mets:xmlData>
-    </mets:mdWrap>
-</mets:rightsMD>
-</mets:amdSec>
-<mets:fileSec>
-<mets:fileGrp ID="OC_EBGRP" USE="master">
-    <mets:file ID="nk-2411ib" MIMETYPE="pdf" SIZE="8339866" CHECKSUMTYPE="MD5" CHECKSUM="1803fc66b3231fedo33e25b4a31ef8ae" SEQ="1"
-               CREATED="2018-07-10T10:46:15Z">
-        <mets:FLocat xlink:href="./original/nk-2411ib.pdf" LOCTYPE="URL"/>
-    </mets:file>
-</mets:fileGrp>
-</mets:fileSec>
-<mets:structMap>
-<mets:div ID="TITLE_0001" DMDID="MODSMD_TITLE_0001" ADMID="RIGHTS_0001" TYPE="TITLE">
-    <mets:div ID="VOLUME_0001" DMDID="MODSMD_VOLUME_0001" TYPE="VOLUME">
-        <mets:div ID="ISSUE_0001" LABEL="nk-2411ib" TYPE="DOCUMENT">
-            <mets:div ID="FILE_0001" ADMID="OBJ_0001" LABEL="nk-2411ib" TYPE="FILE">
-                <mets:fptr FILEID="nk-2411ib"/>
+    <mets:structMap>
+        <mets:div ID="TITLE_0001" DMDID="MODSMD_TITLE_0001" ADMID="RIGHTS_0001" TYPE="TITLE">
+            <mets:div ID="VOLUME_0001" DMDID="MODSMD_VOLUME_0001" TYPE="VOLUME">
+                <mets:div ID="ISSUE_0001" LABEL="nk-2411ib" TYPE="DOCUMENT">
+                    <mets:div ID="FILE_0001" ADMID="OBJ_0001" LABEL="nk-2411ib" TYPE="FILE">
+                        <mets:fptr FILEID="nk-2411ib"/>
+                    </mets:div>
+                </mets:div>
             </mets:div>
         </mets:div>
-    </mets:div>
-</mets:div>
-</mets:div>
-        </mets:structMap>
-        </mets:mets>
+    </mets:structMap>
+
+</mets:mets>
