@@ -13,9 +13,9 @@ import java.util.Set;
  */
 public class FdmfRegistry {
 
-    private final Map<String, FdmfConfiguration> monographFdmfByVersion = new HashMap<>();
+    /*private final Map<String, FdmfConfiguration> monographFdmfByVersion = new HashMap<>();
     private final Map<String, FdmfConfiguration> periodicalFdmfByVersion = new HashMap<>();
-    private final Map<String, FdmfConfiguration> soundRecordingFdmfByVersion = new HashMap<>();
+    private final Map<String, FdmfConfiguration> soundRecordingFdmfByVersion = new HashMap<>();*/
     private final Map<String, FdmfConfiguration> emonographFdmfByVersion = new HashMap<>();
     private final Map<String, FdmfConfiguration> eperiodicalFdmfByVersion = new HashMap<>();
 
@@ -24,7 +24,7 @@ public class FdmfRegistry {
     }
 
     public void initBinaryFileProfiles(ExternalUtilManager externalUtilManager) throws ValidatorConfigurationException {
-        for (FdmfConfiguration fdmfConfig : monographFdmfByVersion.values()) {
+       /* for (FdmfConfiguration fdmfConfig : monographFdmfByVersion.values()) {
             fdmfConfig.initBinaryFileProfiles(externalUtilManager);
         }
         for (FdmfConfiguration fdmfConfig : periodicalFdmfByVersion.values()) {
@@ -32,7 +32,7 @@ public class FdmfRegistry {
         }
         for (FdmfConfiguration fdmfConfig : soundRecordingFdmfByVersion.values()) {
             fdmfConfig.initBinaryFileProfiles(externalUtilManager);
-        }
+        }*/
         for (FdmfConfiguration fdmfConfig : emonographFdmfByVersion.values()) {
             fdmfConfig.initBinaryFileProfiles(externalUtilManager);
         }
@@ -42,11 +42,11 @@ public class FdmfRegistry {
     }
 
     private void init(ValidatorConfigurationManager validatorConfigManager) throws ValidatorConfigurationException {
-        loadFdmfConfigs(validatorConfigManager, "monograph", monographFdmfByVersion);
+        /*loadFdmfConfigs(validatorConfigManager, "monograph", monographFdmfByVersion);
         loadFdmfConfigs(validatorConfigManager, "periodical", periodicalFdmfByVersion);
-        loadFdmfConfigs(validatorConfigManager, "sound_recording", soundRecordingFdmfByVersion);
-        loadFdmfConfigs(validatorConfigManager, "monograph", emonographFdmfByVersion);
-        loadFdmfConfigs(validatorConfigManager, "periodical", eperiodicalFdmfByVersion);
+        loadFdmfConfigs(validatorConfigManager, "sound_recording", soundRecordingFdmfByVersion);*/
+        loadFdmfConfigs(validatorConfigManager, "emonograph", emonographFdmfByVersion);
+        loadFdmfConfigs(validatorConfigManager, "eperiodical", eperiodicalFdmfByVersion);
     }
 
     private void loadFdmfConfigs(ValidatorConfigurationManager validatorConfigManager, String fdmfDirPefix, Map<String, FdmfConfiguration> mapToStoreResults) throws ValidatorConfigurationException {
@@ -61,7 +61,7 @@ public class FdmfRegistry {
         }
     }
 
-    public Set<String> getMonographFdmfVersions() {
+    /*public Set<String> getMonographFdmfVersions() {
         return monographFdmfByVersion.keySet();
     }
 
@@ -71,9 +71,17 @@ public class FdmfRegistry {
 
     public Set<String> getSoundRecordingFdmfVersions() {
         return soundRecordingFdmfByVersion.keySet();
+    }*/
+
+    public Set<String> getEmonographFdmfVersions() {
+        return emonographFdmfByVersion.keySet();
     }
 
-    public FdmfConfiguration getMonographFdmfConfig(String dmfVersion) {
+    public Set<String> getEperiodicalFdmfVersions() {
+        return eperiodicalFdmfByVersion.keySet();
+    }
+
+   /* public FdmfConfiguration getMonographFdmfConfig(String dmfVersion) {
         return monographFdmfByVersion.get(dmfVersion);
     }
 
@@ -83,7 +91,7 @@ public class FdmfRegistry {
 
     public FdmfConfiguration getSoundRecordingFdmfConfig(String dmfVersion) {
         return soundRecordingFdmfByVersion.get(dmfVersion);
-    }
+    }*/
 
     public FdmfConfiguration getEmonographFdmfConfig(String dmfVersion) {
         return emonographFdmfByVersion.get(dmfVersion);
@@ -96,7 +104,7 @@ public class FdmfRegistry {
 
     public FdmfConfiguration getFdmfConfig(Dmf dmf) throws UnknownFdmfException {
         switch (dmf.getType()) {
-            case MONOGRAPH: {
+           /* case MONOGRAPH: {
                 FdmfConfiguration file = monographFdmfByVersion.get(dmf.getVersion());
                 if (file == null) {
                     throw new UnknownFdmfException(dmf);
@@ -119,7 +127,7 @@ public class FdmfRegistry {
                 } else {
                     return file;
                 }
-            }
+            }*/
             case EMONOGRAPH: {
                 FdmfConfiguration file = emonographFdmfByVersion.get(dmf.getVersion());
                 if (file == null) {

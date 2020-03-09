@@ -41,18 +41,14 @@ public class ConfigurationManager {
     //validation
     public static final String PROP_LAST_PSP_DIR = "last.psp.dir";
     public static final String PROP_LAST_PSP_ZIP = "last.psp.zip";
-    public static final String PROP_FORCE_MON_VERSION_ENABLED = "force.monograph.version.enabled";
-    public static final String PROP_FORCE_MON_VERSION_CODE = "force.monograph.version.code";
-    public static final String PROP_FORCE_PER_VERSION_ENABLED = "force.periodical.version.enabled";
-    public static final String PROP_FORCE_PER_VERSION_CODE = "force.periodical.version.code";
-    public static final String PROP_FORCE_SOUND_RECORDING_VERSION_ENABLED = "force.sound_recording.version.enabled";
-    public static final String PROP_FORCE_SOUND_RECORDING_VERSION_CODE = "force.sound_recording.version.code";
-    public static final String PROP_PREFER_MON_VERSION_ENABLED = "prefer.monograph.version.enabled";
-    public static final String PROP_PREFER_MON_VERSION_CODE = "prefer.monograph.version.code";
-    public static final String PROP_PREFER_PER_VERSION_ENABLED = "prefer.periodical.version.enabled";
-    public static final String PROP_PREFER_PER_VERSION_CODE = "prefer.periodical.version.code";
-    public static final String PROP_PREFER_SOUND_RECORDING_VERSION_ENABLED = "prefer.sound_recording.version.enabled";
-    public static final String PROP_PREFER_SOUND_RECORDING_VERSION_CODE = "prefer.sound_recording.version.code";
+    public static final String PROP_FORCE_EMON_VERSION_ENABLED = "force.emonograph.version.enabled";
+    public static final String PROP_FORCE_EMON_VERSION_CODE = "force.emonograph.version.code";
+    public static final String PROP_FORCE_EPER_VERSION_ENABLED = "force.eperiodical.version.enabled";
+    public static final String PROP_FORCE_EPER_VERSION_CODE = "force.eperiodical.version.code";
+    public static final String PROP_PREFER_EMON_VERSION_ENABLED = "prefer.emonograph.version.enabled";
+    public static final String PROP_PREFER_EMON_VERSION_CODE = "prefer.emonograph.version.code";
+    public static final String PROP_PREFER_EPER_VERSION_ENABLED = "prefer.eperiodical.version.enabled";
+    public static final String PROP_PREFER_EPER_VERSION_CODE = "prefer.eperiodical.version.code";
     public static final String PROP_PSP_VALIDATION_CREATE_TXT_LOG = "psp_validation.create_txt_log";
     public static final String PROP_PSP_VALIDATION_CREATE_XML_LOG = "psp_validation.create_xml_log";
     public static final String PROP_LOG_DIR = "validation.log_dir";

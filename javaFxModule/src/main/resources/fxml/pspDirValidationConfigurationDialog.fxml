@@ -38,51 +38,36 @@
                    GridPane.columnSpan="3"
                    GridPane.rowIndex="2"/>
 
-            <!--Monograph-->
-            <CheckBox fx:id="forcedMonVersionCheckBox"
-                      onAction="#forcedMonVersionChanged"
+            <!--E-Monograph-->
+            <CheckBox fx:id="forcedEmonVersionCheckBox"
+                      onAction="#forcedEmonVersionChanged"
                       GridPane.columnIndex="0"
                       GridPane.rowIndex="3"
                       GridPane.halignment="RIGHT"
             />
 
-            <Label text="Monografie" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+            <Label text="Elektronické Monografie" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
 
-            <ChoiceBox fx:id="forcedMonVersionChoiceBox"
-                       onAction="#forcedMonVersionChoiceboxChanged"
+            <ChoiceBox fx:id="forcedEmonVersionChoiceBox"
+                       onAction="#forcedEmonVersionChoiceboxChanged"
                        GridPane.columnIndex="2"
                        GridPane.rowIndex="3"/>
 
 
-            <!--Periodical-->
-            <CheckBox fx:id="forcedPerVersionCheckBox"
-                      onAction="#forcedPerVersionChanged"
+            <!--E-Periodical-->
+            <CheckBox fx:id="forcedEperVersionCheckBox"
+                      onAction="#forcedEperVersionChanged"
                       GridPane.columnIndex="0"
                       GridPane.rowIndex="4"
                       GridPane.halignment="RIGHT"
             />
 
-            <Label text="Periodika" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+            <Label text="Elektronická Periodika" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
 
-            <ChoiceBox fx:id="forcedPerVersionChoiceBox"
+            <ChoiceBox fx:id="forcedEperVersionChoiceBox"
                        GridPane.columnIndex="2" GridPane.columnSpan="2"
                        GridPane.rowIndex="4"
-                       onAction="#forcedPerVersionChoiceboxChanged"/>
-
-            <!--Sound recording-->
-            <CheckBox fx:id="forcedSRVersionCheckBox"
-                      onAction="#forcedSRVersionChanged"
-                      GridPane.columnIndex="0"
-                      GridPane.rowIndex="5"
-                      GridPane.halignment="RIGHT"
-            />
-
-            <Label text="Zvuky" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
-
-            <ChoiceBox fx:id="forcedSRVersionChoiceBox"
-                       GridPane.columnIndex="2" GridPane.columnSpan="2"
-                       GridPane.rowIndex="5"
-                       onAction="#forcedSRVersionChoiceboxChanged"/>
+                       onAction="#forcedEperVersionChoiceboxChanged"/>
 
             <!--PREFERRED-->
             <Label text="Preferované verze standardů. Jsou použity, když v datech balíku chybí verze DMF."
@@ -90,52 +75,36 @@
                    GridPane.columnSpan="3"
                    GridPane.rowIndex="7"/>
 
-            <!--Monograph-->
-            <CheckBox fx:id="preferredMonVersionCheckBox"
-                      onAction="#preferredMonVersionChanged"
+            <!--E-Monograph-->
+            <CheckBox fx:id="preferredEmonVersionCheckBox"
+                      onAction="#preferredEmonVersionChanged"
                       GridPane.columnIndex="0"
                       GridPane.rowIndex="8"
                       GridPane.halignment="RIGHT"
             />
 
-            <Label text="Monografie" GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+            <Label text="Elektronické Monografie" GridPane.columnIndex="1" GridPane.rowIndex="8"/>
 
-            <ChoiceBox fx:id="preferredMonVersionChoiceBox"
+            <ChoiceBox fx:id="preferredEmonVersionChoiceBox"
                        GridPane.columnIndex="2"
                        GridPane.rowIndex="8"
-                       onAction="#preferredMonVersionChoiceboxChanged"
+                       onAction="#preferredEmonVersionChoiceboxChanged"
             />
 
-            <!--Periodical-->
-            <CheckBox fx:id="preferredPerVersionCheckBox"
-                      onAction="#preferredPerVersionChanged"
+            <!--E-Periodical-->
+            <CheckBox fx:id="preferredEperVersionCheckBox"
+                      onAction="#preferredEperVersionChanged"
                       GridPane.columnIndex="0"
                       GridPane.rowIndex="9"
                       GridPane.halignment="RIGHT"
             />
 
-            <Label text="Periodika" GridPane.columnIndex="1" GridPane.rowIndex="9"/>
+            <Label text="Elektronická Periodika" GridPane.columnIndex="1" GridPane.rowIndex="9"/>
 
-            <ChoiceBox fx:id="preferredPerVersionChoiceBox"
+            <ChoiceBox fx:id="preferredEperVersionChoiceBox"
                        GridPane.columnIndex="2" GridPane.columnSpan="2"
                        GridPane.rowIndex="9"
-                       onAction="#preferredPerVersionChoiceboxChanged"
-            />
-
-            <!--Sound recording-->
-            <CheckBox fx:id="preferredSRVersionCheckBox"
-                      onAction="#preferredSRVersionChanged"
-                      GridPane.columnIndex="0"
-                      GridPane.rowIndex="10"
-                      GridPane.halignment="RIGHT"
-            />
-
-            <Label text="Zvuky" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
-
-            <ChoiceBox fx:id="preferredSRVersionChoiceBox"
-                       GridPane.columnIndex="2" GridPane.columnSpan="2"
-                       GridPane.rowIndex="10"
-                       onAction="#preferredSRVersionChoiceboxChanged"
+                       onAction="#preferredEperVersionChoiceboxChanged"
             />
 
             <!--PROTOCOLS-->

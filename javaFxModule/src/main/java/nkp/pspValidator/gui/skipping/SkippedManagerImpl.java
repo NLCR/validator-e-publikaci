@@ -29,7 +29,7 @@ public class SkippedManagerImpl implements SkippedManager {
 
     private List<Dmf> buildDmfList(ValidationDataManager mgr) {
         List<Dmf> result = new ArrayList<>();
-        //monograph
+        /*//monograph
         List<String> monVersions = new ArrayList<>();
         monVersions.addAll(mgr.getFdmfRegistry().getMonographFdmfVersions());
         Collections.sort(monVersions, new VersionComparator());
@@ -49,6 +49,20 @@ public class SkippedManagerImpl implements SkippedManager {
         Collections.sort(srVersions, new VersionComparator());
         for (String srVersion : srVersions) {
             result.add(new Dmf(Dmf.Type.SOUND_RECORDING, srVersion));
+        }*/
+        //e-monograph
+        List<String> emonVersions = new ArrayList<>();
+        emonVersions.addAll(mgr.getFdmfRegistry().getEmonographFdmfVersions());
+        Collections.sort(emonVersions, new VersionComparator());
+        for (String version : emonVersions) {
+            result.add(new Dmf(Dmf.Type.EMONOGRAPH, version));
+        }
+        //e-periodical
+        List<String> eperVersions = new ArrayList<>();
+        eperVersions.addAll(mgr.getFdmfRegistry().getEperiodicalFdmfVersions());
+        Collections.sort(eperVersions, new VersionComparator());
+        for (String version : eperVersions) {
+            result.add(new Dmf(Dmf.Type.EPERIODICAL, version));
         }
         return result;
     }
