@@ -236,6 +236,7 @@
             </validation>
         </rule>
 
+
         <!--názvy top-level adresářů obsahují povolené znaky-->
 
         <rule name="ORIGINAL-DIR_FILE_VALID">
@@ -252,6 +253,7 @@
             </validation>
         </rule>
 
+
         <!--top-level adresáře jsou adresáře (ne obyčejné soubory)-->
 
         <rule name="ORIGINAL-DIR_FILE_IS_DIR">
@@ -264,6 +266,7 @@
                 </params>
             </validation>
         </rule>
+
 
         <!--názvy souborů v top-level adresářích obsahují jen povolené znaky-->
 
@@ -282,6 +285,7 @@
             </validation>
         </rule>-->
 
+
         <!--žádný ze souborů v top-level adresářích není adresář-->
 
         <!--TODO: soubory v original/-->
@@ -295,6 +299,7 @@
                 </params>
             </validation>
         </rule>-->
+
 
         <!--žádné další soubory v top-level adresářích-->
 

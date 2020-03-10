@@ -93,7 +93,6 @@
         </evaluation>
     </value-def>
 
-
     <value-def name="TOLERATED_TL_FILES" type="FILE_LIST">
         <evaluation functionName="findFilesInDirByPattern">
             <params>

@@ -93,7 +93,6 @@
         </evaluation>
     </value-def>
 
-
     <value-def name="TOLERATED_TL_FILES" type="FILE_LIST">
         <evaluation functionName="findFilesInDirByPattern">
             <params>
@@ -137,186 +136,29 @@
         </evaluation>
     </value-def>
 
-    <value-def name="SECONDARY-METS-DIR_FILES" type="FILE_LIST">
+    <value-def name="ORIGINAL-DIR_FILES" type="FILE_LIST">
         <evaluation functionName="findFilesInDirByPattern">
             <params>
                 <value name="dir" type="FILE">
                     <value-ref name="PSP_DIR"/>
                 </value>
                 <pattern name="pattern">
-                    <pattern-ref name="SECONDARY-METS-DIR_FILENAME"/>
+                    <pattern-ref name="ORIGINAL-DIR_FILENAME"/>
                 </pattern>
             </params>
         </evaluation>
     </value-def>
 
-    <value-def name="OCR-TEXT-DIR_FILES" type="FILE_LIST">
-        <evaluation functionName="findFilesInDirByPattern">
-            <params>
-                <value name="dir" type="FILE">
-                    <value-ref name="PSP_DIR"/>
-                </value>
-                <pattern name="pattern">
-                    <pattern-ref name="OCR-TEXT-DIR_FILENAME"/>
-                </pattern>
-            </params>
-        </evaluation>
-    </value-def>
-
-    <value-def name="OCR-ALTO-DIR_FILES" type="FILE_LIST">
-        <evaluation functionName="findFilesInDirByPattern">
-            <params>
-                <value name="dir" type="FILE">
-                    <value-ref name="PSP_DIR"/>
-                </value>
-                <pattern name="pattern">
-                    <pattern-ref name="OCR-ALTO-DIR_FILENAME"/>
-                </pattern>
-            </params>
-        </evaluation>
-    </value-def>
-
-
-    <value-def name="MASTER-COPY-DIR_FILES" type="FILE_LIST">
-        <evaluation functionName="findFilesInDirByPattern">
-            <params>
-                <value name="dir" type="FILE">
-                    <value-ref name="PSP_DIR"/>
-                </value>
-                <pattern name="pattern">
-                    <pattern-ref name="MASTER-COPY-DIR_FILENAME"/>
-                </pattern>
-            </params>
-        </evaluation>
-    </value-def>
-
-    <value-def name="USER-COPY-DIR_FILES" type="FILE_LIST">
-        <evaluation functionName="findFilesInDirByPattern">
-            <params>
-                <value name="dir" type="FILE">
-                    <value-ref name="PSP_DIR"/>
-                </value>
-                <pattern name="pattern">
-                    <pattern-ref name="USER-COPY-DIR_FILENAME"/>
-                </pattern>
-            </params>
-        </evaluation>
-    </value-def>
-
-    <value-def name="SECONDARY-METS-DIR_FILE" type="FILE">
+    <value-def name="ORIGINAL-DIR_FILE" type="FILE">
         <evaluation functionName="getFirstFileFromFileList">
             <params>
                 <value name="files" type="FILE_LIST">
-                    <value-ref name="SECONDARY-METS-DIR_FILES"/>
+                    <value-ref name="ORIGINAL-DIR_FILES"/>
                 </value>
             </params>
         </evaluation>
     </value-def>
 
-    <value-def name="OCR-TEXT-DIR_FILE" type="FILE">
-        <evaluation functionName="getFirstFileFromFileList">
-            <params>
-                <value name="files" type="FILE_LIST">
-                    <value-ref name="OCR-TEXT-DIR_FILES"/>
-                </value>
-            </params>
-        </evaluation>
-    </value-def>
-
-    <value-def name="OCR-ALTO-DIR_FILE" type="FILE">
-        <evaluation functionName="getFirstFileFromFileList">
-            <params>
-                <value name="files" type="FILE_LIST">
-                    <value-ref name="OCR-ALTO-DIR_FILES"/>
-                </value>
-            </params>
-        </evaluation>
-    </value-def>
-
-    <value-def name="MASTER-COPY-DIR_FILE" type="FILE">
-        <evaluation functionName="getFirstFileFromFileList">
-            <params>
-                <value name="files" type="FILE_LIST">
-                    <value-ref name="MASTER-COPY-DIR_FILES"/>
-                </value>
-            </params>
-        </evaluation>
-    </value-def>
-
-    <value-def name="USER-COPY-DIR_FILE" type="FILE">
-        <evaluation functionName="getFirstFileFromFileList">
-            <params>
-                <value name="files" type="FILE_LIST">
-                    <value-ref name="USER-COPY-DIR_FILES"/>
-                </value>
-            </params>
-        </evaluation>
-    </value-def>
-
-    <value-def name="SECONDARY-METS_FILES" type="FILE_LIST">
-        <evaluation functionName="findFilesInDirByPattern">
-            <params>
-                <value name="dir" type="FILE">
-                    <value-ref name="SECONDARY-METS-DIR_FILE"/>
-                </value>
-                <pattern name="pattern">
-                    <pattern-ref name="SECONDARY-METS_FILENAME"/>
-                </pattern>
-            </params>
-        </evaluation>
-    </value-def>
-
-    <value-def name="OCR-TEXT_FILES" type="FILE_LIST">
-        <evaluation functionName="findFilesInDirByPattern">
-            <params>
-                <value name="dir" type="FILE">
-                    <value-ref name="OCR-TEXT-DIR_FILE"/>
-                </value>
-                <pattern name="pattern">
-                    <pattern-ref name="OCR-TEXT_FILENAME"/>
-                </pattern>
-            </params>
-        </evaluation>
-    </value-def>
-
-    <value-def name="OCR-ALTO_FILES" type="FILE_LIST">
-        <evaluation functionName="findFilesInDirByPattern">
-            <params>
-                <value name="dir" type="FILE">
-                    <value-ref name="OCR-ALTO-DIR_FILE"/>
-                </value>
-                <pattern name="pattern">
-                    <pattern-ref name="OCR-ALTO_FILENAME"/>
-                </pattern>
-            </params>
-        </evaluation>
-    </value-def>
-
-    <value-def name="MASTER-COPY_FILES" type="FILE_LIST">
-        <evaluation functionName="findFilesInDirByPattern">
-            <params>
-                <value name="dir" type="FILE">
-                    <value-ref name="MASTER-COPY-DIR_FILE"/>
-                </value>
-                <pattern name="pattern">
-                    <pattern-ref name="MASTER-COPY_FILENAME"/>
-                </pattern>
-            </params>
-        </evaluation>
-    </value-def>
-
-    <value-def name="USER-COPY_FILES" type="FILE_LIST">
-        <evaluation functionName="findFilesInDirByPattern">
-            <params>
-                <value name="dir" type="FILE">
-                    <value-ref name="USER-COPY-DIR_FILE"/>
-                </value>
-                <pattern name="pattern">
-                    <pattern-ref name="USER-COPY_FILENAME"/>
-                </pattern>
-            </params>
-        </evaluation>
-    </value-def>
 
     <!--soubory XSD-->
 
