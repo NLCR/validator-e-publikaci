@@ -373,4 +373,121 @@
 
     </rules-section>
 
+    <rules-section name="Soubor INFO"
+                   description="Validace souboru INFO - odkazování na ostatní soubory, kontrolní součet pro soubor CHECKSUM, atd.">
+
+        <rule name="INFO_XML_WELL_BUILT">
+            <description>Soubor INFO musí být korektní (well-built) xml soubor.</description>
+            <validation functionName="checkXmlIsWellBuilt">
+                <params>
+                    <value name="xml_file" type="FILE">
+                        <value-ref name="INFO_FILE"/>
+                    </value>
+                </params>
+            </validation>
+        </rule>
+
+        <rule name="INFO_XML_VALID_BY_XSD">
+            <description>Soubor INFO by měl být validní podle XML Schema (info_eper2.3.xsd).</description>
+            <validation functionName="checkXmlIsValidByXsd">
+                <params>
+                    <value name="xml_file" type="FILE">
+                        <value-ref name="INFO_FILE"/>
+                    </value>
+                    <value name="xsd_file" type="FILE">
+                        <value-ref name="INFO_XSD_FILE"/>
+                    </value>
+                    <value name="level" type="LEVEL">WARNING</value>
+                </params>
+            </validation>
+        </rule>
+
+        <!--METS Profile requirement id infoxml6-->
+        <rule name="INFO_REFERENCES_PRIMARY-METS">
+            <description>Soubor INFO se musí odkazovat na soubor PRIMARY-METS přes element mainmets.</description>
+            <validation functionName="checkInfoFileReferencesPrimaryMets">
+                <params>
+                    <value name="info_file" type="FILE">
+                        <value-ref name="INFO_FILE"/>
+                    </value>
+                    <value name="primary-mets_file" type="FILE">
+                        <value-ref name="PRIMARY-METS_FILE"/>
+                    </value>
+                </params>
+            </validation>
+        </rule>
+
+        <!--METS Profile requirement id infoxml13-->
+        <rule name="INFO_ITEMTOTAL_MATCHES_ITEMS_COUNT">
+            <description>V souboru INFO musí počet elementů item souhlasit s hodnotou atributu itemtotal elementu
+                itemlist.
+            </description>
+            <!--mozne delat i nejak takhle, zatim ale asi neni potreba takova variabilita-->
+            <!--<validation functionName="checkFilelistHasExactSize">
+                <params>
+                    <value name="files" type="FILE_LIST">
+                        <value-ref name="INFO_ITEMS"/>
+                    </value>
+                    <value name="size" type="INTEGER">
+                        <value-ref name="INFO_ITELMTOTAL"/>
+                    </value>
+                </params>
+            </validation>-->
+            <validation functionName="checkInfoFileItemsCountMatchesItemtotal">
+                <params>
+                    <value name="info_file" type="FILE">
+                        <value-ref name="INFO_FILE"/>
+                    </value>
+                </params>
+            </validation>
+
+        </rule>
+
+        <!--METS Profile requirement id infoxml13-->
+        <rule name="INFO_ITEMLIST_REFERENCES_ALL_FILES">
+            <description>Soubor INFO se musí odkazovat na všechny uvedené soubory přes elementy item a na žádné další.
+            </description>
+            <validation functionName="checkInfoFileItemlistReferencesAllFiles">
+                <params>
+                    <value name="info_file" type="FILE">
+                        <value-ref name="INFO_FILE"/>
+                    </value>
+                    <value name="level" type="LEVEL">ERROR</value>
+                    <value name="file" type="FILE">
+                        <value-ref name="INFO_FILE"/>
+                    </value>
+                    <value name="file" type="FILE">
+                        <value-ref name="CHECKSUM_FILE"/>
+                    </value>
+                    <value name="file" type="FILE">
+                        <value-ref name="PRIMARY-METS_FILE"/>
+                    </value>
+                    <value name="files" type="FILE_LIST">
+                        <value-ref name="ORIGINAL-COPY_FILES"/>
+                    </value>
+                </params>
+            </validation>
+        </rule>
+
+        <!--METS Profile requirement id infoxml14-->
+        <rule name="INFO_CHECKSUM_FILE_CHECKSUM_MATCHES">
+            <description>Soubor INFO se musí odkazovat na existující soubor CHECKSUM přes element checksum a kontrolní
+                součet se musí shodovat.
+            </description>
+            <validation functionName="checkInfoFileChecksumMatches">
+                <params>
+                    <value name="info_file" type="FILE">
+                        <value-ref name="INFO_FILE"/>
+                    </value>
+                    <value name="checksum_file" type="FILE">
+                        <value-ref name="CHECKSUM_FILE"/>
+                    </value>
+                </params>
+            </validation>
+        </rule>
+
+        <!--TODO:identifikatory v INFO-->
+
+    </rules-section>
+
 </fDMF>

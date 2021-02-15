@@ -1,5 +1,5 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <!--XML Schema pro soubor INFO pro DMF Periodika 1.7.1-->
+    <!--XML Schema pro soubor INFO pro DMF Eborn Periodika 2.3-->
 
     <!--METS Profile requirement id infoxml2-->
     <xs:element name="info">
@@ -14,11 +14,11 @@
                 <!--METS Profile requirement id infoxml6-->
                 <xs:element type="xs:string" name="mainmets"/>
                 <!--METS Profile requirement id infoxml7-->
-                <xs:element name="validation">
+                <xs:element name="validation" minOccurs="0">
                     <xs:complexType>
                         <xs:simpleContent>
                             <xs:extension base="xs:string">
-                                <xs:attribute name="version" type="xs:string" use="required"/>
+                                <xs:attribute name="version" type="xs:string"/>
                             </xs:extension>
                         </xs:simpleContent>
                     </xs:complexType>
@@ -31,11 +31,11 @@
                                 <xs:attribute name="type" use="required">
                                     <xs:simpleType>
                                         <xs:restriction base="xs:string">
-                                            <!--podle seznamu na s.14-->
                                             <xs:enumeration value="isbn"/>
                                             <xs:enumeration value="issn"/>
                                             <xs:enumeration value="ccnb"/>
                                             <xs:enumeration value="urnnbn"/>
+                                            <xs:enumeration value="uuid"/>
                                         </xs:restriction>
                                     </xs:simpleType>
                                 </xs:attribute>
@@ -54,10 +54,10 @@
                 <!--TODO: kontrolovat tohle (samozrejme mimo XSD)?-->
                 <xs:element type="xs:int" name="size"/>
                 <!--METS Profile requirement id infoxml13-->
-                <xs:element name="itemlist" maxOccurs="1" minOccurs="1">
+                <xs:element name="itemlist">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element type="xs:anyURI" name="item" maxOccurs="unbounded" minOccurs="1"/>
+                            <xs:element type="xs:anyURI" name="item" maxOccurs="unbounded"/>
                         </xs:sequence>
                         <xs:attribute type="xs:integer" name="itemtotal" use="required"/>
                     </xs:complexType>
@@ -88,12 +88,7 @@
     <xs:simpleType name="metadataVersion">
         <xs:restriction base="xs:string">
             <!--tohle se lisi podle verze DMF (fDMF), jejiz soucasti je tenhle soubor-->
-            <xs:enumeration value="1.5"/>
-            <xs:enumeration value="1.5.1"/>
-            <xs:enumeration value="1.5.2"/>
-            <xs:enumeration value="1.6"/>
-            <xs:enumeration value="1.7"/>
-            <xs:enumeration value="1.7.1"/>
+            <xs:enumeration value="2.3"/>
         </xs:restriction>
     </xs:simpleType>
 
