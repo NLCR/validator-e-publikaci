@@ -159,6 +159,19 @@
         </evaluation>
     </value-def>
 
+    <value-def name="ORIGINAL-COPY_FILES" type="FILE_LIST">
+        <evaluation functionName="findFilesInDirByPattern">
+            <params>
+                <value name="dir" type="FILE">
+                    <value-ref name="ORIGINAL-DIR_FILE"/>
+                </value>
+                <pattern name="pattern">
+                    <pattern-ref name="ORIGINAL-COPY_FILENAME"/>
+                </pattern>
+            </params>
+        </evaluation>
+    </value-def>
+
     <!--soubory XSD-->
 
     <value-def name="INFO_XSD_FILE" type="FILE">

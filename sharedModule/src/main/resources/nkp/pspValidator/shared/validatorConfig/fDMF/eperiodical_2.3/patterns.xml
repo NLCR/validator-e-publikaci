@@ -52,6 +52,19 @@
     <pattern-def name="TOLERATED_TL_FILENAME">
         <description>Vzory pro jména tolerovaných souborů.</description>
         <expression caseSensitive="true">LTP_MD\.xml</expression>
+        <expression caseSensitive="true">.DS_Store</expression>
+    </pattern-def>
+
+    <pattern-def name="ORIGINAL-COPY_FILENAME">
+        <description>Vzor pro jména souborů v rámci adresáře ORIGINAL-COPY-DIR.</description>
+        <!--
+        V DMF e-periodika 2.3 na straně 7 je uvedeno, že prefix musí být "OC", hned na to je ale v příkladu uveden prefix "oc".
+        Dále je na straně 6 uveden, že "velikost písmen v názvech souborů a složek – všechna malá".
+        Povolujeme zde raději obě varianty.
+        https://old.ndk.cz/standardy-digitalizace/DMF_ebornperiodika_2.3.pdf
+        -->
+        <expression caseSensitive="true">oc.+</expression>
+        <expression caseSensitive="true">OC.+</expression>
     </pattern-def>
 
 </fDMF>

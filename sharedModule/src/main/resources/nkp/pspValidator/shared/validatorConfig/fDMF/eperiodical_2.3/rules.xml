@@ -268,56 +268,66 @@
         </rule>
 
 
-        <!--názvy souborů v top-level adresářích obsahují jen povolené znaky-->
+        <!--top-level adresáře jsou adresáře (ne obyčejné soubory)-->
 
-        <!--TODO: soubory v original/-->
-        <!--<rule name="SECONDARY-METS_FILENAMES_VALID">
-            <description>Všechny soubory SECONDARY-METS musí obsahovat jen povolené znaky.</description>
+        <rule name="ORIGINAL-DIR_FILE_IS_DIR">
+            <description>Soubor ORIGINAL musí být adresář a ne obyčejný soubor.</description>
+            <validation functionName="checkFileIsDir">
+                <params>
+                    <value name="file" type="FILE">
+                        <value-ref name="ORIGINAL-DIR_FILE"/>
+                    </value>
+                </params>
+            </validation>
+        </rule>
+
+
+        <!--názvy souborů v adresáři original obsahují jen povolené znaky-->
+
+        <rule name="ORIGINAL-COPY_FILENAMES_VALID">
+            <description>Všechny soubory ORIGINAL-COPY musí obsahovat jen povolené znaky.</description>
             <validation functionName="checkAllFilenamesMatchPattern">
                 <params>
                     <value name="files" type="FILE_LIST">
-                        <value-ref name="SECONDARY-METS_FILES"/>
+                        <value-ref name="ORIGINAL-COPY_FILES"/>
                     </value>
                     <pattern name="pattern">
                         <pattern-ref name="FILENAME"/>
                     </pattern>
                 </params>
             </validation>
-        </rule>-->
+        </rule>
 
 
-        <!--žádný ze souborů v top-level adresářích není adresář-->
+        <!--žádný ze souborů v adresáři original není adresář-->
 
-        <!--TODO: soubory v original/-->
-        <!--<rule name="SECONDARY-METS_FILES_ARE_NOT_DIRS">
-            <description>Žádný soubor SECONDARY-METS nesmí být adresář.</description>
+        <rule name="ORIGINAL-COPY_FILES_ARE_NOT_DIRS">
+            <description>Žádný soubor ORIGINAL-COPY nesmí být adresář.</description>
             <validation functionName="checkNoFileIsDir">
                 <params>
                     <value name="files" type="FILE_LIST">
-                        <value-ref name="SECONDARY-METS_FILES"/>
+                        <value-ref name="ORIGINAL-COPY_FILES"/>
                     </value>
                 </params>
             </validation>
-        </rule>-->
+        </rule>
 
 
-        <!--žádné další soubory v top-level adresářích-->
+        <!--žádné další soubory v adresáři original -->
 
-        <!--TODO: soubory v original/-->
-        <!--<rule name="NO_EXTRA_FILES_IN_SECONDARY-METS-DIR">
-            <description>Kromě souborů SECONDARY-METS nesmí adresář SECONDARY-METS-DIR obsahovat žádné další soubory.
-            </description>
+        <rule name="NO_EXTRA_FILES_IN_ORIGINAL-DIR">
+            <description>Kromě souborů ORIGINAL-COPY nesmí adresář ORIGINAL obsahovat žádné další soubory.</description>
             <validation functionName="checkNoOtherFilesInDir">
                 <params>
                     <value name="root_dir" type="FILE">
-                        <value-ref name="SECONDARY-METS-DIR_FILE"/>
+                        <value-ref name="ORIGINAL-DIR_FILE"/>
                     </value>
                     <value name="files" type="FILE_LIST">
-                        <value-ref name="SECONDARY-METS_FILES"/>
+                        <value-ref name="ORIGINAL-COPY_FILES"/>
                     </value>
                 </params>
             </validation>
-        </rule>-->
+        </rule>
 
     </rules-section>
 
