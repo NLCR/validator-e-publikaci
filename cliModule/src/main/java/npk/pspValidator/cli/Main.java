@@ -617,7 +617,7 @@ public class Main {
                 " Dále je potřeba pomocí --config-dir uvést adresář, který obsahuje definice fDMF," +
                 " napr. monograph_1.3.2 nebo periodical_1.7.\n\n");
         String footer = replaceUmlaut("\n*Definice metadatových formátů. Více na http://www.ndk.cz/standardy-digitalizace/metadata.\n" +
-                "Více informací o validátoru najdete na https://github.com/NLCR/komplexni-validator.");
+                "Více informací o validátoru najdete na https://github.com/NLCR/validator-e-publikaci.");
         HelpFormatter formatter = new HelpFormatter();
         formatter.setWidth(100);
         formatter.setOptionComparator(null);

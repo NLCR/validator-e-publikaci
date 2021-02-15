@@ -55,7 +55,7 @@
                    GridPane.rowIndex="2"
                    GridPane.columnIndex="0"
             />
-            <Hyperlink text="https://github.com/NLCR/komplexni-validator"
+            <Hyperlink text="https://github.com/NLCR/validator-e-publikaci"
                        GridPane.rowIndex="2"
                        GridPane.columnIndex="2"
                        GridPane.hgrow="ALWAYS"

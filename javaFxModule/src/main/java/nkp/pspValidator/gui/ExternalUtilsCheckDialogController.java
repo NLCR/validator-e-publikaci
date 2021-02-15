@@ -26,16 +26,16 @@ import java.util.Map;
  */
 public class ExternalUtilsCheckDialogController extends DialogController {
 
-    private static final String JPYLYZER_INSTALLATION_URL = "https://github.com/NLCR/komplexni-validator/wiki/Instalace#jpylyzer";
-    private static final String JHOVE_INSTALLATION_URL = "https://github.com/NLCR/komplexni-validator/wiki/Instalace#jhove";
-    private static final String IMAGE_MAGICK_INSTALLATION_URL = "https://github.com/NLCR/komplexni-validator/wiki/Instalace#imagemagick";
-    private static final String KAKADU_INSTALLATION_URL = "https://github.com/NLCR/komplexni-validator/wiki/Instalace#kakadu";
+    private static final String JPYLYZER_INSTALLATION_URL = "https://github.com/NLCR/validator-e-publikaci/wiki/Instalace#jpylyzer";
+    private static final String JHOVE_INSTALLATION_URL = "https://github.com/NLCR/validator-e-publikaci/wiki/Instalace#jhove";
+    private static final String IMAGE_MAGICK_INSTALLATION_URL = "https://github.com/NLCR/validator-e-publikaci/wiki/Instalace#imagemagick";
+    private static final String KAKADU_INSTALLATION_URL = "https://github.com/NLCR/validator-e-publikaci/wiki/Instalace#kakadu";
     // TODO: 2019-04-02 doplnit wiki
-    private static final String MP3VAL_INSTALLATION_URL = "https://github.com/NLCR/komplexni-validator/wiki/Instalace#mp3val";
-    private static final String SHNTOOL_INSTALLATION_URL = "https://github.com/NLCR/komplexni-validator/wiki/Instalace#shntool";
-    private static final String CHECKMATE_INSTALLATION_URL = "https://github.com/NLCR/komplexni-validator/wiki/Instalace#checkmate";
+    private static final String MP3VAL_INSTALLATION_URL = "https://github.com/NLCR/validator-e-publikaci/wiki/Instalace#mp3val";
+    private static final String SHNTOOL_INSTALLATION_URL = "https://github.com/NLCR/validator-e-publikaci/wiki/Instalace#shntool";
+    private static final String CHECKMATE_INSTALLATION_URL = "https://github.com/NLCR/validator-e-publikaci/wiki/Instalace#checkmate";
 
-    private static final String HELP_URL = "https://github.com/NLCR/komplexni-validator/wiki/Instalace#instalace-n%C3%A1stroj%C5%AF-pro-validaci-obrazov%C3%BDch-soubor%C5%AF";
+    private static final String HELP_URL = "https://github.com/NLCR/validator-e-publikaci/wiki/Instalace#instalace-n%C3%A1stroj%C5%AF-pro-validaci-obrazov%C3%BDch-soubor%C5%AF";
 
     /*jhove*/
 
