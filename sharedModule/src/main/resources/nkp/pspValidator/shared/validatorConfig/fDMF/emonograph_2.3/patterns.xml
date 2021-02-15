@@ -41,7 +41,7 @@
 
     <pattern-def name="CHECKSUM_FILENAME">
         <description>Vzor pro jméno souboru CHECKSUM.</description>
-        <expression caseSensitive="true">md5_${PSP_ID}\.md5</expression>
+        <expression caseSensitive="true">.+\.md5</expression>
     </pattern-def>
 
     <pattern-def name="ORIGINAL-DIR_FILENAME">

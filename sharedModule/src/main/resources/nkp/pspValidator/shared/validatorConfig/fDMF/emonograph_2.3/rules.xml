@@ -317,4 +317,49 @@
 
     </rules-section>
 
+    <rules-section name="Soubor CHECKSUM"
+                   description="Kontrola souboru CHECKSUM, odkazů na další soubory a shody kontrolních součtů.">
+
+        <rule name="CHECKSUM_FILE_GENERATED_BY_GRAMMAR">
+            <description>Soubor CHECKSUM by měl být generován předepsanou ABNF gramatikou.</description>
+            <validation functionName="checkChecksumFileGeneratedByGrammar">
+                <params>
+                    <value name="checksum_file" type="FILE">
+                        <value-ref name="CHECKSUM_FILE"/>
+                    </value>
+                </params>
+            </validation>
+        </rule>
+
+        <rule name="CHECKSUM_FILE_ALL_PATHS_MATCH_FILES">
+            <description>Soubor CHECKSUM musí obsahovat záznamy pro každý uvedený soubor a žádný jiný.</description>
+            <validation functionName="checkChecksumFileAllPathsMatchFiles">
+                <params>
+                    <value name="checksum_file" type="FILE">
+                        <value-ref name="CHECKSUM_FILE"/>
+                    </value>
+                    <value name="file" type="FILE">
+                        <value-ref name="PRIMARY-METS_FILE"/>
+                    </value>
+                    <value name="files" type="FILE_LIST">
+                        <value-ref name="ORIGINAL-COPY_FILES"/>
+                    </value>
+                </params>
+            </validation>
+        </rule>
+
+        <rule name="CHECKSUM_FILE_ALL_CHECKSUMS_MATCH">
+            <description>Všechny kontrolní součty v souborů odkazovaných v souboru CHECKSUM musí souhlasit.
+            </description>
+            <validation functionName="checkChecksumFileAllChecksumsMatch">
+                <params>
+                    <value name="checksum_file" type="FILE">
+                        <value-ref name="CHECKSUM_FILE"/>
+                    </value>
+                </params>
+            </validation>
+        </rule>
+
+    </rules-section>
+
 </fDMF>
