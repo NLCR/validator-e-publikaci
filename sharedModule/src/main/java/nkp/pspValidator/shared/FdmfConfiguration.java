@@ -69,13 +69,15 @@ public class FdmfConfiguration {
         File xsdRoot = new File(fdmfRoot, XSD_DIR);
         checkDirExistAndReadable(xsdRoot);
         providedFiles.put("INFO_XSD_FILE", findXsdFile(xsdRoot, "INFO(DMF)", "info_(mon|per|sr|emon|eper)[0-9]+(\\.([0-9])+)*\\.xsd"));
-        providedFiles.put("ALTO_XSD_FILE", findXsdFile(xsdRoot, "ALTO", "alto_[0-9]+(\\.([0-9])+)*\\.xsd"));
         providedFiles.put("CMD_XSD_FILE", findXsdFile(xsdRoot, "copyrightMD", "cmd_[0-9]+(\\.([0-9])+)*\\.xsd"));
         providedFiles.put("DC_XSD_FILE", findXsdFile(xsdRoot, "Dublin Core", "dc_[0-9]+(\\.([0-9])+)*\\.xsd"));
         providedFiles.put("METS_XSD_FILE", findXsdFile(xsdRoot, "METS", "mets_[0-9]+(\\.([0-9])+)*\\.xsd"));
         providedFiles.put("MIX_XSD_FILE", findXsdFile(xsdRoot, "MIX", "mix_[0-9]+(\\.([0-9])+)*\\.xsd"));
         providedFiles.put("MODS_XSD_FILE", findXsdFile(xsdRoot, "MODS", "mods_[0-9]+(\\.([0-9])+)*\\.xsd"));
         providedFiles.put("PREMIS_XSD_FILE", findXsdFile(xsdRoot, "PREMIS", "premis_[0-9]+(\\.([0-9])+)*\\.xsd"));
+        providedFiles.put("COPYRIGHT_MD_XSD_FILE", findXsdFile(xsdRoot, "COPYRIGHT_MD", "copyrightMD_[0-9]+(\\.([0-9])+)*\\.xsd"));
+        providedFiles.put("DOCUMENT_MD_XSD_FILE", findXsdFile(xsdRoot, "DOCUMENT_MD", "docmd_[0-9]+(\\.([0-9])+)*\\.xsd"));
+        providedFiles.put("NDKTECH_XSD_FILE", findXsdFile(xsdRoot, "NDKTECH", "ndktech_[0-9]+(\\.([0-9])+)*\\.xsd"));
 
         //nacteni konfiguracnich souboru - jmennych prostoru, vzdoru, promennych, pravidel
         validateAndRegisterFdmfConfig(fdmfRoot, "namespaces.xml");

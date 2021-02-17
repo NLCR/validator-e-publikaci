@@ -2009,7 +2009,8 @@
 
     </rules-section>
 
-    <rules-section name="OCR ALTO" description="Kontrola souborů ALTO.">
+
+    <!--<rules-section name="OCR ALTO" description="Kontrola souborů ALTO.">
 
         <rule name="ALTO_FILES_VALID_BY_XSD">
             <description>Soubory OCR-ALTO musí být validní podle XML Schema (alto_2.0.xsd).</description>
@@ -2026,9 +2027,7 @@
             </validation>
         </rule>
 
-        <!--TODO: kontrola ALTO oproti profilu-->
-
-    </rules-section>
+    </rules-section>-->
 
     <rules-section name="Technická metadata" description="Kontrola technických (MIX, PREMIS) metadat.">
 

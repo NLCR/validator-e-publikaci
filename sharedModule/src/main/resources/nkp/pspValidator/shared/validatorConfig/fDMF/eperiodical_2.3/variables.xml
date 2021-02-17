@@ -182,14 +182,6 @@
         </evaluation>
     </value-def>
 
-    <value-def name="ALTO_XSD_FILE" type="FILE">
-        <evaluation functionName="getProvidedFile">
-            <params>
-                <value name="file_id" type="STRING">ALTO_XSD_FILE</value>
-            </params>
-        </evaluation>
-    </value-def>
-
     <value-def name="CMD_XSD_FILE" type="FILE">
         <evaluation functionName="getProvidedFile">
             <params>
@@ -234,6 +226,30 @@
         <evaluation functionName="getProvidedFile">
             <params>
                 <value name="file_id" type="STRING">PREMIS_XSD_FILE</value>
+            </params>
+        </evaluation>
+    </value-def>
+
+    <value-def name="COPYRIGHT_MD_XSD_FILE" type="FILE">
+        <evaluation functionName="getProvidedFile">
+            <params>
+                <value name="file_id" type="STRING">COPYRIGHT_MD_XSD_FILE</value>
+            </params>
+        </evaluation>
+    </value-def>
+
+    <value-def name="DOCUMENT_MD_XSD_FILE" type="FILE">
+        <evaluation functionName="getProvidedFile">
+            <params>
+                <value name="file_id" type="STRING">DOCUMENT_MD_XSD_FILE</value>
+            </params>
+        </evaluation>
+    </value-def>
+
+    <value-def name="NDKTECH_XSD_FILE" type="FILE">
+        <evaluation functionName="getProvidedFile">
+            <params>
+                <value name="file_id" type="STRING">NDKTECH_XSD_FILE</value>
             </params>
         </evaluation>
     </value-def>
