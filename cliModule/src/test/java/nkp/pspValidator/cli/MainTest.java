@@ -74,10 +74,10 @@ public class MainTest {
         Validator.DevParams devParams = new Validator.DevParams();
 
         //devParams.getSectionsToRun().add("Soubor CHECKSUM");
-        devParams.getSectionsToRun().add("Soubor INFO");
+        //devParams.getSectionsToRun().add("Soubor INFO");
         //devParams.getSectionsToRun().add("Struktura souborů");
         //devParams.getSectionsToRun().add("Bibliografická metadata");
-        //devParams.getSectionsToRun().add("Identifikátory");
+        devParams.getSectionsToRun().add("Identifikátory");
         //devParams.getSectionsToRun().add("Obrazová data");
         //devParams.getSectionsToRun().add("Bibliografická metadata");
         //devParams.getSectionsToRun().add("ALTO");
@@ -85,6 +85,7 @@ public class MainTest {
         //devParams.getSectionsToRun().add("METS hlavičky");
         //devParams.getSectionsToRun().add("Autorskoprávní metadata");
         //devParams.getSectionsToRun().add("Sekundární METS filesec");
+        //devParams.getSectionsToRun().add("Primární METS filesec");
         //devParams.getSectionsToRun().add("Strukturální mapy");
 
         Main.main(devParams, buildParams(
@@ -99,7 +100,7 @@ public class MainTest {
                 //, PER_1_4
                 //, PER_1_6
                 //, EMON_2_3
-                ,EPER_2_3
+                , EPER_2_3
                 //, PER_1_6_INFO_INVALID_NS
                 //, ZIP_1
                 //, ZIP_NOT_ZIP

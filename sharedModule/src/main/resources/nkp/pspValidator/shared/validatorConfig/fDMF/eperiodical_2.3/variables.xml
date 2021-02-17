@@ -271,9 +271,9 @@
         <description>seznam volitelných typů identifikátorů pro úroveň TITLE</description>
         <evaluation functionName="buildListOfStrings">
             <params>
-                <value name="string" type="STRING">issn</value>
-                <value name="string" type="STRING">isbn</value>
                 <value name="string" type="STRING">ccnb</value>
+                <value name="string" type="STRING">issn</value>
+                <value name="string" type="STRING">ismn</value>
             </params>
         </evaluation>
     </value-def>
@@ -301,9 +301,7 @@
         <!--Zatím se nepužívá, jen pro přehled. -->
         <description>seznam volitelných typů identifikátorů pro úroveň VOLUME</description>
         <evaluation functionName="buildListOfStrings">
-            <params>
-                <value name="string" type="STRING">urnnbn</value>
-            </params>
+            <params></params>
         </evaluation>
     </value-def>
 
@@ -311,6 +309,7 @@
         <description>seznam zakázaných typů identifikátorů pro úroveň VOLUME</description>
         <evaluation functionName="buildListOfStrings">
             <params>
+                <value name="string" type="STRING">urnnbn</value>
                 <value name="string" type="STRING">issn</value>
                 <value name="string" type="STRING">ccnb</value>
             </params>
@@ -323,7 +322,6 @@
         <evaluation functionName="buildListOfStrings">
             <params>
                 <value name="string" type="STRING">uuid</value>
-                <value name="string" type="STRING">urnnbn</value>
             </params>
         </evaluation>
     </value-def>
@@ -334,8 +332,8 @@
         <evaluation functionName="buildListOfStrings">
             <params>
                 <value name="string" type="STRING">isbn</value>
-                <!--POZOR: DMF explicitně issn na této úrovni neuvádí-->
                 <value name="string" type="STRING">issn</value>
+                <value name="string" type="STRING">urnnbn</value>
             </params>
         </evaluation>
     </value-def>
@@ -344,6 +342,36 @@
         <description>seznam zakázaných typů identifikátorů pro úroveň VOLUME</description>
         <evaluation functionName="buildListOfStrings">
             <params>
+                <value name="string" type="STRING">ccnb</value>
+            </params>
+        </evaluation>
+    </value-def>
+
+    <!--article-->
+    <value-def name="ID_TYPES_ARTICLE_MANDATORY" type="STRING_LIST">
+        <description>seznam povinných typů identifikátorů pro úroveň ARTICLE</description>
+        <evaluation functionName="buildListOfStrings">
+            <params>
+                <value name="string" type="STRING">uuid</value>
+            </params>
+        </evaluation>
+    </value-def>
+
+    <value-def name="ID_TYPES_ARTICLE_OPTIONAL" type="STRING_LIST">
+        <!--Zatím se nepužívá, jen pro přehled. -->
+        <description>seznam volitelných typů identifikátorů pro úroveň ARTICLE</description>
+        <evaluation functionName="buildListOfStrings">
+            <params>
+                <value name="string" type="STRING">urnnbn</value>
+            </params>
+        </evaluation>
+    </value-def>
+
+    <value-def name="ID_TYPES_ARTICLE_PROHIBITED" type="STRING_LIST">
+        <description>seznam zakázaných typů identifikátorů pro úroveň ARTICLE</description>
+        <evaluation functionName="buildListOfStrings">
+            <params>
+                <value name="string" type="STRING">issn</value>
                 <value name="string" type="STRING">ccnb</value>
             </params>
         </evaluation>
@@ -379,99 +407,6 @@
             <params/>
         </evaluation>
     </value-def>
-
-    <!--article-->
-    <value-def name="ID_TYPES_ARTICLE_MANDATORY" type="STRING_LIST">
-        <description>seznam povinných typů identifikátorů pro úroveň ARTICLE</description>
-        <evaluation functionName="buildListOfStrings">
-            <params>
-                <value name="string" type="STRING">uuid</value>
-            </params>
-        </evaluation>
-    </value-def>
-
-    <value-def name="ID_TYPES_ARTICLE_OPTIONAL" type="STRING_LIST">
-        <!--Zatím se nepužívá, jen pro přehled. -->
-        <description>seznam volitelných typů identifikátorů pro úroveň ARTICLE</description>
-        <evaluation functionName="buildListOfStrings">
-            <params>
-                <value name="string" type="STRING">urnnbn</value>
-            </params>
-        </evaluation>
-    </value-def>
-
-    <value-def name="ID_TYPES_ARTICLE_PROHIBITED" type="STRING_LIST">
-        <description>seznam zakázaných typů identifikátorů pro úroveň ARTICLE</description>
-        <evaluation functionName="buildListOfStrings">
-            <params>
-                <value name="string" type="STRING">issn</value>
-                <value name="string" type="STRING">ccnb</value>
-            </params>
-        </evaluation>
-    </value-def>
-
-    <!--picture-->
-    <value-def name="ID_TYPES_PICTURE_MANDATORY" type="STRING_LIST">
-        <description>seznam povinných typů identifikátorů pro úroveň PICTURE</description>
-        <evaluation functionName="buildListOfStrings">
-            <params>
-                <value name="string" type="STRING">uuid</value>
-            </params>
-        </evaluation>
-    </value-def>
-
-    <value-def name="ID_TYPES_PICTURE_OPTIONAL" type="STRING_LIST">
-        <!--Zatím se nepužívá, jen pro přehled. -->
-        <description>seznam volitelných typů identifikátorů pro úroveň PICTURE</description>
-        <evaluation functionName="buildListOfStrings">
-            <params>
-                <value name="string" type="STRING">urnnbn</value>
-            </params>
-        </evaluation>
-    </value-def>
-
-    <value-def name="ID_TYPES_PICTURE_PROHIBITED" type="STRING_LIST">
-        <description>seznam zakázaných typů identifikátorů pro úroveň PICTURE</description>
-        <evaluation functionName="buildListOfStrings">
-            <params>
-                <value name="string" type="STRING">issn</value>
-                <value name="string" type="STRING">ccnb</value>
-            </params>
-        </evaluation>
-    </value-def>
-
-    <!--page-->
-    <value-def name="ID_TYPES_PAGE_MANDATORY" type="STRING_LIST">
-        <description>seznam povinných typů identifikátorů pro úroveň PAGE</description>
-        <evaluation functionName="buildListOfStrings">
-            <params>
-                <value name="string" type="STRING">uuid</value>
-            </params>
-        </evaluation>
-    </value-def>
-
-    <value-def name="ID_TYPES_PAGE_OPTIONAL" type="STRING_LIST">
-        <!--Zatím se nepužívá, jen pro přehled. -->
-        <description>seznam volitelných typů identifikátorů pro úroveň PAGE</description>
-        <evaluation functionName="buildListOfStrings">
-            <params>
-                <!--   <value name="string" type="STRING">urnnbn</value>-->
-            </params>
-        </evaluation>
-    </value-def>
-
-    <value-def name="ID_TYPES_PAGE_PROHIBITED" type="STRING_LIST">
-        <description>seznam zakázaných typů identifikátorů pro úroveň PAGE</description>
-        <evaluation functionName="buildListOfStrings">
-            <params>
-                <value name="string" type="STRING">urnnbn</value>
-                <value name="string" type="STRING">isbn</value>
-                <value name="string" type="STRING">ismn</value>
-                <value name="string" type="STRING">ccnb</value>
-            </params>
-        </evaluation>
-    </value-def>
-
 
     <value-def name="INFO_IDENTIFIERS" type="IDENTIFIER_LIST">
         <description>seznam identifikátorů ze souboru INFO</description>
