@@ -77,12 +77,12 @@ public class MainTest {
         //devParams.getSectionsToRun().add("Soubor INFO");
         //devParams.getSectionsToRun().add("Struktura souborů");
         //devParams.getSectionsToRun().add("Bibliografická metadata");
-        devParams.getSectionsToRun().add("Identifikátory");
+        //devParams.getSectionsToRun().add("Identifikátory");
         //devParams.getSectionsToRun().add("Obrazová data");
         //devParams.getSectionsToRun().add("Bibliografická metadata");
         //devParams.getSectionsToRun().add("ALTO");
         //devParams.getSectionsToRun().add("Technická metadata");
-        //devParams.getSectionsToRun().add("METS hlavičky");
+        devParams.getSectionsToRun().add("METS hlavičky");
         //devParams.getSectionsToRun().add("Autorskoprávní metadata");
         //devParams.getSectionsToRun().add("Sekundární METS filesec");
         //devParams.getSectionsToRun().add("Primární METS filesec");
@@ -94,14 +94,8 @@ public class MainTest {
                 configDir
                 , "/tmp"
 
-                //, MON_1_2
-                //, MON_1_2_MAP
-                //, MON_1_2_INVALID_IMAGES
-                //, PER_1_4
-                //, PER_1_6
                 //, EMON_2_3
                 , EPER_2_3
-                //, PER_1_6_INFO_INVALID_NS
                 //, ZIP_1
                 //, ZIP_NOT_ZIP
 

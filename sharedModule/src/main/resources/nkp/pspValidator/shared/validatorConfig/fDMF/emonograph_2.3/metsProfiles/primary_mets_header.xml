@@ -3,15 +3,15 @@
         xmlns="http://www.nkp.cz/validatorEpublikaci/1.1/metadataProfile"
         name="Primary METS header"
         validatorVersion="1.1"
-        dmf="monograph_1.3.2"
+        dmf="emonograph_2.3"
 >
 
     <info>
         <text>
-            Profil pro validaci elementu mets:mets, zejména hlavičky mets:metsHdr v primárním METSu pro DMF Monografie 1.3.2.
+            Profil pro validaci elementu mets:mets, zejména hlavičky mets:metsHdr v primárním METSu pro DMF Elektronické publikace (monografie) verze 2.3.
         </text>
-        <url description="Definice metadatových formátů pro digitalizaci monografických dokumentů">
-            http://www.ndk.cz/standardy-digitalizace/DMFmonografDok_12.pdf
+        <url description="Definice metadatových formátů pro digitalizaci eborn monografií">
+            https://old.ndk.cz/standardy-digitalizace/DMF_ebornmonografie_2.3.pdf
         </url>
     </info>
 
@@ -20,28 +20,22 @@
     </namespaces>
 
     <dictionaries>
-        <dictionary name="siglaInstitutionCodes"
-                    description="sigly knihoven"/>
+        <dictionary name="siglaInstitutionCodes" description="sigly knihoven"/>
     </dictionaries>
 
     <rootElement name="mets:mets">
         <expectedAttributes>
             <attribute name="LABEL" mandatory="true"/>
             <attribute name="TYPE" mandatory="true">
-                <expectedContent>Monograph</expectedContent>
+                <expectedContent>
+                    <value>electronic_monograph</value>
+                </expectedContent>
             </attribute>
             <attribute name="xsi:schemaLocation" mandatory="false"/>
         </expectedAttributes>
         <expectedElements>
-            <element name="mets:dmdSec" ignoreUnexpectedAttributes="true" ignoreUnexpectedChildElements="true"
-                     mandatory="false"/>
-            <element name="mets:fileSec" ignoreUnexpectedAttributes="true" ignoreUnexpectedChildElements="true"
-                     mandatory="false"/>
-            <element name="mets:structMap" ignoreUnexpectedAttributes="true" ignoreUnexpectedChildElements="true"
-                     mandatory="false"/>
-            <element name="mets:structLink" ignoreUnexpectedAttributes="true" ignoreUnexpectedChildElements="true"
-                     mandatory="false"/>
 
+            <!--hlavička-->
             <element name="mets:metsHdr">
                 <expectedAttributes>
                     <attribute name="LASTMODDATE" mandatory="true">
@@ -99,6 +93,393 @@
                                 </recommendedContent>
                             </element>
                         </expectedElements>
+                    </element>
+                </expectedElements>
+            </element>
+
+            <!--úroveň titul (nepovinná)-->
+            <element name="mets:dmdSec" specification="starts-with(@ID,'MODSMD_TITLE')" mandatory="false">
+                <expectedAttributes>
+                    <attribute name="ID" mandatory="true">
+                        <expectedContent>
+                            <regexp>MODSMD_TITLE_[0-9]{4}</regexp>
+                        </expectedContent>
+                    </attribute>
+                </expectedAttributes>
+                <expectedElements>
+                    <element name="mets:mdWrap">
+                        <expectedAttributes>
+                            <attribute name="MDTYPE" mandatory="false">
+                                <expectedContent>
+                                    <value>MODS</value>
+                                </expectedContent>
+                            </attribute>
+                            <attribute name="MDTYPEVERSION" mandatory="false">
+                                <expectedContent>
+                                    <regexp>[1-9]+(\.([1-9])+)*</regexp>
+                                </expectedContent>
+                            </attribute>
+                            <attribute name="MIMETYPE" mandatory="false">
+                                <expectedContent>
+                                    <value>text/xml</value>
+                                </expectedContent>
+                            </attribute>
+                        </expectedAttributes>
+                        <expectedElements>
+                            <element name="mets:xmlData" ignoreUnexpectedChildElements="true"/>
+                        </expectedElements>
+                    </element>
+                </expectedElements>
+            </element>
+
+            <element name="mets:dmdSec" specification="starts-with(@ID,'DCMD_TITLE')" mandatory="false">
+                <expectedAttributes>
+                    <attribute name="ID" mandatory="true">
+                        <expectedContent>
+                            <regexp>DCMD_TITLE_[0-9]{4}</regexp>
+                        </expectedContent>
+                    </attribute>
+                </expectedAttributes>
+                <expectedElements>
+                    <element name="mets:mdWrap">
+                        <expectedAttributes>
+                            <attribute name="MDTYPE" mandatory="false">
+                                <expectedContent>
+                                    <value>DC</value>
+                                </expectedContent>
+                            </attribute>
+                            <attribute name="MDTYPEVERSION" mandatory="false">
+                                <expectedContent>
+                                    <regexp>[1-9]+(\.([1-9])+)*</regexp>
+                                </expectedContent>
+                            </attribute>
+                            <attribute name="MIMETYPE" mandatory="false">
+                                <expectedContent>
+                                    <value>text/xml</value>
+                                </expectedContent>
+                            </attribute>
+                        </expectedAttributes>
+                        <expectedElements>
+                            <element name="mets:xmlData" ignoreUnexpectedChildElements="true"/>
+                        </expectedElements>
+                    </element>
+                </expectedElements>
+            </element>
+
+            <!--úroveň svazek (POVINNÁ)-->
+            <element name="mets:dmdSec" specification="starts-with(@ID,'MODSMD_VOLUME')" mandatory="true">
+                <expectedAttributes>
+                    <attribute name="ID" mandatory="true">
+                        <expectedContent>
+                            <regexp>MODSMD_VOLUME_[0-9]{4}</regexp>
+                        </expectedContent>
+                    </attribute>
+                </expectedAttributes>
+                <expectedElements>
+                    <element name="mets:mdWrap">
+                        <expectedAttributes>
+                            <attribute name="MDTYPE" mandatory="false">
+                                <expectedContent>
+                                    <value>MODS</value>
+                                </expectedContent>
+                            </attribute>
+                            <attribute name="MDTYPEVERSION" mandatory="false">
+                                <expectedContent>
+                                    <regexp>[1-9]+(\.([1-9])+)*</regexp>
+                                </expectedContent>
+                            </attribute>
+                            <attribute name="MIMETYPE" mandatory="false">
+                                <expectedContent>
+                                    <value>text/xml</value>
+                                </expectedContent>
+                            </attribute>
+                        </expectedAttributes>
+                        <expectedElements>
+                            <element name="mets:xmlData" ignoreUnexpectedChildElements="true"/>
+                        </expectedElements>
+                    </element>
+                </expectedElements>
+            </element>
+
+            <element name="mets:dmdSec" specification="starts-with(@ID,'DCMD_VOLUME')" mandatory="true">
+                <expectedAttributes>
+                    <attribute name="ID" mandatory="true">
+                        <expectedContent>
+                            <regexp>DCMD_VOLUME_[0-9]{4}</regexp>
+                        </expectedContent>
+                    </attribute>
+                </expectedAttributes>
+                <expectedElements>
+                    <element name="mets:mdWrap">
+                        <expectedAttributes>
+                            <attribute name="MDTYPE" mandatory="false">
+                                <expectedContent>
+                                    <value>DC</value>
+                                </expectedContent>
+                            </attribute>
+                            <attribute name="MDTYPEVERSION" mandatory="false">
+                                <expectedContent>
+                                    <regexp>[1-9]+(\.([1-9])+)*</regexp>
+                                </expectedContent>
+                            </attribute>
+                            <attribute name="MIMETYPE" mandatory="false">
+                                <expectedContent>
+                                    <value>text/xml</value>
+                                </expectedContent>
+                            </attribute>
+                        </expectedAttributes>
+                        <expectedElements>
+                            <element name="mets:xmlData" ignoreUnexpectedChildElements="true"/>
+                        </expectedElements>
+                    </element>
+                </expectedElements>
+            </element>
+
+            <!--úroveň kapitola (nepovinná)-->
+            <element name="mets:dmdSec" specification="starts-with(@ID,'MODSMD_CHAP')" mandatory="false">
+                <expectedAttributes>
+                    <attribute name="ID" mandatory="true">
+                        <expectedContent>
+                            <regexp>MODSMD_CHAP_[0-9]{4}</regexp>
+                        </expectedContent>
+                    </attribute>
+                </expectedAttributes>
+                <expectedElements>
+                    <element name="mets:mdWrap">
+                        <expectedAttributes>
+                            <attribute name="MDTYPE" mandatory="false">
+                                <expectedContent>
+                                    <value>MODS</value>
+                                </expectedContent>
+                            </attribute>
+                            <attribute name="MDTYPEVERSION" mandatory="false">
+                                <expectedContent>
+                                    <regexp>[1-9]+(\.([1-9])+)*</regexp>
+                                </expectedContent>
+                            </attribute>
+                            <attribute name="MIMETYPE" mandatory="false">
+                                <expectedContent>
+                                    <value>text/xml</value>
+                                </expectedContent>
+                            </attribute>
+                        </expectedAttributes>
+                        <expectedElements>
+                            <element name="mets:xmlData" ignoreUnexpectedChildElements="true"/>
+                        </expectedElements>
+                    </element>
+                </expectedElements>
+            </element>
+
+            <element name="mets:dmdSec" specification="starts-with(@ID,'DCMD_CHAP')" mandatory="false">
+                <expectedAttributes>
+                    <attribute name="ID" mandatory="true">
+                        <expectedContent>
+                            <regexp>DCMD_CHAP_[0-9]{4}</regexp>
+                        </expectedContent>
+                    </attribute>
+                </expectedAttributes>
+                <expectedElements>
+                    <element name="mets:mdWrap">
+                        <expectedAttributes>
+                            <attribute name="MDTYPE" mandatory="false">
+                                <expectedContent>
+                                    <value>DC</value>
+                                </expectedContent>
+                            </attribute>
+                            <attribute name="MDTYPEVERSION" mandatory="false">
+                                <expectedContent>
+                                    <regexp>[1-9]+(\.([1-9])+)*</regexp>
+                                </expectedContent>
+                            </attribute>
+                            <attribute name="MIMETYPE" mandatory="false">
+                                <expectedContent>
+                                    <value>text/xml</value>
+                                </expectedContent>
+                            </attribute>
+                        </expectedAttributes>
+                        <expectedElements>
+                            <element name="mets:xmlData" ignoreUnexpectedChildElements="true"/>
+                        </expectedElements>
+                    </element>
+                </expectedElements>
+            </element>
+
+            <!--technická a administrativní metadata (strana 45)-->
+            <element name="mets:amdSec" specification="./mets:techMD|./mets:digiprovMD">
+                <expectedAttributes>
+                    <attribute name="ID" mandatory="true">
+                        <expectedContent/>
+                    </attribute>
+                </expectedAttributes>
+                <expectedElements>
+                    <element name="mets:techMD" mandatory="false">
+                        <expectedAttributes>
+                            <attribute name="ID" mandatory="true">
+                                <expectedContent/>
+                            </attribute>
+                        </expectedAttributes>
+                        <expectedElements>
+                            <element name="mets:mdWrap" ignoreUnexpectedAttributes="true">
+                                <expectedAttributes>
+                                    <attribute name="MDTYPE" mandatory="true">
+                                        <recommendedContent>
+                                            <value>PREMIS</value>
+                                        </recommendedContent>
+                                    </attribute>
+                                </expectedAttributes>
+                                <expectedElements>
+                                    <element name="mets:xmlData" ignoreUnexpectedChildElements="true"/>
+                                </expectedElements>
+                            </element>
+                        </expectedElements>
+                    </element>
+                    <element name="mets:digiprovMD" mandatory="false">
+                        <expectedAttributes>
+                            <attribute name="ID" mandatory="true">
+                                <expectedContent/>
+                            </attribute>
+                        </expectedAttributes>
+                        <expectedElements>
+                            <element name="mets:mdWrap" ignoreUnexpectedAttributes="true">
+                                <expectedAttributes>
+                                    <attribute name="MDTYPE" mandatory="true">
+                                        <expectedContent/>
+                                    </attribute>
+                                </expectedAttributes>
+                                <expectedElements>
+                                    <element name="mets:xmlData" ignoreUnexpectedChildElements="true"/>
+                                </expectedElements>
+                            </element>
+                        </expectedElements>
+                    </element>
+                </expectedElements>
+            </element>
+
+            <!--autorskoprávní metadata (strana 55)-->
+            <element name="mets:amdSec" specification="./mets:rightsMD" mandatory="false">
+                <expectedAttributes>
+                    <attribute name="ID" mandatory="true">
+                        <expectedContent/>
+                    </attribute>
+                </expectedAttributes>
+                <expectedElements>
+                    <element name="mets:rightsMD">
+                        <expectedAttributes>
+                            <attribute name="ID" mandatory="true">
+                                <expectedContent/>
+                            </attribute>
+                        </expectedAttributes>
+                        <expectedElements>
+                            <element name="mets:mdWrap">
+                                <expectedAttributes>
+                                    <attribute name="MDTYPE" mandatory="true">
+                                        <expectedContent>
+                                            <value>OTHER</value>
+                                        </expectedContent>
+                                    </attribute>
+                                    <attribute name="OTHERMDTYPE" mandatory="true">
+                                        <expectedContent>
+                                            <value>CopyrightMD</value>
+                                        </expectedContent>
+                                    </attribute>
+                                    <attribute name="MIMETYPE" mandatory="true">
+                                        <expectedContent>
+                                            <value>text/html</value>
+                                        </expectedContent>
+                                    </attribute>
+                                </expectedAttributes>
+                                <expectedElements>
+                                    <element name="mets:xmlData" ignoreUnexpectedChildElements="true"/>
+                                </expectedElements>
+                            </element>
+                        </expectedElements>
+                    </element>
+                </expectedElements>
+            </element>
+
+            <!--fileSec-->
+            <element name="mets:fileSec" mandatory="true">
+                <expectedElements>
+                    <element name="mets:fileGrp">
+                        <expectedAttributes>
+                            <attribute name="ID">
+                                <expectedContent>
+                                    <value>OC_EBGRP</value>
+                                </expectedContent>
+                            </attribute>
+                            <attribute name="USE">
+                                <expectedContent>
+                                    <value>master</value>
+                                </expectedContent>
+                            </attribute>
+                        </expectedAttributes>
+                        <expectedElements>
+                            <element name="mets:file">
+                                <expectedAttributes>
+                                    <attribute name="ID">
+                                        <expectedContent/>
+                                    </attribute>
+                                    <attribute name="MIMETYPE">
+                                        <expectedContent/>
+                                    </attribute>
+                                    <attribute name="SIZE">
+                                        <expectedContent/>
+                                    </attribute>
+                                    <attribute name="CHECKSUMTYPE">
+                                        <expectedContent>
+                                            <value>MD5</value>
+                                        </expectedContent>
+                                    </attribute>
+                                    <attribute name="CHECKSUM">
+                                        <expectedContent/>
+                                    </attribute>
+                                    <attribute name="SEQ">
+                                        <expectedContent>
+                                            <regexp>[0-9]+</regexp>
+                                        </expectedContent>
+                                    </attribute>
+                                    <attribute name="CREATED">
+                                        <expectedContent>
+                                            <!--TODO: validace ISO 8601 na urovni sekund-->
+                                        </expectedContent>
+                                    </attribute>
+                                </expectedAttributes>
+                                <expectedElements>
+                                    <element name="mets:FLocat" ignoreUnexpectedAttributes="true"/>
+                                </expectedElements>
+                            </element>
+                        </expectedElements>
+                    </element>
+                </expectedElements>
+            </element>
+
+            <!--strukturální mapa-->
+            <element name="mets:structMap" mandatory="true">
+                <expectedElements>
+                    <!--TODO: tady to není možné lépe specifikovat a rozdělit podle hodnot TYPE,
+                        protože není jasné, zda má být třeba div[@TYPE='VOLUME'] přímo v structMap, nebo uvnitř div[@TYPE='DOCUMENT']-->
+                    <element name="mets:div" ignoreUnexpectedChildElements="true">
+                        <expectedAttributes>
+                            <attribute name="ID">
+                                <expectedContent/>
+                            </attribute>
+                            <attribute name="DMDID" mandatory="false">
+                                <expectedContent/>
+                            </attribute>
+                            <attribute name="TYPE">
+                                <expectedContent>
+                                    <oneOf>
+                                        <value>TITLE</value>
+                                        <value>VOLUME</value>
+                                        <value>DOCUMENT</value>
+                                        <value>FILE</value>
+                                    </oneOf>
+                                </expectedContent>
+                            </attribute>
+                            <attribute name="ADMID" mandatory="false">
+                                <expectedContent/>
+                            </attribute>
+                        </expectedAttributes>
                     </element>
                 </expectedElements>
             </element>
