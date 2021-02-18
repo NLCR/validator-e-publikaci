@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <metadataProfile
         xmlns="http://www.nkp.cz/validatorEpublikaci/1.1/metadataProfile"
-        name="DC volume of multivolume monographic (AACR2)"
+        name="DC volume of multivolume monograph (AACR2)"
         validatorVersion="1.1"
-        dmf="monograph_1.3.2"
+        dmf="emonograph_2.3"
 >
     <info>
-        <text>DMF Monografie 1.3.2 očekává Dublin Core verze 1.1. Dále se zde upřesňují očekávaná metadata pro svazek
+        <text>DMF Elektronické publikace (monografie) 2.3 očekává Dublin Core verze 1.1. Dále se zde upřesňují očekávaná metadata pro svazek
             vícesvazkové monografie pro záznamy zpracované podle katalogizačních pravidel AACR2.
         </text>
         <url description="popis Dublin Core 1.1">http://dublincore.org/documents/dces/</url>
@@ -29,11 +29,7 @@
         <expectedElements>
 
             <element name="dc:title"
-                     errorMessage="Očekáván povinný element dc:title obsahující název, případně podnázev titulu.">
-                <expectedContent/>
-            </element>
-
-            <element name="dc:description" mandatory="false">
+                     errorMessage="Očekáván alespoň jeden povinný element dc:title obsahující název, případně podnázev titulu.">
                 <expectedContent/>
             </element>
 
@@ -41,8 +37,8 @@
                 <expectedContent/>
             </element>
 
-            <element name="dc:type" specification="text() = 'model:monographunit'"
-                     errorMessage="Očekáván povinný element dc:type obsahující text 'model:monographunit'.">
+            <element name="dc:type" specification="text() = 'model:electronicmonographunit'"
+                     errorMessage="Očekáván povinný element dc:type obsahující text 'model:electronicmonographunit'.">
                 <expectedContent/>
             </element>
 
@@ -54,20 +50,29 @@
                 <expectedContent/>
             </element>
 
-            <element name="dc:date"
-                     errorMessage="Očekáván povinný element dc:date obsahující datum vydání předlohy.">
+            <element name="dc:date" mandatory="false">
                 <expectedContent/>
             </element>
 
-            <element name="dc:language" mandatory="false"
-                     errorMessage="Očekáván alespoň jeden povinný element dc:language obsahující přesné určení jazyka kódem z kontrolovaného slovníku ISO 639-2.">
+            <element name="dc:language" mandatory="false">
                 <expectedContent>
                     <fromDictionary name="iso6392languageCodes"/>
                 </expectedContent>
             </element>
 
-            <element name="dc:format"
-                     errorMessage="Očekáván alespoň jeden povinný element dc:format obsahující údaje o fyzické podobě dokumentu, případně údaje o rozsahu.">
+            <element name="dc:format" mandatory="false">
+                <expectedContent/>
+            </element>
+
+            <element name="dc:description"
+                     specification="text() = 'born digital'"
+                     errorMessage="Očekáván povinný element dc:description obsahující text 'born digital'.">
+                <expectedContent/>
+            </element>
+
+            <element name="dc:description"
+                     specification="text() != 'born digital'"
+                     mandatory="false">
                 <expectedContent/>
             </element>
 
@@ -75,7 +80,8 @@
                 <expectedContent/>
             </element>
 
-            <element name="dc:identifier" errorMessage="Očekáván alespoň jeden povinný element dc:identifier.">
+            <element name="dc:identifier"
+                     errorMessage="Očekáván alespoň jeden povinný element dc:identifier.">
                 <expectedContent/>
             </element>
 
@@ -85,6 +91,7 @@
 
         </expectedElements>
     </rootElement>
+
 </metadataProfile>
 
 	
