@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <metadataProfile
         xmlns="http://www.nkp.cz/validatorEpublikaci/1.1/metadataProfile"
-        name="MODS title of multivolume monographic (RDA)"
+        name="MODS title of multivolume monograph (RDA)"
         validatorVersion="1.1"
-        dmf="monograph_1.3.2"
+        dmf="emonograph_2.3"
 >
 
     <info>
-        <text>DMF Monografie 1.3.2 očekává MODS verze 3.6. Dále se zde upřesňují očekávaná metadata pro titul
+        <text>DMF Elektronické publikace (monografie) 2.3 očekává MODS verze 3.6. Dále se zde upřesňují očekávaná metadata pro titul
             vícesvazkové monografie pro záznamy zpracované podle katalogizačních pravidel RDA.
         </text>
         <url>http://www.loc.gov/standards/mods/</url>
@@ -45,6 +45,10 @@
                         <expectedContent/>
                     </element>
 
+                    <element name="mods:nonSort" mandatory="false">
+                        <expectedContent/>
+                    </element>
+
                     <element name="mods:subTitle" mandatory="false">
                         <expectedContent/>
                     </element>
@@ -59,27 +63,7 @@
                 </expectedElements>
             </element>
 
-
-            <!--alespon jeden originInfo s eventType production/publication-->
-            <element name="mods:originInfo" specification="@eventType='production' or @eventType='publication'">
-                <expectedAttributes>
-                    <attribute name="eventType">
-                        <expectedContent/>
-                    </attribute>
-                </expectedAttributes>
-
-                <expectedElements>
-                    <element name="mods:publisher" mandatory="false">
-                        <expectedContent/>
-                    </element>
-                    <element name="mods:edition" mandatory="false">
-                        <expectedContent/>
-                    </element>
-                </expectedElements>
-
-            </element>
-
-            <element name="mods:originInfo" mandatory="false">
+            <element name="mods:originInfo">
                 <expectedAttributes>
                     <attribute name="eventType">
                         <expectedContent>
@@ -101,51 +85,49 @@
                     <element name="mods:edition" mandatory="false">
                         <expectedContent/>
                     </element>
-                </expectedElements>
-            </element>
-
-            <element name="mods:genre" specification="text()='title'"/>
-
-            <element name="mods:language" mandatory="false">
-                <expectedAttributes>
-                    <attribute name="objectPart" mandatory="false">
-                        <recommendedContent>
-                            <value>translation</value>
-                        </recommendedContent>
-                    </attribute>
-                </expectedAttributes>
-                <expectedElements>
-                    <element name="mods:languageTerm">
-                        <expectedAttributes>
-                            <attribute name="type">
-                                <expectedContent>
-                                    <value>code</value>
-                                </expectedContent>
-                            </attribute>
-
-                            <attribute name="authority">
-                                <expectedContent>
-                                    <value>iso639-2b</value>
-                                </expectedContent>
-                            </attribute>
-                        </expectedAttributes>
-                        <expectedContent>
-                            <fromDictionary name="iso6392languageCodes"/>
-                        </expectedContent>
+                    <element name="mods:place" mandatory="false">
+                        <expectedElements>
+                            <element name="mods:placeTerm" mandatory="false">
+                                <expectedAttributes>
+                                    <attribute name="type">
+                                        <expectedContent>
+                                            <oneOf>
+                                                <value>code</value>
+                                                <value>text</value>
+                                            </oneOf>
+                                        </expectedContent>
+                                    </attribute>
+                                    <attribute name="authority" mandatory="false">
+                                        <expectedContent>
+                                            <value>marccountry</value>
+                                        </expectedContent>
+                                    </attribute>
+                                </expectedAttributes>
+                                <expectedContent/>
+                            </element>
+                        </expectedElements>
                     </element>
                 </expectedElements>
-                <extraRules>
-                    <!-- V rámci elementu mods:language musí existovat nejvýše jeden element mods:languageTerm s atributy type='code' a authority='iso639-2b' -->
-                    <existsAtMostOnce
-                            xpath="mods:languageTerm[@type='code' and @authority='iso639-2b']/text()"
-                            description="Pokud je potřeba zaznamenat více jazyků, musí být každý ve vlastním elementu mods:language"
-                    />
-                </extraRules>
             </element>
 
-            <!--    identifier-->
+            <element name="mods:genre" specification="text()='electronic title'"/>
+
+
+            <!--identifiers-->
 
             <element name="mods:identifier" specification="@type='uuid'">
+                <expectedAttributes>
+                    <attribute name="type"/>
+                    <attribute name="invalid" mandatory="false">
+                        <expectedContent>
+                            <value>yes</value>
+                        </expectedContent>
+                    </attribute>
+                </expectedAttributes>
+                <expectedContent/>
+            </element>
+
+            <element name="mods:identifier" specification="@type='ccnb'" mandatory="false">
                 <expectedAttributes>
                     <attribute name="type"/>
                     <attribute name="invalid" mandatory="false">
@@ -181,20 +163,9 @@
                 <expectedContent/>
             </element>
 
-            <element name="mods:identifier" specification="@type='ccnb'" mandatory="false">
-                <expectedAttributes>
-                    <attribute name="type"/>
-                    <attribute name="invalid" mandatory="false">
-                        <expectedContent>
-                            <value>yes</value>
-                        </expectedContent>
-                    </attribute>
-                </expectedAttributes>
-                <expectedContent/>
-            </element>
 
             <element name="mods:identifier"
-                     specification="@type!='uuid' and @type!='isbn' and @type!='ismn' and @type!='ccnb'"
+                     specification="@type!='uuid' and @type!='ccnb' and @type!='isbn' and @type!='ismn'"
                      mandatory="false">
                 <expectedAttributes>
                     <attribute name="type" mandatory="false"/>
@@ -208,6 +179,7 @@
             </element>
         </expectedElements>
     </rootElement>
+
 </metadataProfile>
 
 	

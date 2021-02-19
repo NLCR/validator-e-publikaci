@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <metadataProfile
         xmlns="http://www.nkp.cz/validatorEpublikaci/1.1/metadataProfile"
-        name="DC title of multivolume monographic (AACR2)"
+        name="DC title of multivolume monograph (AACR2)"
         validatorVersion="1.1"
-        dmf="monograph_1.3.2"
+        dmf="emonograph_2.3"
 >
 
     <info>
-        <text>DMF Monografie 1.3.2 očekává Dublin Core verze 1.1. Dále se zde upřesňují očekávaná metadata pro titul
+        <text>DMF Elektronické publikace (monografie) 2.3 očekává Dublin Core verze 1.1. Dále se zde upřesňují očekávaná metadata pro titul
             vícesvazkové monografie pro záznamy zpracované podle katalogizačních pravidel AACR2.
         </text>
         <url description="popis Dublin Core 1.1">http://dublincore.org/documents/dces/</url>
@@ -33,19 +33,17 @@
                 <expectedContent/>
             </element>
 
-            <element name="dc:type" specification="text() = 'model:monograph'"
-                     errorMessage="Očekáván povinný element dc:type obsahující text 'model:monograph'.">
+            <element name="dc:coverage" mandatory="false">
                 <expectedContent/>
             </element>
 
-            <element name="dc:language"
-                     errorMessage="Očekáván povinný element dc:language obsahující přesné určení jazyka.">
-                <expectedContent>
-                    <fromDictionary name="iso6392languageCodes"/>
-                </expectedContent>
+            <element name="dc:type" specification="text() = 'model:electronicmonograph'"
+                     errorMessage="Očekáván povinný element dc:type obsahující text 'model:electronicmonograph'.">
+                <expectedContent/>
             </element>
 
-            <element name="dc:identifier" errorMessage="Očekáván alespoň jeden povinný element dc:identifier.">
+            <element name="dc:identifier"
+                     errorMessage="Očekáván alespoň jeden povinný element dc:identifier.">
                 <expectedContent/>
             </element>
 

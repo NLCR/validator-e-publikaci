@@ -1444,10 +1444,8 @@
     <rules-section name="Bibliografická metadata"
                    description="validace obsahů bibliografických metadat v MODS a Dubline Core v souboru PRIMARY-METS">
 
-        <!--<rule name="BIBLIOGRAPHIC_METADATA_MATCH_PROFILE_TITLE">
-            <description>Bibliografická metadata pro entitu typu TITLE musí splňovat požadovaný profil pro záznamy v
-                Dublin Core i MODS.
-            </description>
+        <rule name="BIBLIOGRAPHIC_METADATA_MATCH_PROFILE_TITLE">
+            <description>Bibliografická metadata pro entitu typu TITLE musí splňovat požadovaný profil pro záznamy v Dublin Core i MODS.</description>
             <validation functionName="checkBibliographicMetadataMatchProfile">
                 <params>
                     <value name="mets_file" type="FILE">
@@ -1463,11 +1461,10 @@
                     </value>
                 </params>
             </validation>
-        </rule>-->
+        </rule>
 
         <rule name="BIBLIOGRAPHIC_METADATA_MATCH_PROFILE_VOLUME">
-            <description>Bibliografická metadata pro entitu typu VOLUME musí splňovat požadovaný profil pro záznamy v Dublin Core i MODS.
-            </description>
+            <description>Bibliografická metadata pro entitu typu VOLUME musí splňovat požadovaný profil pro záznamy v Dublin Core i MODS.</description>
             <validation functionName="checkBibliographicMetadataMatchProfile">
                 <params>
                     <value name="mets_file" type="FILE">
