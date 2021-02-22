@@ -1508,7 +1508,7 @@
             </validation>
         </rule>
 
-        <!--<rule name="BIBLIOGRAPHIC_METADATA_MATCH_PROFILE_SUPPLEMENT">
+        <rule name="BIBLIOGRAPHIC_METADATA_MATCH_PROFILE_SUPPLEMENT">
             <description>Bibliografická metadata pro entitu typu SUPPLEMENT musí splňovat požadovaný profil pro záznamy
                 v Dublin Core i MODS.
             </description>
@@ -1527,8 +1527,7 @@
                     </value>
                 </params>
             </validation>
-        </rule>-->
-
+        </rule>
 
     </rules-section>
 
