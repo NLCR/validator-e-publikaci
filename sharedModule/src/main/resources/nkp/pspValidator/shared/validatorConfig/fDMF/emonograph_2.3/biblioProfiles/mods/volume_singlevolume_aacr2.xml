@@ -176,7 +176,7 @@
 
             <element name="mods:genre" specification="text()='electronic volume'"/>
 
-            <element name="mods:originInfo">
+            <element name="mods:originInfo" repeatable="false">
                 <expectedElements>
                     <element name="mods:place" mandatory="false">
                         <expectedElements>

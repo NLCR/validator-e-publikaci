@@ -63,7 +63,7 @@
                 </expectedElements>
             </element>
 
-            <element name="mods:originInfo">
+            <element name="mods:originInfo" repeatable="false">
                 <expectedElements>
                     <element name="mods:publisher" mandatory="false">
                         <expectedContent/>
