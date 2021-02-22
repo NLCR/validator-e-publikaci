@@ -117,7 +117,7 @@
                 </expectedElements>
             </element>
 
-            <element name="mods:name" specification="mods:etal" mandatory="false">
+            <element name="mods:name" specification="mods:etal" mandatory="false" repeatable="false">
                 <expectedElements>
                     <element name="mods:etal">
                         <expectedContent/>
