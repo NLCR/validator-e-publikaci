@@ -163,7 +163,6 @@
                 <expectedContent/>
             </element>
 
-
             <element name="mods:identifier"
                      specification="@type!='uuid' and @type!='ccnb' and @type!='isbn' and @type!='ismn'"
                      mandatory="false">

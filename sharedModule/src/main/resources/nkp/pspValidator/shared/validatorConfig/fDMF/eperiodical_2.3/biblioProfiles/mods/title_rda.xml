@@ -3,11 +3,11 @@
         xmlns="http://www.nkp.cz/validatorEpublikaci/1.1/metadataProfile"
         name="MODS title (RDA)"
         validatorVersion="1.1"
-        dmf="periodical_1.7.1"
+        dmf="eperiodical_2.3"
 >
 
     <info>
-        <text>DMF Periodika 1.7.1 očekává MODS verze 3.6. Dále se zde upřesňují očekávaná metadata pro titul periodika pro
+        <text>DMF Elektronické publikace (periodika) 2.3 očekává MODS verze 3.6. Dále se zde upřesňují očekávaná metadata pro titul periodika pro
             záznamy zpracované podle katalogizačních pravidel RDA.
         </text>
         <url>http://www.loc.gov/standards/mods/</url>
@@ -44,7 +44,6 @@
                     <attribute name="type" mandatory="false">
                         <expectedContent>
                             <oneOf>
-                                <value>abbreviated</value>
                                 <value>alternative</value>
                                 <value>translated</value>
                                 <value>uniform</value>
@@ -55,6 +54,10 @@
 
                 <expectedElements>
                     <element name="mods:title">
+                        <expectedContent/>
+                    </element>
+
+                    <element name="mods:nonSort" mandatory="false">
                         <expectedContent/>
                     </element>
 
@@ -72,16 +75,13 @@
                 </expectedElements>
             </element>
 
-            <element name="mods:name" mandatory="false">
+            <element name="mods:name" specification="not(mods:etal)" mandatory="false">
                 <expectedAttributes>
                     <attribute name="type" mandatory="false">
                         <expectedContent>
                             <oneOf>
                                 <value>personal</value>
                                 <value>corporate</value>
-                                <!--Neni tohle preklep? jinych verzich je tady "conference", proc je tady prave ta jedna hodnota cesky?
-                                Kazdopadne preklep, nebo ne, jednou je to ve standardu, tak to plati.-->
-                                <value>konference</value>
                                 <value>conference</value>
                                 <value>family</value>
                             </oneOf>
@@ -89,9 +89,10 @@
                     </attribute>
 
                     <attribute name="usage" mandatory="false">
-                        <expectedContent>
+                        <!--z textu (str. 13) není zřejmé, zda jde o jedinou povolenou hodnotu-->
+                        <recommendedContent>
                             <value>primary</value>
-                        </expectedContent>
+                        </recommendedContent>
                     </attribute>
                 </expectedAttributes>
                 <expectedElements>
@@ -111,16 +112,20 @@
                         <expectedContent/>
                     </element>
 
+                    <element name="mods:nameIdentifier" mandatory="false">
+                        <expectedContent/>
+                    </element>
+
                     <element name="mods:role" mandatory="false">
                         <expectedElements>
-                            <element name="mods:roleTerm" mandatory="false">
+                            <element name="mods:roleTerm">
                                 <expectedAttributes>
                                     <attribute name="type">
                                         <expectedContent>
                                             <value>code</value>
                                         </expectedContent>
                                     </attribute>
-                                    <attribute name="authority" mandatory="false">
+                                    <attribute name="authority">
                                         <recommendedContent>
                                             <value>marcrelator</value>
                                         </recommendedContent>
@@ -135,6 +140,13 @@
                 </expectedElements>
             </element>
 
+            <element name="mods:name" specification="mods:etal" mandatory="false" repeatable="false">
+                <expectedElements>
+                    <element name="mods:etal">
+                        <expectedContent/>
+                    </element>
+                </expectedElements>
+            </element>
 
             <element name="mods:typeOfResource" mandatory="false">
                 <expectedContent>
@@ -142,7 +154,7 @@
                 </expectedContent>
             </element>
 
-            <element name="mods:genre" specification="text()='title'"/>
+            <element name="mods:genre" specification="text()='electronic_title'"/>
 
             <element name="mods:originInfo" specification="@eventType='publication'" mandatory="false">
                 <expectedAttributes>
@@ -204,10 +216,6 @@
                         <expectedContent/>
                     </element>
 
-                    <element name="mods:dateCreated" mandatory="false">
-                        <expectedContent/>
-                    </element>
-
                     <element name="mods:issuance">
                         <expectedContent>
                             <oneOf>
@@ -219,11 +227,6 @@
                     </element>
 
                     <element name="mods:frequency" mandatory="false">
-                        <expectedAttributes>
-                            <attribute name="authority" mandatory="false">
-                                <!--jen doporucena hodnota 'marcfrequency', resp. neni urcena hodnota pro data z jineho zdroje, treba MARC21 pole 310-->
-                            </attribute>
-                        </expectedAttributes>
                         <expectedContent/>
                     </element>
 
@@ -263,11 +266,7 @@
                         <expectedContent/>
                     </element>
 
-                    <element name="mods:copyrightDate">
-                        <expectedContent/>
-                    </element>
-
-                    <element name="mods:dateCreated" mandatory="false">
+                    <element name="mods:copyrightDate" mandatory="false">
                         <expectedContent/>
                     </element>
 
@@ -282,11 +281,6 @@
                     </element>
 
                     <element name="mods:frequency" mandatory="false">
-                        <expectedAttributes>
-                            <attribute name="authority" mandatory="false">
-                                <!--jen doporucena hodnota 'marcfrequency', resp. neni urcena hodnota pro data z jineho zdroje, treba MARC21 pole 310-->
-                            </attribute>
-                        </expectedAttributes>
                         <expectedContent/>
                     </element>
 
@@ -339,10 +333,6 @@
                         <expectedContent/>
                     </element>
 
-                    <element name="mods:dateCreated" mandatory="false">
-                        <expectedContent/>
-                    </element>
-
                     <element name="mods:issuance">
                         <expectedContent>
                             <oneOf>
@@ -354,11 +344,6 @@
                     </element>
 
                     <element name="mods:frequency" mandatory="false">
-                        <expectedAttributes>
-                            <attribute name="authority" mandatory="false">
-                                <!--jen doporucena hodnota 'marcfrequency', resp. neni urcena hodnota pro data z jineho zdroje, treba MARC21 pole 310-->
-                            </attribute>
-                        </expectedAttributes>
                         <expectedContent/>
                     </element>
 
@@ -411,10 +396,6 @@
                         <expectedContent/>
                     </element>
 
-                    <element name="mods:dateCreated" mandatory="false">
-                        <expectedContent/>
-                    </element>
-
                     <element name="mods:issuance">
                         <expectedContent>
                             <oneOf>
@@ -426,11 +407,6 @@
                     </element>
 
                     <element name="mods:frequency" mandatory="false">
-                        <expectedAttributes>
-                            <attribute name="authority" mandatory="false">
-                                <!--jen doporucena hodnota 'marcfrequency', resp. neni urcena hodnota pro data z jineho zdroje, treba MARC21 pole 310-->
-                            </attribute>
-                        </expectedAttributes>
                         <expectedContent/>
                     </element>
 
@@ -483,10 +459,6 @@
                         <expectedContent/>
                     </element>
 
-                    <element name="mods:dateCreated" mandatory="false">
-                        <expectedContent/>
-                    </element>
-
                     <element name="mods:issuance">
                         <expectedContent>
                             <oneOf>
@@ -498,18 +470,13 @@
                     </element>
 
                     <element name="mods:frequency" mandatory="false">
-                        <expectedAttributes>
-                            <attribute name="authority" mandatory="false">
-                                <!--jen doporucena hodnota 'marcfrequency', resp. neni urcena hodnota pro data z jineho zdroje, treba MARC21 pole 310-->
-                            </attribute>
-                        </expectedAttributes>
                         <expectedContent/>
                     </element>
 
                 </expectedElements>
             </element>
 
-            <element name="mods:language">
+            <element name="mods:language" mandatory="false">
                 <expectedAttributes>
                     <attribute name="objectPart" mandatory="false">
                         <expectedContent>
@@ -551,29 +518,28 @@
                 </extraRules>
             </element>
 
-            <element name="mods:physicalDescription">
+            <element name="mods:physicalDescription" mandatory="false">
                 <expectedElements>
-                    <element name="mods:form">
+                    <element name="mods:form" mandatory="false">
                         <expectedAttributes>
-                            <!--neni jasne, jestli tohle ma byt povinne - je tam M/MA.
-                            Viz https://github.com/NLCR/Standard_NDK/issues/88-->
-                            <attribute name="authority" mandatory="false">
-                                <expectedContent>
-                                    <oneOf>
-                                        <value>rdamedia</value>
-                                        <value>rdacarrier</value>
-                                        <value>marcform</value>
-                                        <value>marccategory</value>
-                                        <value>marcsmd</value>
-                                    </oneOf>
-                                </expectedContent>
-                            </attribute>
-
                             <attribute name="type" mandatory="false">
                                 <expectedContent>
                                     <oneOf>
                                         <value>media</value>
                                         <value>carrier</value>
+                                    </oneOf>
+                                </expectedContent>
+                            </attribute>
+                            <attribute name="authority" mandatory="false">
+                                <expectedContent>
+                                    <!--v textu (str. 16) nejednoznačně uvedeny očekávané hodnoty-->
+                                    <oneOf>
+                                        <value>marcform</value>
+                                        <value>marccategory</value>
+                                        <value>marcsmd</value>
+                                        <value>gmd</value>
+                                        <value>rdamedia</value>
+                                        <value>rdacarrier</value>
                                     </oneOf>
                                 </expectedContent>
                             </attribute>
@@ -583,177 +549,15 @@
                         </expectedContent>
                     </element>
 
-                    <element name="mods:extent" mandatory="false">
-                        <expectedContent/>
-                    </element>
-
-                    <element name="mods:note" mandatory="false">
-                        <expectedContent/>
+                    <element name="mods:digitalOrigin" mandatory="false">
+                        <expectedContent>
+                            <value>born digital</value>
+                        </expectedContent>
                     </element>
                 </expectedElements>
             </element>
 
-            <element name="mods:abstract" mandatory="false">
-                <expectedContent/>
-            </element>
-
-            <element name="mods:note" mandatory="false">
-                <expectedAttributes>
-                    <attribute name="type" mandatory="false"/>
-                </expectedAttributes>
-                <expectedContent/>
-            </element>
-
-            <element name="mods:subject" mandatory="false">
-                <expectedAttributes>
-                    <attribute name="authority" mandatory="false">
-                        <recommendedContent>
-                            <oneOf>
-                                <value>czenas</value>
-                                <value>eczenas</value>
-                                <value>mednas</value>
-                                <value>czmesh</value>
-                                <value>Konspekt</value>
-                            </oneOf>
-                        </recommendedContent>
-                    </attribute>
-                </expectedAttributes>
-                <expectedElements>
-                    <element name="mods:topic" mandatory="false">
-                        <!--V DMF je "použít kontrolovaný slovník, napříkld ... " - tj. kontrolovaný slovník NENÍ vyžadován DMF-->
-                        <expectedContent/>
-                    </element>
-
-                    <element name="mods:geographic" mandatory="false">
-                        <!--V DMF je "použít kontrolovaný slovník, napříkld ... " - tj. kontrolovaný slovník NENÍ vyžadován DMF-->
-                        <expectedContent/>
-                    </element>
-
-                    <element name="mods:geographicCode" mandatory="false">
-                        <expectedAttributes>
-                            <attribute name="authority" mandatory="false"/>
-                        </expectedAttributes>
-                        <expectedContent/>
-                    </element>
-
-                    <element name="mods:temporal" mandatory="false">
-                        <!--V DMF je "použít kontrolovaný slovník, napříkld ... " - tj. kontrolovaný slovník NENÍ vyžadován DMF-->
-                        <expectedContent/>
-                    </element>
-
-                    <element name="mods:name" mandatory="false">
-                        <expectedAttributes>
-                            <attribute name="type" mandatory="false">
-                                <expectedContent>
-                                    <oneOf>
-                                        <value>personal</value>
-                                        <value>corporate</value>
-                                        <!--Neni tohle preklep? jinych verzich je tady "conference", proc je tady prave ta jedna hodnota cesky?
-                                        Kazdopadne preklep, nebo ne, jednou je to ve standardu, tak to plati.-->
-                                        <value>konference</value>
-                                        <value>family</value>
-                                    </oneOf>
-                                </expectedContent>
-                            </attribute>
-
-                            <attribute name="usage" mandatory="false">
-                                <expectedContent>
-                                    <value>primary</value>
-                                </expectedContent>
-                            </attribute>
-                        </expectedAttributes>
-                        <expectedElements>
-                            <element name="mods:namePart" mandatory="false">
-                                <expectedAttributes>
-                                    <attribute name="type" mandatory="false">
-                                        <expectedContent>
-                                            <oneOf>
-                                                <value>date</value>
-                                                <value>family</value>
-                                                <value>given</value>
-                                                <value>termsOfAddress</value>
-                                            </oneOf>
-                                        </expectedContent>
-                                    </attribute>
-                                </expectedAttributes>
-                                <expectedContent/>
-                            </element>
-
-                            <element name="mods:nameIdentifier" mandatory="false">
-                                <expectedContent/>
-                            </element>
-
-                            <element name="mods:role" mandatory="false">
-                                <expectedElements>
-                                    <element name="mods:roleTerm" mandatory="false">
-                                        <expectedAttributes>
-                                            <attribute name="type">
-                                                <expectedContent>
-                                                    <value>code</value>
-                                                </expectedContent>
-                                            </attribute>
-                                            <attribute name="authority" mandatory="false">
-                                                <recommendedContent>
-                                                    <value>marcrelator</value>
-                                                </recommendedContent>
-                                            </attribute>
-                                        </expectedAttributes>
-                                        <recommendedContent>
-                                            <fromDictionary name="marcRelatorCodes"/>
-                                        </recommendedContent>
-                                    </element>
-                                </expectedElements>
-                            </element>
-                        </expectedElements>
-                    </element>
-                </expectedElements>
-            </element>
-
-            <element name="mods:classification" specification="not(@edition)" mandatory="false">
-                <!--Mezinarodni desetinne trideni-->
-                <expectedAttributes>
-                    <!--NOTE: z DMF není úplně zřjmé co platí pro rda a aacr2, povolena hodnota Konspekt, aby při validaci prošel element s touto hodnotou i když nemá atribut edition-->
-                    <attribute name="authority">
-                        <recommendedContent>
-                            <oneOf>
-                                <value>udc</value>
-                                <value>Konspekt</value>
-                            </oneOf>
-                        </recommendedContent>
-                    </attribute>
-                </expectedAttributes>
-                <expectedContent/>
-            </element>
-
-            <element name="mods:classification" specification="boolean(@edition)" mandatory="false">
-                <!--Konspekt-->
-                <expectedAttributes>
-                    <!--NOTE: DMF neuvadi, jestli je authority povinny atribut, necham, ze je nepovinny-->
-                    <attribute name="authority">
-                        <recommendedContent>
-                            <oneOf>
-                                <value>udc</value>
-                                <value>Konspekt</value>
-                            </oneOf>
-                        </recommendedContent>
-                    </attribute>
-
-                    <attribute name="edition"/>
-                </expectedAttributes>
-                <expectedContent/>
-            </element>
-
-            <element name="mods:relatedItem" mandatory="false" ignoreUnexpectedChildElements="true">
-                <expectedAttributes>
-                    <attribute name="type" mandatory="false"/>
-                    <attribute name="otherType" mandatory="false"/>
-                    <attribute name="otherTypeURI" mandatory="false"/>
-                    <attribute name="otherTypeAuth" mandatory="false"/>
-                    <attribute name="otherTypeAuthURI" mandatory="false"/>
-                </expectedAttributes>
-            </element>
-
-            <!--identifikatory-->
+            <!--identifiers-->
 
             <element name="mods:identifier" specification="@type='uuid'">
                 <expectedAttributes>
@@ -767,12 +571,47 @@
                 <expectedContent/>
             </element>
 
-            <!--dalsi identifikatory - ccnb, isbn, issn, jine (barcode, oclc, sysno, permalink apod.)-->
-            <element name="mods:identifier"
-                     specification="@type!='uuid'"
-                     mandatory="false">
+            <element name="mods:identifier" specification="@type='ccnb'" mandatory="false">
                 <expectedAttributes>
                     <attribute name="type"/>
+                    <attribute name="invalid" mandatory="false">
+                        <expectedContent>
+                            <value>yes</value>
+                        </expectedContent>
+                    </attribute>
+                </expectedAttributes>
+                <expectedContent/>
+            </element>
+
+            <element name="mods:identifier" specification="@type='issn'" mandatory="false">
+                <expectedAttributes>
+                    <attribute name="type"/>
+                    <attribute name="invalid" mandatory="false">
+                        <expectedContent>
+                            <value>yes</value>
+                        </expectedContent>
+                    </attribute>
+                </expectedAttributes>
+                <expectedContent/>
+            </element>
+
+            <element name="mods:identifier" specification="@type='ismn'" mandatory="false">
+                <expectedAttributes>
+                    <attribute name="type"/>
+                    <attribute name="invalid" mandatory="false">
+                        <expectedContent>
+                            <value>yes</value>
+                        </expectedContent>
+                    </attribute>
+                </expectedAttributes>
+                <expectedContent/>
+            </element>
+
+            <element name="mods:identifier"
+                     specification="@type!='uuid' and @type!='ccnb' and @type!='issn' and @type!='ismn'"
+                     mandatory="false">
+                <expectedAttributes>
+                    <attribute name="type" mandatory="false"/>
                     <attribute name="invalid" mandatory="false">
                         <expectedContent>
                             <value>yes</value>
@@ -787,17 +626,14 @@
                     <element name="mods:url" mandatory="false">
                         <expectedAttributes>
                             <attribute name="note" mandatory="false"/>
-                            <attribute name="displayLabel" mandatory="false"/>
                             <attribute name="usage" mandatory="false"/>
-                            <attribute name="access" mandatory="false"/>
                         </expectedAttributes>
                         <expectedContent/>
                     </element>
 
-                    <!--DMF si protireci: "pozn. u dokumentů v digitální podobě není možné vyplnit" a zaroven je element mandatory. Nechavam tedy nepovinny.-->
                     <element name="mods:physicalLocation" repeatable="false" mandatory="false">
                         <expectedAttributes>
-                            <attribute name="authority" mandatory="false">
+                            <attribute name="type">
                                 <expectedContent>
                                     <value>siglaADR</value>
                                 </expectedContent>
@@ -808,7 +644,7 @@
                         </expectedContent>
                     </element>
 
-                    <element name="mods:shelfLocator">
+                    <element name="mods:shelfLocator" mandatory="false">
                         <expectedContent/>
                     </element>
                 </expectedElements>
@@ -834,6 +670,15 @@
                     </element>
 
                     <element name="mods:recordCreationDate">
+                        <expectedContent>
+                            <!--TODO: validace ISO 8601 na urovni minut-->
+                            <!--TODO: mozna regulernim vyrazem, resp. skupinou, protoze ten zapis muze byt dost ruzny - uz jenom oddelovace, viz. treba
+                            http://www.pelagodesign.com/blog/2009/05/20/iso-8601-date-validation-that-doesnt-suck/
+                            -->
+                        </expectedContent>
+                    </element>
+
+                    <element name="mods:recordChangeDate" mandatory="false">
                         <expectedAttributes>
                             <attribute name="encoding">
                                 <expectedContent>
@@ -842,27 +687,11 @@
                             </attribute>
                         </expectedAttributes>
                         <expectedContent>
-                            <!--TODO: mozna regulernim vyrazem, resp. skupinou, protoze ten zapis muze byt dost ruzny - uz jenom oddelovace, viz. treba
-                            http://www.pelagodesign.com/blog/2009/05/20/iso-8601-date-validation-that-doesnt-suck/
-                            -->
+                            <!--TODO: validace ISO 8601 na urovni minut-->
                         </expectedContent>
                     </element>
 
-                    <element name="mods:recordChangeDate" mandatory="false">
-                        <!-- TODO: https://github.com/NLCR/Standard_NDK/issues/86 -->
-                        <!-- V DMF 1.7 není atribut encoding definován, ale logicky by měl být stejný zápis jako u recordCreationDate.
-                        Zde ale atribut definován nepovinný, protože není ve specifikaci DMF -->
-                        <expectedAttributes>
-                            <attribute name="encoding" mandatory="false">
-                                <expectedContent>
-                                    <value>iso8601</value>
-                                </expectedContent>
-                            </attribute>
-                        </expectedAttributes>
-                        <expectedContent/>
-                    </element>
-
-                    <element name="mods:recordIdentifier" mandatory="false">
+                    <element name="mods:recordIdentifier">
                         <expectedAttributes>
                             <attribute name="source" mandatory="false"/>
                         </expectedAttributes>
@@ -870,12 +699,12 @@
                     </element>
 
                     <element name="mods:recordOrigin" mandatory="false">
-                        <recommendedContent>
+                        <expectedContent>
                             <oneOf>
                                 <value>machine generated</value>
                                 <value>human prepared</value>
                             </oneOf>
-                        </recommendedContent>
+                        </expectedContent>
                     </element>
 
                     <element name="mods:languageOfCataloging" mandatory="false">
@@ -894,10 +723,71 @@
                 </expectedElements>
             </element>
 
+            <element name="mods:subject" mandatory="false">
+                <expectedAttributes>
+                    <attribute name="authority" mandatory="false"/>
+                </expectedAttributes>
+                <expectedElements>
+                    <element name="mods:topic" mandatory="false">
+                        <expectedContent/>
+                    </element>
+
+                    <element name="mods:geographic" mandatory="false">
+                        <!--V DMF je "použít kontrolovaný slovník, napříkld ... " - tj. kontrolovaný slovník NENÍ vyžadován DMF-->
+                        <expectedContent/>
+                    </element>
+
+                    <element name="mods:temporal" mandatory="false">
+                        <!--V DMF je "použít kontrolovaný slovník, napříkld ... " - tj. kontrolovaný slovník NENÍ vyžadován DMF-->
+                        <expectedContent/>
+                    </element>
+
+                    <element name="mods:name" mandatory="false">
+                        <expectedElements>
+                            <element name="mods:namePart" mandatory="false">
+                                <expectedContent/>
+                            </element>
+                        </expectedElements>
+                    </element>
+                </expectedElements>
+            </element>
+
+            <!--Mezinarodni desetinne trideni-->
+            <element name="mods:classification" specification="@authority='udc'" mandatory="false">
+                <expectedAttributes>
+                    <attribute name="authority"/>
+                    <attribute name="edition"/>
+                </expectedAttributes>
+                <expectedContent/>
+            </element>
+
+            <!--Konspekt-->
+            <element name="mods:classification" specification="@authority='Konspekt'" mandatory="false">
+                <expectedAttributes>
+                    <attribute name="authority"/>
+                    <attribute name="edition">
+                        <expectedContent>
+                            <value>Konspekt</value>
+                        </expectedContent>
+                    </attribute>
+                </expectedAttributes>
+                <expectedContent/>
+            </element>
+
+            <element name="mods:relatedItem" mandatory="false" ignoreUnexpectedChildElements="true">
+                <expectedAttributes>
+                    <attribute name="type" mandatory="false"/>
+                    <attribute name="otherType" mandatory="false"/>
+                    <attribute name="otherTypeURI" mandatory="false"/>
+                    <attribute name="otherTypeAuth" mandatory="false"/>
+                    <attribute name="otherTypeAuthURI" mandatory="false"/>
+                </expectedAttributes>
+            </element>
+
         </expectedElements>
         <extraRules>
-            <!--  Musí existovat alespoň jeden element originInfo a to s atributem eventType=publication nebo eventType=production -->
-            <existsAtLeastOnce xpath="mods:originInfo[@eventType='publication' or @eventType='production']"/>
+            <!--  Musí existovat alespoň jeden element originInfo -->
+            <existsAtLeastOnce xpath="mods:originInfo"/>
         </extraRules>
     </rootElement>
 </metadataProfile>

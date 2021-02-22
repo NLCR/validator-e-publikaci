@@ -79,10 +79,10 @@ public class MainTest {
         //devParams.getSectionsToRun().add("Bibliografická metadata");
         //devParams.getSectionsToRun().add("Identifikátory");
         //devParams.getSectionsToRun().add("Obrazová data");
-        //devParams.getSectionsToRun().add("Bibliografická metadata");
+        devParams.getSectionsToRun().add("Bibliografická metadata");
         //devParams.getSectionsToRun().add("ALTO");
         //devParams.getSectionsToRun().add("Technická metadata");
-        devParams.getSectionsToRun().add("METS hlavičky");
+        //devParams.getSectionsToRun().add("METS hlavičky");
         //devParams.getSectionsToRun().add("Autorskoprávní metadata");
         //devParams.getSectionsToRun().add("Sekundární METS filesec");
         //devParams.getSectionsToRun().add("Primární METS filesec");

@@ -3,11 +3,11 @@
         xmlns="http://www.nkp.cz/validatorEpublikaci/1.1/metadataProfile"
         name="DC title (RDA)"
         validatorVersion="1.1"
-        dmf="periodical_1.7.1"
+        dmf="eperiodical_2.3"
 >
 
     <info>
-        <text>DMF Periodika 1.7.1 očekává Dublin Core verze 1.1. Dále se zde upřesňují očekávaná metadata pro titul
+        <text>DMF Elektronické publikace (periodika) 2.3 očekává Dublin Core verze 1.1. Dále se zde upřesňují očekávaná metadata pro titul
             periodika pro záznamy zpracované podle katalogizačních pravidel RDA.
         </text>
         <url description="popis Dublin Core 1.1">http://dublincore.org/documents/dces/</url>
@@ -34,8 +34,8 @@
                 <expectedContent/>
             </element>
 
-            <element name="dc:type" specification="text() = 'model:periodical'"
-                     errorMessage="Očekáván povinný element dc:type obsahující text 'model:periodical'.">
+            <element name="dc:type" specification="text() = 'model:electronic_periodical'"
+                     errorMessage="Očekáván povinný element dc:type obsahující text 'model:electronic_periodical'.">
                 <expectedContent/>
             </element>
 
@@ -51,24 +51,15 @@
                 <expectedContent/>
             </element>
 
-            <element name="dc:language">
+            <element name="dc:identifier" errorMessage="Očekáván alespoň jeden povinný element dc:identifier.">
                 <expectedContent/>
             </element>
 
-            <element name="dc:format"
-                     errorMessage="Očekáván povinný element dc:date obsahující údaje o fyzické podobě dokumentu">
+            <element name="dc:source" mandatory="false">
                 <expectedContent/>
             </element>
 
             <element name="dc:subject" mandatory="false">
-                <expectedContent/>
-            </element>
-
-            <element name="dc:identifier" errorMessage="Očekáván alespoň jeden povinný element dc:identifier.">
-                <expectedContent/>
-            </element>
- 
-	        <element name="dc:source" mandatory="false">
                 <expectedContent/>
             </element>
 
