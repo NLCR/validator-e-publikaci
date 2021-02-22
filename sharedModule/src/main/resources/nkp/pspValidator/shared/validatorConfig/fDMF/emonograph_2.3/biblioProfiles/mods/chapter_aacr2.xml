@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadataProfile
         xmlns="http://www.nkp.cz/validatorEpublikaci/1.1/metadataProfile"
-        name="MODS internal part - chapter (AACR2)"
+        name="MODS chapter (AACR2)"
         validatorVersion="1.1"
         dmf="emonograph_2.3"
 >

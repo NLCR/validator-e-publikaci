@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadataProfile
         xmlns="http://www.nkp.cz/validatorEpublikaci/1.1/metadataProfile"
-        name="DC internal part - chapter (AACR2)"
+        name="chapter (RDA)"
         validatorVersion="1.1"
         dmf="monograph_1.3.2"
 >
 
     <info>
         <text>DMF Elektronické publikace (monografie) 2.3 očekává Dublin Core verze 1.1. Dále se zde upřesňují očekávaná metadata pro vnitřní
-            část typu kapitola pro záznamy zpracované podle katalogizačních pravidel AACR2.
+            část typu kapitola pro záznamy zpracované podle katalogizačních pravidel RDA.
         </text>
         <url description="popis Dublin Core 1.1">http://dublincore.org/documents/dces/</url>
         <url description="XSD pro Dublin Core 1.1">http://www.openarchives.org/OAI/2.0/oai_dc.xsd</url>
@@ -43,8 +43,7 @@
                 <expectedContent/>
             </element>
 
-            <element name="dc:language"
-                     errorMessage="Očekáván alespoň jeden povinný element dc:language obsahující přesné určení jazyka kódem z kontrolovaného slovníku ISO 639-2.">
+            <element name="dc:language" mandatory="false">
                 <expectedContent>
                     <fromDictionary name="iso6392languageCodes"/>
                 </expectedContent>
