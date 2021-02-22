@@ -23,7 +23,7 @@
     <mets:dmdSec ID="MODSMD_TITLE_0001">
         <mets:mdWrap MDTYPE="MODS" MDTYPEVERSION="3.6" MIMETYPE="text/xml">
             <mets:xmlData>
-                <mods:mods ID="MODS_TITLE_0001">>
+                <mods:mods ID="MODS_TITLE_0001">
                     <mods:titleInfo>
                         <mods:title>Šalina</mods:title>
                         <mods:subTitle>čtrnástideník pro příjemné cestování městskou dopravou</mods:subTitle>
@@ -104,7 +104,7 @@
                     <dc:title>Šalina</dc:title>
                     <dc:title>čtrnástideník pro příjemné cestování městskou dopravou</dc:title>
                     <dc:title>Šalina Brno</dc:title>
-                    <dc:type>model:electronical_periodical</dc:type>
+                    <dc:type>model:electronic_periodical</dc:type>
                     <dc:coverage>xr</dc:coverage>
                     <dc:coverage>Brno</dc:coverage>
                     <dc:publisher>DPMB, a. s.</dc:publisher>
