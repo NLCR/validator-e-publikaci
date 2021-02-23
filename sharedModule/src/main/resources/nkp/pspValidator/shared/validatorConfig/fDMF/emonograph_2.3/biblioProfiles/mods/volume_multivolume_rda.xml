@@ -276,15 +276,12 @@
                                     <value>marc</value>
                                 </expectedContent>
                             </attribute>
-                            <attribute name="point">
-                                <expectedContent>
-                                    <oneOf>
-                                        <value>start</value>
-                                        <value>end</value>
-                                    </oneOf>
-                                </expectedContent>
-                            </attribute>
-                            <attribute name="qualifier"/>
+                            <!--
+                            Změna oproti textu (str. 17)
+                            Point nechávám nepovinný, protože dateIssued může být jediné datum, ne nutně rozsah.
+                            -->
+                            <attribute name="point" mandatory="false"/>
+                            <attribute name="qualifier" mandatory="false"/>
                         </expectedAttributes>
                         <expectedContent/>
                     </element>
