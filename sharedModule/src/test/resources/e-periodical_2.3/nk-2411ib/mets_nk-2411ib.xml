@@ -193,9 +193,9 @@
                     <mods:identifier type="uuid">jgmdaeda-8be0-44ca-ae51-b071b6f31d00</mods:identifier>
                     <mods:identifier type="urnnbn">urn:nbn:cz:nk-mbc228</mods:identifier>
                     <mods:location>
-                        <mods:url usage="primary" note="Adobe Acrobat required">https://www.salina-brno.cz/images/casopis_pdf/03%20-%202018.pdf</mods:url>
                         <mods:physicalLocation>ABA001</mods:physicalLocation>
                         <mods:shelfLocator>P III 075312</mods:shelfLocator>
+                        <mods:url usage="primary" note="Adobe Acrobat required">https://www.salina-brno.cz/images/casopis_pdf/03%20-%202018.pdf</mods:url>
                     </mods:location>
                     <mods:recordInfo>
                         <mods:descriptionStandard>rda</mods:descriptionStandard>
