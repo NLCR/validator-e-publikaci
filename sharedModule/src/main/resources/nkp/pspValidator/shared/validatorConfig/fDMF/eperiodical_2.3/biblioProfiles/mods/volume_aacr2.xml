@@ -117,7 +117,7 @@
 
             <element name="mods:genre" specification="text()='electronic_volume'"/>
 
-            <element name="mods:originInfo">
+            <element name="mods:originInfo" repeatable="false">
                 <expectedElements>
                     <element name="mods:dateIssued">
                         <expectedAttributes>

@@ -156,7 +156,7 @@
                 <expectedContent/>
             </element>
 
-            <element name="mods:originInfo" mandatory="false">
+            <element name="mods:originInfo" mandatory="false" repeatable="false">
                 <expectedElements>
                     <element name="mods:place" mandatory="false">
                         <expectedElements>

@@ -161,7 +161,7 @@
                 <expectedContent/>
             </element>
 
-            <element name="mods:originInfo" mandatory="false">
+            <element name="mods:originInfo" mandatory="false" repeatable="false">
                 <expectedAttributes>
                     <attribute name="transliteration" mandatory="false">
                         <expectedContent>
