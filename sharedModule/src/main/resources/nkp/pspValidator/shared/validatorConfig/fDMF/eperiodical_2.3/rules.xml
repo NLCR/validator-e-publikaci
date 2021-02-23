@@ -1647,8 +1647,6 @@
             </validation>
         </rule>
 
-        <!--
-
         <rule name="BIBLIOGRAPHIC_METADATA_MATCH_PROFILE_ISSUE">
             <description>Bibliografická metadata pro entitu typu ISSUE musí splňovat požadovaný profil pro záznamy v
                 Dublin Core i MODS.
@@ -1669,6 +1667,7 @@
                 </params>
             </validation>
         </rule>
+        <!--
 
         <rule name="BIBLIOGRAPHIC_METADATA_MATCH_PROFILE_SUPPLEMENT">
             <description>Bibliografická metadata pro entitu typu SUPPLEMENT musí splňovat požadovaný profil pro záznamy
