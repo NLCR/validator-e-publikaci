@@ -336,7 +336,9 @@
                         <mods:digitalOrigin>born digital</mods:digitalOrigin>
                     </mods:physicalDescription>
                     <!--<mods:subject authority="czenas"/>-->
-                    <mods:topic>městská hromadná doprava</mods:topic>
+                    <mods:subject>
+                        <mods:topic>městská hromadná doprava</mods:topic>
+                    </mods:subject>
                     <mods:identifier type="uuid">si8793h2-4dd6-33bb-es51-m4op89350f54</mods:identifier>
                     <mods:location>
                         <mods:url>https://www.salina-brno.cz/images/casopis_pdf/03%20-%202018.pdf</mods:url>
