@@ -3,11 +3,11 @@
         xmlns="http://www.nkp.cz/validatorEpublikaci/1.1/metadataProfile"
         name="MODS supplement (RDA)"
         validatorVersion="1.1"
-        dmf="periodical_1.7.1"
+        dmf="eperiodical_2.3"
 >
 
     <info>
-        <text>DMF Periodika 1.7.1 očekává MODS verze 3.6. Dále se zde upřesňují očekávaná metadata pro přílohu pro
+        <text>DMF Elektronické publikace (periodika) 2.3 očekává MODS verze 3.6. Dále se zde upřesňují očekávaná metadata pro přílohu pro
             záznamy zpracované podle katalogizačních pravidel RDA.
         </text>
         <url>http://www.loc.gov/standards/mods/</url>
@@ -42,6 +42,10 @@
             <element name="mods:titleInfo">
                 <expectedElements>
                     <element name="mods:title">
+                        <expectedContent/>
+                    </element>
+
+                    <element name="mods:nonSort" mandatory="false">
                         <expectedContent/>
                     </element>
 
@@ -157,45 +161,6 @@
                 <expectedContent/>
             </element>
 
-
-            <element name="mods:originInfo" specification="@eventType='publication'" mandatory="false">
-                <expectedAttributes>
-                    <attribute name="eventType"/>
-                </expectedAttributes>
-                <expectedElements>
-                    <element name="mods:place" mandatory="false">
-                        <expectedElements>
-                            <element name="mods:placeTerm" mandatory="false">
-                                <expectedAttributes>
-                                    <attribute name="type">
-                                        <expectedContent>
-                                            <oneOf>
-                                                <value>code</value>
-                                                <value>text</value>
-                                            </oneOf>
-                                        </expectedContent>
-                                    </attribute>
-
-                                    <attribute name="authority" mandatory="false"/>
-                                </expectedAttributes>
-                                <expectedContent/>
-                            </element>
-                        </expectedElements>
-                    </element>
-
-                    <element name="mods:publisher" mandatory="false">
-                        <expectedContent/>
-                    </element>
-
-                    <element name="mods:dateIssued" mandatory="false">
-                        <expectedAttributes>
-                            <attribute name="qualifier" mandatory="false"/>
-                        </expectedAttributes>
-                        <expectedContent/>
-                    </element>
-                </expectedElements>
-            </element>
-
             <element name="mods:originInfo" specification="@eventType='production'" mandatory="false">
                 <expectedAttributes>
                     <attribute name="eventType"/>
@@ -232,6 +197,44 @@
                                     <value>production</value>
                                 </expectedContent>
                             </attribute>
+                        </expectedAttributes>
+                        <expectedContent/>
+                    </element>
+                </expectedElements>
+            </element>
+
+            <element name="mods:originInfo" specification="@eventType='publication'" mandatory="false">
+                <expectedAttributes>
+                    <attribute name="eventType"/>
+                </expectedAttributes>
+                <expectedElements>
+                    <element name="mods:place" mandatory="false">
+                        <expectedElements>
+                            <element name="mods:placeTerm" mandatory="false">
+                                <expectedAttributes>
+                                    <attribute name="type">
+                                        <expectedContent>
+                                            <oneOf>
+                                                <value>code</value>
+                                                <value>text</value>
+                                            </oneOf>
+                                        </expectedContent>
+                                    </attribute>
+
+                                    <attribute name="authority" mandatory="false"/>
+                                </expectedAttributes>
+                                <expectedContent/>
+                            </element>
+                        </expectedElements>
+                    </element>
+
+                    <element name="mods:publisher" mandatory="false">
+                        <expectedContent/>
+                    </element>
+
+                    <element name="mods:dateIssued" mandatory="false">
+                        <expectedAttributes>
+                            <attribute name="qualifier" mandatory="false"/>
                         </expectedAttributes>
                         <expectedContent/>
                     </element>
@@ -366,7 +369,6 @@
                                     <value>code</value>
                                 </expectedContent>
                             </attribute>
-
                             <attribute name="authority">
                                 <expectedContent>
                                     <value>iso639-2b</value>
@@ -391,20 +393,7 @@
                 <expectedElements>
                     <element name="mods:form">
                         <expectedAttributes>
-                            <!-- Viz https://github.com/NLCR/Standard_NDK/issues/88-->
-                            <attribute name="authority" mandatory="false">
-                                <expectedContent>
-                                    <oneOf>
-                                        <value>rdamedia</value>
-                                        <value>rdacarrier</value>
-                                        <value>marcform</value>
-                                        <value>marccategory</value>
-                                        <value>marcsmd</value>
-                                    </oneOf>
-                                </expectedContent>
-                            </attribute>
-
-                            <attribute name="type" mandatory="false">
+                            <attribute name="type">
                                 <expectedContent>
                                     <oneOf>
                                         <value>media</value>
@@ -412,10 +401,23 @@
                                     </oneOf>
                                 </expectedContent>
                             </attribute>
+
+                            <attribute name="authority" mandatory="false">
+                                <expectedContent>
+                                    <oneOf>
+                                        <!--nejasne, co vlastne plati, viz strana 32-->
+                                        <value>marcform</value>
+                                        <value>marccategory</value>
+                                        <value>marcsmd</value>
+                                        <value>gmd</value>
+
+                                        <value>rdamedia</value>
+                                        <value>rdacarrier</value>
+                                    </oneOf>
+                                </expectedContent>
+                            </attribute>
                         </expectedAttributes>
-                        <expectedContent>
-                            <!--Navrhovane hodnoty "print", "electronic" ale nejspíš ne vyžadované-->
-                        </expectedContent>
+                        <expectedContent/>
                     </element>
 
                     <element name="mods:extent" mandatory="false">
@@ -470,6 +472,7 @@
                     </element>
 
                     <element name="mods:name" mandatory="false">
+                        <!--V DMF je "použít kontrolovaný slovník, napříkld ... " - tj. kontrolovaný slovník NENÍ vyžadován DMF-->
                         <expectedElements>
                             <element name="mods:namePart" mandatory="false">
                                 <expectedContent/>
@@ -479,37 +482,22 @@
                 </expectedElements>
             </element>
 
-            <element name="mods:classification" specification="not(@edition)" mandatory="false">
-                <!--Mezinarodni desetinne trideni-->
+            <!--Mezinarodni desetinne trideni-->
+            <element name="mods:classification" specification="@authority='udc'" mandatory="false">
                 <expectedAttributes>
-                    <!--NOTE: DMF neuvadi, jestli je authority povinny atribut, nechavam nepovinny. Neni zrejme co plati pro rda a aacr2, povolena nvíc i hodnota Konspekt aby prochazely elementy s touto hodnotou bez atributu edition-->
-                    <attribute name="authority" mandatory="true">
-                        <recommendedContent>
-                            <oneOf>
-                                <value>udc</value>
-                                <value>Konspekt</value>
-                            </oneOf>
-                        </recommendedContent>
-                    </attribute>
+                    <attribute name="authority"/>
+                    <attribute name="edition"/>
                 </expectedAttributes>
                 <expectedContent/>
             </element>
 
-            <element name="mods:classification" specification="boolean(@edition)" mandatory="false">
-                <!--Klasifikační údaje věcného třídění podle Konspektu-->
+            <!--Konspekt-->
+            <element name="mods:classification" specification="@authority='Konspekt'" mandatory="false">
                 <expectedAttributes>
-                    <attribute name="authority">
-                        <recommendedContent>
-                            <oneOf>
-                                <value>udc</value>
-                                <value>Konspekt</value>
-                            </oneOf>
-                        </recommendedContent>
-                    </attribute>
-
+                    <attribute name="authority"/>
                     <attribute name="edition">
                         <expectedContent>
-                            <!--hodnota "Konspekt" je zde nejspíš jen doporučená-->
+                            <value>Konspekt</value>
                         </expectedContent>
                     </attribute>
                 </expectedAttributes>
@@ -544,9 +532,57 @@
                 </expectedContent>
             </element>
 
-            <!--jiny identifikator - ccnb, isbn, ismn, issn, jiny (barcode, oclc, sysno, permalink)-->
+            <element name="mods:identifier" specification="@type='ccnb'" mandatory="false">
+                <expectedAttributes>
+                    <attribute name="type"/>
+                    <attribute name="invalid" mandatory="false">
+                        <expectedContent>
+                            <value>yes</value>
+                        </expectedContent>
+                    </attribute>
+                </expectedAttributes>
+                <expectedContent/>
+            </element>
+
+            <element name="mods:identifier" specification="@type='isbn'" mandatory="false">
+                <expectedAttributes>
+                    <attribute name="type"/>
+                    <attribute name="invalid" mandatory="false">
+                        <expectedContent>
+                            <value>yes</value>
+                        </expectedContent>
+                    </attribute>
+                </expectedAttributes>
+                <expectedContent/>
+            </element>
+
+            <element name="mods:identifier" specification="@type='ismn'" mandatory="false">
+                <expectedAttributes>
+                    <attribute name="type"/>
+                    <attribute name="invalid" mandatory="false">
+                        <expectedContent>
+                            <value>yes</value>
+                        </expectedContent>
+                    </attribute>
+                </expectedAttributes>
+                <expectedContent/>
+            </element>
+
+            <element name="mods:identifier" specification="@type='issn'" mandatory="false">
+                <expectedAttributes>
+                    <attribute name="type"/>
+                    <attribute name="invalid" mandatory="false">
+                        <expectedContent>
+                            <value>yes</value>
+                        </expectedContent>
+                    </attribute>
+                </expectedAttributes>
+                <expectedContent/>
+            </element>
+
+            <!--jiny identifikator - (barcode, oclc, sysno, permalink)-->
             <element name="mods:identifier"
-                     specification="@type!='uuid' and @type!='urnnbn'"
+                     specification="@type!='uuid' and @type!='urnnbn' and @type!='ccnb' and @type!='isbn' and @type!='ismn' and @type!='issn'"
                      mandatory="false">
                 <expectedAttributes>
                     <attribute name="type" mandatory="false"/>
