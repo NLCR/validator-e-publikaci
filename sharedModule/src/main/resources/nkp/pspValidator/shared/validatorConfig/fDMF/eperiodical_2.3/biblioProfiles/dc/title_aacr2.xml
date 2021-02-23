@@ -47,7 +47,7 @@
                 <expectedContent/>
             </element>
 
-            <element name="dc:date" errorMessage="Očekáván povinný element dc:date obsahující datum vydání předlohy">
+            <element name="dc:date" errorMessage="Očekáván povinný element dc:date obsahující datum vydání.">
                 <expectedContent/>
             </element>
 

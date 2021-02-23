@@ -1626,7 +1626,7 @@
             </validation>
         </rule>
 
-        <!--<rule name="BIBLIOGRAPHIC_METADATA_MATCH_PROFILE_VOLUME">
+        <rule name="BIBLIOGRAPHIC_METADATA_MATCH_PROFILE_VOLUME">
             <description>Bibliografická metadata pro entitu typu VOLUME musí splňovat požadovaný profil pro záznamy v
                 Dublin Core i MODS.
             </description>
@@ -1646,6 +1646,8 @@
                 </params>
             </validation>
         </rule>
+
+        <!--
 
         <rule name="BIBLIOGRAPHIC_METADATA_MATCH_PROFILE_ISSUE">
             <description>Bibliografická metadata pro entitu typu ISSUE musí splňovat požadovaný profil pro záznamy v

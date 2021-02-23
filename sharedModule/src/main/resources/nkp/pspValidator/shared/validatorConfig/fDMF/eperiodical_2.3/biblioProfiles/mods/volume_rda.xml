@@ -3,11 +3,11 @@
         xmlns="http://www.nkp.cz/validatorEpublikaci/1.1/metadataProfile"
         name="MODS volume (RDA)"
         validatorVersion="1.1"
-        dmf="periodical_1.7.1"
+        dmf="eperiodical_2.3"
 >
 
     <info>
-        <text>DMF Periodika 1.7.1 očekává MODS verze 3.6. Dále se zde upřesňují očekávaná metadata pro ročník periodika
+        <text>DMF Elektronické publikace (periodika) 2.3 očekává MODS verze 3.6. Dále se zde upřesňují očekávaná metadata pro ročník periodika
             pro záznamy zpracované podle katalogizačních pravidel RDA.
         </text>
         <url>http://www.loc.gov/standards/mods/</url>
@@ -36,30 +36,26 @@
         <expectedElements>
             <element name="mods:titleInfo">
                 <expectedElements>
-                    <element name="mods:partNumber" mandatory="false">
+                    <element name="mods:partNumber">
                         <expectedContent/>
                     </element>
                 </expectedElements>
             </element>
 
-            <element name="mods:name" mandatory="false">
+            <element name="mods:name" specification="not(mods:etal)" mandatory="false">
                 <expectedAttributes>
                     <attribute name="type" mandatory="false">
                         <expectedContent>
                             <oneOf>
                                 <value>personal</value>
                                 <value>corporate</value>
-                                <!--Neni tohle preklep? jinych verzich je tady "conference", proc je tady prave ta jedna hodnota cesky?
-                                Kazdopadne preklep, nebo ne, jednou je to ve standardu, tak to plati.-->
-                                <value>konference</value>
                                 <value>conference</value>
                                 <value>family</value>
                             </oneOf>
                         </expectedContent>
                     </attribute>
 
-                    <attribute name="usage" mandatory="false">
-                        <!--DMF nespecifikuje, jestli je atribut povinny, nechavam nepovinny-->
+                    <attribute name="usage">
                         <expectedContent>
                             <!--neni jasne, jestli je hodnota 'primary' povinna, nebo jen doporucena-->
                             <!--<value>primary</value>-->
@@ -67,10 +63,18 @@
                     </attribute>
                 </expectedAttributes>
                 <expectedElements>
-                    <element name="mods:namePart" mandatory="false">
-                        <!--Na s.35 neni u namePart definovan atribut 'type', ale slovne se o nem zminuje. Radeji ho definuji-->
+                    <element name="mods:namePart">
                         <expectedAttributes>
-                            <attribute name="type" mandatory="false"/>
+                            <attribute name="type" mandatory="false">
+                                <expectedContent>
+                                    <oneOf>
+                                        <value>date</value>
+                                        <value>family</value>
+                                        <value>given</value>
+                                        <value>termsOfAddress</value>
+                                    </oneOf>
+                                </expectedContent>
+                            </attribute>
                         </expectedAttributes>
                         <expectedContent/>
                     </element>
@@ -80,11 +84,10 @@
                     </element>
 
                     <element name="mods:role" mandatory="false">
-                        <!--Kontrolovany slovnik je jen doporucovan-->
                         <expectedElements>
                             <element name="mods:roleTerm" mandatory="false">
                                 <expectedAttributes>
-                                    <attribute name="type">
+                                    <attribute name="type" mandatory="false">
                                         <expectedContent>
                                             <value>code</value>
                                         </expectedContent>
@@ -104,26 +107,29 @@
                 </expectedElements>
             </element>
 
-            <element name="mods:genre" specification="text()='volume'"/>
+            <element name="mods:name" specification="mods:etal" mandatory="false" repeatable="false">
+                <expectedElements>
+                    <element name="mods:etal">
+                        <expectedContent/>
+                    </element>
+                </expectedElements>
+            </element>
+
+            <element name="mods:genre" specification="text()='electronic_volume'"/>
 
             <element name="mods:originInfo">
                 <expectedElements>
                     <element name="mods:dateIssued">
                         <expectedAttributes>
-                            <attribute name="point" mandatory="false">
-                                <expectedContent>
-                                    <!--neni jasne, jestli to jsou opravdu jedine dve povolene hodnoty-->
-                                    <!--<oneOf>
-                                        <value>start</value>
-                                        <value>end</value>
-                                    </oneOf>-->
-                                </expectedContent>
-                            </attribute>
-                            <attribute name="qualifier" mandatory="false">
-                                <expectedContent>
-                                    <!--approximate je jen doporucena hodnota, muze tam byt jinak cokoliv-->
-                                </expectedContent>
-                            </attribute>
+                            <!--
+                            TODO: tady je vnitřní spor v textu DMF (str. 20).
+                            Jednak se uvádí, že point je povinný (M),
+                            ale o řádek výše se pro dateIssued uvádí, že jde o DATUM nebo rozsah datumů, takže ne jen rozsah.
+                            A pro ne-rozsah point nedává smysl, jedině, že by byly stejné hodnoty pro start i end.
+                            Proto zde nechávám @point nepovinný.
+                            -->
+                            <attribute name="point" mandatory="false"/>
+                            <attribute name="qualifier" mandatory="false"/>
                         </expectedAttributes>
                         <expectedContent/>
                     </element>
@@ -157,14 +163,6 @@
                     </attribute>
                 </expectedAttributes>
                 <expectedContent/>
-            </element>
-
-            <element name="mods:physicalDescription" mandatory="false">
-                <expectedElements>
-                    <element name="mods:note" mandatory="false">
-                        <expectedContent/>
-                    </element>
-                </expectedElements>
             </element>
 
         </expectedElements>

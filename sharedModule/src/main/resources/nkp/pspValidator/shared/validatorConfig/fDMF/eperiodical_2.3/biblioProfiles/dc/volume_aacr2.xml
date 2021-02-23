@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <metadataProfile
         xmlns="http://www.nkp.cz/validatorEpublikaci/1.1/metadataProfile"
-        name="DC volume (RDA)"
+        name="DC volume (AACR2)"
         validatorVersion="1.1"
-        dmf="periodical_1.7.1"
+        dmf="eperiodical_2.3"
 >
     <info>
-        <text>DMF Periodika 1.7.1 očekává Dublin Core verze 1.1. Dále se zde upřesňují očekávaná metadata pro ročník
-            periodika pro záznamy zpracované podle katalogizačních pravidel RDA.
+        <text>DMF Elektronické publikace (periodika) 2.3 očekává Dublin Core verze 1.1. Dále se zde upřesňují očekávaná metadata pro ročník
+            periodika pro záznamy zpracované podle katalogizačních pravidel AACR2.
         </text>
         <url description="popis Dublin Core 1.1">http://dublincore.org/documents/dces/</url>
         <url description="XSD pro Dublin Core 1.1">http://www.openarchives.org/OAI/2.0/oai_dc.xsd</url>
@@ -35,7 +35,7 @@
             </element>
 
             <element name="dc:date"
-                     errorMessage="Očekáván povinný element dc:date obsahující datum vydání předlohy.">
+                     errorMessage="Očekáván povinný element dc:date obsahující datum vydání.">
                 <expectedContent/>
             </element>
 
