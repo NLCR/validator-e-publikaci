@@ -187,7 +187,6 @@
                                     <value>production</value>
                                 </expectedContent>
                             </attribute>
-
                             <attribute name="qualifier" mandatory="false"/>
                         </expectedAttributes>
                         <expectedContent/>
@@ -232,7 +231,20 @@
                         <expectedAttributes>
                             <attribute name="qualifier" mandatory="false"/>
                         </expectedAttributes>
-                        <expectedContent/>
+                        <expectedContent>
+                            <oneOf>
+                                <!--RRRR-->
+                                <regexp>^(?&lt;year&gt;[0-9]{4})$</regexp>
+                                <!--MM.RRRR-->
+                                <regexp>(?&lt;month&gt;1[0-2]|0[1-9])\.(?&lt;year&gt;[0-9]{4})$</regexp>
+                                <!--MM.-MM.RRR-->
+                                <regexp>^(?&lt;month1&gt;1[0-2]|0[1-9])\.-(?&lt;month2&gt;1[0-2]|0[1-9])\.(?&lt;year&gt;[0-9]{4})$</regexp>
+                                <!--DD.MM.RRRR-->
+                                <regexp>^(?&lt;day&gt;3[01]|0[1-9]|[12][0-9])\.(?&lt;month&gt;1[0-2]|0[1-9])\.(?&lt;year&gt;[0-9]{4})$</regexp>
+                                <!--DD.-DD.MM.RRRR-->
+                                <regexp>^(?&lt;day1&gt;3[01]|0[1-9]|[12][0-9])\.-(?&lt;day2&gt;3[01]|0[1-9]|[12][0-9])\.(?&lt;month&gt;1[0-2]|0[1-9])\.(?&lt;year&gt;[0-9]{4})$</regexp>
+                            </oneOf>
+                        </expectedContent>
                     </element>
                 </expectedElements>
             </element>
