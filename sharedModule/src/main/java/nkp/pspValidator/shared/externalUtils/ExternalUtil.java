@@ -5,13 +5,15 @@ package nkp.pspValidator.shared.externalUtils;
  */
 public enum ExternalUtil {
 
-    IMAGE_MAGICK("ImageMagick", "imageMagick.xml"),
+    /*IMAGE_MAGICK("ImageMagick", "imageMagick.xml"),
     JHOVE("JHOVE", "jhove.xml"),
     JPYLYZER("Jpylyzer", "jpylyzer.xml"),
     KAKADU("Kakadu", "kakadu.xml"),
     MP3VAL("MP3val", "mp3val.xml"),
     SHNTOOL("shntool", "shntool.xml"),
-    CHECKMATE("Checkmate", "checkmate.xml");
+    CHECKMATE("Checkmate", "checkmate.xml"),*/
+    VERAPDF("veraPDF", "verapdf.xml"),
+    EPUBCHECK("EPUBCheck", "epubcheck.xml");
 
     private final String userFriendlyName;
     private final String profileFileName;

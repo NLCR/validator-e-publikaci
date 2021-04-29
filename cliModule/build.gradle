@@ -46,3 +46,9 @@ task fatJar(type: Jar) {
 //targets:
 //gradle run - spusti Main (plugin application)
 //gradle fatJar - vybuildi jar v cliModule/build/libs
+
+//since gradle 4.9 we can use --args:
+//gradle run --args="--version"
+//gradle run --args="--help"
+//gradle run --args="--action VALIDATE_PSP --config-dir CONFIG_DIR --psp PSP_DIR"
+

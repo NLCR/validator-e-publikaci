@@ -74,7 +74,6 @@ public class ValidationDataInitializationDialogController extends DialogControll
         imgError.setVisible(false);
         btnSetFdmfsRootDir.setVisible(false);
         getConfigurationManager();
-
         Task task = new Task<Void>() {
             private ValidationDataManager validationDataManager;
 
@@ -97,7 +96,10 @@ public class ValidationDataInitializationDialogController extends DialogControll
                         processResult(new Result(true, null));
                     }
                 } catch (ValidatorConfigurationException e) {
+                    e.printStackTrace();
                     processResult(new Result(false, e.getMessage()));
+                } catch (Throwable e) {
+                    e.printStackTrace();
                 } finally {
                     return null;
                 }

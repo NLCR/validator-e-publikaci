@@ -26,18 +26,21 @@ import java.util.Map;
  */
 public class ExternalUtilsCheckDialogController extends DialogController {
 
-    private static final String JPYLYZER_INSTALLATION_URL = "https://github.com/NLCR/validator-e-publikaci/wiki/Instalace#jpylyzer";
+    /*private static final String JPYLYZER_INSTALLATION_URL = "https://github.com/NLCR/validator-e-publikaci/wiki/Instalace#jpylyzer";
     private static final String JHOVE_INSTALLATION_URL = "https://github.com/NLCR/validator-e-publikaci/wiki/Instalace#jhove";
     private static final String IMAGE_MAGICK_INSTALLATION_URL = "https://github.com/NLCR/validator-e-publikaci/wiki/Instalace#imagemagick";
     private static final String KAKADU_INSTALLATION_URL = "https://github.com/NLCR/validator-e-publikaci/wiki/Instalace#kakadu";
-    // TODO: 2019-04-02 doplnit wiki
     private static final String MP3VAL_INSTALLATION_URL = "https://github.com/NLCR/validator-e-publikaci/wiki/Instalace#mp3val";
     private static final String SHNTOOL_INSTALLATION_URL = "https://github.com/NLCR/validator-e-publikaci/wiki/Instalace#shntool";
-    private static final String CHECKMATE_INSTALLATION_URL = "https://github.com/NLCR/validator-e-publikaci/wiki/Instalace#checkmate";
+    private static final String CHECKMATE_INSTALLATION_URL = "https://github.com/NLCR/validator-e-publikaci/wiki/Instalace#checkmate";*/
+    private static final String VERAPDF_INSTALLATION_URL = "https://github.com/rzeh4n/validator-e-publikaci/wiki/Instalace#verapdf";
+    private static final String EPUBCHECK_INSTALLATION_URL = "https://github.com/rzeh4n/validator-e-publikaci/wiki/Instalace#epubcheck";
 
-    private static final String HELP_URL = "https://github.com/NLCR/validator-e-publikaci/wiki/Instalace#instalace-n%C3%A1stroj%C5%AF-pro-validaci-obrazov%C3%BDch-soubor%C5%AF";
+    //TODO: opravit url (anchor na odstavec)
+    private static final String HELP_URL = "https://github.com/rzeh4n/validator-e-publikaci/wiki/Instalace";
 
-    /*jhove*/
+    /*
+     *//*jhove*//*
 
     @FXML
     Label jhoveStatusText;
@@ -63,7 +66,7 @@ public class ExternalUtilsCheckDialogController extends DialogController {
     @FXML
     Button jhoveBtnRemovePath;
 
-    /*jpylyzer*/
+    *//*jpylyzer*//*
 
     @FXML
     Label jpylyzerStatusText;
@@ -89,7 +92,7 @@ public class ExternalUtilsCheckDialogController extends DialogController {
     @FXML
     Button jpylyzerBtnRemovePath;
 
-    /*imageMagick*/
+    *//*imageMagick*//*
 
     @FXML
     Label imageMagickStatusText;
@@ -115,7 +118,7 @@ public class ExternalUtilsCheckDialogController extends DialogController {
     @FXML
     Button imageMagickBtnRemovePath;
 
-    /*kakadu*/
+    *//*kakadu*//*
 
     @FXML
     Label kakaduStatusText;
@@ -141,7 +144,7 @@ public class ExternalUtilsCheckDialogController extends DialogController {
     @FXML
     Button kakaduBtnRemovePath;
 
-    /*MP3val*/
+    *//*MP3val*//*
 
     @FXML
     Label mp3valStatusText;
@@ -167,7 +170,7 @@ public class ExternalUtilsCheckDialogController extends DialogController {
     @FXML
     Button mp3valBtnRemovePath;
 
-    /*shntool*/
+    *//*shntool*//*
 
     @FXML
     Label shntoolStatusText;
@@ -193,7 +196,7 @@ public class ExternalUtilsCheckDialogController extends DialogController {
     @FXML
     Button shntoolBtnRemovePath;
 
-    /*Checkmate*/
+    *//*Checkmate*//*
 
     @FXML
     Label checkmateStatusText;
@@ -218,6 +221,58 @@ public class ExternalUtilsCheckDialogController extends DialogController {
 
     @FXML
     Button checkmateBtnRemovePath;
+*/
+    /*veraPDF*/
+
+    @FXML
+    Label verapdfStatusText;
+
+    @FXML
+    ProgressIndicator verapdfProgress;
+
+    @FXML
+    ImageView verapdfOkImg;
+
+    @FXML
+    ImageView verapdfErrorImg;
+
+    @FXML
+    Button verapdfBtnRetry;
+
+    @FXML
+    Button verapdfBtnInstall;
+
+    @FXML
+    Button verapdfBtnSelectPath;
+
+    @FXML
+    Button verapdfBtnRemovePath;
+
+    /*EPUBCheck*/
+
+    @FXML
+    Label epubcheckStatusText;
+
+    @FXML
+    ProgressIndicator epubcheckProgress;
+
+    @FXML
+    ImageView epubcheckOkImg;
+
+    @FXML
+    ImageView epubcheckErrorImg;
+
+    @FXML
+    Button epubcheckBtnRetry;
+
+    @FXML
+    Button epubcheckBtnInstall;
+
+    @FXML
+    Button epubcheckBtnSelectPath;
+
+    @FXML
+    Button epubcheckBtnRemovePath;
 
 
     @FXML
@@ -259,13 +314,15 @@ public class ExternalUtilsCheckDialogController extends DialogController {
 
     @Override
     public void startNow() {
-        checkJhove();
+        /*checkJhove();
         checkJpylyzer();
         checkImageMagick();
         checkKakadu();
         checkMp3val();
         checkShntool();
-        checkCheckmate();
+        checkCheckmate();*/
+        checkVerapdf();
+        checkEpubcheck();
     }
 
     public void continueInApp(ActionEvent actionEvent) {
@@ -273,7 +330,7 @@ public class ExternalUtilsCheckDialogController extends DialogController {
         //app.openMainWindow();
     }
 
-    @FXML
+    /*@FXML
     private void checkJhove() {
         checkUtil(ExternalUtil.JHOVE, jhoveProgress, jhoveStatusText, jhoveOkImg, jhoveErrorImg, jhoveBtnRetry, jhoveBtnInstall, jhoveBtnSelectPath, jhoveBtnRemovePath);
     }
@@ -304,6 +361,14 @@ public class ExternalUtilsCheckDialogController extends DialogController {
 
     public void checkCheckmate() {
         checkUtil(ExternalUtil.CHECKMATE, checkmateProgress, checkmateStatusText, checkmateOkImg, checkmateErrorImg, checkmateBtnRetry, checkmateBtnInstall, checkmateBtnSelectPath, checkmateBtnRemovePath);
+    }*/
+
+    public void checkVerapdf() {
+        checkUtil(ExternalUtil.VERAPDF, verapdfProgress, verapdfStatusText, verapdfOkImg, verapdfErrorImg, verapdfBtnRetry, verapdfBtnInstall, verapdfBtnSelectPath, verapdfBtnRemovePath);
+    }
+
+    public void checkEpubcheck() {
+        checkUtil(ExternalUtil.EPUBCHECK, epubcheckProgress, epubcheckStatusText, epubcheckOkImg, epubcheckErrorImg, epubcheckBtnRetry, epubcheckBtnInstall, epubcheckBtnSelectPath, epubcheckBtnRemovePath);
     }
 
     private void checkUtil(ExternalUtil util,
@@ -429,7 +494,7 @@ public class ExternalUtilsCheckDialogController extends DialogController {
     }
 
 
-    public void installJpylyzer(ActionEvent actionEvent) {
+    /*public void installJpylyzer(ActionEvent actionEvent) {
         openUrl(JPYLYZER_INSTALLATION_URL);
     }
 
@@ -455,6 +520,14 @@ public class ExternalUtilsCheckDialogController extends DialogController {
 
     public void installCheckmate(ActionEvent actionEvent) {
         openUrl(CHECKMATE_INSTALLATION_URL);
+    }*/
+
+    public void installVerapdf(ActionEvent actionEvent) {
+        openUrl(VERAPDF_INSTALLATION_URL);
+    }
+
+    public void installEPubcheck(ActionEvent actionEvent) {
+        openUrl(EPUBCHECK_INSTALLATION_URL);
     }
 
     public void showHelp(ActionEvent actionEvent) {
@@ -462,7 +535,7 @@ public class ExternalUtilsCheckDialogController extends DialogController {
     }
 
 
-    public void selectJhovePath(ActionEvent actionEvent) {
+    /*public void selectJhovePath(ActionEvent actionEvent) {
         selectUtilPath(ConfigurationManager.PROP_JHOVE_DIR, ExternalUtil.JHOVE, () -> checkJhove());
     }
 
@@ -489,6 +562,14 @@ public class ExternalUtilsCheckDialogController extends DialogController {
 
     public void selectCheckmatePath(ActionEvent actionEvent) {
         selectUtilPath(ConfigurationManager.PROP_CHECKMATE_DIR, ExternalUtil.CHECKMATE, () -> checkCheckmate());
+    }*/
+
+    public void selectVerapdfPath(ActionEvent actionEvent) {
+        selectUtilPath(ConfigurationManager.PROP_VERAPDF_DIR, ExternalUtil.VERAPDF, () -> checkVerapdf());
+    }
+
+    public void selectEpubcheckPath(ActionEvent actionEvent) {
+        selectUtilPath(ConfigurationManager.PROP_EPUBCHECK_DIR, ExternalUtil.EPUBCHECK, () -> checkEpubcheck());
     }
 
     private void selectUtilPath(String property, ExternalUtil util, MyListener listener) {
@@ -520,7 +601,7 @@ public class ExternalUtilsCheckDialogController extends DialogController {
         listener.onFinished();
     }
 
-    public void removeJhovePath(ActionEvent actionEvent) {
+    /*public void removeJhovePath(ActionEvent actionEvent) {
         removeUtilPath(ConfigurationManager.PROP_JHOVE_DIR, ExternalUtil.JHOVE, () -> checkJhove());
     }
 
@@ -546,6 +627,14 @@ public class ExternalUtilsCheckDialogController extends DialogController {
 
     public void removeCheckmatePath(ActionEvent actionEvent) {
         removeUtilPath(ConfigurationManager.PROP_CHECKMATE_DIR, ExternalUtil.CHECKMATE, () -> checkCheckmate());
+    }*/
+
+    public void removeVerapdfPath(ActionEvent actionEvent) {
+        removeUtilPath(ConfigurationManager.PROP_VERAPDF_DIR, ExternalUtil.VERAPDF, () -> checkVerapdf());
+    }
+
+    public void removeEpubcheckPath(ActionEvent actionEvent) {
+        removeUtilPath(ConfigurationManager.PROP_EPUBCHECK_DIR, ExternalUtil.EPUBCHECK, () -> checkEpubcheck());
     }
 
 

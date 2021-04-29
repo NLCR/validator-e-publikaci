@@ -5,27 +5,28 @@
     ${TARGET_FILE} - in execution will be replaced by target file, with absolute path
 -->
 <externalUtils>
+    <!--
     <util name="JPYLYZER">
         <versionDetection>
             <operatingSystem name="LINUX">
-                <command>${UTIL_PATH}jpylyzer --version</command>
+                <command>${UTIL_PATH}jpylyzer &#45;&#45;version</command>
                 <parser>
                     <stream>STDERR</stream>
-                    <!--      <regexp>(?s).*</regexp>-->
+                    &lt;!&ndash;      <regexp>(?s).*</regexp>&ndash;&gt;
                     <regexp>\A[0-9\.]+$</regexp>
                 </parser>
             </operatingSystem>
             <operatingSystem name="WINDOWS">
-                <command>${UTIL_PATH}jpylyzer.exe --version</command>
+                <command>${UTIL_PATH}jpylyzer.exe &#45;&#45;version</command>
                 <parser>
                     <stream>STDERR</stream>
                     <regexp>\A[0-9\.]+$</regexp>
                 </parser>
             </operatingSystem>
-            <!--zdrojove kody z https://github.com/openpreserve/jpylyzer/releases a spousteni pres python-->
-            <!--http://jpylyzer.openpreservation.org//installation.html-->
+            &lt;!&ndash;zdrojove kody z https://github.com/openpreserve/jpylyzer/releases a spousteni pres python&ndash;&gt;
+            &lt;!&ndash;http://jpylyzer.openpreservation.org//installation.html&ndash;&gt;
             <operatingSystem name="MAC">
-                <command>python ${UTIL_PATH}jpylyzer.py --version</command>
+                <command>python ${UTIL_PATH}jpylyzer.py &#45;&#45;version</command>
                 <parser>
                     <stream>STDERR</stream>
                     <regexp>\A[0-9\.]+$</regexp>
@@ -59,12 +60,12 @@
 
     <util name="IMAGE_MAGICK">
         <versionDetection>
-            <!--https://gist.github.com/Lammerink/3926636-->
+            &lt;!&ndash;https://gist.github.com/Lammerink/3926636&ndash;&gt;
             <operatingSystem name="LINUX">
                 <command>${UTIL_PATH}convert -version</command>
                 <parser>
                     <stream>STDOUT</stream>
-                    <!--<regexp>ImageMagick\s\S*\s\S*</regexp>-->
+                    &lt;!&ndash;<regexp>ImageMagick\s\S*\s\S*</regexp>&ndash;&gt;
                     <regexp>ImageMagick [0-9\.\-]+</regexp>
                 </parser>
             </operatingSystem>
@@ -72,12 +73,12 @@
                 <command>${UTIL_PATH}magick.exe convert -version</command>
                 <parser>
                     <stream>STDOUT</stream>
-                    <!--<regexp>ImageMagick\s\S*\s\S*</regexp>-->
+                    &lt;!&ndash;<regexp>ImageMagick\s\S*\s\S*</regexp>&ndash;&gt;
                     <regexp>ImageMagick [0-9\.\-]+</regexp>
                 </parser>
             </operatingSystem>
-            <!--http://www.imagemagick.org/script/binary-releases.php-->
-            <!--instalace pres MacPorts-->
+            &lt;!&ndash;http://www.imagemagick.org/script/binary-releases.php&ndash;&gt;
+            &lt;!&ndash;instalace pres MacPorts&ndash;&gt;
             <operatingSystem name="MAC">
                 <command>${UTIL_PATH}convert -version</command>
                 <parser>
@@ -87,7 +88,7 @@
             </operatingSystem>
         </versionDetection>
         <execution name="jp2k">
-            <!--NOTE: if the file is empty, ideentify -verbose doesn't print anything at all-->
+            &lt;!&ndash;NOTE: if the file is empty, ideentify -verbose doesn't print anything at all&ndash;&gt;
             <operatingSystem name="LINUX">
                 <command>${UTIL_PATH}identify -verbose ${TARGET_FILE}</command>
                 <parser>
@@ -105,9 +106,9 @@
             <operatingSystem name="MAC">
                 <command>${UTIL_PATH}identify -verbose ${TARGET_FILE}</command>
                 <parser>
-                    <!--at least in version 6.9.9 the error message finally goes to STDERR-->
+                    &lt;!&ndash;at least in version 6.9.9 the error message finally goes to STDERR&ndash;&gt;
                     <stream>STDERR</stream>
-                    <!--<stream>STDOUT</stream>-->
+                    &lt;!&ndash;<stream>STDOUT</stream>&ndash;&gt;
                     <regexp>(?s).*</regexp>
                 </parser>
             </operatingSystem>
@@ -117,30 +118,30 @@
     <util name="JHOVE">
         <versionDetection>
             <operatingSystem name="LINUX">
-                <command>${UTIL_PATH}jhove --version</command>
+                <command>${UTIL_PATH}jhove &#45;&#45;version</command>
                 <parser>
                     <stream>STDOUT</stream>
-                    <!--<regexp>Jhove \(.*\)</regexp>-->
+                    &lt;!&ndash;<regexp>Jhove \(.*\)</regexp>&ndash;&gt;
                     <regexp>Rel\. [0-9\.]+</regexp>
                 </parser>
             </operatingSystem>
             <operatingSystem name="WINDOWS">
-                <!--TODO: v aplikaci vyzadovat minimalni verzi 1.14
+                &lt;!&ndash;TODO: v aplikaci vyzadovat minimalni verzi 1.14
                 http://openpreservation.org/news/jhove-1-14-released/
                 instalace: stahnout jhove-latest.jar (instalator) a spustit double click nebo java -jar jhove-latest.jar
-                -->
-                <command>${UTIL_PATH}jhove.bat --version</command>
+                &ndash;&gt;
+                <command>${UTIL_PATH}jhove.bat &#45;&#45;version</command>
                 <parser>
                     <stream>STDOUT</stream>
                     <regexp>Rel\. [0-9\.]+</regexp>
-                    <!--<regexp>Jhove \(.*\)</regexp>-->
-                    <!--<regexp>(?m)^.*$</regexp>-->
+                    &lt;!&ndash;<regexp>Jhove \(.*\)</regexp>&ndash;&gt;
+                    &lt;!&ndash;<regexp>(?m)^.*$</regexp>&ndash;&gt;
                 </parser>
             </operatingSystem>
-            <!--instalace podle http://jhove.openpreservation.org/getting-started/-->
-            <!--stahnout jhove-latest.jar a double click spusti instalator (predpoklad jre)-->
+            &lt;!&ndash;instalace podle http://jhove.openpreservation.org/getting-started/&ndash;&gt;
+            &lt;!&ndash;stahnout jhove-latest.jar a double click spusti instalator (predpoklad jre)&ndash;&gt;
             <operatingSystem name="MAC">
-                <command>${UTIL_PATH}jhove --version</command>
+                <command>${UTIL_PATH}jhove &#45;&#45;version</command>
                 <parser>
                     <stream>STDOUT</stream>
                     <regexp>Jhove \(.*\)</regexp>
@@ -201,7 +202,7 @@
                 <command>${UTIL_PATH}kdu_expand -version</command>
                 <parser>
                     <stream>STDOUT</stream>
-                    <!--<regexp>Current core system version is \S*</regexp>-->
+                    &lt;!&ndash;<regexp>Current core system version is \S*</regexp>&ndash;&gt;
                     <regexp>v[\.0-9]+</regexp>
                 </parser>
             </operatingSystem>
@@ -209,11 +210,11 @@
                 <command>${UTIL_PATH}kdu_expand.exe -version</command>
                 <parser>
                     <stream>STDOUT</stream>
-                    <!--<regexp>Current core system version is \S*</regexp>-->
+                    &lt;!&ndash;<regexp>Current core system version is \S*</regexp>&ndash;&gt;
                     <regexp>v[\.0-9]+</regexp>
                 </parser>
             </operatingSystem>
-            <!--demo app does not work in macOS 10.12 Sierra, so not tested-->
+            &lt;!&ndash;demo app does not work in macOS 10.12 Sierra, so not tested&ndash;&gt;
             <operatingSystem name="MAC">
                 <command>${UTIL_PATH}kdu_expand -version</command>
                 <parser>
@@ -237,7 +238,7 @@
                     <regexp>(?s).*</regexp>
                 </parser>
             </operatingSystem>
-            <!--demo app does not work in macOS 10.12 Sierra, so not tested-->
+            &lt;!&ndash;demo app does not work in macOS 10.12 Sierra, so not tested&ndash;&gt;
             <operatingSystem name="MAC">
                 <command>${UTIL_PATH}kdu_expand -i ${TARGET_FILE}</command>
                 <parser>
@@ -387,6 +388,107 @@
             </operatingSystem>
             <operatingSystem name="MAC">
                 <command>${UTIL_PATH}mpck ${TARGET_FILE}</command>
+                <parser>
+                    <stream>STDOUT</stream>
+                    <regexp>(?s).*</regexp>
+                </parser>
+            </operatingSystem>
+        </execution>
+    </util>
+    -->
+
+    <!--TODO: neopakovat nazvy nastroju, ale vytahnout z regexp groups -->
+
+    <util name="VERAPDF">
+        <versionDetection>
+            <operatingSystem name="LINUX">
+                <command>${UTIL_PATH}verapdf --version</command>
+                <parser>
+                    <stream>STDOUT</stream>
+                    <regexp>veraPDF [0-9\.]+</regexp>
+                </parser>
+            </operatingSystem>
+            <operatingSystem name="WINDOWS">
+                <command>${UTIL_PATH}verapdf --version</command>
+                <parser>
+                    <stream>STDOUT</stream>
+                    <regexp>veraPDF [0-9\.]+</regexp>
+                </parser>
+            </operatingSystem>
+            <operatingSystem name="MAC">
+                <command>${UTIL_PATH}verapdf --version</command>
+                <parser>
+                    <stream>STDOUT</stream>
+                    <regexp>veraPDF [0-9\.]+</regexp>
+                </parser>
+            </operatingSystem>
+        </versionDetection>
+        <execution name="todo">
+            <operatingSystem name="LINUX">
+                <command>${UTIL_PATH}jpylyzer jp2In ${TARGET_FILE}</command>
+                <parser>
+                    <stream>STDOUT</stream>
+                    <regexp>(?s).*</regexp>
+                </parser>
+            </operatingSystem>
+            <operatingSystem name="WINDOWS">
+                <command>${UTIL_PATH}jpylyzer.exe jp2In ${TARGET_FILE}</command>
+                <parser>
+                    <stream>STDOUT</stream>
+                    <regexp>(?s).*</regexp>
+                </parser>
+            </operatingSystem>
+            <operatingSystem name="MAC">
+                <command>python ${UTIL_PATH}jpylyzer.py jp2In ${TARGET_FILE}</command>
+                <parser>
+                    <stream>STDOUT</stream>
+                    <regexp>(?s).*</regexp>
+                </parser>
+            </operatingSystem>
+        </execution>
+    </util>
+
+    <util name="EPUBCHECK">
+        <versionDetection>
+            <operatingSystem name="LINUX">
+                <command>java -jar ${UTIL_PATH}epubcheck.jar --version</command>
+                <parser>
+                    <stream>STDOUT</stream>
+                    <regexp>EPUBCheck v[0-9\.]+</regexp>
+                </parser>
+            </operatingSystem>
+            <operatingSystem name="WINDOWS">
+                <command>java -jar ${UTIL_PATH}epubcheck.jar --version</command>
+                <parser>
+                    <stream>STDOUT</stream>
+                    <regexp>EPUBCheck v[0-9\.]+</regexp>
+                </parser>
+            </operatingSystem>
+            <operatingSystem name="MAC">
+                <command>java -jar ${UTIL_PATH}epubcheck.jar --version</command>
+                <parser>
+                    <stream>STDOUT</stream>
+                    <regexp>EPUBCheck v[0-9\.]+</regexp>
+                </parser>
+            </operatingSystem>
+        </versionDetection>
+        <execution name="todo">
+            <operatingSystem name="LINUX">
+                <command>${UTIL_PATH}jpylyzer jp2In ${TARGET_FILE}</command>
+                <parser>
+                    <stream>STDOUT</stream>
+                    <regexp>(?s).*</regexp>
+                </parser>
+            </operatingSystem>
+            <operatingSystem name="WINDOWS">
+                <command>${UTIL_PATH}jpylyzer.exe jp2In ${TARGET_FILE}</command>
+                <parser>
+                    <stream>STDOUT</stream>
+                    <regexp>(?s).*</regexp>
+                </parser>
+            </operatingSystem>
+            <operatingSystem name="MAC">
+                <command>python ${UTIL_PATH}jpylyzer.py jp2In ${TARGET_FILE}</command>
                 <parser>
                     <stream>STDOUT</stream>
                     <regexp>(?s).*</regexp>

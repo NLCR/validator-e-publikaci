@@ -205,7 +205,7 @@ public class Main {
                 .withLongOpt(Params.VERBOSITY)
                 .create("v"));
 
-        options.addOption(OptionBuilder
+        /*options.addOption(OptionBuilder
                 .withDescription(replaceUmlaut(
                         "Adresář s binárními soubory nástroje ImageMagick. " +
                                 "Např. C:\\Program Files\\ImageMagick-7.0.3-Q16 pro Windows, /usr/bin pro Linux."))
@@ -258,9 +258,21 @@ public class Main {
                 .hasArg()
                 .withArgName("ADRESAR")
                 .withLongOpt(Params.CHECKMATE_PATH)
+                .create());*/
+        options.addOption(OptionBuilder
+                .withDescription(replaceUmlaut("Adresář s binárními soubory nástroje veraPDF."))
+                .hasArg()
+                .withArgName("ADRESAR")
+                .withLongOpt(Params.VERAPDF_PATH)
+                .create());
+        options.addOption(OptionBuilder
+                .withDescription(replaceUmlaut("Adresář s binárními soubory nástroje EPUBCheck."))
+                .hasArg()
+                .withArgName("ADRESAR")
+                .withLongOpt(Params.EPUBCHECK_PATH)
                 .create());
 
-        options.addOption(OptionBuilder
+        /*options.addOption(OptionBuilder
                 .withDescription(replaceUmlaut("Zakáže použití ImageMagick."))
                 .withLongOpt(Params.DISABLE_IMAGEMAGICK)
                 .create());
@@ -293,6 +305,14 @@ public class Main {
         options.addOption(OptionBuilder
                 .withDescription(replaceUmlaut("Zakáže použití Checkmate."))
                 .withLongOpt(Params.DISABLE_CHECKMATE)
+                .create());*/
+        options.addOption(OptionBuilder
+                .withDescription(replaceUmlaut("Zakáže použití veraPDF."))
+                .withLongOpt(Params.DISABLE_VERAPDF)
+                .create());
+        options.addOption(OptionBuilder
+                .withDescription(replaceUmlaut("Zakáže použití EPUBCheck."))
+                .withLongOpt(Params.DISABLE_EPUBCHECK)
                 .create());
 
         options.addOption(OptionBuilder
@@ -463,7 +483,7 @@ public class Main {
                 //external utils
                 Map<ExternalUtil, File> utilsPaths = new HashMap<>();
                 Set<ExternalUtil> utilsDisabled = new HashSet<>();
-                if (line.hasOption(Params.DISABLE_IMAGEMAGICK)) {
+                /*if (line.hasOption(Params.DISABLE_IMAGEMAGICK)) {
                     utilsDisabled.add(ExternalUtil.IMAGE_MAGICK);
                 } else {
                     if (line.hasOption(Params.IMAGEMAGICK_PATH)) {
@@ -510,6 +530,20 @@ public class Main {
                 } else {
                     if (line.hasOption(Params.CHECKMATE_PATH)) {
                         utilsPaths.put(ExternalUtil.CHECKMATE, new File(line.getOptionValue(Params.CHECKMATE_PATH)));
+                    }
+                }*/
+                if (line.hasOption(Params.DISABLE_VERAPDF)) {
+                    utilsDisabled.add(ExternalUtil.VERAPDF);
+                } else {
+                    if (line.hasOption(Params.VERAPDF_PATH)) {
+                        utilsPaths.put(ExternalUtil.VERAPDF, new File(line.getOptionValue(Params.VERAPDF_PATH)));
+                    }
+                }
+                if (line.hasOption(Params.DISABLE_EPUBCHECK)) {
+                    utilsDisabled.add(ExternalUtil.EPUBCHECK);
+                } else {
+                    if (line.hasOption(Params.EPUBCHECK_PATH)) {
+                        utilsPaths.put(ExternalUtil.EPUBCHECK, new File(line.getOptionValue(Params.EPUBCHECK_PATH)));
                     }
                 }
 
