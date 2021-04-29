@@ -125,6 +125,14 @@ public class Iso8601Test {
         assertFalse(isValidIso8601Minutes("20190830T15:36"));
     }
 
+    @Test
+    public void iso8601Seconds() {
+        //TODO: allow/forbid values with seconds, see https://github.com/rzeh4n/validator-e-publikaci/issues/1
+        assertFalse(isValidIso8601Minutes("20210309T195538"));
+    }
+
+    //TODO: testy pro nižší detail, než minuty - takové věci by projít neměly
+
    /* @Test
     public void iso8601Year() {
         assertTrue(isIso8601DateMinutes("2019"));
