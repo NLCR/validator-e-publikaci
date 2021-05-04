@@ -32,17 +32,18 @@ public class Iso8601Test {
         //week day: year + week of the year + day of the week
         regexps8601DateMinutes.add("^(?<year>[0-9]{4})-?W(?<week>5[0-3]|[1-4][0-9]|0[1-9])-?(?<day>[1-7])$");
         */
+
         //basic
         regexps8601AtLeastMinutes.add("^" +
                 "(?<year>[0-9]{4})(?<month>1[0-2]|0[1-9])(?<day>3[01]|0[1-9]|[12][0-9])" +
-                "T(?<hour>2[0-3]|[01][0-9])(?<minute>[0-5][0-9])" +
-                "(?<timezone>Z|[+-](2[0-3]|[01][0-9])(([0-5][0-9]))?)?" +
+                "T(?<hour>2[0-3]|[01][0-9])(?<minute>[0-5][0-9])(?<second>[0-5][0-9])?" +
+                "(?<timezone>Z|[+-](2[0-3]|[01][0-9])([0-5][0-9])?)?" +
                 "$");
 
         //extended
         regexps8601AtLeastMinutes.add("^" +
                 "(?<year>[0-9]{4})-(?<month>1[0-2]|0[1-9])-(?<day>3[01]|0[1-9]|[12][0-9])" +
-                "T(?<hour>2[0-3]|[01][0-9]):(?<minute>[0-5][0-9])" +
+                "T(?<hour>2[0-3]|[01][0-9]):(?<minute>[0-5][0-9])(:(?<second>[0-5][0-9]))?" +
                 "(?<timezone>Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9])?)?)?" +
                 "$");
 
@@ -121,6 +122,7 @@ public class Iso8601Test {
     @Test
     public void iso8601HoursValues() {
         //00 - ok
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T0059"));
         assertTrue(isValidIso8601AtLeastMinutes("20190830T0059Z"));
         assertTrue(isValidIso8601AtLeastMinutes("20190830T0059+01"));
         assertTrue(isValidIso8601AtLeastMinutes("20190830T0059+0100"));
@@ -137,6 +139,7 @@ public class Iso8601Test {
         assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T00:59-23:00"));
         assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T00:59-23:30"));
         //23 - ok
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T2359"));
         assertTrue(isValidIso8601AtLeastMinutes("20190830T2359Z"));
         assertTrue(isValidIso8601AtLeastMinutes("20190830T2359+01"));
         assertTrue(isValidIso8601AtLeastMinutes("20190830T2359+0100"));
@@ -153,6 +156,7 @@ public class Iso8601Test {
         assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T23:59-23:00"));
         assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T23:59-23:30"));
         //24 - wrong
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T2459"));
         assertFalse(isValidIso8601AtLeastMinutes("20190830T2459Z"));
         assertFalse(isValidIso8601AtLeastMinutes("20190830T2459+01"));
         assertFalse(isValidIso8601AtLeastMinutes("20190830T2459+0100"));
@@ -169,6 +173,7 @@ public class Iso8601Test {
         assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T24:59-23:00"));
         assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T24:59-23:30"));
         //25 - wrong
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T2559"));
         assertFalse(isValidIso8601AtLeastMinutes("20190830T2559Z"));
         assertFalse(isValidIso8601AtLeastMinutes("20190830T2559+01"));
         assertFalse(isValidIso8601AtLeastMinutes("20190830T2559+0100"));
@@ -189,6 +194,7 @@ public class Iso8601Test {
     @Test
     public void iso8601MinutesValues() {
         //00 - ok
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T1500"));
         assertTrue(isValidIso8601AtLeastMinutes("20190830T1500Z"));
         assertTrue(isValidIso8601AtLeastMinutes("20190830T1500+01"));
         assertTrue(isValidIso8601AtLeastMinutes("20190830T1500+0100"));
@@ -196,15 +202,16 @@ public class Iso8601Test {
         assertTrue(isValidIso8601AtLeastMinutes("20190830T1500-23"));
         assertTrue(isValidIso8601AtLeastMinutes("20190830T1500-2300"));
         assertTrue(isValidIso8601AtLeastMinutes("20190830T1500-2330"));
-        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T00:59"));
-        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T00:59Z"));
-        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T00:59+01"));
-        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T00:59+01:00"));
-        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T00:59+01:30"));
-        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T00:59-23"));
-        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T00:59-23:00"));
-        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T00:59-23:30"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:00"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:00Z"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:00+01"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:00+01:00"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:00+01:30"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:00-23"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:00-23:00"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:00-23:30"));
         //59 - ok
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T1559"));
         assertTrue(isValidIso8601AtLeastMinutes("20190830T1559Z"));
         assertTrue(isValidIso8601AtLeastMinutes("20190830T1559+01"));
         assertTrue(isValidIso8601AtLeastMinutes("20190830T1559+0100"));
@@ -221,6 +228,7 @@ public class Iso8601Test {
         assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:59-23:00"));
         assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:59-23:30"));
         //60 - wrong
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T1560"));
         assertFalse(isValidIso8601AtLeastMinutes("20190830T1560Z"));
         assertFalse(isValidIso8601AtLeastMinutes("20190830T1560+01"));
         assertFalse(isValidIso8601AtLeastMinutes("20190830T1560+0100"));
@@ -237,6 +245,7 @@ public class Iso8601Test {
         assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:60-23:00"));
         assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:60-23:30"));
         //66 - wrong
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T1566"));
         assertFalse(isValidIso8601AtLeastMinutes("20190830T1566Z"));
         assertFalse(isValidIso8601AtLeastMinutes("20190830T1566+01"));
         assertFalse(isValidIso8601AtLeastMinutes("20190830T1566+0100"));
@@ -255,7 +264,97 @@ public class Iso8601Test {
     }
 
     @Test
+    public void iso8601SecondsValues() {
+        //44
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153544"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153544Z"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153544+01"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153544+0100"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153544+0130"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153544-23"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153544-2300"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153544-2330"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:44"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:44Z"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:44+01"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:44+01:00"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:44+01:30"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:44-23"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:44-23:00"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:44-23:30"));
+        //00 - ok
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153500"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153500Z"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153500+01"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153500+0100"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153500+0130"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153500-23"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153500-2300"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153500-2330"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:00"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:00Z"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:00+01"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:00+01:00"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:00+01:30"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:00-23"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:00-23:00"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:00-23:30"));
+        //59 - ok
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153559"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153559Z"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153559+01"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153559+0100"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153559+0130"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153559-23"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153559-2300"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153559-2330"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:59"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:59Z"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:59+01"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:59+01:00"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:59+01:30"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:59-23"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:59-23:00"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:59-23:30"));
+        //60 - wrong
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T153560"));
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T153560Z"));
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T153560+01"));
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T153560+0100"));
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T153560+0130"));
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T153560-23"));
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T153560-2300"));
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T153560-2330"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:35:60"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:35:60Z"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:35:60+01"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:35:60+01:00"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:35:60+01:30"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:35:60-23"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:35:60-23:00"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:35:60-23:30"));
+        //66 - wrong
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T153566"));
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T153566Z"));
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T153566+01"));
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T153566+0100"));
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T153566+0130"));
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T153566-23"));
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T153566-2300"));
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T153566-2330"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:35:66"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:35:66Z"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:35:66+01"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:35:66+01:00"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:35:66+01:30"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:35:66-23"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:35:66-23:00"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:35:66-23:30"));
+    }
+
+    @Test
     public void iso8601MinutesBasicFormat() {
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T1535"));
         assertTrue(isValidIso8601AtLeastMinutes("20190830T1535Z"));
         assertTrue(isValidIso8601AtLeastMinutes("20190830T1535+01"));
         assertTrue(isValidIso8601AtLeastMinutes("20190830T1535+0100"));
@@ -296,9 +395,45 @@ public class Iso8601Test {
     }
 
     @Test
-    public void iso8601Seconds() {
-        //TODO: allow/forbid values with seconds, see https://github.com/rzeh4n/validator-e-publikaci/issues/1
-        assertFalse(isValidIso8601AtLeastMinutes("20210309T195538"));
+    public void iso8601SecondsBasicFormat() {
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153544"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153544Z"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153544+01"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153544+0100"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153544+0130"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153544-23"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153544-2300"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T153544-2330"));
+
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T153544+01:00"));
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T153544+01:30"));
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T153544-23:00"));
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T153544-23:30"));
+    }
+
+    @Test
+    public void iso8601SecondsExtendedFormat() {
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:44"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:44Z"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:44+01"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:44+01:00"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:44+01:30"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:44-23"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:44-23:00"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35:44-23:30"));
+
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:35:44+0100"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:35:44+0130"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:35:44-2300"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:35:44-2330"));
+    }
+
+    @Test
+    public void iso8601SecondsMixedFormats() {
+        assertFalse(isValidIso8601AtLeastMinutes("201908-30T15:35:44"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-0830T15:35:44"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T153544"));
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T15:35:44"));
     }
 
     //TODO: testy pro nižší detail, než minuty - takové věci by projít neměly
