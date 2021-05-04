@@ -11,12 +11,12 @@ import static org.junit.Assert.assertTrue;
 
 public class Iso8601Test {
 
-    List<String> regexps8601Minutes;
+    List<String> regexps8601AtLeastMinutes;
     List<String> regexpsOwnFormat;
 
     @Before
     public void initRegexps() {
-        regexps8601Minutes = new ArrayList<>();
+        regexps8601AtLeastMinutes = new ArrayList<>();
         /*
         //see https://www.oreilly.com/library/view/regular-expressions-cookbook/9781449327453/ch04s07.html
         //year
@@ -33,14 +33,14 @@ public class Iso8601Test {
         regexps8601DateMinutes.add("^(?<year>[0-9]{4})-?W(?<week>5[0-3]|[1-4][0-9]|0[1-9])-?(?<day>[1-7])$");
         */
         //basic
-        regexps8601Minutes.add("^" +
+        regexps8601AtLeastMinutes.add("^" +
                 "(?<year>[0-9]{4})(?<month>1[0-2]|0[1-9])(?<day>3[01]|0[1-9]|[12][0-9])" +
                 "T(?<hour>2[0-3]|[01][0-9])(?<minute>[0-5][0-9])" +
                 "(?<timezone>Z|[+-](2[0-3]|[01][0-9])(([0-5][0-9]))?)?" +
                 "$");
 
         //extended
-        regexps8601Minutes.add("^" +
+        regexps8601AtLeastMinutes.add("^" +
                 "(?<year>[0-9]{4})-(?<month>1[0-2]|0[1-9])-(?<day>3[01]|0[1-9]|[12][0-9])" +
                 "T(?<hour>2[0-3]|[01][0-9]):(?<minute>[0-5][0-9])" +
                 "(?<timezone>Z|[+-](2[0-3]|[01][0-9])(:([0-5][0-9])?)?)?" +
@@ -55,8 +55,8 @@ public class Iso8601Test {
         regexpsOwnFormat.add("^(?<day1>3[01]|0[1-9]|[12][0-9])\\.-(?<day2>3[01]|0[1-9]|[12][0-9])\\.(?<month>1[0-2]|0[1-9])\\.(?<year>[0-9]{4})$");//DD.-DD.MM.RRRR
     }
 
-    private boolean isValidIso8601Minutes(String str) {
-        for (String regexp : regexps8601Minutes) {
+    private boolean isValidIso8601AtLeastMinutes(String str) {
+        for (String regexp : regexps8601AtLeastMinutes) {
             if (str.matches(regexp)) {
                 return true;
             }
@@ -85,50 +85,49 @@ public class Iso8601Test {
 
     @Test
     public void iso8601MinutesBasicFormat() {
-        assertTrue(isValidIso8601Minutes("20190830T1535"));
-        assertTrue(isValidIso8601Minutes("20190830T1535Z"));
-        assertTrue(isValidIso8601Minutes("20190830T1535+01"));
-        assertTrue(isValidIso8601Minutes("20190830T1535+0100"));
-        assertTrue(isValidIso8601Minutes("20190830T1535+0130"));
-        assertTrue(isValidIso8601Minutes("20190830T1535-23"));
-        assertTrue(isValidIso8601Minutes("20190830T1535-2300"));
-        assertTrue(isValidIso8601Minutes("20190830T1535-2330"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T1535Z"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T1535+01"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T1535+0100"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T1535+0130"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T1535-23"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T1535-2300"));
+        assertTrue(isValidIso8601AtLeastMinutes("20190830T1535-2330"));
 
-        assertFalse(isValidIso8601Minutes("20190830T1535+01:00"));
-        assertFalse(isValidIso8601Minutes("20190830T1535+01:30"));
-        assertFalse(isValidIso8601Minutes("20190830T1535-23:00"));
-        assertFalse(isValidIso8601Minutes("20190830T1535-23:30"));
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T1535+01:00"));
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T1535+01:30"));
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T1535-23:00"));
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T1535-23:30"));
     }
 
     @Test
     public void iso8601MinutesExtendedFormat() {
-        assertTrue(isValidIso8601Minutes("2019-08-30T15:35"));
-        assertTrue(isValidIso8601Minutes("2019-08-30T15:35Z"));
-        assertTrue(isValidIso8601Minutes("2019-08-30T15:35+01"));
-        assertTrue(isValidIso8601Minutes("2019-08-30T15:35+01:00"));
-        assertTrue(isValidIso8601Minutes("2019-08-30T15:35+01:30"));
-        assertTrue(isValidIso8601Minutes("2019-08-30T15:35-23"));
-        assertTrue(isValidIso8601Minutes("2019-08-30T15:35-23:00"));
-        assertTrue(isValidIso8601Minutes("2019-08-30T15:35-23:30"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35Z"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35+01"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35+01:00"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35+01:30"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35-23"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35-23:00"));
+        assertTrue(isValidIso8601AtLeastMinutes("2019-08-30T15:35-23:30"));
 
-        assertFalse(isValidIso8601Minutes("2019-08-30T15:35+0100"));
-        assertFalse(isValidIso8601Minutes("2019-08-30T15:35+0130"));
-        assertFalse(isValidIso8601Minutes("2019-08-30T15:35-2300"));
-        assertFalse(isValidIso8601Minutes("2019-08-30T15:35-2330"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:35+0100"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:35+0130"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:35-2300"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T15:35-2330"));
     }
 
     @Test
     public void iso8601MinutesMixedFormats() {
-        assertFalse(isValidIso8601Minutes("201908-30T15:35"));
-        assertFalse(isValidIso8601Minutes("2019-0830T15:35"));
-        assertFalse(isValidIso8601Minutes("2019-08-30T1535"));
-        assertFalse(isValidIso8601Minutes("20190830T15:36"));
+        assertFalse(isValidIso8601AtLeastMinutes("201908-30T15:35"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-0830T15:35"));
+        assertFalse(isValidIso8601AtLeastMinutes("2019-08-30T1535"));
+        assertFalse(isValidIso8601AtLeastMinutes("20190830T15:36"));
     }
 
     @Test
     public void iso8601Seconds() {
         //TODO: allow/forbid values with seconds, see https://github.com/rzeh4n/validator-e-publikaci/issues/1
-        assertFalse(isValidIso8601Minutes("20210309T195538"));
+        assertFalse(isValidIso8601AtLeastMinutes("20210309T195538"));
     }
 
     //TODO: testy pro nižší detail, než minuty - takové věci by projít neměly
