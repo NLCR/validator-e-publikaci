@@ -30,6 +30,7 @@
 
     <xs:complexType name="namespacesType">
         <xs:sequence>
+            <xs:element name="defaultNamespace" type="xs:string" maxOccurs="1" minOccurs="0"/>
             <xs:element name="namespace" type="bfp:namespaceType" maxOccurs="unbounded" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
@@ -103,6 +104,7 @@
     <xs:complexType name="mustMatchAnyType">
         <xs:sequence>
             <xs:element name="isExactly" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="startsWith" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="endsWith" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="isInIntRange" type="bfp:intRangeType" minOccurs="0"/>
             <xs:element name="isInFloatRange" type="bfp:floatRangeType" minOccurs="0"/>

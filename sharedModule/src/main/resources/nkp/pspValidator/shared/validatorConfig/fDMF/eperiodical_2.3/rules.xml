@@ -11,7 +11,6 @@
     <rules-section name="Struktura souborů" description="Struktura PSP balicku na urovni soboru">
 
         <!--mozna tohle patri spise k INFO?-->
-        <!--TODO: spis pouzit pattern a checkFilenameMatchesPattern, kdyz matches-->
         <rule name="PSP_DIR_MATCHES_PSP_ID">
             <description>Název kořenového adresáře musí být schodný s PSP-ID.</description>
             <validation functionName="checkFilenameMatchesPattern">
@@ -286,8 +285,18 @@
             <validation functionName="checkAllFilenamesMatchPattern">
                 <params>
                     <value name="files" type="FILE_LIST">
-                        <value-ref name="ORIGINAL-COPY_FILES"/>
+                        <evaluation functionName="mergeFiles">
+                            <params>
+                                <value name="file_list" type="FILE_LIST">
+                                    <value-ref name="ORIGINAL-COPY-PDF_FILES"/>
+                                </value>
+                                <value name="file_list" type="FILE_LIST">
+                                    <value-ref name="ORIGINAL-COPY-EPUB_FILES"/>
+                                </value>
+                            </params>
+                        </evaluation>
                     </value>
+
                     <pattern name="pattern">
                         <pattern-ref name="FILENAME"/>
                     </pattern>
@@ -303,7 +312,16 @@
             <validation functionName="checkNoFileIsDir">
                 <params>
                     <value name="files" type="FILE_LIST">
-                        <value-ref name="ORIGINAL-COPY_FILES"/>
+                        <evaluation functionName="mergeFiles">
+                            <params>
+                                <value name="file_list" type="FILE_LIST">
+                                    <value-ref name="ORIGINAL-COPY-PDF_FILES"/>
+                                </value>
+                                <value name="file_list" type="FILE_LIST">
+                                    <value-ref name="ORIGINAL-COPY-EPUB_FILES"/>
+                                </value>
+                            </params>
+                        </evaluation>
                     </value>
                 </params>
             </validation>
@@ -320,7 +338,10 @@
                         <value-ref name="ORIGINAL-DIR_FILE"/>
                     </value>
                     <value name="files" type="FILE_LIST">
-                        <value-ref name="ORIGINAL-COPY_FILES"/>
+                        <value-ref name="ORIGINAL-COPY-PDF_FILES"/>
+                    </value>
+                    <value name="files" type="FILE_LIST">
+                        <value-ref name="ORIGINAL-COPY-EPUB_FILES"/>
                     </value>
                 </params>
             </validation>
@@ -1712,6 +1733,40 @@
 
     </rules-section>
 
-    <!--TODO: epub/pdf-->
+    <rules-section name="Soubory původních kopií" description="Kontrola souborů ORIGINAL-COPY_FILES v PDF nebo EPUB">
+
+        <rule name="ORIGINAL-COPY-PDF_FILES_VALID_BY_VERAPDF">
+            <description>Všechny soubory ORIGINAL-COPY-PDF_FILES v PDF musí být validní vůči profilu pro binární soubory pro nástroj veraPDF.
+            </description>
+            <validation functionName="checkBinaryFilesValidByExternalUtil">
+                <params>
+                    <value name="files" type="FILE_LIST">
+                        <value-ref name="ORIGINAL-COPY-PDF_FILES"/>
+                    </value>
+                    <value name="type" type="RESOURCE_TYPE">ORIGINAL_COPY_PDF</value>
+                    <value name="util" type="EXTERNAL_UTIL">VERAPDF</value>
+                    <value name="execution" type="STRING">pdf</value>
+                    <value name="ignore_empty_file_list" type="BOOLEAN">TRUE</value>
+                </params>
+            </validation>
+        </rule>
+
+        <rule name="ORIGINAL-COPY-EPUB_FILES_VALID_BY_EPUBCHECK">
+            <description>Všechny soubory ORIGINAL-COPY-EPUB_FILES v PDF musí být validní vůči profilu pro binární soubory pro nástroj EPUBCheck.
+            </description>
+            <validation functionName="checkBinaryFilesValidByExternalUtil">
+                <params>
+                    <value name="files" type="FILE_LIST">
+                        <value-ref name="ORIGINAL-COPY-EPUB_FILES"/>
+                    </value>
+                    <value name="type" type="RESOURCE_TYPE">ORIGINAL_COPY_EPUB</value>
+                    <value name="util" type="EXTERNAL_UTIL">EPUBCHECK</value>
+                    <value name="execution" type="STRING">epub</value>
+                    <value name="ignore_empty_file_list" type="BOOLEAN">TRUE</value>
+                </params>
+            </validation>
+        </rule>
+
+    </rules-section>
 
 </fDMF>

@@ -39,7 +39,8 @@ public class MainTest {
 
     private static final String PER_1_4 = "../sharedModule/src/test/resources/periodical_1.4/ope301-00000v";
 
-    private static final String EMON_2_3 = "../sharedModule/src/test/resources/e-monograph_2.3/nk-mbc228";
+    //private static final String EMON_2_3 = "../sharedModule/src/test/resources/e-monograph_2.3/nk-mbc228";
+    private static final String EMON_2_3 = "../sharedModule/src/test/resources/eborny_validator_test_uprava_povinnych_chyb/emono_klasicke/RDA/aba007-0000f8";
     private static final String EPER_2_3 = "../sharedModule/src/test/resources/e-periodical_2.3/nk-2411ib";
 
 
@@ -47,28 +48,32 @@ public class MainTest {
     public void cli() throws InvalidXPathExpressionException, PspDataException, ValidatorConfigurationException, XmlFileParsingException, FdmfRegistry.UnknownFdmfException {
         Platform platform = Platform.detectOs();
         String configDir = null;
-        String imageMagickPath = null;
+        /*String imageMagickPath = null;
         String jhovePath = null;
         String jpylyzerPath = null;
-        String kakaduPath = null;
+        String kakaduPath = null;*/
+        String verapdfPath = null;
+        String epubcheckPath = null;
 
         switch (platform.getOperatingSystem()) {
             case WINDOWS:
                 configDir = "..\\sharedModule\\src\\main\\resources\\nkp\\pspValidator\\shared\\validatorConfig";
-                imageMagickPath = "C:\\Program Files\\ImageMagick-7.0.3-Q16";
+                /*imageMagickPath = "C:\\Program Files\\ImageMagick-7.0.3-Q16";
                 jhovePath = "C:\\Users\\Lenovo\\Documents\\software\\jhove";
                 jpylyzerPath = "C:\\Users\\Lenovo\\Documents\\software\\jpylyzer_1.17.0_win64";
-                kakaduPath = "C:\\Program Files (x86)\\Kakadu\\";
+                kakaduPath = "C:\\Program Files (x86)\\Kakadu\\";*/
                 break;
             case LINUX:
                 configDir = "../sharedModule/src/main/resources/nkp/pspValidator/shared/validatorConfig";
-                kakaduPath = "/home/martin/zakazky/NKP-Komplexni_Validator/utility/kakadu/KDU78_Demo_Apps_for_Linux-x86-64_160226";
+                /*kakaduPath = "/home/martin/zakazky/NKP-Komplexni_Validator/utility/kakadu/KDU78_Demo_Apps_for_Linux-x86-64_160226";*/
                 break;
             case MAC:
                 configDir = "../sharedModule/src/main/resources/nkp/pspValidator/shared/validatorConfig";
-                jhovePath = "/Users/martinrehanek/Software/jhove";
+                /*jhovePath = "/Users/martinrehanek/Software/jhove";
                 imageMagickPath = "/opt/local/bin";
-                jpylyzerPath = "/Users/martinrehanek/Software/jpylyzer-1.17.0/jpylyzer";
+                jpylyzerPath = "/Users/martinrehanek/Software/jpylyzer-1.17.0/jpylyzer";*/
+                verapdfPath = "/Users/martin/Software/verapdf";
+                epubcheckPath = "/Users/martin/Software/epubcheck-4.2.5";
         }
 
         Validator.DevParams devParams = new Validator.DevParams();
@@ -79,7 +84,7 @@ public class MainTest {
         //devParams.getSectionsToRun().add("Bibliografická metadata");
         //devParams.getSectionsToRun().add("Identifikátory");
         //devParams.getSectionsToRun().add("Obrazová data");
-        devParams.getSectionsToRun().add("Bibliografická metadata");
+        devParams.getSectionsToRun().add("Soubory původních kopií");
         //devParams.getSectionsToRun().add("ALTO");
         //devParams.getSectionsToRun().add("Technická metadata");
         //devParams.getSectionsToRun().add("METS hlavičky");
@@ -94,8 +99,8 @@ public class MainTest {
                 configDir
                 , "/tmp"
 
-                //, EMON_2_3
-                , EPER_2_3
+                , EMON_2_3
+                //, EPER_2_3
                 //, ZIP_1
                 //, ZIP_NOT_ZIP
 
@@ -121,14 +126,20 @@ public class MainTest {
                 , 2 //verbosity
                 , "/tmp/protocols"
                 , null//"src/test/resources/protocol.xml" //xml protocol
-                , imageMagickPath //null //imageMagick path
+                /*, imageMagickPath //null //imageMagick path
                 , jhovePath //jhove path
                 , jpylyzerPath //jpylyzer path
-                , kakaduPath  //kakadu path
-                , true //disable imageMagick
-                , true //disable jhove
-                , true //disable jpylyzer
-                , true//disable kakadu
+                , kakaduPath  //kakadu path*/
+                , verapdfPath
+                , epubcheckPath
+
+
+                //, true //disable imageMagick
+                //, true //disable jhove
+                //, true //disable jpylyzer
+                //, true//disable kakadu
+                , false //disable veraPDF
+                , false //disable EPUBCheck
         ));
     }
 
@@ -138,8 +149,11 @@ public class MainTest {
                                  String preferDmfMonVersion, String preferDmfPerVersion, String preferDmfEmonVersion, String preferDmfEperVersion,
                                  String forceDmfMonVersion, String forceDmfPerVersion, String forceDmfEmonVersion, String forceDmfEperVersion,
                                  Integer verbosity, String xmlProtocolDir, String xmlProtocolFile,
-                                 String imageMagickPath, String jhovePath, String jpylyzerPath, String kakaduPath,
-                                 boolean disableImageMagick, boolean disableJhove, boolean disableJpylyzer, boolean disableKakadu
+                                 //String imageMagickPath, String jhovePath, String jpylyzerPath, String kakaduPath,
+                                 String verapdfPath, String epubcheckPath,
+                                 //boolean disableImageMagick, boolean disableJhove, boolean disableJpylyzer, boolean disableKakadu
+                                 boolean disableVerapdf, boolean disableEpubcheck
+
     ) {
         List<String> params = new ArrayList<>();
         //action
@@ -219,7 +233,7 @@ public class MainTest {
         }
 
         //image utils
-        if (imageMagickPath != null) {
+        /*if (imageMagickPath != null) {
             params.add(String.format("--%s", Params.IMAGEMAGICK_PATH));
             params.add(imageMagickPath);
         }
@@ -234,8 +248,16 @@ public class MainTest {
         if (kakaduPath != null) {
             params.add(String.format("--%s", Params.KAKADU_PATH));
             params.add(kakaduPath);
+        }*/
+        if (verapdfPath != null) {
+            params.add(String.format("--%s", Params.VERAPDF_PATH));
+            params.add(verapdfPath);
         }
-        if (disableImageMagick) {
+        if (epubcheckPath != null) {
+            params.add(String.format("--%s", Params.EPUBCHECK_PATH));
+            params.add(epubcheckPath);
+        }
+        /*if (disableImageMagick) {
             params.add(String.format("--%s", Params.DISABLE_IMAGEMAGICK));
         }
         if (disableJhove) {
@@ -246,9 +268,16 @@ public class MainTest {
         }
         if (disableKakadu) {
             params.add(String.format("--%s", Params.DISABLE_KAKADU));
+        }*/
+        if (disableVerapdf) {
+            params.add(String.format("--%s", Params.DISABLE_VERAPDF));
+        }
+        if (disableEpubcheck) {
+            params.add(String.format("--%s", Params.DISABLE_EPUBCHECK));
         }
 
         Object[] array = params.toArray();
+        //System.err.println(Arrays.toString(array));
         return Arrays.copyOf(array, array.length, String[].class);
     }
 }

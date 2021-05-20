@@ -189,6 +189,7 @@ public class MainController extends AbstractController implements ValidationStat
                         devParams.getSectionsToRun().add("Struktura souborů");
                         devParams.getSectionsToRun().add("Primární METS filesec");
                         //devParams.getSectionsToRun().add("Obrazová data");
+                        devParams.getSectionsToRun().add("Soubory původních kopií");
                     }
                     //Thread.sleep(5000);
                     if (isCancelled()) {

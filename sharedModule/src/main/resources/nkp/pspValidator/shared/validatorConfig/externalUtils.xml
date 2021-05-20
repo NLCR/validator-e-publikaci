@@ -398,6 +398,7 @@
     -->
 
     <!--TODO: neopakovat nazvy nastroju, ale vytahnout z regexp groups -->
+    <!--TODO: otestovat ve Windows, Linux-->
 
     <util name="VERAPDF">
         <versionDetection>
@@ -423,23 +424,23 @@
                 </parser>
             </operatingSystem>
         </versionDetection>
-        <execution name="todo">
+        <execution name="pdf">
             <operatingSystem name="LINUX">
-                <command>${UTIL_PATH}jpylyzer jp2In ${TARGET_FILE}</command>
+                <command>${UTIL_PATH}verapdf ${TARGET_FILE}</command>
                 <parser>
                     <stream>STDOUT</stream>
                     <regexp>(?s).*</regexp>
                 </parser>
             </operatingSystem>
             <operatingSystem name="WINDOWS">
-                <command>${UTIL_PATH}jpylyzer.exe jp2In ${TARGET_FILE}</command>
+                <command>${UTIL_PATH}verapdf ${TARGET_FILE}</command>
                 <parser>
                     <stream>STDOUT</stream>
                     <regexp>(?s).*</regexp>
                 </parser>
             </operatingSystem>
             <operatingSystem name="MAC">
-                <command>python ${UTIL_PATH}jpylyzer.py jp2In ${TARGET_FILE}</command>
+                <command>${UTIL_PATH}verapdf ${TARGET_FILE}</command>
                 <parser>
                     <stream>STDOUT</stream>
                     <regexp>(?s).*</regexp>
@@ -472,23 +473,23 @@
                 </parser>
             </operatingSystem>
         </versionDetection>
-        <execution name="todo">
+        <execution name="epub">
             <operatingSystem name="LINUX">
-                <command>${UTIL_PATH}jpylyzer jp2In ${TARGET_FILE}</command>
+                <command>java -jar ${UTIL_PATH}epubcheck.jar --out - ${TARGET_FILE}</command>
                 <parser>
                     <stream>STDOUT</stream>
                     <regexp>(?s).*</regexp>
                 </parser>
             </operatingSystem>
             <operatingSystem name="WINDOWS">
-                <command>${UTIL_PATH}jpylyzer.exe jp2In ${TARGET_FILE}</command>
+                <command>$java -jar ${UTIL_PATH}epubcheck.jar --out - ${TARGET_FILE}</command>
                 <parser>
                     <stream>STDOUT</stream>
                     <regexp>(?s).*</regexp>
                 </parser>
             </operatingSystem>
             <operatingSystem name="MAC">
-                <command>python ${UTIL_PATH}jpylyzer.py jp2In ${TARGET_FILE}</command>
+                <command>java -jar ${UTIL_PATH}epubcheck.jar --out - ${TARGET_FILE}</command>
                 <parser>
                     <stream>STDOUT</stream>
                     <regexp>(?s).*</regexp>

@@ -44,6 +44,14 @@ public class VfCheckBinaryFilesValidByExternalUtilTest {
     private static File KAKADU_PATH_WINDOWS = new File("C:\\Program Files (x86)\\Kakadu\\");
     private static File KAKADU_PATH_MAC = null;
 
+    private static File VERAPDF_PATH_LINUX = null; //TODO
+    private static File VERAPDF_PATH_WINDOWS = null; //TODO
+    private static File VERAPDF_PATH_MAC = new File("/Users/martin/Software/verapdf/verapdf");
+
+    private static File EPUBCHECK_PATH_LINUX = null; //TODO
+    private static File EPUBCHECK_PATH_WINDOWS = null; //TODO
+    private static File EPUBCHECK_PATH_MAC = new File("/Users/martin/Software/epubcheck-4.2.5");
+
     private static Engine engine;
     private static ExternalUtilManager externalUtilManager;
     private static List<File> FILES_OK_MC;
@@ -80,22 +88,28 @@ public class VfCheckBinaryFilesValidByExternalUtilTest {
         externalUtilManager = new ExternalUtilManagerFactory(IMAGE_UTILS_CONFIG).buildExternalUtilManager(platform.getOperatingSystem());
         switch (platform.getOperatingSystem()) {
             case WINDOWS:
-                externalUtilManager.setPath(ExternalUtil.IMAGE_MAGICK, IMAGEMAGICK_PATH_WINDOWS);
+                /*externalUtilManager.setPath(ExternalUtil.IMAGE_MAGICK, IMAGEMAGICK_PATH_WINDOWS);
                 externalUtilManager.setPath(ExternalUtil.JHOVE, JHOVE_PATH_WINDOWS);
                 externalUtilManager.setPath(ExternalUtil.JPYLYZER, JPYLYZER_PATH_WINDOWS);
-                externalUtilManager.setPath(ExternalUtil.KAKADU, KAKADU_PATH_WINDOWS);
+                externalUtilManager.setPath(ExternalUtil.KAKADU, KAKADU_PATH_WINDOWS);*/
+                externalUtilManager.setPath(ExternalUtil.VERAPDF, VERAPDF_PATH_WINDOWS);
+                externalUtilManager.setPath(ExternalUtil.EPUBCHECK, EPUBCHECK_PATH_WINDOWS);
                 break;
             case LINUX:
-                externalUtilManager.setPath(ExternalUtil.IMAGE_MAGICK, IMAGEMAGICK_PATH_LINUX);
+                /*externalUtilManager.setPath(ExternalUtil.IMAGE_MAGICK, IMAGEMAGICK_PATH_LINUX);
                 externalUtilManager.setPath(ExternalUtil.JHOVE, JHOVE_PATH_LINUX);
                 externalUtilManager.setPath(ExternalUtil.JPYLYZER, JPYLYZER_PATH_LINUX);
-                externalUtilManager.setPath(ExternalUtil.KAKADU, KAKADU_PATH_LINUX);
+                externalUtilManager.setPath(ExternalUtil.KAKADU, KAKADU_PATH_LINUX);*/
+                externalUtilManager.setPath(ExternalUtil.VERAPDF, VERAPDF_PATH_LINUX);
+                externalUtilManager.setPath(ExternalUtil.EPUBCHECK, EPUBCHECK_PATH_LINUX);
                 break;
             case MAC:
-                externalUtilManager.setPath(ExternalUtil.IMAGE_MAGICK, IMAGEMAGICK_PATH_MAC);
+                /*externalUtilManager.setPath(ExternalUtil.IMAGE_MAGICK, IMAGEMAGICK_PATH_MAC);
                 externalUtilManager.setPath(ExternalUtil.JHOVE, JHOVE_PATH_MAC);
                 externalUtilManager.setPath(ExternalUtil.JPYLYZER, JPYLYZER_PATH_MAC);
-                externalUtilManager.setPath(ExternalUtil.KAKADU, KAKADU_PATH_MAC);
+                externalUtilManager.setPath(ExternalUtil.KAKADU, KAKADU_PATH_MAC);*/
+                externalUtilManager.setPath(ExternalUtil.VERAPDF, VERAPDF_PATH_MAC);
+                externalUtilManager.setPath(ExternalUtil.EPUBCHECK, EPUBCHECK_PATH_MAC);
                 break;
         }
 
@@ -146,7 +160,7 @@ public class VfCheckBinaryFilesValidByExternalUtilTest {
         assertEquals(null, null);
     }
 
-    @Test
+   /* @Test
     public void kakaduOkMc() {
         if (externalUtilManager.isUtilAvailable(ExternalUtil.KAKADU)) {
             ValidationFunction validationFunction = buildValidationFunction(ExternalUtil.KAKADU, ResourceType.IMAGE_MASTER_COPY, FILES_OK_MC);
@@ -304,21 +318,21 @@ public class VfCheckBinaryFilesValidByExternalUtilTest {
     @Test
     public void kakaduIncorrect() {
         //TODO: co je na nich spatne? timhle projdou
-        /*if (externalUtilManager.isUtilAvailable(ExternalUtil.KAKADU)) {
+        *//*if (externalUtilManager.isUtilAvailable(ExternalUtil.KAKADU)) {
             ValidationFunction validationFunction = buildValidationFunction(ExternalUtil.KAKADU, ResourceType.IMAGE_MASTER_COPY, FILES_INCORRECT);
             ValidationResult result = validationFunction.validate();
             assertTrue(result.hasProblems());
-        }*/
+        }*//*
     }
 
     @Test
     public void imageMagickIncorrect() {
         //TODO: co je na nich spatne? timhle projdou
-        /*if (externalUtilManager.isUtilAvailable(ExternalUtil.IMAGE_MAGICK)) {
+        *//*if (externalUtilManager.isUtilAvailable(ExternalUtil.IMAGE_MAGICK)) {
             ValidationFunction validationFunction = buildValidationFunction(ExternalUtil.IMAGE_MAGICK, ResourceType.IMAGE_MASTER_COPY, FILES_INCORRECT);
             ValidationResult result = validationFunction.validate();
             assertTrue(result.hasProblems());
-        }*/
+        }*//*
     }
 
     @Test
@@ -374,7 +388,7 @@ public class VfCheckBinaryFilesValidByExternalUtilTest {
             ValidationResult result = validationFunction.validate();
             assertTrue(result.hasProblems());
         }
-    }
+    }*/
 
 
 }

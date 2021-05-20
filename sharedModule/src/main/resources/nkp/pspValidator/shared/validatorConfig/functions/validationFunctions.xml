@@ -317,6 +317,7 @@
             <value name="execution" type="STRING"/>
             <value name="validation_problem_level" type="LEVEL" minOccurs="0" maxOccurs="1"
                    description="úroveň chybové hlášky pro samotnou validaci externím nástrojem, defaultně ERROR"/>
+            <value name="ignore_empty_file_list" type="BOOLEAN" minOccurs="0" maxOccurs="1"/>
         </params-def>
     </validationFunction>
 

@@ -905,21 +905,37 @@ public class Main {
                 out.print(String.format("Kontroluji dostupnost nástroje %s: ", util.getUserFriendlyName()));
                 if (!externalUtilManager.isVersionDetectionDefined(util)) {
                     out.println("není definován způsob detekce verze");
-                } else if (!externalUtilManager.isUtilAvailable(util)) {
-                    out.println("není definován způsob spuštění");
+                } else if (externalUtilManager.isUtilAvailable(util)) {
+                    out.println("je definován způsob spuštění");
                 } else {
+                    out.println("není definován způsob spuštění");
                     try {
+                        out.print(String.format("Detekuji verzi nástroje %s: ", util.getUserFriendlyName()));
                         String version = externalUtilManager.runUtilVersionDetection(util);
                         if (version != null) {
+                            out.println("zjištěna verze: " + version + ", nástroj bude dostupný");
                             externalUtilManager.setUtilAvailable(util, true);
-                            out.println("nalezen, verze: " + version);
                         } else {
-                            out.println("nenalezen");
+                            out.println("verze nezjištěna, nástroj nebude dostupný");
                         }
                     } catch (CliCommand.CliCommandException e) {
-                        out.println(String.format("nenalezen (%s)", e.getMessage()));
+                        out.println(String.format("nepodařilo se zjistit verzi: %s", shortenErrorMessage(e.getMessage())));
                     }
                 }
+            }
+        }
+    }
+
+    private static String shortenErrorMessage(String message) {
+        if (message == null) {
+            return null;
+        } else {
+            int maxLength = 100;
+            if (message.length() < 100) {
+                return message.replaceAll("\\s+", " ").trim();
+            } else {
+                String suffix = "...";
+                return message.substring(0, maxLength - suffix.length()).replaceAll("\\s+", " ").trim() + suffix;
             }
         }
     }

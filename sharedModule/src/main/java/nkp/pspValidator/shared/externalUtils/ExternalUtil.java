@@ -12,8 +12,8 @@ public enum ExternalUtil {
     MP3VAL("MP3val", "mp3val.xml"),
     SHNTOOL("shntool", "shntool.xml"),
     CHECKMATE("Checkmate", "checkmate.xml"),*/
-    VERAPDF("veraPDF", "verapdf.xml"),
-    EPUBCHECK("EPUBCheck", "epubcheck.xml");
+    VERAPDF("veraPDF", "veraPdf.xml"),
+    EPUBCHECK("EPUBCheck", "epubCheck.xml");
 
     private final String userFriendlyName;
     private final String profileFileName;

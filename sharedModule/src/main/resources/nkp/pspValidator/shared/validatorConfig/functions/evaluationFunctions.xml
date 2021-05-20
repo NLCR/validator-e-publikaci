@@ -144,6 +144,14 @@
         </params-def>
     </evaluationFunction>
 
+    <evaluationFunction name="mergeFiles" resultType="FILE_LIST">
+        <description>Spojí soubory, seznamy souborů a seznamy seznamů souborů do jednoho seznamu.</description>
+        <params-def>
+            <value name="file" type="FILE" minOccurs="0" maxOccurs="unbound"/>
+            <value name="file_list" type="FILE_LIST" minOccurs="0" maxOccurs="unbound"/>
+            <value name="file_list_list" type="FILE_LIST_LIST" minOccurs="0" maxOccurs="unbound"/>
+        </params-def>
+    </evaluationFunction>
 
     <evaluationFunction name="getDcIdentifiersForEachDmdsecId" resultType="IDENTIFIER_LIST_LIST">
         <description>Vrátí seznam seznamů identifikátorů z Dublin Core - pro každý dmdSec jeden seznam.</description>

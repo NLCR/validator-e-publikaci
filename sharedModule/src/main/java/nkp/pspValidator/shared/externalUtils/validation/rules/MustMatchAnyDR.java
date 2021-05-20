@@ -2,6 +2,7 @@ package nkp.pspValidator.shared.externalUtils.validation.rules;
 
 import nkp.pspValidator.shared.externalUtils.validation.Constraint;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -17,11 +18,33 @@ public class MustMatchAnyDR extends AbstractDataRule {
 
     @Override
     public List<String> validate(Object data) {
-        for (Constraint constraint : constraints) {
-            if (constraint.matches(data)) {
+        if (data instanceof List) {
+            List dataAsList = (List) data;
+            List errors = new ArrayList();
+            for (Object item : dataAsList) {
+                String error = validateItem(item);
+                if (error != null) {
+                    errors.add(error);
+                }
+            }
+            return errors;
+        } else {
+            String error = validateItem(data);
+            if (error == null) {
                 return noErrors();
+            } else {
+                return singleError(error);
             }
         }
-        return singleError(error(String.format("hodnota \"%s\" neodpovídá žádnému z omezení: %s", toString(data), toString(constraints))));
     }
+
+    private String validateItem(Object item) {
+        for (Constraint constraint : constraints) {
+            if (constraint.matches(item)) {
+                return null;
+            }
+        }
+        return error(String.format("hodnota \"%s\" neodpovídá žádnému z omezení: %s", toString(item), toString(constraints)));
+    }
+
 }

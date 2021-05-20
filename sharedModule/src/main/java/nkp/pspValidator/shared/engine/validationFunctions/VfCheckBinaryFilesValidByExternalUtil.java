@@ -14,6 +14,7 @@ import nkp.pspValidator.shared.externalUtils.ExternalUtilExecution;
 
 import java.io.File;
 import java.util.List;
+import java.util.logging.Logger;
 
 
 /**
@@ -21,12 +22,15 @@ import java.util.List;
  */
 public class VfCheckBinaryFilesValidByExternalUtil extends ValidationFunction {
 
+    private static Logger LOG = Logger.getLogger(VfCheckBinaryFilesValidByExternalUtil.class.getSimpleName());
+
     public static final String PARAM_NO_FILES_PROBLEM_LEVEL = "no_files_problem_level";
     public static final String PARAM_FILES = "files";
     public static final String PARAM_TYPE = "type";
     public static final String PARAM_UTIL = "util";
     public static final String PARAM_EXECUTION = "execution";
     public static final String PARAM_VALIDATION_PROBLEM_LEVEL = "validation_problem_level";
+    public static final String PARAM_IGNORE_EMPTY_FILE_LIST = "ignore_empty_file_list";
 
     public VfCheckBinaryFilesValidByExternalUtil(String name, Engine engine) {
         super(name, engine, new Contract()
@@ -36,6 +40,7 @@ public class VfCheckBinaryFilesValidByExternalUtil extends ValidationFunction {
                 .withValueParam(PARAM_UTIL, ValueType.EXTERNAL_UTIL, 1, 1)
                 .withValueParam(PARAM_EXECUTION, ValueType.STRING, 1, 1)
                 .withValueParam(PARAM_VALIDATION_PROBLEM_LEVEL, ValueType.LEVEL, 0, 1)
+                .withValueParam(PARAM_IGNORE_EMPTY_FILE_LIST, ValueType.BOOLEAN, 0, 1)
         );
     }
 
@@ -55,8 +60,6 @@ public class VfCheckBinaryFilesValidByExternalUtil extends ValidationFunction {
             List<File> files = (List<File>) paramFiles.getData();
             if (files == null) {
                 return invalidValueParamNull(PARAM_FILES, paramFiles);
-            } else if (files.isEmpty()) {
-                return singlErrorResult(invalid(noFilesProblemLevel, "prázdný seznam souborů"));
             }
 
             Level validationProblemLevel = Level.ERROR;
@@ -64,6 +67,13 @@ public class VfCheckBinaryFilesValidByExternalUtil extends ValidationFunction {
             if (!validationProblemLevelParams.isEmpty()) {
                 ValueEvaluation eval = validationProblemLevelParams.get(0).getEvaluation();
                 validationProblemLevel = (Level) eval.getData();
+            }
+
+            Boolean ignoreEmptyFileList = false;
+            List<ValueParam> ignoreEmptyFileListParams = valueParams.getParams(PARAM_IGNORE_EMPTY_FILE_LIST);
+            if (!ignoreEmptyFileListParams.isEmpty()) {
+                ValueEvaluation eval = ignoreEmptyFileListParams.get(0).getEvaluation();
+                ignoreEmptyFileList = (Boolean) eval.getData();
             }
 
             ValueEvaluation paramType = valueParams.getParams(PARAM_TYPE).get(0).getEvaluation();
@@ -82,6 +92,15 @@ public class VfCheckBinaryFilesValidByExternalUtil extends ValidationFunction {
             String executionName = (String) paramExecution.getData();
             if (executionName == null) {
                 return invalidValueParamNull(PARAM_EXECUTION, paramExecution);
+            }
+
+            if (files.isEmpty()) {
+                //LOG.info("no files: " + util.getUserFriendlyName() + "(" + util.getProfileFileName() + ")");
+                if (ignoreEmptyFileList) {
+                    return new ValidationResult();
+                } else {
+                    return singlErrorResult(invalid(noFilesProblemLevel, "prázdný seznam souborů"));
+                }
             }
 
             ExternalUtilExecution execution = new ExternalUtilExecution(executionName, util);

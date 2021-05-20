@@ -7,6 +7,7 @@ import nkp.pspValidator.shared.XmlUtils;
 import nkp.pspValidator.shared.engine.exceptions.ValidatorConfigurationException;
 import nkp.pspValidator.shared.externalUtils.*;
 import nkp.pspValidator.shared.externalUtils.validation.extractions.AllNonemptyByRegexpDataExtraction;
+import nkp.pspValidator.shared.externalUtils.validation.extractions.AllNonemptyByXpathDataExctraction;
 import nkp.pspValidator.shared.externalUtils.validation.extractions.FirstNonemptyByRegexpDataExtraction;
 import nkp.pspValidator.shared.externalUtils.validation.extractions.FirstNonemptyByXpathDataExctraction;
 import nkp.pspValidator.shared.externalUtils.validation.rules.MustExistDR;
@@ -53,7 +54,7 @@ public class BinaryFileValidator {
         XMLTag doc = XMLDoc.from(profileDefinitionFile, true);
         BinaryFileProfile profile = buildProfile(util, doc.getCurrentTag());
         if (getProfilesByType(type).containsKey(util)) {
-            // TODO: 2019-04-02 vyresit, docasne bude jen warning
+            // TODO: 2019-04-02 vyresit zdvojenou registraci profilu
             //throw new IllegalStateException(String.format("profil pro typ %s a utilitu %s už byl registrován: %s", type, util, profileDefinitionFile.getAbsolutePath()));
             //System.err.println(String.format("profil pro typ %s a utilitu %s už byl registrován: %s", type, util, profileDefinitionFile.getAbsolutePath()));
         }
@@ -109,6 +110,7 @@ public class BinaryFileValidator {
                 String url = nsEl.getTextContent().trim();
                 profile.addNamespace(prefix, url);
             }
+            //TODO: fix, doesn't work, see epubCheck.xml
             Element defaultNamespaceEl = XmlUtils.getFirstChildElementsByName(namespacesEl, "defaultNamespace");
             if (defaultNamespaceEl != null) {
                 profile.addNamespace(null, defaultNamespaceEl.getTextContent().trim());
@@ -162,22 +164,32 @@ public class BinaryFileValidator {
     private DataExtraction buildXmlDataExtraction(NamespaceContextImpl nsContext, Element extractionEl) throws ValidatorConfigurationException {
         String resultTypeStr = extractionEl.getAttribute("resultType");
         ExtractionResultType resultType = ExtractionResultType.valueOf(resultTypeStr);
+
+        Element allNonemptyEl = XmlUtils.getFirstChildElementsByName(extractionEl, "allNonempty");
         Element firstNonemptyEl = XmlUtils.getFirstChildElementsByName(extractionEl, "firstNonempty");
-        if (firstNonemptyEl != null) {
+        if (allNonemptyEl != null) {
+            List<String> xpaths = new ArrayList<>();
+            List<Element> xpathEls = XmlUtils.getChildrenElementsByName(allNonemptyEl, "xpath");
+            for (Element xpathEl : xpathEls) {
+                xpaths.add(xpathEl.getTextContent().trim());
+            }
+            return new AllNonemptyByXpathDataExctraction(resultType, nsContext, xpaths);
+        } else if (firstNonemptyEl != null) {
             List<String> xpaths = new ArrayList<>();
             List<Element> xpathEls = XmlUtils.getChildrenElementsByName(firstNonemptyEl, "xpath");
             for (Element xpathEl : xpathEls) {
                 xpaths.add(xpathEl.getTextContent().trim());
             }
             return new FirstNonemptyByXpathDataExctraction(resultType, nsContext, xpaths);
+        } else {
+            throw new ValidatorConfigurationException("neznámá extrakce hodnoty: " + XmlUtils.getChildrenElements(extractionEl).get(0).getTagName());
         }
-        throw new ValidatorConfigurationException("neznámá extrakce hodnoty");
     }
 
     private DataRule buildRule(String validationName, Element ruleEl) throws ValidatorConfigurationException {
         //mustExist
         //mustNotExist
-        //mustMatch
+        //mustMatchAny
 
         switch (ruleEl.getTagName()) {
             case "mustExist": {
@@ -205,6 +217,10 @@ public class BinaryFileValidator {
             case "isExactly": {
                 String value = constraintEl.getTextContent().trim();
                 return new IsExactlyConstraint(value);
+            }
+            case "startsWith": {
+                String suffix = constraintEl.getTextContent().trim();
+                return new StartsWithConstraint(suffix);
             }
             case "endsWith": {
                 String suffix = constraintEl.getTextContent().trim();
