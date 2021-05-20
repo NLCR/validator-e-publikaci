@@ -410,7 +410,7 @@
                 </parser>
             </operatingSystem>
             <operatingSystem name="WINDOWS">
-                <command>${UTIL_PATH}verapdf --version</command>
+                <command>${UTIL_PATH}verapdf.bat --version</command>
                 <parser>
                     <stream>STDOUT</stream>
                     <regexp>veraPDF [0-9\.]+</regexp>
@@ -433,7 +433,7 @@
                 </parser>
             </operatingSystem>
             <operatingSystem name="WINDOWS">
-                <command>${UTIL_PATH}verapdf ${TARGET_FILE}</command>
+                <command>${UTIL_PATH}verapdf.bat ${TARGET_FILE}</command>
                 <parser>
                     <stream>STDOUT</stream>
                     <regexp>(?s).*</regexp>
@@ -475,21 +475,21 @@
         </versionDetection>
         <execution name="epub">
             <operatingSystem name="LINUX">
-                <command>java -jar ${UTIL_PATH}epubcheck.jar --out - ${TARGET_FILE}</command>
+                <command>java -jar ${UTIL_PATH}epubcheck.jar --out - -q ${TARGET_FILE}</command>
                 <parser>
                     <stream>STDOUT</stream>
                     <regexp>(?s).*</regexp>
                 </parser>
             </operatingSystem>
             <operatingSystem name="WINDOWS">
-                <command>$java -jar ${UTIL_PATH}epubcheck.jar --out - ${TARGET_FILE}</command>
+                <command>java -jar ${UTIL_PATH}epubcheck.jar --out - -q ${TARGET_FILE}</command>
                 <parser>
                     <stream>STDOUT</stream>
                     <regexp>(?s).*</regexp>
                 </parser>
             </operatingSystem>
             <operatingSystem name="MAC">
-                <command>java -jar ${UTIL_PATH}epubcheck.jar --out - ${TARGET_FILE}</command>
+                <command>java -jar ${UTIL_PATH}epubcheck.jar --out - -q ${TARGET_FILE}</command>
                 <parser>
                     <stream>STDOUT</stream>
                     <regexp>(?s).*</regexp>
