@@ -8,10 +8,10 @@ import java.util.List;
 /**
  * Created by Martin Řehánek on 17.11.16.
  */
-public class MustMatchAnyDR extends AbstractDataRule {
+public class MustMatchAnyConstraintDR extends AbstractDataRule {
     private final List<Constraint> constraints;
 
-    public MustMatchAnyDR(String validationName, List<Constraint> constraints) {
+    public MustMatchAnyConstraintDR(String validationName, List<Constraint> constraints) {
         super(validationName);
         this.constraints = constraints;
     }

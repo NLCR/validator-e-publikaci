@@ -11,7 +11,7 @@ import nkp.pspValidator.shared.externalUtils.validation.extractions.AllNonemptyB
 import nkp.pspValidator.shared.externalUtils.validation.extractions.FirstNonemptyByRegexpDataExtraction;
 import nkp.pspValidator.shared.externalUtils.validation.extractions.FirstNonemptyByXpathDataExctraction;
 import nkp.pspValidator.shared.externalUtils.validation.rules.MustExistDR;
-import nkp.pspValidator.shared.externalUtils.validation.rules.MustMatchAnyDR;
+import nkp.pspValidator.shared.externalUtils.validation.rules.MustMatchAnyConstraintDR;
 import nkp.pspValidator.shared.externalUtils.validation.rules.MustNotExistDR;
 import nkp.pspValidator.shared.externalUtils.validation.rules.constraints.*;
 import org.w3c.dom.Element;
@@ -204,7 +204,7 @@ public class BinaryFileValidator {
                 for (Element constraintEl : constraintEls) {
                     constraints.add(buildConstraint(constraintEl));
                 }
-                return new MustMatchAnyDR(validationName, constraints);
+                return new MustMatchAnyConstraintDR(validationName, constraints);
             }
             default:
                 throw new ValidatorConfigurationException("nečekaný element %s", ruleEl.getTagName());
