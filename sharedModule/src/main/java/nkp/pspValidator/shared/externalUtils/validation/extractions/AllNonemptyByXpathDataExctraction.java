@@ -23,7 +23,6 @@ public class AllNonemptyByXpathDataExctraction extends XmlDataExtraction {
         try {
             List allMatches = new ArrayList<>();
             for (String path : paths) {
-                System.err.println(path);
                 pathForError = path;
                 XPathExpression xPath = buildXpath(path);
                 Object extractedData = extractData(xPath, processedOutput);
