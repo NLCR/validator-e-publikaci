@@ -3,7 +3,7 @@
         xmlns="http://www.nkp.cz/validatorEpublikaci/2.0/metadataProfile"
         name="chapter (RDA)"
         validatorVersion="2.0"
-        dmf="monograph_1.3.2"
+        dmf="emonograph_2.3"
 >
 
     <info>

@@ -3,7 +3,7 @@
         xmlns="http://www.nkp.cz/validatorEpublikaci/2.0/metadataProfile"
         name="ukázkový profil pro MODS záznam"
         validatorVersion="2.0"
-        dmf="monograph_1.2"
+        dmf="emonograph_2.3"
 >
     <info>
         <!--Různé poznámky, případně odkazy-->
