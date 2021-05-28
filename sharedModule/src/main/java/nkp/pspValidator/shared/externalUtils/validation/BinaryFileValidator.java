@@ -4,6 +4,7 @@ import com.mycila.xmltool.XMLDoc;
 import com.mycila.xmltool.XMLTag;
 import nkp.pspValidator.shared.NamespaceContextImpl;
 import nkp.pspValidator.shared.XmlUtils;
+import nkp.pspValidator.shared.engine.Level;
 import nkp.pspValidator.shared.engine.exceptions.ValidatorConfigurationException;
 import nkp.pspValidator.shared.externalUtils.*;
 import nkp.pspValidator.shared.externalUtils.validation.extractions.AllNonemptyByRegexpDataExtraction;
@@ -187,16 +188,17 @@ public class BinaryFileValidator {
     }
 
     private DataRule buildRule(String validationName, Element ruleEl) throws ValidatorConfigurationException {
-        //mustExist
-        //mustNotExist
-        //mustMatchAny
+        //level
+        String levelStr = ruleEl.getAttribute("level");
+        Level level = levelStr == null || levelStr.isEmpty() ? null : Level.valueOf(levelStr);
 
+        //rule
         switch (ruleEl.getTagName()) {
             case "mustExist": {
-                return new MustExistDR(validationName);
+                return new MustExistDR(validationName, level);
             }
             case "mustNotExist": {
-                return new MustNotExistDR(validationName);
+                return new MustNotExistDR(validationName, level);
             }
             case "mustMatchAny": {
                 List<Constraint> constraints = new ArrayList<>();
@@ -204,7 +206,7 @@ public class BinaryFileValidator {
                 for (Element constraintEl : constraintEls) {
                     constraints.add(buildConstraint(constraintEl));
                 }
-                return new MustMatchAnyConstraintDR(validationName, constraints);
+                return new MustMatchAnyConstraintDR(validationName, level, constraints);
             }
             default:
                 throw new ValidatorConfigurationException("nečekaný element %s", ruleEl.getTagName());

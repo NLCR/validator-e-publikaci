@@ -1,5 +1,6 @@
 package nkp.pspValidator.shared.externalUtils.validation;
 
+import nkp.pspValidator.shared.engine.Level;
 import nkp.pspValidator.shared.engine.exceptions.ExternalUtilOutputParsingException;
 import nkp.pspValidator.shared.externalUtils.CliCommand;
 import nkp.pspValidator.shared.externalUtils.ExternalUtil;
@@ -29,27 +30,27 @@ public abstract class BinaryFileProfile {
         validations.add(validation);
     }
 
-    public List<String> validate(String executionName, File imageFile) {
-        List<String> totalErrors = new ArrayList<>();
+    public List<Validation.Problem> validate(String executionName, File imageFile) {
+        List<Validation.Problem> totalProblems = new ArrayList<>();
         String toolRawOutput = null;
         try {
             toolRawOutput = runExternalUtil(executionName, imageFile);
             Object processedOutput = processExternalUtilOutput(toolRawOutput, externalUtil);
             for (Validation validation : validations) {
                 try {
-                    List<String> validationErrors = validation.validate(processedOutput);
-                    totalErrors.addAll(validationErrors);
+                    List<Validation.Problem> validationProblems = validation.validate(processedOutput);
+                    totalProblems.addAll(validationProblems);
                 } catch (DataExtraction.ExtractionException e) {
                     e.printStackTrace();
-                    totalErrors.add(e.getMessage());
+                    totalProblems.add(new Validation.Problem(Level.ERROR, e.getMessage()));
                 }
             }
         } catch (CliCommand.CliCommandException e) {
-            totalErrors.add(e.getMessage());
+            totalProblems.add(new Validation.Problem(Level.ERROR, e.getMessage()));
         } catch (ExternalUtilOutputParsingException e) {
-            totalErrors.add(e.getMessage());
+            totalProblems.add(new Validation.Problem(Level.ERROR, e.getMessage()));
         } finally {
-            return totalErrors;
+            return totalProblems;
         }
     }
 

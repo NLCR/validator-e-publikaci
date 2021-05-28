@@ -24,7 +24,6 @@
             </rules>
         </validation>
 
-        <!--TODO: should be WARNING, not ERROR-->
         <validation name="Soubor Epub by měl být v podporované verzi">
             <xmlDataExtraction resultType="STRING">
                 <firstNonempty>
@@ -33,7 +32,7 @@
             </xmlDataExtraction>
             <rules>
                 <mustExist/>
-                <mustMatchAny>
+                <mustMatchAny level="WARNING">
                     <isExactly>2.0.1</isExactly>
                 </mustMatchAny>
             </rules>
@@ -41,7 +40,6 @@
 
         <!--TODO: kontrola na nepřítomnost DRM-->
 
-        <!--TODO: WARNING-->
         <!--TODO: chybová hláška "Obsahuje vlastnost problematickou z hlediska dlouhodobého uchovávání" -->
         <validation name="Kontrola typů obsažených objektů (Epub 2)">
             <xmlDataExtraction resultType="STRING_LIST">
@@ -50,7 +48,7 @@
                 </allNonempty>
             </xmlDataExtraction>
             <rules>
-                <mustMatchAny>
+                <mustMatchAny level="WARNING">
                     <isExactly>text/css</isExactly>
 
                     <isExactly>image/gif</isExactly>
@@ -76,7 +74,7 @@
                 </allNonempty>
             </xmlDataExtraction>
             <rules>
-                <mustMatchAny>
+                <mustMatchAny level="WARNING">
                     <isExactly>text/css</isExactly>
 
                     <isExactly>image/gif</isExactly>
@@ -98,7 +96,6 @@
             </rules>
         </validation>
 
-        <!--TODO: WARNING-->
         <validation name="Detekce chybových hlášek">
             <xmlDataExtraction resultType="STRING_LIST">
                 <allNonempty>
@@ -106,7 +103,7 @@
                 </allNonempty>
             </xmlDataExtraction>
             <rules>
-                <mustNotExist/>
+                <mustNotExist level="WARNING"/>
             </rules>
         </validation>
 

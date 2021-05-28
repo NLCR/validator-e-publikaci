@@ -1,5 +1,7 @@
 package nkp.pspValidator.shared.externalUtils.validation;
 
+import nkp.pspValidator.shared.engine.Level;
+
 import java.util.List;
 
 /**
@@ -8,4 +10,6 @@ import java.util.List;
 public interface DataRule {
 
     List<String> validate(Object data);
+
+    Level getLevel();
 }

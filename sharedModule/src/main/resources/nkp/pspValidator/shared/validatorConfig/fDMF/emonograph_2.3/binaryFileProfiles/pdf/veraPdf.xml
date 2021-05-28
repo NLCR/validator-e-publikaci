@@ -19,7 +19,6 @@
             </rules>
         </validation>
 
-        <!--TODO: should be WARNING, not ERROR-->
         <validation name="Soubor PDF/A by měl být v podporované verzi">
             <xmlDataExtraction resultType="STRING">
                 <firstNonempty>
@@ -28,7 +27,7 @@
             </xmlDataExtraction>
             <rules>
                 <mustExist/>
-                <mustMatchAny>
+                <mustMatchAny level="WARNING">
                     <startsWith>PDF/A-1A</startsWith>
                     <startsWith>PDF/A-1B</startsWith>
                     <startsWith>PDF/A-2A</startsWith>

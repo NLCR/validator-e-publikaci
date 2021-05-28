@@ -11,6 +11,7 @@ import nkp.pspValidator.shared.externalUtils.ResourceType;
 import nkp.pspValidator.shared.externalUtils.validation.BinaryFileProfile;
 import nkp.pspValidator.shared.externalUtils.validation.BinaryFileValidator;
 import nkp.pspValidator.shared.externalUtils.ExternalUtilExecution;
+import nkp.pspValidator.shared.externalUtils.validation.Validation;
 
 import java.io.File;
 import java.util.List;
@@ -128,9 +129,13 @@ public class VfCheckBinaryFilesValidByExternalUtil extends ValidationFunction {
             for (File file : files) {
                 //System.out.println(String.format("validating (%s): %s", profile, file.getAbsolutePath()));
                 try {
-                    List<String> problems = profile.validate(execution.getName(), file);
-                    for (String problem : problems) {
-                        result.addError(invalid(level, "%s (soubor %s)", problem, file.getCanonicalPath()));
+                    List<Validation.Problem> problems = profile.validate(execution.getName(), file);
+                    for (Validation.Problem problem : problems) {
+                        Level levelApplied = level;
+                        if (problem.level != null) {
+                            levelApplied = problem.level;
+                        }
+                        result.addError(invalid(levelApplied, "%s (soubor %s)", problem.message, file.getCanonicalPath()));
                     }
                 } catch (Exception e) {
                     result.addError(invalid(Level.ERROR, "%s: (soubor %s)", e.getMessage(), file.getName()));

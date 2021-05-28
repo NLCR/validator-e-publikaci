@@ -1,5 +1,6 @@
 package nkp.pspValidator.shared.externalUtils.validation.rules;
 
+import nkp.pspValidator.shared.engine.Level;
 import nkp.pspValidator.shared.externalUtils.validation.Constraint;
 
 import java.util.ArrayList;
@@ -11,8 +12,8 @@ import java.util.List;
 public class MustMatchAnyConstraintDR extends AbstractDataRule {
     private final List<Constraint> constraints;
 
-    public MustMatchAnyConstraintDR(String validationName, List<Constraint> constraints) {
-        super(validationName);
+    public MustMatchAnyConstraintDR(String validationName, Level level, List<Constraint> constraints) {
+        super(validationName, level);
         this.constraints = constraints;
     }
 
