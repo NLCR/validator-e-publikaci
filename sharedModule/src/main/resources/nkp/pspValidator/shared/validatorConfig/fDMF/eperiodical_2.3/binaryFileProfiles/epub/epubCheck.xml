@@ -98,7 +98,17 @@
             </rules>
         </validation>
 
-        <!--TODO: detekce chybových hlášek-->
+        <!--TODO: WARNING-->
+        <validation name="Detekce chybových hlášek">
+            <xmlDataExtraction resultType="STRING_LIST">
+                <allNonempty>
+                    <xpath>//j:repInfo/j:messages/j:message</xpath>
+                </allNonempty>
+            </xmlDataExtraction>
+            <rules>
+                <mustNotExist/>
+            </rules>
+        </validation>
 
     </fromXml>
 </binaryFileProfile>
