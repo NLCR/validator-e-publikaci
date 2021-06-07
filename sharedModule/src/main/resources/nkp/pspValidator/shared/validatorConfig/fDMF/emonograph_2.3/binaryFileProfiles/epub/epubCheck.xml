@@ -38,7 +38,16 @@
             </rules>
         </validation>
 
-        <!--TODO: kontrola na nepřítomnost DRM-->
+        <validation name="Kontrola na nepřítomnost DRM">
+            <xmlDataExtraction resultType="STRING_LIST">
+                <allNonempty>
+                    <xpath>//j:repInfo/j:messages/j:message[@id='RSC-004']</xpath>
+                </allNonempty>
+            </xmlDataExtraction>
+            <rules>
+                <mustNotExist level="ERROR"/>
+            </rules>
+        </validation>
 
         <!--TODO: chybová hláška "Obsahuje vlastnost problematickou z hlediska dlouhodobého uchovávání" -->
         <validation name="Kontrola typů obsažených objektů (Epub 2)">
