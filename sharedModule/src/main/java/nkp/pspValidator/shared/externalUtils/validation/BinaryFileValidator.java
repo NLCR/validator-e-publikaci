@@ -17,6 +17,7 @@ import nkp.pspValidator.shared.externalUtils.validation.rules.MustNotExistDR;
 import nkp.pspValidator.shared.externalUtils.validation.rules.constraints.*;
 import org.w3c.dom.Element;
 
+import javax.xml.XMLConstants;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -114,7 +115,8 @@ public class BinaryFileValidator {
             //TODO: fix, doesn't work, see epubCheck.xml
             Element defaultNamespaceEl = XmlUtils.getFirstChildElementsByName(namespacesEl, "defaultNamespace");
             if (defaultNamespaceEl != null) {
-                profile.addNamespace(null, defaultNamespaceEl.getTextContent().trim());
+                String defaultNs = defaultNamespaceEl.getTextContent().trim();
+                profile.addNamespace(XMLConstants.DEFAULT_NS_PREFIX, defaultNs);
             }
         }
         //validations
@@ -179,6 +181,7 @@ public class BinaryFileValidator {
             List<String> xpaths = new ArrayList<>();
             List<Element> xpathEls = XmlUtils.getChildrenElementsByName(firstNonemptyEl, "xpath");
             for (Element xpathEl : xpathEls) {
+                System.err.println(xpathEl.getTextContent().trim());
                 xpaths.add(xpathEl.getTextContent().trim());
             }
             return new FirstNonemptyByXpathDataExctraction(resultType, nsContext, xpaths);
