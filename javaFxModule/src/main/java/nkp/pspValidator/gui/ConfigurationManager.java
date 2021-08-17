@@ -4,10 +4,7 @@ import nkp.pspValidator.shared.Dmf;
 import nkp.pspValidator.shared.Platform;
 
 import java.io.*;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Properties;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by Martin Řehánek on 2.12.16.
@@ -114,7 +111,8 @@ public class ConfigurationManager {
         initDictionary("siglaInstitutionCodes",
                 "kódy institucí (Sigla)",
                 null,
-                "https://raw.githubusercontent.com/NLCR/validator-e-publikaci/master/sharedModule/src/main/resources/nkp/pspValidator/shared/validatorConfig/dictionaries/siglaInstitutionCodes.dict");
+                //TODO: update url after repository migration
+                "https://raw.githubusercontent.com/rzeh4n/validator-e-publikaci/master/sharedModule/src/main/resources/nkp/pspValidator/shared/validatorConfig/dictionaries/siglaInstitutionCodes.dict");
         initDictionary("iso31661Alpha2languageCodes",
                 "kódy zemí ISO3166-1 alpha-2",
                 "https://www.iso.org/iso-3166-country-codes.html",
