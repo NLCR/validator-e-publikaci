@@ -22,6 +22,9 @@ tasks.withType(JavaCompile) {
 }*/
 
 dependencies {
+    //pozor: nepoužívat 'implementation', protože to poslední verze javafx pluginu neumí
+    //https://github.com/FibreFoX/javafx-gradle-plugin/issues/116#issuecomment-376924075
+
     testCompile 'junit:junit:4.12'
     compile group: 'com.mycila', name: 'mycila-xmltool', version: '4.4.ga'
     // https://mvnrepository.com/artifact/com.github.nradov/abnffuzzer
@@ -34,18 +37,31 @@ dependencies {
 }
 
 group 'nkp.pspValidator'
-version '2.0'
+version '2.1'
 
 
 //tohle udela zip, ale asi shared-logic.zip, asi na nic
 //see https://docs.gradle.org/current/userguide/javaLibraryDistribution_plugin.html
+//see https://docs.gradle.org/current/userguide/java_library_distribution_plugin.html
 apply plugin: 'java-library-distribution'
 distributions {
     main {
+        //gradle 3.3, 5
         baseName = 'shared-logic'
+        //gradle 6.2
+        //distributionBaseName = 'shared-logic'
         //nefunguje
         contents {
             from { 'src/main/resources' }
         }
     }
 }
+
+//tasks:
+//gradle run - vybuildí a spustí nkp.pspValidator.shared.Main.main()
+
+//gradle jar - vyrobí build/libs/sharedModule-VERZE.jar
+//tasky pro javafx-gradle-plugin nefungují bez nachystaného jar v build/libs
+
+//gradle distZip - vyrobi build/distributions/shared-logic-VERSION.jar
+//aktualne k nicemu
