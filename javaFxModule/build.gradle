@@ -108,6 +108,7 @@ jfx {
 
 //jfxNative
 
+//TODO: which bundler for Windows?
 //bundler = 'windows.app'
 //V javaFxModule\build\jfx\native\ValidatorEpublikaci vytvori ValidatorEpublikaci.exe, adresar app s .jar, pribalenym jre, zatim
 //Tohle pouzit s necim jako Inno Setup a vyrobit instalator vcetne fDMF
