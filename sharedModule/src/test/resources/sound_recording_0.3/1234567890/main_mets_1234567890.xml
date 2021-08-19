@@ -179,7 +179,7 @@
                     <mods:subject authority="czenas">
                         <mods:topic>Divadelní hudba. Opera, opereta, muzikál</mods:topic>
                     </mods:subject>
-                    <mods:identifier type="uuid">321p7654-f32d-13d5-k654-798264310000</mods:identifier>
+                    <mods:identifier type="uuid">fa39bd64-c289-4e04-a7ca-c718baf69832</mods:identifier>
                     <mods:identifier type="issue-number">272027</mods:identifier>
                     <mods:identifier type="matrix-number">H1354</mods:identifier>
                     <mods:identifier type="local">1234567890</mods:identifier>
@@ -210,7 +210,7 @@
                     <dc:language>cze</dc:language>
                     <dc:subject>Divadelní hudba. Opera, opereta, muzikál</dc:subject>
                     <dc:description>Poco piu mosso ; Moderato afflitto</dc:description>
-                    <dc:identifier>uuid:321p7654-f32d-13d5-k654-798264310000</dc:identifier>
+                    <dc:identifier>uuid:fa39bd64-c289-4e04-a7ca-c718baf69832</dc:identifier>
                 </oai_dc:dc>
             </mets:xmlData>
         </mets:mdWrap>
@@ -258,7 +258,7 @@
                     </mods:relatedItem>
                     <mods:identifier type="matrix-number">H1355</mods:identifier>
                     <mods:identifier type="issue-number">272027</mods:identifier>
-                    <mods:identifier type="uuid">263e8795-k54e-15e4-r789-824600127960</mods:identifier>
+                    <mods:identifier type="uuid">6768c7d4-3468-46e3-82d8-71f7db9b5bac</mods:identifier>
                     <mods:identifier type="local">1234567890</mods:identifier>
                     <mods:recordInfo>
                         <mods:descriptionStandard>rda</mods:descriptionStandard>
@@ -286,7 +286,7 @@
                     <dc:coverage>8:41</dc:coverage>
                     <dc:language>cze</dc:language>
                     <dc:subject>Divadelní hudba. Opera, opereta, muzikál</dc:subject>
-                    <dc:identifier>uuid:263e8795-k54e-15e4-r789-824600127960</dc:identifier>
+                    <dc:identifier>uuid:6768c7d4-3468-46e3-82d8-71f7db9b5bac</dc:identifier>
                 </oai_dc:dc>
             </mets:xmlData>
         </mets:mdWrap>
@@ -309,9 +309,9 @@
                             <mods:title>Arie vodníka z opery "Rusalka"</mods:title>
                             <mods:partNumber>01</mods:partNumber>
                         </mods:titleInfo>
-                        <mods:identifier type="uuid">321p7654-f32d-13d5-k654-798264310000</mods:identifier>
+                        <mods:identifier type="uuid">fa39bd64-c289-4e04-a7ca-c718baf69832</mods:identifier>
                     </mods:relatedItem>
-                    <mods:identifier type="uuid">581j6543-n32m-84e3-g750-849768265310</mods:identifier>
+                    <mods:identifier type="uuid">620dca09-8eb6-4c89-a591-276c3c7340e3</mods:identifier>
                     <mods:identifier type="local">1234567890</mods:identifier>
                     <mods:recordInfo>
                         <mods:descriptionStandard>rda</mods:descriptionStandard>
@@ -335,7 +335,7 @@
                     <dc:title>01</dc:title>
                     <dc:type>sound recording</dc:type>
                     <dc:coverage>1:15</dc:coverage>
-                    <dc:identifier>uuid:581j6543-n32m-84e3-g750-849768265310</dc:identifier>
+                    <dc:identifier>uuid:620dca09-8eb6-4c89-a591-276c3c7340e3</dc:identifier>
                     <dc:identifier>local:1234567890</dc:identifier>
                 </oai_dc:dc>
             </mets:xmlData>
@@ -359,9 +359,9 @@
                             <mods:title>Arie vodníka z opery "Rusalka"</mods:title>
                             <mods:partNumber>01</mods:partNumber>
                         </mods:titleInfo>
-                        <mods:identifier type="uuid">321p7654-f32d-13d5-k654-798264310000</mods:identifier>
+                        <mods:identifier type="uuid">fa39bd64-c289-4e04-a7ca-c718baf69832</mods:identifier>
                     </mods:relatedItem>
-                    <mods:identifier type="uuid">637i7920-n96m-23d1-g971-1356905478</mods:identifier>
+                    <mods:identifier type="uuid">e3aae24d-f3e4-4ed2-829c-1c658e8645c5</mods:identifier>
                     <mods:identifier type="local">1234567890</mods:identifier>
                     <mods:recordInfo>
                         <mods:descriptionStandard>rda</mods:descriptionStandard>
@@ -385,7 +385,7 @@
                     <dc:title>02</dc:title>
                     <dc:type>sound recording</dc:type>
                     <dc:coverage>4:06</dc:coverage>
-                    <dc:identifier>uuid:637i7920-n96m-23d1-g971-1356905478</dc:identifier>
+                    <dc:identifier>uuid:e3aae24d-f3e4-4ed2-829c-1c658e8645c5</dc:identifier>
                     <dc:identifier>local:1234567890</dc:identifier>
                 </oai_dc:dc>
             </mets:xmlData>
@@ -421,7 +421,7 @@
                         <mods:identifier type="issue number">272027</mods:identifier>
                         <mods:identifier type="local">1234567890</mods:identifier>
                     </mods:relatedItem>
-                    <mods:identifier type="uuid">567o1234-g56s-23c9-ah793-7804659320</mods:identifier>
+                    <mods:identifier type="uuid">b8b148ea-5060-4fe5-bf64-75069599fad9</mods:identifier>
                     <mods:recordInfo>
                         <mods:descriptionStandard>rda</mods:descriptionStandard>
                         <mods:recordContentSource>ABA001</mods:recordContentSource>
@@ -448,7 +448,7 @@
                     <dc:format>svazek</dc:format>
                     <dc:format>bez média</dc:format>
                     <dc:format>1 obraz desky</dc:format>
-                    <dc:identifier>uuid:567o1234-g56s-23c9-ah793-7804659320</dc:identifier>
+                    <dc:identifier>uuid:b8b148ea-5060-4fe5-bf64-75069599fad9</dc:identifier>
                 </oai_dc:dc>
             </mets:xmlData>
         </mets:mdWrap>
@@ -483,7 +483,7 @@
                         <mods:identifier type="uuid">123e4567-e89b-12d3-a456-426655440000</mods:identifier>
                         <mods:identifier type="local">1234567890</mods:identifier>
                     </mods:relatedItem>
-                    <mods:identifier type="uuid">548t3695-r45s-63a5-v258-589146302570</mods:identifier>
+                    <mods:identifier type="uuid">ada188d3-fd3d-47ce-b143-173bee54207d</mods:identifier>
                     <mods:recordInfo>
                         <mods:descriptionStandard>rda</mods:descriptionStandard>
                         <mods:recordContentSource>ABA001</mods:recordContentSource>
@@ -510,7 +510,7 @@
                     <dc:format>svazek</dc:format>
                     <dc:format>bez média</dc:format>
                     <dc:format>1 obraz desky</dc:format>
-                    <dc:identifier>uuid:548t3695-r45s-63a5-v258-589146302570</dc:identifier>
+                    <dc:identifier>uuid:ada188d3-fd3d-47ce-b143-173bee54207d</dc:identifier>
                 </oai_dc:dc>
             </mets:xmlData>
         </mets:mdWrap>
@@ -519,21 +519,21 @@
         <mets:fileGrp ID="SA_AUDIOGRP" USE="source">
             <mets:file SEQ="0" CREATED="2017-07-07T08:22:32Z" ID="sa_1234567890_0001" MIMETYPE="audio/wav" CHECKSUM="6I518677FB465F795863M6320F1993B0"
                        CHECKSUMTYPE="MD5" SIZE="52674930">
-                <mets:FLocat LOCTYPE="URL" xlink:href="./sourceaudio/sa_1234567890_0001.wav"/>
+                <mets:FLocat LOCTYPE="URL" xlink:href="./source_audio/sa_1234567890_0001.wav"/>
             </mets:file>
             <mets:file SEQ="1" CREATED="2017-07-07T08:22:33Z" ID="sa_1234567890_0002" MIMETYPE="audio/wav" CHECKSUM="MS4JS3D40E1P67EAB950KS0H84RB73E8"
                        CHECKSUMTYPE="MD5" SIZE="105798634">
-                <mets:FLocat LOCTYPE="URL" xlink:href="./sourceaudio/sa_1234567890_0002.wav"/>
+                <mets:FLocat LOCTYPE="URL" xlink:href="./source_audio/sa_1234567890_0002.wav"/>
             </mets:file>
         </mets:fileGrp>
         <mets:fileGrp ID="UC_AUDIOGRP" USE="user">
             <mets:file SEQ="0" CREATED="2017-07-07T08:22:32Z" ID="uca_1234567890_0001" MIMETYPE="audio/mp3" CHECKSUM="4CB9D5815CB51635282103F288CCC63E"
                        CHECKSUMTYPE="MD5" SIZE="2495052">
-                <mets:FLocat LOCTYPE="URL" xlink:href="./usercopyaudio/uca_1234567890_0001.mp3"/>
+                <mets:FLocat LOCTYPE="URL" xlink:href="./user_copy_audio/uca_1234567890_0001.mp3"/>
             </mets:file>
             <mets:file SEQ="1" CREATED="2017-07-07T08:22:33Z" ID="uca_1234567890_0002" MIMETYPE="audio/mp3" CHECKSUM="06A30A10D58747C1920A2F2360D923E1"
                        CHECKSUMTYPE="MD5" SIZE="2937671">
-                <mets:FLocat LOCTYPE="URL" xlink:href="./usercopyaudio/uca_1234567890_0002.mp3"/>
+                <mets:FLocat LOCTYPE="URL" xlink:href="./user_copy_audio/uca_1234567890_0002.mp3"/>
             </mets:file>
         </mets:fileGrp>
         <mets:fileGrp ID="MC_IMGGRP" USE="master">
@@ -549,11 +549,11 @@
         <mets:fileGrp ID="UC_IMGGRP" USE="user">
             <mets:file SEQ="0" CREATED="2017-07-07T08:22:32Z" ID="uc_1234567890_0001" MIMETYPE="image/jpeg2000" CHECKSUM="E71FC7D2EC524CCC47C66BCEF3B83644"
                        CHECKSUMTYPE="MD5" SIZE="2437425">
-                <mets:FLocat LOCTYPE="URL" xlink:href="./usercopy/uc_1234567890_0001.jp2"/>
+                <mets:FLocat LOCTYPE="URL" xlink:href="./user_copy/uc_1234567890_0001.jp2"/>
             </mets:file>
             <mets:file SEQ="1" CREATED="2017-07-07T08:22:33Z" ID="uc_1234567890_0002" MIMETYPE="image/jpeg2000" CHECKSUM="DF05F7D202A542483A158A51F08CEACA"
                        CHECKSUMTYPE="MD5" SIZE="2403979">
-                <mets:FLocat LOCTYPE="URL" xlink:href="./usercopy/uc_1234567890_0002.jp2"/>
+                <mets:FLocat LOCTYPE="URL" xlink:href="./user_copy/uc_1234567890_0002.jp2"/>
             </mets:file>
         </mets:fileGrp>
         <mets:fileGrp ID="ALTOGRP" USE="layout">
@@ -569,19 +569,19 @@
         <mets:fileGrp ID="TECHMDGRP" USE="technical metadata">
             <mets:file SEQ="0" CREATED="2017-07-07T08:22:32Z" ID="amd_mets_1234567890_0001" MIMETYPE="text/xml" CHECKSUM="9AE1CAD67BD1E74B02F87922857B840C"
                        CHECKSUMTYPE="MD5" SIZE="9535464">
-                <mets:FLocat LOCTYPE="URL" xlink:href="./amdsec/amd_mets_1234567890_0001.xml"/>
+                <mets:FLocat LOCTYPE="URL" xlink:href="./amd_sec/amd_mets_1234567890_0001.xml"/>
             </mets:file>
             <mets:file SEQ="1" CREATED="2017-07-07T08:22:33Z" ID="amd_mets_1234567890_0002" MIMETYPE="text/xml" CHECKSUM="CCC0389017F8B713F0285525E598D8D6"
                        CHECKSUMTYPE="MD5" SIZE="8711368">
-                <mets:FLocat LOCTYPE="URL" xlink:href="./amdsec/amd_mets_1234567890_0002.xml"/>
+                <mets:FLocat LOCTYPE="URL" xlink:href="./amd_sec/amd_mets_1234567890_0002.xml"/>
             </mets:file>
             <mets:file SEQ="2" CREATED="2017-07-07T08:22:32Z" ID="amd_mets_audio_1234567890_0001" MIMETYPE="text/xml"
                        CHECKSUM="7EDB06F32E727C4589D3A9C811839C10" CHECKSUMTYPE="MD5" SIZE="9548970">
-                <mets:FLocat LOCTYPE="URL" xlink:href="./amdsec/amd_mets_1234567890__0001.xml"/>
+                <mets:FLocat LOCTYPE="URL" xlink:href="./amd_sec/amd_mets_1234567890__0001.xml"/>
             </mets:file>
             <mets:file SEQ="3" CREATED="2017-07-07T08:22:33Z" ID="amd_mets_audio_1234567890_0002" MIMETYPE="text/xml"
                        CHECKSUM="77EF487670E3A6D593B0CF5DC49F1B3E" CHECKSUMTYPE="MD5" SIZE="8356902">
-                <mets:FLocat LOCTYPE="URL" xlink:href="./amdsec/amd_mets_1234567890__0002.xml"/>
+                <mets:FLocat LOCTYPE="URL" xlink:href="./amd_sec/amd_mets_1234567890__0002.xml"/>
             </mets:file>
         </mets:fileGrp>
         <mets:fileGrp ID="TXTGRP" USE="text">
