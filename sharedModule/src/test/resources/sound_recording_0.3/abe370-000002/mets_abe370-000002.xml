@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<mets:mets LABEL="Hakon Jarl: symfonická báseň, op. 16" TYPE="Sound recording" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:mets="http://www.loc.gov/METS/" xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <mets:metsHdr CREATEDATE="2019-11-21T09:22:56.398Z" LASTMODDATE="2021-02-23T10:17:09.792Z">
+        <mets:agent ROLE="CREATOR" TYPE="ORGANIZATION">
+            <mets:name>NarodniMuzeum</mets:name>
+        </mets:agent>
+        <mets:agent ROLE="ARCHIVIST" TYPE="ORGANIZATION">
+            <mets:name>NarodniMuzeum</mets:name>
+        </mets:agent>
+    </mets:metsHdr>
+    <mets:dmdSec ID="MODSMD_SOUNDCOLLECTION_0001">
+        <mets:mdWrap MIMETYPE="text/xml" MDTYPE="MODS" MDTYPEVERSION="3.6">
+            <mets:xmlData>
+                <mods:mods ID="MODS_SOUNDCOLLECTION_0001" xmlns:foxml="info:fedora/fedora-system:def/foxml#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <mods:classification authority="Konspekt">9</mods:classification>
+                    <mods:classification authority="udc" edition="Konspekt">785</mods:classification>
+                    <mods:genre authority="rdacontent">hraná hudba</mods:genre>
+                    <mods:identifier type="uuid">a6c5ce74-c433-4e44-be03-2941aba1ed47</mods:identifier>
+                    <mods:identifier type="matrix number">044044 Ultraphon</mods:identifier>
+                    <mods:identifier type="matrix number">044045 Ultraphon</mods:identifier>
+                    <mods:identifier type="matrix number">044046 Ultraphon</mods:identifier>
+                    <mods:identifier type="matrix number">044047 Ultraphon</mods:identifier>
+                    <mods:identifier type="issue number">G 14054 Ultraphon</mods:identifier>
+                    <mods:identifier type="issue number">G 14055 Ultraphon</mods:identifier>
+                    <mods:identifier type="urnnbn">urn:nbn:cz:abe370-000002</mods:identifier>
+                    <mods:language>
+                        <mods:languageTerm authority="iso639-2b" type="code">zxx</mods:languageTerm>
+  </mods:language>
+                    <mods:location>
+                        <mods:physicalLocation authority="siglaADR">ABE370</mods:physicalLocation>
+                        <mods:shelfLocator>ME 193</mods:shelfLocator>
+  </mods:location>
+                    <mods:originInfo eventType="publication">
+                        <mods:place>
+                            <mods:placeTerm type="text">[Praha] :</mods:placeTerm>
+    </mods:place>
+                        <mods:publisher>Ultraphon,</mods:publisher>
+                        <mods:dateIssued>[1943?]</mods:dateIssued>
+                        <mods:issuance>monographic</mods:issuance>
+  </mods:originInfo>
+                    <mods:physicalDescription>
+                        <mods:form authority="marccategory">sound recording</mods:form>
+                        <mods:form authority="marcsmd">sound disc</mods:form>
+                        <mods:form authority="rdamedia" type="media">audio</mods:form>
+                        <mods:form authority="rdacarrier" type="carrier">audiodisk</mods:form>
+                        <mods:extent>2 gramofonové desky</mods:extent>
+  </mods:physicalDescription>
+                    <mods:recordInfo>
+                        <mods:recordContentSource authority="marcorg">ABE370</mods:recordContentSource>
+                        <mods:recordCreationDate encoding="iso8601">20191121T092256</mods:recordCreationDate>
+                        <mods:recordChangeDate encoding="iso8601">20200110T083438</mods:recordChangeDate>
+                        <mods:recordIdentifier>kpw0868536</mods:recordIdentifier>
+                        <mods:languageOfCataloging>
+                            <mods:languageTerm authority="iso639-2b" type="code">cze</mods:languageTerm>
+    </mods:languageOfCataloging>
+                        <mods:recordOrigin>machine generated</mods:recordOrigin>
+                        <mods:descriptionStandard>rda</mods:descriptionStandard>
+                        <mods:recordInfoNote>Converted from MARCXML to MODS version 3.6 using MARC21slim2MODS3.xsl
+                (Revision 1.98 2018/02/09, ProArc patch 16.884 2019/02/10)</mods:recordInfoNote>
+  </mods:recordInfo>
+                    <mods:relatedItem type="series">
+                        <mods:titleInfo>
+                            <mods:title>Česká filharmonie</mods:title>
+    </mods:titleInfo>
+  </mods:relatedItem>
+                    <mods:subject authority="Konspekt">
+                        <mods:topic>Instrumentální hudba. Symfonická hudba. Hudba pro více nástrojů</mods:topic>
+  </mods:subject>
+                    <mods:titleInfo>
+                        <mods:title>Hakon Jarl</mods:title>
+                        <mods:subTitle>symfonická báseň, op. 16</mods:subTitle>
+  </mods:titleInfo>
+                    <mods:typeOfResource>sound recording-musical</mods:typeOfResource>
+</mods:mods>
+            </mets:xmlData>
+        </mets:mdWrap>
+    </mets:dmdSec>
+    <mets:dmdSec ID="DCMD_SOUNDCOLLECTION_0001">
+        <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC">
+            <mets:xmlData>
+                <oai_dc:dc>
+                    <dc:coverage>[Praha] :</dc:coverage>
+                    <dc:coverage>2 gramofonové desky</dc:coverage>
+                    <dc:date>[1943?]</dc:date>
+                    <dc:format>sound recording</dc:format>
+                    <dc:format>sound disc</dc:format>
+                    <dc:format>audio</dc:format>
+                    <dc:format>audiodisk</dc:format>
+                    <dc:identifier>uuid:a6c5ce74-c433-4e44-be03-2941aba1ed47</dc:identifier>
+                    <dc:identifier>matrix number:044044 Ultraphon</dc:identifier>
+                    <dc:identifier>matrix number:044045 Ultraphon</dc:identifier>
+                    <dc:identifier>matrix number:044046 Ultraphon</dc:identifier>
+                    <dc:identifier>matrix number:044047 Ultraphon</dc:identifier>
+                    <dc:identifier>issue number:G 14054 Ultraphon</dc:identifier>
+                    <dc:identifier>issue number:G 14055 Ultraphon</dc:identifier>
+                    <dc:identifier>urnnbn:urn:nbn:cz:abe370-000002</dc:identifier>
+                    <dc:publisher>Ultraphon,</dc:publisher>
+                    <dc:source>ABE370</dc:source>
+                    <dc:source>ME 193</dc:source>
+                    <dc:title>Hakon Jarl: symfonická báseň, op. 16</dc:title>
+                    <dc:type>sound recording-musical</dc:type>
+                    <dc:type>model:soundrecording</dc:type>
+                </oai_dc:dc>
+            </mets:xmlData>
+        </mets:mdWrap>
+    </mets:dmdSec>
+    <mets:dmdSec ID="MODSMD_SOUNDRECORDING_0001">
+        <mets:mdWrap MIMETYPE="text/xml" MDTYPE="MODS" MDTYPEVERSION="3.6">
+            <mets:xmlData>
+                <mods:mods ID="MODS_SOUNDRECORDING_0001" xmlns:foxml="info:fedora/fedora-system:def/foxml#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <mods:genre>sound recording</mods:genre>
+                    <mods:identifier type="uuid">58597dca-82b8-42e6-bc49-df08ce0ae49c</mods:identifier>
+                    <mods:language>
+                        <mods:languageTerm authority="iso639-2b" type="code">zxx</mods:languageTerm>
+  </mods:language>
+                    <mods:name authorityURI="http://aut.nkp.cz" type="personal" usage="primary" valueURI="http://aut.nkp.cz/jk01120043">
+                        <mods:namePart type="family">Smetana</mods:namePart>
+                        <mods:namePart type="given">Bedřich</mods:namePart>
+                        <mods:namePart type="date">1824-1884</mods:namePart>
+                        <mods:role>
+                            <mods:roleTerm authority="marcrelator" type="code">cmp</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+                    <mods:name authorityURI="http://aut.nkp.cz" type="personal" valueURI="http://aut.nkp.cz/jn99240000552">
+                        <mods:namePart type="family">Kubelík</mods:namePart>
+                        <mods:namePart type="given">Rafael</mods:namePart>
+                        <mods:namePart type="date">1914-1996</mods:namePart>
+                        <mods:role>
+                            <mods:roleTerm authority="marcrelator" type="code">cnd</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+                    <mods:name type="corporate">
+                        <mods:namePart>Česká filharmonie</mods:namePart>
+                        <mods:role>
+                            <mods:roleTerm authority="marcrelator" type="code">prf</mods:roleTerm>
+    </mods:role>
+  </mods:name>
+                    <mods:note altRepGroup="00" type="statement of responsibility">Bedřich Smetana</mods:note>
+                    <mods:note type="performers">Česká filharmonie, řídí Rafael Kubelík</mods:note>
+                    <mods:originInfo eventType="publication">
+                        <mods:place>
+                            <mods:placeTerm type="text">[Praha] :</mods:placeTerm>
+    </mods:place>
+                        <mods:publisher>Ultraphon,</mods:publisher>
+                        <mods:dateIssued>[1943?]</mods:dateIssued>
+                        <mods:issuance>monographic</mods:issuance>
+  </mods:originInfo>
+                    <mods:physicalDescription>
+                        <mods:form authority="marccategory">sound recording</mods:form>
+                        <mods:form authority="marcsmd">sound disc</mods:form>
+                        <mods:form authority="rdamedia" type="media">audio</mods:form>
+                        <mods:form authority="rdacarrier" type="carrier">audiodisk</mods:form>
+                        <mods:extent>2 gramofonové desky</mods:extent>
+  </mods:physicalDescription>
+                    <mods:recordInfo>
+                        <mods:recordCreationDate encoding="iso8601">20191121T092501</mods:recordCreationDate>
+                        <mods:recordChangeDate encoding="iso8601">20191121T093526</mods:recordChangeDate>
+                        <mods:languageOfCataloging>
+                            <mods:languageTerm authority="iso639-2b" type="code">cze</mods:languageTerm>
+    </mods:languageOfCataloging>
+                        <mods:descriptionStandard>rda</mods:descriptionStandard>
+  </mods:recordInfo>
+                    <mods:subject authority="Konspekt">
+                        <mods:topic>Instrumentální hudba. Symfonická hudba. Hudba pro více nástrojů</mods:topic>
+  </mods:subject>
+                    <mods:titleInfo>
+                        <mods:title>Hakon Jarl</mods:title>
+                        <mods:subTitle>symfonická báseň, op. 16</mods:subTitle>
+  </mods:titleInfo>
+</mods:mods>
+            </mets:xmlData>
+        </mets:mdWrap>
+    </mets:dmdSec>
+    <mets:dmdSec ID="DCMD_SOUNDRECORDING_0001">
+        <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC">
+            <mets:xmlData>
+                <oai_dc:dc>
+                    <dc:coverage>[Praha] :</dc:coverage>
+                    <dc:coverage>2 gramofonové desky</dc:coverage>
+                    <dc:creator>Smetana, Bedřich, 1824-1884</dc:creator>
+                    <dc:creator>Kubelík, Rafael, 1914-1996</dc:creator>
+                    <dc:creator>Česká filharmonie</dc:creator>
+                    <dc:description>Bedřich Smetana</dc:description>
+                    <dc:description>Česká filharmonie, řídí Rafael Kubelík</dc:description>
+                    <dc:identifier>uuid:58597dca-82b8-42e6-bc49-df08ce0ae49c</dc:identifier>
+                    <dc:language>zxx</dc:language>
+                    <dc:subject>Instrumentální hudba. Symfonická hudba. Hudba pro více nástrojů</dc:subject>
+                    <dc:title>Hakon Jarl</dc:title>
+                </oai_dc:dc>
+            </mets:xmlData>
+        </mets:mdWrap>
+    </mets:dmdSec>
+    <mets:dmdSec ID="MODSMD_SOUNDPART_0001">
+        <mets:mdWrap MIMETYPE="text/xml" MDTYPE="MODS" MDTYPEVERSION="3.6">
+            <mets:xmlData>
+                <mods:mods ID="MODS_SOUNDPART_0001" xmlns:foxml="info:fedora/fedora-system:def/foxml#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <mods:genre type="model">sound part</mods:genre>
+                    <mods:identifier type="uuid">7c42bf6e-2451-429c-b7e6-4d0e96e1895c</mods:identifier>
+                    <mods:physicalDescription>
+                        <mods:form authority="marccategory">sound recording</mods:form>
+                        <mods:form authority="marcsmd">sound disc</mods:form>
+                        <mods:form authority="rdamedia" type="media">audio</mods:form>
+                        <mods:form authority="rdacarrier" type="carrier">audiodisk</mods:form>
+                        <mods:extent>00:04:15</mods:extent>
+  </mods:physicalDescription>
+                    <mods:recordInfo>
+                        <mods:recordCreationDate encoding="iso8601">20191121T092501</mods:recordCreationDate>
+                        <mods:recordChangeDate encoding="iso8601">20191122T083114</mods:recordChangeDate>
+                        <mods:languageOfCataloging>
+                            <mods:languageTerm authority="iso639-2b" type="code">cze</mods:languageTerm>
+    </mods:languageOfCataloging>
+                        <mods:descriptionStandard>rda</mods:descriptionStandard>
+  </mods:recordInfo>
+                    <mods:titleInfo>
+                        <mods:title>Hakon Jarl</mods:title>
+                        <mods:subTitle>symfonická báseň, op. 16</mods:subTitle>
+                        <mods:partNumber>I. díl</mods:partNumber>
+  </mods:titleInfo>
+</mods:mods>
+            </mets:xmlData>
+        </mets:mdWrap>
+    </mets:dmdSec>
+    <mets:dmdSec ID="DCMD_SOUNDPART_0001">
+        <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC">
+            <mets:xmlData>
+                <oai_dc:dc>
+                    <dc:coverage>00:04:15</dc:coverage>
+                    <dc:identifier>uuid:7c42bf6e-2451-429c-b7e6-4d0e96e1895c</dc:identifier>
+                    <dc:title>Hakon Jarl. I. díl</dc:title>
+                </oai_dc:dc>
+            </mets:xmlData>
+        </mets:mdWrap>
+    </mets:dmdSec>
+    <mets:dmdSec ID="MODSMD_SOUNDPART_0002">
+        <mets:mdWrap MIMETYPE="text/xml" MDTYPE="MODS" MDTYPEVERSION="3.6">
+            <mets:xmlData>
+                <mods:mods ID="MODS_SOUNDPART_0002" xmlns:foxml="info:fedora/fedora-system:def/foxml#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <mods:genre type="model">sound part</mods:genre>
+                    <mods:identifier type="uuid">c5338ec6-ab83-494d-91e5-ed5b047c0d44</mods:identifier>
+                    <mods:physicalDescription>
+                        <mods:form authority="marccategory">sound recording</mods:form>
+                        <mods:form authority="marcsmd">sound disc</mods:form>
+                        <mods:form authority="rdamedia" type="media">audio</mods:form>
+                        <mods:form authority="rdacarrier" type="carrier">audiodisk</mods:form>
+                        <mods:extent>00:04:11</mods:extent>
+  </mods:physicalDescription>
+                    <mods:recordInfo>
+                        <mods:recordCreationDate encoding="iso8601">20191121T092501</mods:recordCreationDate>
+                        <mods:recordChangeDate encoding="iso8601">20191122T083152</mods:recordChangeDate>
+                        <mods:languageOfCataloging>
+                            <mods:languageTerm authority="iso639-2b" type="code">cze</mods:languageTerm>
+    </mods:languageOfCataloging>
+                        <mods:descriptionStandard>rda</mods:descriptionStandard>
+  </mods:recordInfo>
+                    <mods:titleInfo>
+                        <mods:title>Hakon Jarl</mods:title>
+                        <mods:subTitle>symfonická báseň, op. 16</mods:subTitle>
+                        <mods:partNumber>II. díl</mods:partNumber>
+  </mods:titleInfo>
+</mods:mods>
+            </mets:xmlData>
+        </mets:mdWrap>
+    </mets:dmdSec>
+    <mets:dmdSec ID="DCMD_SOUNDPART_0002">
+        <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC">
+            <mets:xmlData>
+                <oai_dc:dc>
+                    <dc:coverage>00:04:11</dc:coverage>
+                    <dc:identifier>uuid:c5338ec6-ab83-494d-91e5-ed5b047c0d44</dc:identifier>
+                    <dc:title>Hakon Jarl. II. díl</dc:title>
+                </oai_dc:dc>
+            </mets:xmlData>
+        </mets:mdWrap>
+    </mets:dmdSec>
+    <mets:dmdSec ID="MODSMD_SOUNDPART_0003">
+        <mets:mdWrap MIMETYPE="text/xml" MDTYPE="MODS" MDTYPEVERSION="3.6">
+            <mets:xmlData>
+                <mods:mods ID="MODS_SOUNDPART_0003" xmlns:foxml="info:fedora/fedora-system:def/foxml#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <mods:genre type="model">sound part</mods:genre>
+                    <mods:identifier type="uuid">bc285788-fed0-4be0-984f-9c9fc90c2c8b</mods:identifier>
+                    <mods:physicalDescription>
+                        <mods:form authority="marccategory">sound recording</mods:form>
+                        <mods:form authority="marcsmd">sound disc</mods:form>
+                        <mods:form authority="rdamedia" type="media">audio</mods:form>
+                        <mods:form authority="rdacarrier" type="carrier">audiodisk</mods:form>
+                        <mods:extent>00:04:31</mods:extent>
+  </mods:physicalDescription>
+                    <mods:recordInfo>
+                        <mods:recordCreationDate encoding="iso8601">20191121T092501</mods:recordCreationDate>
+                        <mods:recordChangeDate encoding="iso8601">20191122T083239</mods:recordChangeDate>
+                        <mods:languageOfCataloging>
+                            <mods:languageTerm authority="iso639-2b" type="code">cze</mods:languageTerm>
+    </mods:languageOfCataloging>
+                        <mods:descriptionStandard>rda</mods:descriptionStandard>
+  </mods:recordInfo>
+                    <mods:titleInfo>
+                        <mods:title>Hakon Jarl</mods:title>
+                        <mods:subTitle>symfonická báseň, op. 16</mods:subTitle>
+                        <mods:partNumber>III. díl</mods:partNumber>
+  </mods:titleInfo>
+</mods:mods>
+            </mets:xmlData>
+        </mets:mdWrap>
+    </mets:dmdSec>
+    <mets:dmdSec ID="DCMD_SOUNDPART_0003">
+        <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC">
+            <mets:xmlData>
+                <oai_dc:dc>
+                    <dc:coverage>00:04:31</dc:coverage>
+                    <dc:identifier>uuid:bc285788-fed0-4be0-984f-9c9fc90c2c8b</dc:identifier>
+                    <dc:title>Hakon Jarl. III. díl</dc:title>
+                </oai_dc:dc>
+            </mets:xmlData>
+        </mets:mdWrap>
+    </mets:dmdSec>
+    <mets:dmdSec ID="MODSMD_SOUNDPART_0004">
+        <mets:mdWrap MIMETYPE="text/xml" MDTYPE="MODS" MDTYPEVERSION="3.6">
+            <mets:xmlData>
+                <mods:mods ID="MODS_SOUNDPART_0004" xmlns:foxml="info:fedora/fedora-system:def/foxml#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                    <mods:genre type="model">sound part</mods:genre>
+                    <mods:identifier type="uuid">45b37653-e731-49f3-9840-7de4532520d1</mods:identifier>
+                    <mods:physicalDescription>
+                        <mods:form authority="marccategory">sound recording</mods:form>
+                        <mods:form authority="marcsmd">sound disc</mods:form>
+                        <mods:form authority="rdamedia" type="media">audio</mods:form>
+                        <mods:form authority="rdacarrier" type="carrier">audiodisk</mods:form>
+                        <mods:extent>00:04:27</mods:extent>
+  </mods:physicalDescription>
+                    <mods:recordInfo>
+                        <mods:recordCreationDate encoding="iso8601">20191121T092501</mods:recordCreationDate>
+                        <mods:recordChangeDate encoding="iso8601">20191122T083324</mods:recordChangeDate>
+                        <mods:languageOfCataloging>
+                            <mods:languageTerm authority="iso639-2b" type="code">cze</mods:languageTerm>
+    </mods:languageOfCataloging>
+                        <mods:descriptionStandard>rda</mods:descriptionStandard>
+  </mods:recordInfo>
+                    <mods:titleInfo>
+                        <mods:title>Hakon Jarl</mods:title>
+                        <mods:subTitle>symfonická báseň, op. 16</mods:subTitle>
+                        <mods:partNumber>IV. díl</mods:partNumber>
+  </mods:titleInfo>
+</mods:mods>
+            </mets:xmlData>
+        </mets:mdWrap>
+    </mets:dmdSec>
+    <mets:dmdSec ID="DCMD_SOUNDPART_0004">
+        <mets:mdWrap MIMETYPE="text/xml" MDTYPE="DC">
+            <mets:xmlData>
+                <oai_dc:dc>
+                    <dc:coverage>00:04:27</dc:coverage>
+                    <dc:identifier>uuid:45b37653-e731-49f3-9840-7de4532520d1</dc:identifier>
+                    <dc:title>Hakon Jarl. IV. díl</dc:title>
+                </oai_dc:dc>
+            </mets:xmlData>
+        </mets:mdWrap>
+    </mets:dmdSec>
+    <mets:fileSec>
+        <mets:fileGrp ID="TXTGRP" USE="Text">
+            <mets:file ID="txt_abe370-000002_0001" SEQ="0" MIMETYPE="text/plain" SIZE="434" CREATED="2021-08-10T08:25:42.698Z" CHECKSUM="78effd6ff250c9bb4be1528049de799f" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="txt/txt_abe370-000002_0001.txt" LOCTYPE="URL"/>
+            </mets:file>
+            <mets:file ID="txt_abe370-000002_0002" SEQ="1" MIMETYPE="text/plain" SIZE="246" CREATED="2021-08-10T08:25:43.757Z" CHECKSUM="9b68252f0428f18f56f056628d888858" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="txt/txt_abe370-000002_0002.txt" LOCTYPE="URL"/>
+            </mets:file>
+            <mets:file ID="txt_abe370-000002_0003" SEQ="2" MIMETYPE="text/plain" SIZE="397" CREATED="2021-08-10T08:25:44.584Z" CHECKSUM="1e1b64b6f7b72c72fc76f29688bb8519" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="txt/txt_abe370-000002_0003.txt" LOCTYPE="URL"/>
+            </mets:file>
+            <mets:file ID="txt_abe370-000002_0004" SEQ="3" MIMETYPE="text/plain" SIZE="350" CREATED="2021-08-10T08:25:45.478Z" CHECKSUM="ad6d643a27b45efd6e29618d9b26c2f4" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="txt/txt_abe370-000002_0004.txt" LOCTYPE="URL"/>
+            </mets:file>
+        </mets:fileGrp>
+        <mets:fileGrp ID="UC_IMGGRP" USE="Images">
+            <mets:file ID="uc_abe370-000002_0001" SEQ="0" MIMETYPE="image/jp2" SIZE="3446816" CREATED="2021-08-10T08:25:42.699Z" CHECKSUM="a5c31474a17807758f91106e35f88a18" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="usercopy/uc_abe370-000002_0001.jp2" LOCTYPE="URL"/>
+            </mets:file>
+            <mets:file ID="uc_abe370-000002_0002" SEQ="1" MIMETYPE="image/jp2" SIZE="3119469" CREATED="2021-08-10T08:25:43.757Z" CHECKSUM="fb6471f05b9f1cd9d5cef60cd0569e10" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="usercopy/uc_abe370-000002_0002.jp2" LOCTYPE="URL"/>
+            </mets:file>
+            <mets:file ID="uc_abe370-000002_0003" SEQ="2" MIMETYPE="image/jp2" SIZE="3410373" CREATED="2021-08-10T08:25:44.585Z" CHECKSUM="1d311c637ce669b542c99e6a4035e167" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="usercopy/uc_abe370-000002_0003.jp2" LOCTYPE="URL"/>
+            </mets:file>
+            <mets:file ID="uc_abe370-000002_0004" SEQ="3" MIMETYPE="image/jp2" SIZE="3187393" CREATED="2021-08-10T08:25:45.479Z" CHECKSUM="e0d80fdbcb828f5d7b99b0fa911b16ad" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="usercopy/uc_abe370-000002_0004.jp2" LOCTYPE="URL"/>
+            </mets:file>
+        </mets:fileGrp>
+        <mets:fileGrp ID="ALTOGRP" USE="Layout">
+            <mets:file ID="alto_abe370-000002_0001" SEQ="0" MIMETYPE="text/xml" SIZE="34164" CREATED="2021-08-10T08:25:42.735Z" CHECKSUM="ffcc11816bc86b37056214f74830ece0" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="alto/alto_abe370-000002_0001.xml" LOCTYPE="URL"/>
+            </mets:file>
+            <mets:file ID="alto_abe370-000002_0002" SEQ="1" MIMETYPE="text/xml" SIZE="19390" CREATED="2021-08-10T08:25:43.791Z" CHECKSUM="f58045f88e8dd260fa36d4fac1d52766" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="alto/alto_abe370-000002_0002.xml" LOCTYPE="URL"/>
+            </mets:file>
+            <mets:file ID="alto_abe370-000002_0003" SEQ="2" MIMETYPE="text/xml" SIZE="25874" CREATED="2021-08-10T08:25:44.675Z" CHECKSUM="c9e9f733977e48b236fbcee33410a543" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="alto/alto_abe370-000002_0003.xml" LOCTYPE="URL"/>
+            </mets:file>
+            <mets:file ID="alto_abe370-000002_0004" SEQ="3" MIMETYPE="text/xml" SIZE="25458" CREATED="2021-08-10T08:25:45.512Z" CHECKSUM="623fb10f7f8473378b41ca03da0ce8e3" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="alto/alto_abe370-000002_0004.xml" LOCTYPE="URL"/>
+            </mets:file>
+        </mets:fileGrp>
+        <mets:fileGrp ID="TECHMDGRP" USE="Technical Metadata">
+            <mets:file ID="amd_mets_audio_abe370-000002_0001" SEQ="0" MIMETYPE="text/xml" SIZE="59077" CREATED="2021-08-10T08:25:21.385Z" CHECKSUM="0c77036d4d7975f5704ea80a2f93e69b" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="amdsec/amd_mets_audio_abe370-000002_0001.xml" LOCTYPE="URL"/>
+            </mets:file>
+            <mets:file ID="amd_mets_audio_abe370-000002_0002" SEQ="1" MIMETYPE="text/xml" SIZE="59077" CREATED="2021-08-10T08:25:26.708Z" CHECKSUM="05a4ce55f94cafe5611dcf47111258c5" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="amdsec/amd_mets_audio_abe370-000002_0002.xml" LOCTYPE="URL"/>
+            </mets:file>
+            <mets:file ID="amd_mets_audio_abe370-000002_0003" SEQ="2" MIMETYPE="text/xml" SIZE="59081" CREATED="2021-08-10T08:25:33.383Z" CHECKSUM="3bc1c31176a7219596f735f95eeb2fe8" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="amdsec/amd_mets_audio_abe370-000002_0003.xml" LOCTYPE="URL"/>
+            </mets:file>
+            <mets:file ID="amd_mets_audio_abe370-000002_0004" SEQ="3" MIMETYPE="text/xml" SIZE="59073" CREATED="2021-08-10T08:25:42.484Z" CHECKSUM="d151d4e69d2e1cabe75e9f29ee4391d2" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="amdsec/amd_mets_audio_abe370-000002_0004.xml" LOCTYPE="URL"/>
+            </mets:file>
+            <mets:file ID="amd_mets_abe370-000002_0001" SEQ="0" MIMETYPE="text/xml" SIZE="39671" CREATED="2021-08-10T08:25:43.519Z" CHECKSUM="7dc933ada1893bbc51517c84a4caa671" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="amdsec/amd_mets_abe370-000002_0001.xml" LOCTYPE="URL"/>
+            </mets:file>
+            <mets:file ID="amd_mets_abe370-000002_0002" SEQ="1" MIMETYPE="text/xml" SIZE="39671" CREATED="2021-08-10T08:25:44.495Z" CHECKSUM="fa036cee5418598d013b70cb8043a351" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="amdsec/amd_mets_abe370-000002_0002.xml" LOCTYPE="URL"/>
+            </mets:file>
+            <mets:file ID="amd_mets_abe370-000002_0003" SEQ="2" MIMETYPE="text/xml" SIZE="39671" CREATED="2021-08-10T08:25:45.371Z" CHECKSUM="ff637b3ed7d4b556f2bd60c305529d3d" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="amdsec/amd_mets_abe370-000002_0003.xml" LOCTYPE="URL"/>
+            </mets:file>
+            <mets:file ID="amd_mets_abe370-000002_0004" SEQ="3" MIMETYPE="text/xml" SIZE="39671" CREATED="2021-08-10T08:25:46.288Z" CHECKSUM="e7a4a19ec9c79f3e1382097905a78201" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="amdsec/amd_mets_abe370-000002_0004.xml" LOCTYPE="URL"/>
+            </mets:file>
+        </mets:fileGrp>
+        <mets:fileGrp ID="UC_AUDIOGRP" USE="user">
+            <mets:file ID="uca_mp3_abe370-000002_0001" SEQ="0" MIMETYPE="audio/mp3" SIZE="10203012" CREATED="2021-08-10T08:25:19.364Z" CHECKSUM="83f56ace4fac08233a54a88f647bb71b" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="usercopy_audio/uca_mp3_abe370-000002_0001.mp3" LOCTYPE="URL"/>
+            </mets:file>
+            <mets:file ID="uca_mp3_abe370-000002_0002" SEQ="1" MIMETYPE="audio/mp3" SIZE="10038060" CREATED="2021-08-10T08:25:24.738Z" CHECKSUM="325493c1c9c37bf2b86ffca9a5e35d8a" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="usercopy_audio/uca_mp3_abe370-000002_0002.mp3" LOCTYPE="URL"/>
+            </mets:file>
+            <mets:file ID="uca_mp3_abe370-000002_0003" SEQ="2" MIMETYPE="audio/mp3" SIZE="10865952" CREATED="2021-08-10T08:25:31.311Z" CHECKSUM="9dcb4e25a95046a2c69fea9c06e34305" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="usercopy_audio/uca_mp3_abe370-000002_0003.mp3" LOCTYPE="URL"/>
+            </mets:file>
+            <mets:file ID="uca_mp3_abe370-000002_0004" SEQ="3" MIMETYPE="audio/mp3" SIZE="10716660" CREATED="2021-08-10T08:25:40.517Z" CHECKSUM="f2fe143ec1bcfd3bcf74b118e1221338" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="usercopy_audio/uca_mp3_abe370-000002_0004.mp3" LOCTYPE="URL"/>
+            </mets:file>
+        </mets:fileGrp>
+        <mets:fileGrp ID="MC_IMGGRP" USE="Images">
+            <mets:file ID="mc_abe370-000002_0001" SEQ="0" MIMETYPE="image/jp2" SIZE="3586646" CREATED="2021-08-10T08:25:42.736Z" CHECKSUM="5b225e088d4ad4ab61d5e6cbc795f217" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="mastercopy/mc_abe370-000002_0001.jp2" LOCTYPE="URL"/>
+            </mets:file>
+            <mets:file ID="mc_abe370-000002_0002" SEQ="1" MIMETYPE="image/jp2" SIZE="3100584" CREATED="2021-08-10T08:25:43.792Z" CHECKSUM="7c45769dae4dc4237943ba936e08e161" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="mastercopy/mc_abe370-000002_0002.jp2" LOCTYPE="URL"/>
+            </mets:file>
+            <mets:file ID="mc_abe370-000002_0003" SEQ="2" MIMETYPE="image/jp2" SIZE="3387509" CREATED="2021-08-10T08:25:44.676Z" CHECKSUM="3bacb85941721bdb22ac37b08280a919" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="mastercopy/mc_abe370-000002_0003.jp2" LOCTYPE="URL"/>
+            </mets:file>
+            <mets:file ID="mc_abe370-000002_0004" SEQ="3" MIMETYPE="image/jp2" SIZE="3169131" CREATED="2021-08-10T08:25:45.513Z" CHECKSUM="f231d7057208e3d31fe5240f599d7ae5" CHECKSUMTYPE="MD5">
+                <mets:FLocat xlink:href="mastercopy/mc_abe370-000002_0004.jp2" LOCTYPE="URL"/>
+            </mets:file>
+        </mets:fileGrp>
+    </mets:fileSec>
+    <mets:structMap TYPE="LOGICAL" LABEL="Logical_Structure">
+        <mets:div ID="SOUNDCOLLECTION_0001" LABEL="Hakon Jarl: symfonická báseň, op. 16" DMDID="MODSMD_SOUNDCOLLECTION_0001" TYPE="SOUNDCOLLECTION">
+            <mets:div ID="SOUNDRECORDING_0001" LABEL="Hakon Jarl: symfonická báseň, op. 16" DMDID="MODSMD_SOUNDRECORDING_0001" TYPE="SOUNDRECORDING">
+                <mets:div ID="SOUNDPART_0001" LABEL="Hakon Jarl: symfonická báseň, op. 16" DMDID="MODSMD_SOUNDPART_0001" TYPE="SOUNDPART"/>
+                <mets:div ID="SOUNDPART_0002" LABEL="Hakon Jarl: symfonická báseň, op. 16" DMDID="MODSMD_SOUNDPART_0002" TYPE="SOUNDPART"/>
+		    </mets:div>
+            <mets:div ID="SOUNDPART_0003" LABEL="Hakon Jarl: symfonická báseň, op. 16" DMDID="MODSMD_SOUNDPART_0003" TYPE="SOUNDPART"/>
+            <mets:div ID="SOUNDPART_0004" LABEL="Hakon Jarl: symfonická báseň, op. 16" DMDID="MODSMD_SOUNDPART_0004" TYPE="SOUNDPART"/>
+        </mets:div>
+    </mets:structMap>
+    <mets:structMap TYPE="PHYSICAL" LABEL="Physical_Structure">
+        <mets:div ID="DIV_P_0000" LABEL="Hakon Jarl: symfonická báseň, op. 16" DMDID="MODSMD_SOUNDCOLLECTION_0001" TYPE="sound collection">
+            <mets:div ID="DIV_STOPA_0001" ORDER="5" ORDERLABEL="1" TYPE="soundpart">
+                <mets:fptr FILEID="uca_mp3_abe370-000002_0001"/>
+                <mets:fptr FILEID="amd_mets_audio_abe370-000002_0001"/>
+            </mets:div>
+            <mets:div ID="DIV_STOPA_0002" ORDER="6" ORDERLABEL="2" TYPE="soundpart">
+                <mets:fptr FILEID="uca_mp3_abe370-000002_0002"/>
+                <mets:fptr FILEID="amd_mets_audio_abe370-000002_0002"/>
+            </mets:div>
+            <mets:div ID="DIV_STOPA_0003" ORDER="7" ORDERLABEL="3" TYPE="soundpart">
+                <mets:fptr FILEID="uca_mp3_abe370-000002_0003"/>
+                <mets:fptr FILEID="amd_mets_audio_abe370-000002_0003"/>
+            </mets:div>
+            <mets:div ID="DIV_STOPA_0004" ORDER="8" ORDERLABEL="4" TYPE="soundpart">
+                <mets:fptr FILEID="uca_mp3_abe370-000002_0004"/>
+                <mets:fptr FILEID="amd_mets_audio_abe370-000002_0004"/>
+            </mets:div>
+            <mets:div ID="DIV_P_PAGE_0001" ORDER="1" ORDERLABEL="1" TYPE="imgDisc">
+                <mets:fptr FILEID="txt_abe370-000002_0001"/>
+                <mets:fptr FILEID="uc_abe370-000002_0001"/>
+                <mets:fptr FILEID="alto_abe370-000002_0001"/>
+                <mets:fptr FILEID="mc_abe370-000002_0001"/>
+                <mets:fptr FILEID="amd_mets_abe370-000002_0001"/>
+            </mets:div>
+            <mets:div ID="DIV_P_PAGE_0002" ORDER="2" ORDERLABEL="2" TYPE="imgDisc">
+                <mets:fptr FILEID="txt_abe370-000002_0002"/>
+                <mets:fptr FILEID="uc_abe370-000002_0002"/>
+                <mets:fptr FILEID="alto_abe370-000002_0002"/>
+                <mets:fptr FILEID="mc_abe370-000002_0002"/>
+                <mets:fptr FILEID="amd_mets_abe370-000002_0002"/>
+            </mets:div>
+            <mets:div ID="DIV_P_PAGE_0003" ORDER="3" ORDERLABEL="3" TYPE="imgDisc">
+                <mets:fptr FILEID="txt_abe370-000002_0003"/>
+                <mets:fptr FILEID="uc_abe370-000002_0003"/>
+                <mets:fptr FILEID="alto_abe370-000002_0003"/>
+                <mets:fptr FILEID="mc_abe370-000002_0003"/>
+                <mets:fptr FILEID="amd_mets_abe370-000002_0003"/>
+            </mets:div>
+            <mets:div ID="DIV_P_PAGE_0004" ORDER="4" ORDERLABEL="4" TYPE="imgDisc">
+                <mets:fptr FILEID="txt_abe370-000002_0004"/>
+                <mets:fptr FILEID="uc_abe370-000002_0004"/>
+                <mets:fptr FILEID="alto_abe370-000002_0004"/>
+                <mets:fptr FILEID="mc_abe370-000002_0004"/>
+                <mets:fptr FILEID="amd_mets_abe370-000002_0004"/>
+            </mets:div>
+        </mets:div>
+    </mets:structMap>
+    <mets:structLink>
+        <mets:smLink xlink:to="DIV_P_PAGE_0001" xlink:from="SOUNDCOLLECTION_0001"/>
+        <mets:smLink xlink:to="DIV_P_PAGE_0002" xlink:from="SOUNDCOLLECTION_0001"/>
+        <mets:smLink xlink:to="DIV_P_PAGE_0003" xlink:from="SOUNDCOLLECTION_0001"/>
+        <mets:smLink xlink:to="DIV_P_PAGE_0004" xlink:from="SOUNDCOLLECTION_0001"/>
+        <mets:smLink xlink:to="DIV_STOPA_0001" xlink:from="SOUNDPART_0001"/>
+        <mets:smLink xlink:to="DIV_STOPA_0002" xlink:from="SOUNDPART_0002"/>
+        <mets:smLink xlink:to="DIV_STOPA_0003" xlink:from="SOUNDPART_0003"/>
+        <mets:smLink xlink:to="DIV_STOPA_0004" xlink:from="SOUNDPART_0004"/>
+    </mets:structLink>
+</mets:mets>

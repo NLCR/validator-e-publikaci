@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<info>
+    <created>2021-08-10T08:25:46.322Z</created>
+    <metadataversion>0.4</metadataversion>
+    <packageid>abe370-000002</packageid>
+    <mainmets>mets_abe370-000002.xml</mainmets>
+    <validation version="0.0">W3C-XML</validation>
+    <titleid type="urnnbn">urn:nbn:cz:abe370-000002</titleid>
+    <creator>NarodniMuzeum</creator>
+    <size>1244164</size>
+    <itemlist itemtotal="39">
+        <item>/mastercopy_audio/mca_wav_abe370-000002_0001.wav</item>
+        <item>/source_audio/sa_wav_abe370-000002_0001.wav</item>
+        <item>/usercopy_audio/uca_mp3_abe370-000002_0001.mp3</item>
+        <item>/amdsec/amd_mets_audio_abe370-000002_0001.xml</item>
+        <item>/mastercopy_audio/mca_wav_abe370-000002_0002.wav</item>
+        <item>/source_audio/sa_wav_abe370-000002_0002.wav</item>
+        <item>/usercopy_audio/uca_mp3_abe370-000002_0002.mp3</item>
+        <item>/amdsec/amd_mets_audio_abe370-000002_0002.xml</item>
+        <item>/mastercopy_audio/mca_wav_abe370-000002_0003.wav</item>
+        <item>/source_audio/sa_wav_abe370-000002_0003.wav</item>
+        <item>/usercopy_audio/uca_mp3_abe370-000002_0003.mp3</item>
+        <item>/amdsec/amd_mets_audio_abe370-000002_0003.xml</item>
+        <item>/mastercopy_audio/mca_wav_abe370-000002_0004.wav</item>
+        <item>/source_audio/sa_wav_abe370-000002_0004.wav</item>
+        <item>/usercopy_audio/uca_mp3_abe370-000002_0004.mp3</item>
+        <item>/amdsec/amd_mets_audio_abe370-000002_0004.xml</item>
+        <item>/txt/txt_abe370-000002_0001.txt</item>
+        <item>/usercopy/uc_abe370-000002_0001.jp2</item>
+        <item>/alto/alto_abe370-000002_0001.xml</item>
+        <item>/mastercopy/mc_abe370-000002_0001.jp2</item>
+        <item>/amdsec/amd_mets_abe370-000002_0001.xml</item>
+        <item>/txt/txt_abe370-000002_0002.txt</item>
+        <item>/usercopy/uc_abe370-000002_0002.jp2</item>
+        <item>/alto/alto_abe370-000002_0002.xml</item>
+        <item>/mastercopy/mc_abe370-000002_0002.jp2</item>
+        <item>/amdsec/amd_mets_abe370-000002_0002.xml</item>
+        <item>/txt/txt_abe370-000002_0003.txt</item>
+        <item>/usercopy/uc_abe370-000002_0003.jp2</item>
+        <item>/alto/alto_abe370-000002_0003.xml</item>
+        <item>/mastercopy/mc_abe370-000002_0003.jp2</item>
+        <item>/amdsec/amd_mets_abe370-000002_0003.xml</item>
+        <item>/txt/txt_abe370-000002_0004.txt</item>
+        <item>/usercopy/uc_abe370-000002_0004.jp2</item>
+        <item>/alto/alto_abe370-000002_0004.xml</item>
+        <item>/mastercopy/mc_abe370-000002_0004.jp2</item>
+        <item>/amdsec/amd_mets_abe370-000002_0004.xml</item>
+        <item>/mets_abe370-000002.xml</item>
+        <item>/md5_abe370-000002.md5</item>
+        <item>/info_abe370-000002.xml</item>
+    </itemlist>
+    <checksum type="MD5" checksum="cbf91d349d9d43806b4d134804c7c3bb">md5_abe370-000002.md5</checksum>
+</info>

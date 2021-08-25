@@ -1,0 +1,974 @@
+<?xml version="1.0" encoding="UTF-8"?><mets:mets xmlns:mets="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" LABEL="Hakon Jarl: symfonická báseň, op. 16" TYPE="Sound recording">
+    <mets:metsHdr CREATEDATE="2019-11-21T09:24:56.083Z" LASTMODDATE="2021-02-23T10:17:32.254Z">
+        <mets:agent ROLE="CREATOR" TYPE="ORGANIZATION">
+            <mets:name>NarodniMuzeum</mets:name>
+        </mets:agent>
+        <mets:agent ROLE="ARCHIVIST" TYPE="ORGANIZATION">
+            <mets:name>NarodniMuzeum</mets:name>
+        </mets:agent>
+    </mets:metsHdr>
+    <mets:amdSec ID="SOUNDPAGE_0002">
+        <mets:techMD ID="AES_001">
+            <mets:mdWrap MDTYPE="AES57" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <audioObject:audioObject xmlns="http://www.aes.org/audioObject" xmlns:audioObject="http://www.aes.org/audioObject" ID="J4" analogDigitalFlag="FILE_DIGITAL" disposition="Validated by JHOVE" schemaVersion="1.02b">
+                        <format specificationVersion="">WAVE</format>
+                        <audioDataEncoding>PCM audio in integer format</audioDataEncoding>
+                        <byteOrder>LITTLE_ENDIAN</byteOrder>
+                        <firstSampleOffset>80</firstSampleOffset>
+                        <use otherType="JHOVE_validation" useType="OTHER"/>
+                        <primaryIdentifier identifierType="FILE_NAME">/home/proarc/.proarc/users/proarc/export/a6c5ce74-c433-4e44-be03-2941aba1ed47/abe370-000002/rawAes.wav</primaryIdentifier>
+                        <face ID="J3" audioObjectRef="J4" direction="NONE" label="Face">
+                            <region ID="J2" faceRef="J3" formatRef="J1" label="BuiltByJHOVE">
+                                <numChannels>2</numChannels>
+                                <stream ID="J90" faceRegionRef="J2" label="JHOVE">
+                                    <channelAssignment channelNum="0"/>
+                                </stream>
+                                <stream ID="J91" faceRegionRef="J2" label="JHOVE">
+                                    <channelAssignment channelNum="1"/>
+                                </stream>
+                                <timeRange>
+                                    <startTime>
+                                        <hours>0</hours>
+                                        <minutes>0</minutes>
+                                        <seconds>0</seconds>
+                                        <frames>0</frames>
+                                        <samples>
+                                            <numberOfSamples>0</numberOfSamples>
+                                        </samples>
+                                    </startTime>
+                                    <duration>
+                                        <hours>0</hours>
+                                        <minutes>4</minutes>
+                                        <seconds>11</seconds>
+                                        <frames>2</frames>
+                                        <samples>
+                                            <numberOfSamples>2535</numberOfSamples>
+                                        </samples>
+                                    </duration>
+                                </timeRange>
+                            </region>
+                            <timeline>
+                                <startTime>
+                                    <hours>0</hours>
+                                    <minutes>0</minutes>
+                                    <seconds>0</seconds>
+                                    <frames>0</frames>
+                                    <samples>
+                                        <numberOfSamples>0</numberOfSamples>
+                                    </samples>
+                                </startTime>
+                                <duration>
+                                    <hours>0</hours>
+                                    <minutes>4</minutes>
+                                    <seconds>11</seconds>
+                                    <frames>2</frames>
+                                    <samples>
+                                        <numberOfSamples>2535</numberOfSamples>
+                                    </samples>
+                                </duration>
+                            </timeline>
+                        </face>
+                        <formatList>
+                            <formatRegion ID="J1">
+                                <bitDepth>24</bitDepth>
+                                <sampleRate>96000.0</sampleRate>
+                            </formatRegion>
+                        </formatList>
+                    </audioObject:audioObject>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:techMD>
+        <mets:techMD ID="AES_002">
+            <mets:mdWrap MDTYPE="AES57" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <audioObject:audioObject xmlns="http://www.aes.org/audioObject" xmlns:audioObject="http://www.aes.org/audioObject" ID="J4" analogDigitalFlag="FILE_DIGITAL" disposition="Validated by JHOVE" schemaVersion="1.02b">
+                        <format specificationVersion="">WAVE</format>
+                        <audioDataEncoding>PCM audio in integer format</audioDataEncoding>
+                        <byteOrder>LITTLE_ENDIAN</byteOrder>
+                        <firstSampleOffset>80</firstSampleOffset>
+                        <use otherType="JHOVE_validation" useType="OTHER"/>
+                        <primaryIdentifier identifierType="FILE_NAME">/home/proarc/.proarc/users/proarc/export/a6c5ce74-c433-4e44-be03-2941aba1ed47/abe370-000002/mastercopy_audio/mca_wav_abe370-000002_0002.wav</primaryIdentifier>
+                        <face ID="J3" audioObjectRef="J4" direction="NONE" label="Face">
+                            <region ID="J2" faceRef="J3" formatRef="J1" label="BuiltByJHOVE">
+                                <numChannels>2</numChannels>
+                                <stream ID="J90" faceRegionRef="J2" label="JHOVE">
+                                    <channelAssignment channelNum="0"/>
+                                </stream>
+                                <stream ID="J91" faceRegionRef="J2" label="JHOVE">
+                                    <channelAssignment channelNum="1"/>
+                                </stream>
+                                <timeRange>
+                                    <startTime>
+                                        <hours>0</hours>
+                                        <minutes>0</minutes>
+                                        <seconds>0</seconds>
+                                        <frames>0</frames>
+                                        <samples>
+                                            <numberOfSamples>0</numberOfSamples>
+                                        </samples>
+                                    </startTime>
+                                    <duration>
+                                        <hours>0</hours>
+                                        <minutes>4</minutes>
+                                        <seconds>11</seconds>
+                                        <frames>2</frames>
+                                        <samples>
+                                            <numberOfSamples>2535</numberOfSamples>
+                                        </samples>
+                                    </duration>
+                                </timeRange>
+                            </region>
+                            <timeline>
+                                <startTime>
+                                    <hours>0</hours>
+                                    <minutes>0</minutes>
+                                    <seconds>0</seconds>
+                                    <frames>0</frames>
+                                    <samples>
+                                        <numberOfSamples>0</numberOfSamples>
+                                    </samples>
+                                </startTime>
+                                <duration>
+                                    <hours>0</hours>
+                                    <minutes>4</minutes>
+                                    <seconds>11</seconds>
+                                    <frames>2</frames>
+                                    <samples>
+                                        <numberOfSamples>2535</numberOfSamples>
+                                    </samples>
+                                </duration>
+                            </timeline>
+                        </face>
+                        <formatList>
+                            <formatRegion ID="J1">
+                                <bitDepth>24</bitDepth>
+                                <sampleRate>96000.0</sampleRate>
+                            </formatRegion>
+                        </formatList>
+                    </audioObject:audioObject>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:techMD>
+        <mets:techMD ID="CODINGHISTORY_001">
+            <mets:mdWrap MDTYPE="CODING_HISTORY" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <property:property xmlns="http://hul.harvard.edu/ois/xml/ns/jhove" xmlns:property="http://hul.harvard.edu/ois/xml/ns/jhove">
+                        <name>BroadcastAudioExtension</name>
+                        <values arity="List" type="Property">
+                            <property>
+                                <name>Description</name>
+                                <values arity="Scalar" type="String">
+                                    <value>CZ,NM
+Ultraphon 30 cm Shellac
+11/03/2019 15:15:11
+WaveLab Pro 9.0.35
+NMVISME-2735100015
+Side 2</value>
+                                </values>
+                            </property>
+                            <property>
+                                <name>OriginationDate</name>
+                                <values arity="Scalar" type="String">
+                                    <value>2019-03-11</value>
+                                </values>
+                            </property>
+                            <property>
+                                <name>OriginationTime</name>
+                                <values arity="Scalar" type="String">
+                                    <value>15:20:43</value>
+                                </values>
+                            </property>
+                            <property>
+                                <name>TimeReference</name>
+                                <values arity="Scalar" type="Long">
+                                    <value>0</value>
+                                </values>
+                            </property>
+                            <property>
+                                <name>Version</name>
+                                <values arity="Scalar" type="Integer">
+                                    <value>1</value>
+                                </values>
+                            </property>
+                            <property>
+                                <name>UMID</name>
+                                <values arity="Array" type="Byte">
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                </values>
+                            </property>
+                            <property>
+                                <name>CodingHistory</name>
+                                <values arity="Scalar" type="String">
+                                    <value>A=PCM
+F=96000
+W=24
+M=stereo
+Technics SL-1200MK4 Serial KNM8 DM45649
+Nagaoka MP-2.5
+Nagaoka MP-100H</value>
+                                </values>
+                            </property>
+                        </values>
+                    </property:property>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:techMD>
+        <mets:techMD ID="CODINGHISTORY_002">
+            <mets:mdWrap MDTYPE="CODING_HISTORY" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <property:property xmlns="http://hul.harvard.edu/ois/xml/ns/jhove" xmlns:property="http://hul.harvard.edu/ois/xml/ns/jhove">
+                        <name>BroadcastAudioExtension</name>
+                        <values arity="List" type="Property">
+                            <property>
+                                <name>Description</name>
+                                <values arity="Scalar" type="String">
+                                    <value>CZ,NM
+Ultraphon 30 cm Shellac
+11/03/2019 15:15:11
+WaveLab Pro 9.0.35
+NMVISME-2735100015
+Side 2</value>
+                                </values>
+                            </property>
+                            <property>
+                                <name>OriginationDate</name>
+                                <values arity="Scalar" type="String">
+                                    <value>2019-03-11</value>
+                                </values>
+                            </property>
+                            <property>
+                                <name>OriginationTime</name>
+                                <values arity="Scalar" type="String">
+                                    <value>15:20:43</value>
+                                </values>
+                            </property>
+                            <property>
+                                <name>TimeReference</name>
+                                <values arity="Scalar" type="Long">
+                                    <value>0</value>
+                                </values>
+                            </property>
+                            <property>
+                                <name>Version</name>
+                                <values arity="Scalar" type="Integer">
+                                    <value>1</value>
+                                </values>
+                            </property>
+                            <property>
+                                <name>UMID</name>
+                                <values arity="Array" type="Byte">
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                    <value>0</value>
+                                </values>
+                            </property>
+                            <property>
+                                <name>CodingHistory</name>
+                                <values arity="Scalar" type="String">
+                                    <value>A=PCM
+F=96000
+W=24
+M=stereo
+Technics SL-1200MK4 Serial KNM8 DM45649
+Nagaoka MP-2.5
+Nagaoka MP-100H</value>
+                                </values>
+                            </property>
+                        </values>
+                    </property:property>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:techMD>
+        <mets:techMD ID="OBJ_001">
+            <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <premis:object xmlns:premis="info:lc/xmlns/premis-v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="premis:file">
+                        <premis:objectIdentifier>
+                            <premis:objectIdentifierType>ProArc_URI</premis:objectIdentifierType>
+                            <premis:objectIdentifierValue>info:fedora/uuid:4416573b-5bc5-4af1-84f0-32cda73fd628/RAW</premis:objectIdentifierValue>
+                        </premis:objectIdentifier>
+                        <premis:preservationLevel>
+                            <premis:preservationLevelValue>deleted</premis:preservationLevelValue>
+                        </premis:preservationLevel>
+                        <premis:objectCharacteristics>
+                            <premis:compositionLevel>0</premis:compositionLevel>
+                            <premis:fixity>
+                                <premis:messageDigestAlgorithm>MD5</premis:messageDigestAlgorithm>
+                                <premis:messageDigest>4c28e04180a3365fe0f6d6c2fc9a51d4</premis:messageDigest>
+                                <premis:messageDigestOriginator>ProArc</premis:messageDigestOriginator>
+                            </premis:fixity>
+                            <premis:size>144630422</premis:size>
+                            <premis:format>
+                                <premis:formatDesignation>
+                                    <premis:formatName>audio/wave</premis:formatName>
+                                    <premis:formatVersion>1.0</premis:formatVersion>
+                                </premis:formatDesignation>
+                                <premis:formatRegistry>
+                                    <premis:formatRegistryName>PRONOM</premis:formatRegistryName>
+                                </premis:formatRegistry>
+                            </premis:format>
+                            <premis:creatingApplication>
+                                <premis:creatingApplicationName>ProArc</premis:creatingApplicationName>
+                                <premis:creatingApplicationVersion>3.6.5</premis:creatingApplicationVersion>
+                                <premis:dateCreatedByApplication>2021-08-10T08:25:26.290Z</premis:dateCreatedByApplication>
+                            </premis:creatingApplication>
+                        </premis:objectCharacteristics>
+                        <premis:originalName>NMCMH00415-ME02735-100015-01-01-02null</premis:originalName>
+                        <premis:linkingEventIdentifier>
+                            <premis:linkingEventIdentifierType>ProArc_EventID</premis:linkingEventIdentifierType>
+                            <premis:linkingEventIdentifierValue>digitization_001</premis:linkingEventIdentifierValue>
+                        </premis:linkingEventIdentifier>
+                    </premis:object>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:techMD>
+        <mets:techMD ID="OBJ_006">
+            <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <premis:object xmlns:premis="info:lc/xmlns/premis-v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="premis:file">
+                        <premis:objectIdentifier>
+                            <premis:objectIdentifierType>ProArc_URI</premis:objectIdentifierType>
+                            <premis:objectIdentifierValue>info:fedora/uuid:4416573b-5bc5-4af1-84f0-32cda73fd628/null</premis:objectIdentifierValue>
+                        </premis:objectIdentifier>
+                        <premis:preservationLevel>
+                            <premis:preservationLevelValue>preservation</premis:preservationLevelValue>
+                        </premis:preservationLevel>
+                        <premis:objectCharacteristics>
+                            <premis:compositionLevel>0</premis:compositionLevel>
+                            <premis:fixity>
+                                <premis:messageDigestAlgorithm>MD5</premis:messageDigestAlgorithm>
+                                <premis:messageDigest>4c28e04180a3365fe0f6d6c2fc9a51d4</premis:messageDigest>
+                                <premis:messageDigestOriginator>ProArc</premis:messageDigestOriginator>
+                            </premis:fixity>
+                            <premis:size>144630422</premis:size>
+                            <premis:format>
+                                <premis:formatDesignation>
+                                    <premis:formatName>audio/wave</premis:formatName>
+                                </premis:formatDesignation>
+                                <premis:formatRegistry>
+                                    <premis:formatRegistryName>PRONOM</premis:formatRegistryName>
+                                </premis:formatRegistry>
+                            </premis:format>
+                            <premis:creatingApplication>
+                                <premis:creatingApplicationName>ProArc</premis:creatingApplicationName>
+                                <premis:creatingApplicationVersion>3.6.5</premis:creatingApplicationVersion>
+                                <premis:dateCreatedByApplication>2021-08-10T08:25:26.308Z</premis:dateCreatedByApplication>
+                            </premis:creatingApplication>
+                        </premis:objectCharacteristics>
+                        <premis:originalName>NMCMH00415-ME02735-100015-01-01-02null</premis:originalName>
+                        <premis:relationship>
+                            <premis:relationshipType>derivation</premis:relationshipType>
+                            <premis:relationshipSubType>created from</premis:relationshipSubType>
+                            <premis:relatedObjectIdentification>
+                                <premis:relatedObjectIdentifierType>ProArc_URI</premis:relatedObjectIdentifierType>
+                                <premis:relatedObjectIdentifierValue>info:fedora/uuid:4416573b-5bc5-4af1-84f0-32cda73fd628/NDK_ARCHIVAL</premis:relatedObjectIdentifierValue>
+                            </premis:relatedObjectIdentification>
+                            <premis:relatedEventIdentification>
+                                <premis:relatedEventIdentifierType>ProArc_EventID</premis:relatedEventIdentifierType>
+                                <premis:relatedEventSequence>1</premis:relatedEventSequence>
+                            </premis:relatedEventIdentification>
+                        </premis:relationship>
+                    </premis:object>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:techMD>
+        <mets:techMD ID="OBJ_007">
+            <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <premis:object xmlns:premis="info:lc/xmlns/premis-v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="premis:file">
+                        <premis:objectIdentifier>
+                            <premis:objectIdentifierType>ProArc_URI</premis:objectIdentifierType>
+                            <premis:objectIdentifierValue>info:fedora/uuid:4416573b-5bc5-4af1-84f0-32cda73fd628/null</premis:objectIdentifierValue>
+                        </premis:objectIdentifier>
+                        <premis:preservationLevel>
+                            <premis:preservationLevelValue>preservation</premis:preservationLevelValue>
+                        </premis:preservationLevel>
+                        <premis:objectCharacteristics>
+                            <premis:compositionLevel>0</premis:compositionLevel>
+                            <premis:fixity>
+                                <premis:messageDigestAlgorithm>MD5</premis:messageDigestAlgorithm>
+                                <premis:messageDigest>4c28e04180a3365fe0f6d6c2fc9a51d4</premis:messageDigest>
+                                <premis:messageDigestOriginator>ProArc</premis:messageDigestOriginator>
+                            </premis:fixity>
+                            <premis:size>144630422</premis:size>
+                            <premis:format>
+                                <premis:formatDesignation>
+                                    <premis:formatName>audio/wave</premis:formatName>
+                                    <premis:formatVersion>1.0</premis:formatVersion>
+                                </premis:formatDesignation>
+                                <premis:formatRegistry>
+                                    <premis:formatRegistryName>PRONOM</premis:formatRegistryName>
+                                </premis:formatRegistry>
+                            </premis:format>
+                            <premis:creatingApplication>
+                                <premis:creatingApplicationName>ProArc</premis:creatingApplicationName>
+                                <premis:creatingApplicationVersion>3.6.5</premis:creatingApplicationVersion>
+                                <premis:dateCreatedByApplication>2021-08-10T08:25:26.329Z</premis:dateCreatedByApplication>
+                            </premis:creatingApplication>
+                        </premis:objectCharacteristics>
+                        <premis:originalName>NMCMH00415-ME02735-100015-01-01-02null</premis:originalName>
+                        <premis:relationship>
+                            <premis:relationshipType>derivation</premis:relationshipType>
+                            <premis:relationshipSubType>created from</premis:relationshipSubType>
+                            <premis:relatedObjectIdentification>
+                                <premis:relatedObjectIdentifierType>ProArc_URI</premis:relatedObjectIdentifierType>
+                                <premis:relatedObjectIdentifierValue>info:fedora/uuid:4416573b-5bc5-4af1-84f0-32cda73fd628/NDK_ARCHIVAL</premis:relatedObjectIdentifierValue>
+                            </premis:relatedObjectIdentification>
+                            <premis:relatedEventIdentification>
+                                <premis:relatedEventIdentifierType>ProArc_EventID</premis:relatedEventIdentifierType>
+                                <premis:relatedEventSequence>1</premis:relatedEventSequence>
+                            </premis:relatedEventIdentification>
+                        </premis:relationship>
+                    </premis:object>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:techMD>
+        <mets:digiprovMD ID="EVT_001">
+            <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <premis:event xmlns:premis="info:lc/xmlns/premis-v2">
+                        <premis:eventIdentifier>
+                            <premis:eventIdentifierType>ProArc_EventID</premis:eventIdentifierType>
+                        </premis:eventIdentifier>
+                        <premis:eventType>capture</premis:eventType>
+                        <premis:eventDateTime>2019-11-21T09:18:17.339Z</premis:eventDateTime>
+                        <premis:eventDetail>capture/digitization</premis:eventDetail>
+                        <premis:eventOutcomeInformation>
+                            <premis:eventOutcome>successful</premis:eventOutcome>
+                        </premis:eventOutcomeInformation>
+                        <premis:linkingAgentIdentifier>
+                            <premis:linkingAgentIdentifierType>turntable</premis:linkingAgentIdentifierType>
+                            <premis:linkingAgentRole>player</premis:linkingAgentRole>
+                        </premis:linkingAgentIdentifier>
+                        <premis:linkingObjectIdentifier>
+                            <premis:linkingObjectIdentifierType>ProArc_URI</premis:linkingObjectIdentifierType>
+                            <premis:linkingObjectIdentifierValue>info:fedora/uuid:4416573b-5bc5-4af1-84f0-32cda73fd628/null</premis:linkingObjectIdentifierValue>
+                        </premis:linkingObjectIdentifier>
+                    </premis:event>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:digiprovMD>
+        <mets:digiprovMD ID="EVT_002">
+            <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <premis:event xmlns:premis="info:lc/xmlns/premis-v2">
+                        <premis:eventIdentifier>
+                            <premis:eventIdentifierType>ProArc_EventID</premis:eventIdentifierType>
+                        </premis:eventIdentifier>
+                        <premis:eventType>capture</premis:eventType>
+                        <premis:eventDateTime>2019-11-21T09:18:17.339Z</premis:eventDateTime>
+                        <premis:eventDetail>capture/digitization</premis:eventDetail>
+                        <premis:eventOutcomeInformation>
+                            <premis:eventOutcome>successful</premis:eventOutcome>
+                        </premis:eventOutcomeInformation>
+                        <premis:linkingAgentIdentifier>
+                            <premis:linkingAgentIdentifierType>tonearm</premis:linkingAgentIdentifierType>
+                            <premis:linkingAgentRole>tonearm</premis:linkingAgentRole>
+                        </premis:linkingAgentIdentifier>
+                        <premis:linkingObjectIdentifier>
+                            <premis:linkingObjectIdentifierType>ProArc_URI</premis:linkingObjectIdentifierType>
+                            <premis:linkingObjectIdentifierValue>info:fedora/uuid:4416573b-5bc5-4af1-84f0-32cda73fd628/null</premis:linkingObjectIdentifierValue>
+                        </premis:linkingObjectIdentifier>
+                    </premis:event>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:digiprovMD>
+        <mets:digiprovMD ID="EVT_003">
+            <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <premis:event xmlns:premis="info:lc/xmlns/premis-v2">
+                        <premis:eventIdentifier>
+                            <premis:eventIdentifierType>ProArc_EventID</premis:eventIdentifierType>
+                        </premis:eventIdentifier>
+                        <premis:eventType>capture</premis:eventType>
+                        <premis:eventDateTime>2019-11-21T09:18:17.339Z</premis:eventDateTime>
+                        <premis:eventDetail>capture/digitization</premis:eventDetail>
+                        <premis:eventOutcomeInformation>
+                            <premis:eventOutcome>successful</premis:eventOutcome>
+                        </premis:eventOutcomeInformation>
+                        <premis:linkingAgentIdentifier>
+                            <premis:linkingAgentIdentifierType>phono cartridge</premis:linkingAgentIdentifierType>
+                            <premis:linkingAgentRole>phono cartridge</premis:linkingAgentRole>
+                        </premis:linkingAgentIdentifier>
+                        <premis:linkingObjectIdentifier>
+                            <premis:linkingObjectIdentifierType>ProArc_URI</premis:linkingObjectIdentifierType>
+                            <premis:linkingObjectIdentifierValue>info:fedora/uuid:4416573b-5bc5-4af1-84f0-32cda73fd628/null</premis:linkingObjectIdentifierValue>
+                        </premis:linkingObjectIdentifier>
+                    </premis:event>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:digiprovMD>
+        <mets:digiprovMD ID="EVT_004">
+            <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <premis:event xmlns:premis="info:lc/xmlns/premis-v2">
+                        <premis:eventIdentifier>
+                            <premis:eventIdentifierType>ProArc_EventID</premis:eventIdentifierType>
+                        </premis:eventIdentifier>
+                        <premis:eventType>capture</premis:eventType>
+                        <premis:eventDateTime>2019-11-21T09:18:17.339Z</premis:eventDateTime>
+                        <premis:eventDetail>capture/digitization</premis:eventDetail>
+                        <premis:eventOutcomeInformation>
+                            <premis:eventOutcome>successful</premis:eventOutcome>
+                        </premis:eventOutcomeInformation>
+                        <premis:linkingAgentIdentifier>
+                            <premis:linkingAgentIdentifierType>stylus</premis:linkingAgentIdentifierType>
+                            <premis:linkingAgentRole>phono stylus</premis:linkingAgentRole>
+                        </premis:linkingAgentIdentifier>
+                        <premis:linkingObjectIdentifier>
+                            <premis:linkingObjectIdentifierType>ProArc_URI</premis:linkingObjectIdentifierType>
+                            <premis:linkingObjectIdentifierValue>info:fedora/uuid:4416573b-5bc5-4af1-84f0-32cda73fd628/null</premis:linkingObjectIdentifierValue>
+                        </premis:linkingObjectIdentifier>
+                    </premis:event>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:digiprovMD>
+        <mets:digiprovMD ID="EVT_005">
+            <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <premis:event xmlns:premis="info:lc/xmlns/premis-v2">
+                        <premis:eventIdentifier>
+                            <premis:eventIdentifierType>ProArc_EventID</premis:eventIdentifierType>
+                        </premis:eventIdentifier>
+                        <premis:eventType>capture</premis:eventType>
+                        <premis:eventDateTime>2019-11-21T09:18:17.339Z</premis:eventDateTime>
+                        <premis:eventDetail>capture/digitization</premis:eventDetail>
+                        <premis:eventOutcomeInformation>
+                            <premis:eventOutcome>successful</premis:eventOutcome>
+                        </premis:eventOutcomeInformation>
+                        <premis:linkingAgentIdentifier>
+                            <premis:linkingAgentIdentifierType>preamplifier</premis:linkingAgentIdentifierType>
+                            <premis:linkingAgentRole>preamplifier</premis:linkingAgentRole>
+                        </premis:linkingAgentIdentifier>
+                        <premis:linkingObjectIdentifier>
+                            <premis:linkingObjectIdentifierType>ProArc_URI</premis:linkingObjectIdentifierType>
+                            <premis:linkingObjectIdentifierValue>info:fedora/uuid:4416573b-5bc5-4af1-84f0-32cda73fd628/null</premis:linkingObjectIdentifierValue>
+                        </premis:linkingObjectIdentifier>
+                    </premis:event>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:digiprovMD>
+        <mets:digiprovMD ID="EVT_006">
+            <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <premis:event xmlns:premis="info:lc/xmlns/premis-v2">
+                        <premis:eventIdentifier>
+                            <premis:eventIdentifierType>ProArc_EventID</premis:eventIdentifierType>
+                        </premis:eventIdentifier>
+                        <premis:eventType>capture</premis:eventType>
+                        <premis:eventDateTime>2019-11-21T09:18:17.339Z</premis:eventDateTime>
+                        <premis:eventDetail>capture/digitization</premis:eventDetail>
+                        <premis:eventOutcomeInformation>
+                            <premis:eventOutcome>successful</premis:eventOutcome>
+                        </premis:eventOutcomeInformation>
+                        <premis:linkingAgentIdentifier>
+                            <premis:linkingAgentIdentifierType>AD convertor</premis:linkingAgentIdentifierType>
+                            <premis:linkingAgentRole>AD convertor</premis:linkingAgentRole>
+                        </premis:linkingAgentIdentifier>
+                        <premis:linkingObjectIdentifier>
+                            <premis:linkingObjectIdentifierType>ProArc_URI</premis:linkingObjectIdentifierType>
+                            <premis:linkingObjectIdentifierValue>info:fedora/uuid:4416573b-5bc5-4af1-84f0-32cda73fd628/null</premis:linkingObjectIdentifierValue>
+                        </premis:linkingObjectIdentifier>
+                    </premis:event>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:digiprovMD>
+        <mets:digiprovMD ID="EVT_007">
+            <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <premis:event xmlns:premis="info:lc/xmlns/premis-v2">
+                        <premis:eventIdentifier>
+                            <premis:eventIdentifierType>ProArc_EventID</premis:eventIdentifierType>
+                        </premis:eventIdentifier>
+                        <premis:eventType>capture</premis:eventType>
+                        <premis:eventDateTime>2019-11-21T09:18:17.339Z</premis:eventDateTime>
+                        <premis:eventDetail>capture/digitization</premis:eventDetail>
+                        <premis:eventOutcomeInformation>
+                            <premis:eventOutcome>successful</premis:eventOutcome>
+                        </premis:eventOutcomeInformation>
+                        <premis:linkingAgentIdentifier>
+                            <premis:linkingAgentIdentifierType>Digital audio editor</premis:linkingAgentIdentifierType>
+                            <premis:linkingAgentRole>software</premis:linkingAgentRole>
+                        </premis:linkingAgentIdentifier>
+                        <premis:linkingObjectIdentifier>
+                            <premis:linkingObjectIdentifierType>ProArc_URI</premis:linkingObjectIdentifierType>
+                            <premis:linkingObjectIdentifierValue>info:fedora/uuid:4416573b-5bc5-4af1-84f0-32cda73fd628/null</premis:linkingObjectIdentifierValue>
+                        </premis:linkingObjectIdentifier>
+                    </premis:event>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:digiprovMD>
+        <mets:digiprovMD ID="EVT_008">
+            <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <premis:event xmlns:premis="info:lc/xmlns/premis-v2">
+                        <premis:eventIdentifier>
+                            <premis:eventIdentifierType>ProArc_EventID</premis:eventIdentifierType>
+                        </premis:eventIdentifier>
+                        <premis:eventType>capture</premis:eventType>
+                        <premis:eventDateTime>2019-11-21T09:18:17.339Z</premis:eventDateTime>
+                        <premis:eventDetail>capture/digitization</premis:eventDetail>
+                        <premis:eventOutcomeInformation>
+                            <premis:eventOutcome>successful</premis:eventOutcome>
+                        </premis:eventOutcomeInformation>
+                        <premis:linkingAgentIdentifier>
+                            <premis:linkingAgentIdentifierType>Digital audio workstation</premis:linkingAgentIdentifierType>
+                            <premis:linkingAgentRole>extraction workstation</premis:linkingAgentRole>
+                        </premis:linkingAgentIdentifier>
+                        <premis:linkingObjectIdentifier>
+                            <premis:linkingObjectIdentifierType>ProArc_URI</premis:linkingObjectIdentifierType>
+                            <premis:linkingObjectIdentifierValue>info:fedora/uuid:4416573b-5bc5-4af1-84f0-32cda73fd628/null</premis:linkingObjectIdentifierValue>
+                        </premis:linkingObjectIdentifier>
+                    </premis:event>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:digiprovMD>
+        <mets:digiprovMD ID="EVT_002">
+            <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <premis:event xmlns:premis="info:lc/xmlns/premis-v2">
+                        <premis:eventIdentifier>
+                            <premis:eventIdentifierType>ProArc_EventID</premis:eventIdentifierType>
+                        </premis:eventIdentifier>
+                        <premis:eventType>migration</premis:eventType>
+                        <premis:eventDateTime>2019-11-21T09:18:17.340Z</premis:eventDateTime>
+                        <premis:eventDetail>migration/MC_creation</premis:eventDetail>
+                        <premis:eventOutcomeInformation>
+                            <premis:eventOutcome>successful</premis:eventOutcome>
+                        </premis:eventOutcomeInformation>
+                        <premis:linkingAgentIdentifier>
+                            <premis:linkingAgentIdentifierType>ProArc_AgentID</premis:linkingAgentIdentifierType>
+                            <premis:linkingAgentIdentifierValue>ProArc</premis:linkingAgentIdentifierValue>
+                            <premis:linkingAgentRole>software</premis:linkingAgentRole>
+                        </premis:linkingAgentIdentifier>
+                        <premis:linkingObjectIdentifier>
+                            <premis:linkingObjectIdentifierType>ProArc_URI</premis:linkingObjectIdentifierType>
+                            <premis:linkingObjectIdentifierValue>info:fedora/uuid:4416573b-5bc5-4af1-84f0-32cda73fd628/null</premis:linkingObjectIdentifierValue>
+                        </premis:linkingObjectIdentifier>
+                    </premis:event>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:digiprovMD>
+        <mets:digiprovMD ID="EVT_004">
+            <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <premis:event xmlns:premis="info:lc/xmlns/premis-v2">
+                        <premis:eventIdentifier>
+                            <premis:eventIdentifierType>ProArc_EventID</premis:eventIdentifierType>
+                        </premis:eventIdentifier>
+                        <premis:eventType>derivation</premis:eventType>
+                        <premis:eventDateTime>2019-11-21T09:18:17.340Z</premis:eventDateTime>
+                        <premis:eventDetail>derivation/UC_creation</premis:eventDetail>
+                        <premis:eventOutcomeInformation>
+                            <premis:eventOutcome>successful</premis:eventOutcome>
+                        </premis:eventOutcomeInformation>
+                        <premis:linkingAgentIdentifier>
+                            <premis:linkingAgentIdentifierType>ProArc_AgentID</premis:linkingAgentIdentifierType>
+                            <premis:linkingAgentIdentifierValue>ProArc</premis:linkingAgentIdentifierValue>
+                            <premis:linkingAgentRole>software</premis:linkingAgentRole>
+                        </premis:linkingAgentIdentifier>
+                        <premis:linkingObjectIdentifier>
+                            <premis:linkingObjectIdentifierType>ProArc_URI</premis:linkingObjectIdentifierType>
+                            <premis:linkingObjectIdentifierValue>info:fedora/uuid:4416573b-5bc5-4af1-84f0-32cda73fd628/null</premis:linkingObjectIdentifierValue>
+                        </premis:linkingObjectIdentifier>
+                    </premis:event>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:digiprovMD>
+        <mets:digiprovMD ID="EVT_001">
+            <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <premis:event xmlns:premis="info:lc/xmlns/premis-v2">
+                        <premis:eventIdentifier>
+                            <premis:eventIdentifierType>ProArc_EventID</premis:eventIdentifierType>
+                            <premis:eventIdentifierValue>digitization_001</premis:eventIdentifierValue>
+                        </premis:eventIdentifier>
+                        <premis:eventType>capture</premis:eventType>
+                        <premis:eventDateTime>2019-11-21T09:18:17.339Z</premis:eventDateTime>
+                        <premis:eventDetail>capture/digitization</premis:eventDetail>
+                        <premis:eventOutcomeInformation>
+                            <premis:eventOutcome>successful</premis:eventOutcome>
+                        </premis:eventOutcomeInformation>
+                        <premis:linkingAgentIdentifier>
+                            <premis:linkingAgentIdentifierType>ProArc_AgentID</premis:linkingAgentIdentifierType>
+                            <premis:linkingAgentIdentifierValue>ProArc</premis:linkingAgentIdentifierValue>
+                            <premis:linkingAgentRole>software</premis:linkingAgentRole>
+                        </premis:linkingAgentIdentifier>
+                        <premis:linkingObjectIdentifier>
+                            <premis:linkingObjectIdentifierType>ProArc_URI</premis:linkingObjectIdentifierType>
+                            <premis:linkingObjectIdentifierValue>info:fedora/uuid:4416573b-5bc5-4af1-84f0-32cda73fd628/RAW</premis:linkingObjectIdentifierValue>
+                        </premis:linkingObjectIdentifier>
+                    </premis:event>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:digiprovMD>
+        <mets:digiprovMD ID="AGENT_001">
+            <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <premis:agent xmlns:premis="info:lc/xmlns/premis-v2">
+                        <premis:agentIdentifier>
+                            <premis:agentIdentifierType>ProArc_AgentID</premis:agentIdentifierType>
+                            <premis:agentIdentifierValue>ProArc</premis:agentIdentifierValue>
+                        </premis:agentIdentifier>
+                        <premis:agentName>ProArc</premis:agentName>
+                        <premis:agentType>software</premis:agentType>
+                        <premis:agentExtension/>
+                    </premis:agent>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:digiprovMD>
+        <mets:digiprovMD ID="AGENT_002">
+            <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <premis:agent xmlns:premis="info:lc/xmlns/premis-v2">
+                        <premis:agentIdentifier>
+                            <premis:agentIdentifierType>ProArc_AgentID</premis:agentIdentifierType>
+                            <premis:agentIdentifierValue>ProArc</premis:agentIdentifierValue>
+                        </premis:agentIdentifier>
+                        <premis:agentName>ProArc</premis:agentName>
+                        <premis:agentType>software</premis:agentType>
+                    </premis:agent>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:digiprovMD>
+        <mets:digiprovMD ID="AGENT_003">
+            <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <premis:agent xmlns:premis="info:lc/xmlns/premis-v2">
+                        <premis:agentIdentifier>
+                            <premis:agentIdentifierType>ProArc_AgentID</premis:agentIdentifierType>
+                            <premis:agentIdentifierValue>ProArc</premis:agentIdentifierValue>
+                        </premis:agentIdentifier>
+                        <premis:agentName>ProArc</premis:agentName>
+                        <premis:agentType>software</premis:agentType>
+                        <premis:agentExtension/>
+                    </premis:agent>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:digiprovMD>
+        <mets:digiprovMD ID="AGENT_004">
+            <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <premis:agent xmlns:premis="info:lc/xmlns/premis-v2">
+                        <premis:agentIdentifier>
+                            <premis:agentIdentifierType>ProArc_AgentID</premis:agentIdentifierType>
+                            <premis:agentIdentifierValue>ProArc</premis:agentIdentifierValue>
+                        </premis:agentIdentifier>
+                        <premis:agentName>ProArc</premis:agentName>
+                        <premis:agentType>software</premis:agentType>
+                        <premis:agentExtension/>
+                    </premis:agent>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:digiprovMD>
+        <mets:digiprovMD ID="AGENT_005">
+            <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <premis:agent xmlns:premis="info:lc/xmlns/premis-v2">
+                        <premis:agentIdentifier>
+                            <premis:agentIdentifierType>ProArc_AgentID</premis:agentIdentifierType>
+                            <premis:agentIdentifierValue>ProArc</premis:agentIdentifierValue>
+                        </premis:agentIdentifier>
+                        <premis:agentName>ProArc</premis:agentName>
+                        <premis:agentType>software</premis:agentType>
+                        <premis:agentExtension/>
+                    </premis:agent>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:digiprovMD>
+        <mets:digiprovMD ID="AGENT_006">
+            <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <premis:agent xmlns:premis="info:lc/xmlns/premis-v2">
+                        <premis:agentIdentifier>
+                            <premis:agentIdentifierType>ProArc_AgentID</premis:agentIdentifierType>
+                            <premis:agentIdentifierValue>ProArc</premis:agentIdentifierValue>
+                        </premis:agentIdentifier>
+                        <premis:agentName>ProArc</premis:agentName>
+                        <premis:agentType>software</premis:agentType>
+                        <premis:agentExtension/>
+                    </premis:agent>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:digiprovMD>
+        <mets:digiprovMD ID="AGENT_007">
+            <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <premis:agent xmlns:premis="info:lc/xmlns/premis-v2">
+                        <premis:agentIdentifier>
+                            <premis:agentIdentifierType>ProArc_AgentID</premis:agentIdentifierType>
+                            <premis:agentIdentifierValue>ProArc</premis:agentIdentifierValue>
+                        </premis:agentIdentifier>
+                        <premis:agentName>ProArc</premis:agentName>
+                        <premis:agentType>software</premis:agentType>
+                        <premis:agentExtension/>
+                    </premis:agent>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:digiprovMD>
+        <mets:digiprovMD ID="AGENT_008">
+            <mets:mdWrap MDTYPE="PREMIS" MIMETYPE="text/xml">
+                <mets:xmlData>
+                    <premis:agent xmlns:premis="info:lc/xmlns/premis-v2">
+                        <premis:agentIdentifier>
+                            <premis:agentIdentifierType>ProArc_AgentID</premis:agentIdentifierType>
+                            <premis:agentIdentifierValue>ProArc</premis:agentIdentifierValue>
+                        </premis:agentIdentifier>
+                        <premis:agentName>ProArc</premis:agentName>
+                        <premis:agentType>software</premis:agentType>
+                        <premis:agentExtension/>
+                    </premis:agent>
+                </mets:xmlData>
+            </mets:mdWrap>
+        </mets:digiprovMD>
+    </mets:amdSec>
+    <mets:fileSec>
+        <mets:fileGrp ID="MC_AUDIOGRP" USE="master">
+            <mets:file ADMID="AES_002 CODINGHISTORY_002" CHECKSUM="4c28e04180a3365fe0f6d6c2fc9a51d4" CHECKSUMTYPE="MD5" CREATED="2021-08-10T08:25:21.579Z" ID="mca_wav_abe370-000002_0002" MIMETYPE="audio/wave" SEQ="1" SIZE="144630422">
+                <mets:FLocat LOCTYPE="URL" xlink:href="mastercopy_audio/mca_wav_abe370-000002_0002.wav"/>
+            </mets:file>
+        </mets:fileGrp>
+        <mets:fileGrp ID="SA_AUDIOGRP" USE="raw">
+            <mets:file CHECKSUM="4c28e04180a3365fe0f6d6c2fc9a51d4" CHECKSUMTYPE="MD5" CREATED="2021-08-10T08:25:23.056Z" ID="sa_wav_abe370-000002_0002" MIMETYPE="audio/wave" SEQ="1" SIZE="144630422">
+                <mets:FLocat LOCTYPE="URL" xlink:href="source_audio/sa_wav_abe370-000002_0002.wav"/>
+            </mets:file>
+        </mets:fileGrp>
+        <mets:fileGrp ID="UC_AUDIOGRP" USE="user">
+            <mets:file CHECKSUM="325493c1c9c37bf2b86ffca9a5e35d8a" CHECKSUMTYPE="MD5" CREATED="2021-08-10T08:25:24.738Z" ID="uca_mp3_abe370-000002_0002" MIMETYPE="audio/mp3" SEQ="1" SIZE="10038060">
+                <mets:FLocat LOCTYPE="URL" xlink:href="usercopy_audio/uca_mp3_abe370-000002_0002.mp3"/>
+            </mets:file>
+        </mets:fileGrp>
+    </mets:fileSec>
+    <mets:structMap TYPE="PHYSICAL">
+        <mets:div TYPE="TRACK">
+            <mets:fptr FILEID="mca_wav_abe370-000002_0002"/>
+            <mets:fptr FILEID="sa_wav_abe370-000002_0002"/>
+            <mets:fptr FILEID="uca_mp3_abe370-000002_0002"/>
+        </mets:div>
+    </mets:structMap>
+</mets:mets>
