@@ -9,6 +9,12 @@ import java.util.List;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+/**
+ * Tests regular expressions for ISO 8601 Date and Times
+ *
+ * @see <a href="https://www.pelagodesign.com/blog/2009/05/20/iso-8601-date-validation-that-doesnt-suck/">https://www.pelagodesign.com/blog/2009/05/20/iso-8601-date-validation-that-doesnt-suck/</a>
+ * @see <a href="https://www.oreilly.com/library/view/regular-expressions-cookbook/9781449327453/ch04s07.html">https://www.oreilly.com/library/view/regular-expressions-cookbook/9781449327453/ch04s07.html</a>
+ */
 public class Iso8601Test {
 
     List<String> regexps8601AtLeastMinutes;
@@ -19,7 +25,6 @@ public class Iso8601Test {
     public void initRegexps() {
 
         /*
-        //see https://www.oreilly.com/library/view/regular-expressions-cookbook/9781449327453/ch04s07.html
         //year
         regexps8601DateMinutes.add("^(?<year>[0-9]{4})");
         //year, month
