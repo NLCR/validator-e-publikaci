@@ -66,11 +66,11 @@ public class Main extends Application {
         //System.out.println("mainWindow: " + primaryStage);
         try {
             //title
-            primaryStage.setTitle("Validátor e-publikací " + Version.VERSION_CODE);
+            primaryStage.setTitle("Komplexní validátor " + Version.VERSION_CODE);
             //icon
-            addIconIfFound(primaryStage, "img/appIcon/appIcon16.png");
-            addIconIfFound(primaryStage, "img/appIcon/appIcon32.png");
-            addIconIfFound(primaryStage, "img/appIcon/appIcon48.png");
+            addIconIfFound(primaryStage, "img/appIcon/appIcon.iconset/icon_16x16.png");
+            addIconIfFound(primaryStage, "img/appIcon/appIcon.iconset/icon_32x32.png");
+            addIconIfFound(primaryStage, "img/appIcon/appIcon.iconset/icon_48x48.png");
 
             //window size and position
             primaryStage.setResizable(true);
@@ -125,6 +125,7 @@ public class Main extends Application {
     }
 
     public void runPspDirValidation(File pspDir, DmfDetector.Params dmDetectorParams, boolean createTxtLog, boolean createXmlLog, int verbosity) {
+
         //because the possible unzip dialog cannot close it's parent dialog
         dialogStage.close();
         mainController.runPspDirValidation(pspDir, dmDetectorParams, createTxtLog, createXmlLog, verbosity);
