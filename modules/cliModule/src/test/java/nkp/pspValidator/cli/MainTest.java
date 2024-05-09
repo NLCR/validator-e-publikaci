@@ -39,8 +39,8 @@ public class MainTest {
 
     private static final String PER_1_4 = "../sharedModule/src/test/resources/periodical_1.4/ope301-00000v";
 
-    //private static final String EMON_2_3 = "../sharedModule/src/test/resources/e-monograph_2.3/nk-mbc228";
-    private static final String EMON_2_3 = "../sharedModule/src/test/resources/eborny_validator_test_uprava_povinnych_chyb/emono_klasicke/RDA/aba007-0000f8";
+    private static final String EMON_2_3 = "../sharedModule/src/test/resources/e-monograph_2.3/nk-mbc228";
+    //private static final String EMON_2_3 = "../sharedModule/src/test/resources/eborny_validator_test_uprava_povinnych_chyb/emono_klasicke/RDA/aba007-0000f8";
     private static final String EPER_2_3 = "../sharedModule/src/test/resources/e-periodical_2.3/nk-2411ib";
 
 
