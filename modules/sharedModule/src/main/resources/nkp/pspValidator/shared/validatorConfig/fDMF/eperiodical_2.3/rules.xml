@@ -374,7 +374,10 @@
                         <value-ref name="PRIMARY-METS_FILE"/>
                     </value>
                     <value name="files" type="FILE_LIST">
-                        <value-ref name="ORIGINAL-COPY_FILES"/>
+                        <value-ref name="ORIGINAL-COPY-PDF_FILES"/>
+                    </value>
+                    <value name="files" type="FILE_LIST">
+                        <value-ref name="ORIGINAL-COPY-EPUB_FILES"/>
                     </value>
                 </params>
             </validation>
@@ -484,7 +487,10 @@
                         <value-ref name="PRIMARY-METS_FILE"/>
                     </value>
                     <value name="files" type="FILE_LIST">
-                        <value-ref name="ORIGINAL-COPY_FILES"/>
+                        <value-ref name="ORIGINAL-COPY-PDF_FILES"/>
+                    </value>
+                    <value name="files" type="FILE_LIST">
+                        <value-ref name="ORIGINAL-COPY-EPUB_FILES"/>
                     </value>
                 </params>
             </validation>
