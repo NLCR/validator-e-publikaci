@@ -1,5 +1,5 @@
-<fDMF xmlns="http://www.nkp.cz/validatorEpublikaci/2.1/fdmfConfig"
-      validatorVersion="2.1"
+<fDMF xmlns="http://www.nkp.cz/validatorEpublikaci/2.2/fdmfConfig"
+      validatorVersion="2.2"
       dmf="none"
 >
     <value-def name="NECO" type="FILE_LIST">
