@@ -202,3 +202,5 @@ gradle-app.setting
 **/build/
 
 # End of https://www.gitignore.io/api/gradle,java,intellij,intellij+iml,macos
+/modules/guiModule/config.properties
+/modules/guiModule/logs/
