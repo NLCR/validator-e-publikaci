@@ -37,7 +37,7 @@ jar {
     }
     from {
         configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-    }{
+    } {
         // Set the duplicates strategy here
         duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     }
@@ -129,6 +129,41 @@ task printRuntimeClasspath {
 // Add this line to run this task automatically before shadowJar
 shadowJar.dependsOn printRuntimeClasspath
 
+//import org.gradle.internal.os.OperatingSystem
+def os = org.gradle.internal.os.OperatingSystem.current()
+def jpackageType
+def iconPath
+
+if (os.isWindows()) {
+    jpackageType = 'exe' //nebo 'msi'
+    iconPath = 'src/main/resources/img/appIcon/icon_48x48.ico'
+} else if (os.isMacOsX()) {
+    //jpackageType = 'pkg'
+    jpackageType = 'dmg'
+    iconPath = 'src/main/resources/img/appIcon/appIcon.icns'
+} else if (os.isLinux()) {
+    jpackageType = 'deb' // nebo 'rpm'
+    iconPath = 'src/main/resources/img/appIcon/appIcon.icns'
+} else {
+    throw new GradleException("Unsupported operating system: ${os}")
+}
+
+// Define paths to your resources
+def resourceDir = file("$projectDir/../sharedModule/src/main/resources/nkp/pspValidator/shared")
+//def additionalResourcesDir = file("$projectDir/additional-resources")
+def combinedResourcesDir = file("$buildDir/combined-resources")
+
+
+task prepareResources(type: Copy) {
+    from resourceDir
+    into combinedResourcesDir
+
+    doLast {
+        println "Resources copied to: $combinedResourcesDir"
+        fileTree(dir: combinedResourcesDir).visit { println it }
+    }
+}
+
 task jpackage(type: Exec) {
     // Replace non-digit characters with a dot for the app-version
     def compatibleVersion = version.replaceAll(/[^0-9]+/, '.')
@@ -139,53 +174,52 @@ task jpackage(type: Exec) {
     def outputDir = 'build/jpackage'
     // Define the input directory where the JAR file and other resources are located
     def inputDir = 'build/libs'
-    //TODO: fix this hack
-    def resourceDir = '../sharedModule/src/main/resources/nkp/pspValidator/shared/validatorConfig'
     // Define the path to the main JAR file of your application
-    //def mainJar = "guiModule-${version}.jar"
     def mainJar = "guiModule-${version}-shadow.jar"
     // Define the main class of your application
-    //def mainClassName = 'nkp.pspValidator.gui.Main'
     def mainClassName = 'nkp.pspValidator.gui.Launcher'
     // Specify the image directory (if you have one)
     def imageDir = 'build/image/resources/img'
-    // Specify the icon path (if you have one)
 
-    //MacOs
-    def iconPath = 'src/main/resources/img/appIcon/appIcon.icns'
-
-    //Windows:
-    //def iconPath = 'src/main/resources/img/appIcon/icon_48x48.ico'
-
-    // Make sure this task is executed after the application is built
-    dependsOn 'build'
+    // Ensure this task depends on building the application and preparing resources
+    dependsOn 'build', 'prepareResources'
 
     // Use the jpackage command-line tool to create the installer
     commandLine 'jpackage',
-            //'--type', 'dmg', // Change to 'exe' for Windows or 'deb' for Debian-based Linux distributions
-            //'--type', 'exe',
-            '--type', 'pkg',
+            '--type', jpackageType,
             '--dest', outputDir,
             '--name', appName,
-            //'--description', 'Komplexni_Validator_baliku_PSP',
-            //'--vendor', 'Narodni_knihovna_CR',
+            '--description', 'Validátor e-publikací',
+            '--copyright', 'Copyright © 2024 National Library of the Czech Republic. Licensed under the Apache License, Version 2.0.',
+            '--vendor', 'National Library of the Czech Republic',
             '--input', inputDir,
             '--main-jar', mainJar,
             '--main-class', mainClassName,
-            '--resource-dir', resourceDir,
+            //'--app-content', combinedResourcesDir.path, // Use combined resources directory
+            '--resource-dir', combinedResourcesDir, // Use combined resources directory
             '--icon', iconPath,
             '--app-version', compatibleVersion
-
-    // Additional options can be added here, such as '--vendor', '--resource-dir', etc.
-
-    // Only if you have created a custom runtime image
-    // '--runtime-image', imageDir
+    //'--runtime-image', file("$buildDir/runtime").path
 
     // Setting the Java options for the application; include any JVM args you need
     doFirst {
         environment 'JAVA_HOME', System.getenv('JAVA_HOME')
+        println "Project Directory: $projectDir"
+        println "Resource Directory: $resourceDir"
+        println "Combined Resources Directory: $combinedResourcesDir"
+        if (!combinedResourcesDir.exists()) {
+            throw new GradleException("Combined Resources Directory does not exist!")
+        }
+        //fileTree(dir: combinedResourcesDir).visit { println it }
+    }
+
+    doLast {
+        println "jpackage task completed"
     }
 }
+
+// Ensure the jpackage task depends on shadowJar to package the application correctly
+jpackage.dependsOn shadowJar
 
 //run - spusti GUI
 //./gradlew :modules:guiModule:run

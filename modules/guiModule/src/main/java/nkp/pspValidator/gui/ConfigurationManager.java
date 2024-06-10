@@ -4,6 +4,8 @@ import nkp.pspValidator.shared.Dmf;
 import nkp.pspValidator.shared.Platform;
 
 import java.io.*;
+import java.net.URLDecoder;
+import java.nio.file.Paths;
 import java.util.*;
 
 /**
@@ -17,7 +19,8 @@ public class ConfigurationManager {
     private static final String DEFAULT_LOG_DIR = "logs";
     private static final String DEFAULT_FDMF_DIR = "validatorConfig";
 
-    private static File CONFIG_FILE_PRODUCTION = new File("config.properties");
+    private static final String PROD_CONFIG_DIR = ".validator-epublikaci";
+    private static String CONFIG_FILE_NAME_PRODUCTION = "config.properties";
     private static File CONFIG_FILE_DEV_WIN = new File("../../resources/main/dev/config-win.properties");
     private static File CONFIG_FILE_DEV_MAC = new File("../../resources/main/dev/config-mac.properties");
     private static File CONFIG_FILE_DEV_LINUX = new File("../../resources/main/dev/config-linux.properties");
@@ -97,13 +100,13 @@ public class ConfigurationManager {
         //validator config dir
         File validatorConfigDir = getFileOrNull(PROP_VALIDATOR_CONFIG_DIR);
         if (validatorConfigDir == null) {
-            validatorConfigDir = new File(DEFAULT_FDMF_DIR);
+            validatorConfigDir = findDefaultFdmfDir();
             setFile(PROP_VALIDATOR_CONFIG_DIR, validatorConfigDir);
         }
         //log dir
         File logDir = getFileOrNull(PROP_LOG_DIR);
         if (logDir == null) {
-            logDir = new File(DEFAULT_LOG_DIR);
+            logDir = findDefaultLogDir();
             setFile(PROP_LOG_DIR, logDir);
         }
         logDir.mkdirs();
@@ -127,6 +130,33 @@ public class ConfigurationManager {
                 null);
     }
 
+    private File findDefaultLogDir() {
+        String jarPath = getJarPath();
+        File logDir = Paths.get(jarPath, DEFAULT_LOG_DIR).toFile();
+        System.out.println("findDefaultLogDir(): " + logDir);
+        logDir.mkdirs();
+        return logDir;
+    }
+
+    private File findDefaultFdmfDir() {
+        String jarPath = getJarPath();
+        File fdmfDir = Paths.get(jarPath, DEFAULT_FDMF_DIR).toFile();
+        System.out.println("findDefaultFdmfDir(): " + fdmfDir);
+        return fdmfDir;
+    }
+
+    private String getJarPath() {
+        try {
+            String path = ConfigurationManager.class.getProtectionDomain().getCodeSource().getLocation().getPath();
+            String decodedPath = URLDecoder.decode(path, "UTF-8");
+            String result = new File(decodedPath).getParent();
+            System.out.println("getJarPath(): " + result);
+            return result;
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to determine JAR path", e);
+        }
+    }
+
     private void initDictionary(String name, String description, String specUrl, String syncUrl) {
         updateStringPropertyIfOldValueEmptyAndNewValueNot(propDictionaryDescription(name), description);
         updateStringPropertyIfOldValueEmptyAndNewValueNot(propDictionarySpecUrl(name), specUrl);
@@ -143,6 +173,10 @@ public class ConfigurationManager {
     }
 
     private File selectConfigFile() {
+        System.out.println("selectConfigFile current dir: " + new File(".").getAbsolutePath());
+        //list files in current dir:
+        System.out.println("files here: ");
+        Arrays.stream(new File(".").listFiles()).sorted().forEach(System.out::println);
         if (DEV_MODE) {
             switch (platform.getOperatingSystem()) {
                 case LINUX:
@@ -152,11 +186,29 @@ public class ConfigurationManager {
                 case MAC:
                     return CONFIG_FILE_DEV_MAC;
                 default:
-                    return CONFIG_FILE_PRODUCTION;
+                    throw new RuntimeException("unknown platform: " + platform.getOperatingSystem());
             }
         } else {
-            return CONFIG_FILE_PRODUCTION;
+            return detectProductionConfigFile();
         }
+    }
+
+    private File detectProductionConfigFile() {
+        String userHome = System.getProperty("user.home");
+        File configFile = Paths.get(userHome, PROD_CONFIG_DIR, CONFIG_FILE_NAME_PRODUCTION).toFile();
+        //String jarPath = getJarPath();
+        //File configFile = Paths.get(jarPath, CONFIG_FILE_NAME_PRODUCTION).toFile();
+        System.out.println("detectProductionConfigFile(): " + configFile.getAbsolutePath());
+        if (!configFile.exists()) {
+            try {
+                //Config file does not exist, create it and parent dirs
+                configFile.getParentFile().mkdirs();
+                configFile.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return configFile;
     }
 
     private void loadProperties() throws IOException {
