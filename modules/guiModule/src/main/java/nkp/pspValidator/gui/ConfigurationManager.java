@@ -6,7 +6,10 @@ import nkp.pspValidator.shared.Platform;
 import java.io.*;
 import java.net.URLDecoder;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Properties;
+import java.util.Set;
 
 /**
  * Created by Martin Řehánek on 2.12.16.
@@ -100,13 +103,13 @@ public class ConfigurationManager {
         //validator config dir
         File validatorConfigDir = getFileOrNull(PROP_VALIDATOR_CONFIG_DIR);
         if (validatorConfigDir == null) {
-            validatorConfigDir = findDefaultFdmfDir();
+            validatorConfigDir = getDefaultValidatorConfigDir();
             setFile(PROP_VALIDATOR_CONFIG_DIR, validatorConfigDir);
         }
         //log dir
         File logDir = getFileOrNull(PROP_LOG_DIR);
         if (logDir == null) {
-            logDir = findDefaultLogDir();
+            logDir = getDefaultLogDir();
             setFile(PROP_LOG_DIR, logDir);
         }
         logDir.mkdirs();
@@ -129,19 +132,31 @@ public class ConfigurationManager {
                 null);
     }
 
-    private File findDefaultLogDir() {
-        String jarPath = getJarPath();
-        File logDir = Paths.get(jarPath, DEFAULT_LOG_DIR).toFile();
-        System.out.println("findDefaultLogDir(): " + logDir);
-        logDir.mkdirs();
+    private File getDefaultLogDir() {
+        String userHome = System.getProperty("user.home");
+        File logDir = Paths.get(userHome, PROD_CONFIG_DIR, DEFAULT_LOG_DIR).toFile();
+        System.out.println("getDefaultLogDir(): " + logDir.getAbsolutePath());
+        if (!logDir.exists()) {
+            try {
+                //Log dire does not exist, create it and parent dirs
+                logDir.getParentFile().mkdirs();
+                logDir.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
         return logDir;
     }
 
-    private File findDefaultFdmfDir() {
+    private File getDefaultValidatorConfigDir() {
         String jarPath = getJarPath();
-        File fdmfDir = Paths.get(jarPath, DEFAULT_FDMF_DIR).toFile();
-        System.out.println("findDefaultFdmfDir(): " + fdmfDir);
-        return fdmfDir;
+        //TODO: Windows, Linux
+        File appDir = Paths.get(jarPath).toFile(); //ValidatorEpublikaci.app/Contents/app
+        File contentsDir = appDir.getParentFile(); //ValidatorEpublikaci.app/Contents
+        File appContentDir = new File(contentsDir, "app-content"); //ValidatorEpublikaci.app/Contents/app-content
+        File validatorConfigDir = new File(appContentDir, "validatorConfig"); //ValidatorEpublikaci.app/Contents/app-content/validatorConfig
+        System.out.println("getDefaultValidatorConfigDir(): " + validatorConfigDir);
+        return validatorConfigDir;
     }
 
     private String getJarPath() {
@@ -172,10 +187,10 @@ public class ConfigurationManager {
     }
 
     private File selectConfigFile() {
-        System.out.println("selectConfigFile current dir: " + new File(".").getAbsolutePath());
+        System.out.println("selectConfigFile() current dir: " + new File(".").getAbsolutePath());
         //list files in current dir:
-        System.out.println("files here: ");
-        Arrays.stream(new File(".").listFiles()).sorted().forEach(System.out::println);
+        //System.out.println("files here: ");
+        //Arrays.stream(new File(".").listFiles()).sorted().forEach(System.out::println);
         if (DEV_MODE) {
             switch (platform.getOperatingSystem()) {
                 case LINUX:
@@ -195,8 +210,6 @@ public class ConfigurationManager {
     private File detectProductionConfigFile() {
         String userHome = System.getProperty("user.home");
         File configFile = Paths.get(userHome, PROD_CONFIG_DIR, CONFIG_FILE_NAME_PRODUCTION).toFile();
-        //String jarPath = getJarPath();
-        //File configFile = Paths.get(jarPath, CONFIG_FILE_NAME_PRODUCTION).toFile();
         System.out.println("detectProductionConfigFile(): " + configFile.getAbsolutePath());
         if (!configFile.exists()) {
             try {

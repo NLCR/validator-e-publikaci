@@ -79,7 +79,6 @@ javafx {
     //modules = [ 'javafx.controls', 'javafx.fxml' ]
     //modules = ['javafx.controls', 'javafx.fxml', 'javafx.base']
     modules = ['javafx.base', 'javafx.controls', 'javafx.fxml', 'javafx.media']
-
 }
 
 application {
@@ -151,20 +150,20 @@ if (os.isWindows()) {
 // Define paths to your resources
 def resourceDir = file("$projectDir/../sharedModule/src/main/resources/nkp/pspValidator/shared")
 //def additionalResourcesDir = file("$projectDir/additional-resources")
-def combinedResourcesDir = file("$buildDir/combined-resources")
+def appContentDir = file("$buildDir/app-content")
 
 
 task prepareResources(type: Copy) {
     from resourceDir
-    into combinedResourcesDir
+    into appContentDir
 
     doLast {
-        println "Resources copied to: $combinedResourcesDir"
-        fileTree(dir: combinedResourcesDir).visit { println it }
+        println "Resources copied to: $appContentDir"
+        fileTree(dir: appContentDir).visit { println it }
     }
 }
 
-task jpackage(type: Exec) {
+task buildInstaller(type: Exec) {
     // Replace non-digit characters with a dot for the app-version
     def compatibleVersion = version.replaceAll(/[^0-9]+/, '.')
     // Define the name of your application
@@ -195,8 +194,8 @@ task jpackage(type: Exec) {
             '--input', inputDir,
             '--main-jar', mainJar,
             '--main-class', mainClassName,
-            //'--app-content', combinedResourcesDir.path, // Use combined resources directory
-            '--resource-dir', combinedResourcesDir, // Use combined resources directory
+            '--app-content', appContentDir, // custom content
+            //'--resource-dir', appContentDir,
             '--icon', iconPath,
             '--app-version', compatibleVersion
     //'--runtime-image', file("$buildDir/runtime").path
@@ -206,26 +205,26 @@ task jpackage(type: Exec) {
         environment 'JAVA_HOME', System.getenv('JAVA_HOME')
         println "Project Directory: $projectDir"
         println "Resource Directory: $resourceDir"
-        println "Combined Resources Directory: $combinedResourcesDir"
-        if (!combinedResourcesDir.exists()) {
-            throw new GradleException("Combined Resources Directory does not exist!")
+        println "App Content Directory: $appContentDir"
+        if (!appContentDir.exists()) {
+            throw new GradleException("App Content does not exist!")
         }
-        //fileTree(dir: combinedResourcesDir).visit { println it }
+        //fileTree(dir: appContentDir).visit { println it }
     }
 
     doLast {
-        println "jpackage task completed"
+        println "buildInstaller task completed"
     }
 }
 
-// Ensure the jpackage task depends on shadowJar to package the application correctly
-jpackage.dependsOn shadowJar
+// Ensure the buildInstaller task depends on shadowJar to package the application correctly
+buildInstaller.dependsOn shadowJar
 
-//run - spusti GUI
+//run - spustí GUI aplikaci
 //./gradlew :modules:guiModule:run
 
-//jpackage - build instalatoru
-//./gradlew :modules:guiModule:jpackage
+//buildInstaller - vyrobí instalátor
+//./gradlew :modules:guiModule:buildInstaller
 
 
 //build.gradle ends here
