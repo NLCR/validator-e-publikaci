@@ -114,8 +114,7 @@ public class ConfigurationManager {
         initDictionary("siglaInstitutionCodes",
                 "kódy institucí (Sigla)",
                 null,
-                //TODO: update url after repository migration
-                "https://raw.githubusercontent.com/rzeh4n/validator-e-publikaci/master/sharedModule/src/main/resources/nkp/pspValidator/shared/validatorConfig/dictionaries/siglaInstitutionCodes.dict");
+                "https://raw.githubusercontent.com/NLCR/validator-e-publikaci/master/modules/sharedModule/src/main/resources/nkp/pspValidator/shared/validatorConfig/dictionaries/siglaInstitutionCodes.dict");
         initDictionary("iso31661Alpha2languageCodes",
                 "kódy zemí ISO3166-1 alpha-2",
                 "https://www.iso.org/iso-3166-country-codes.html",

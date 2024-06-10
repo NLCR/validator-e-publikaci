@@ -33,11 +33,10 @@ public class ExternalUtilsCheckDialogController extends DialogController {
     private static final String MP3VAL_INSTALLATION_URL = "https://github.com/NLCR/validator-e-publikaci/wiki/Instalace#mp3val";
     private static final String SHNTOOL_INSTALLATION_URL = "https://github.com/NLCR/validator-e-publikaci/wiki/Instalace#shntool";
     private static final String CHECKMATE_INSTALLATION_URL = "https://github.com/NLCR/validator-e-publikaci/wiki/Instalace#checkmate";*/
-    private static final String VERAPDF_INSTALLATION_URL = "https://github.com/rzeh4n/validator-e-publikaci/wiki/Instalace#verapdf";
-    private static final String EPUBCHECK_INSTALLATION_URL = "https://github.com/rzeh4n/validator-e-publikaci/wiki/Instalace#epubcheck";
+    private static final String VERAPDF_INSTALLATION_URL = "https://github.com/NLCR/validator-e-publikaci/wiki/Instalace#verapdf";
+    private static final String EPUBCHECK_INSTALLATION_URL = "https://github.com/NLCR/validator-e-publikaci/wiki/Instalace#epubcheck";
 
-    //TODO: opravit url (anchor na odstavec)
-    private static final String HELP_URL = "https://github.com/rzeh4n/validator-e-publikaci/wiki/Instalace";
+    private static final String HELP_URL = "https://github.com/NLCR/validator-e-publikaci/wiki/Instalace";
 
     /*
      *//*jhove*//*
