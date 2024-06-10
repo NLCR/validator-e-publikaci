@@ -150,7 +150,7 @@ public class ConfigurationManager {
 
     private File getDefaultValidatorConfigDir() {
         String jarPath = getJarPath();
-        //TODO: Windows, Linux
+        //TODO: Linux
         File appDir = Paths.get(jarPath).toFile(); //ValidatorEpublikaci.app/Contents/app
         File contentsDir = appDir.getParentFile(); //ValidatorEpublikaci.app/Contents
         File appContentDir = new File(contentsDir, "app-content"); //ValidatorEpublikaci.app/Contents/app-content
