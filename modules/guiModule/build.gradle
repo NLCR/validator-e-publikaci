@@ -135,7 +135,7 @@ def iconPath
 
 if (os.isWindows()) {
     jpackageType = 'exe' //nebo 'msi'
-    iconPath = 'src/main/resources/img/appIcon/icon_48x48.ico'
+    iconPath = 'src/main/resources/img/appIcon/icon_multisize.ico'
 } else if (os.isMacOsX()) {
     //jpackageType = 'pkg'
     jpackageType = 'dmg'

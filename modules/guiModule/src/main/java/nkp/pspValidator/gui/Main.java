@@ -71,6 +71,8 @@ public class Main extends Application {
             addIconIfFound(primaryStage, "img/appIcon/appIcon.iconset/icon_16x16.png");
             addIconIfFound(primaryStage, "img/appIcon/appIcon.iconset/icon_32x32.png");
             addIconIfFound(primaryStage, "img/appIcon/appIcon.iconset/icon_48x48.png");
+            addIconIfFound(primaryStage, "img/appIcon/appIcon.iconset/icon_64x64.png");
+            addIconIfFound(primaryStage, "img/appIcon/appIcon.iconset/icon_128x128.png");
 
             //window size and position
             primaryStage.setResizable(true);
@@ -106,9 +108,13 @@ public class Main extends Application {
     }
 
     private void addIconIfFound(Stage stage, String path) {
-        Image icon = new Image(path);
-        if (icon != null) {
-            stage.getIcons().add(icon);
+        try {
+            Image icon = new Image(path);
+            if (icon != null) {
+                stage.getIcons().add(icon);
+            }
+        } catch (Throwable e) {
+            LOG.warning("Icon not found: " + path);
         }
     }
 
