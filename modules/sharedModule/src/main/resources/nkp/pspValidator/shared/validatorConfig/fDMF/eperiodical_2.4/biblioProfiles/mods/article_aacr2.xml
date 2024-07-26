@@ -115,6 +115,11 @@
                     </element>
 
                     <element name="mods:affiliation" mandatory="false">
+                        <expectedAttributes>
+                            <attribute name="type">
+                                <expectedContent/>
+                            </attribute>
+                        </expectedAttributes>
                         <expectedContent/>
                     </element>
 

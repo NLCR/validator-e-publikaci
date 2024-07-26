@@ -111,6 +111,11 @@
                     </element>
 
                     <element name="mods:nameIdentifier" mandatory="false">
+                        <expectedAttributes>
+                            <attribute name="type">
+                                <expectedContent/>
+                            </attribute>
+                        </expectedAttributes>
                         <expectedContent/>
                     </element>
 
