@@ -517,7 +517,7 @@
 
     </rules-section>
 
-    <rules-section name="Identifikátory" description="">
+    <rules-section name="Identifikátory" description="Kontrola idenfitikátorů (info.xml, mets - MODS, DC)">
 
         <!--psp id-->
         <rule name="PSP_ID_DERIVED_FROM_TITLE_ID">
