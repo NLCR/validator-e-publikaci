@@ -7,7 +7,7 @@
 >
 
     <info>
-        <text>DMF Elektronické publikace (monografie) 2.4  očekává MODS verze 3.6. Dále se zde upřesňují očekávaná metadata pro přílohu pro
+        <text>DMF Elektronické publikace (monografie) 2.4 očekává MODS verze 3.6. Dále se zde upřesňují očekávaná metadata pro přílohu pro
             záznamy zpracované podle katalogizačních pravidel RDA.
         </text>
         <url>http://www.loc.gov/standards/mods/</url>
@@ -629,6 +629,66 @@
                     </attribute>
                 </expectedAttributes>
                 <expectedContent/>
+            </element>
+
+            <element name="mods:part" specification="@type='pageNumber" mandatory="false">
+                <expectedAttributes>
+                    <attribute name="type"/>
+                </expectedAttributes>
+                <expectedElements>
+                    <element name="mods:detail" mandatory="false">
+                        <expectedElements>
+                            <element name="mods:number">
+                                <expectedContent/>
+                            </element>
+                        </expectedElements>
+                    </element>
+                    <element name="mods:extent" mandatory="false">
+                        <expectedElements>
+                            <element name="mods:start" mandatory="false">
+                                <expectedContent/>
+                            </element>
+                            <element name="mods:end" mandatory="false">
+                                <expectedContent/>
+                            </element>
+                            <element name="mods:total" mandatory="false">
+                                <expectedAttributes>
+                                    <attribute name="unit">
+                                        <expectedContent>
+                                            <value>pages</value>
+                                        </expectedContent>
+                                    </attribute>
+                                </expectedAttributes>
+                                <expectedContent/>
+                            </element>
+                        </expectedElements>
+                    </element>
+                </expectedElements>
+            </element>
+
+            <element name="mods:part" specification="@type='pageIndex" mandatory="false">
+                <expectedAttributes>
+                    <attribute name="type"/>
+                </expectedAttributes>
+                <expectedElements>
+                    <element name="mods:detail" mandatory="false">
+                        <expectedElements>
+                            <element name="mods:number">
+                                <expectedContent/>
+                            </element>
+                        </expectedElements>
+                    </element>
+                    <element name="mods:extent" mandatory="false">
+                        <expectedElements>
+                            <element name="mods:start" mandatory="false">
+                                <expectedContent/>
+                            </element>
+                            <element name="mods:end" mandatory="false">
+                                <expectedContent/>
+                            </element>
+                        </expectedElements>
+                    </element>
+                </expectedElements>
             </element>
 
             <element name="mods:recordInfo">
