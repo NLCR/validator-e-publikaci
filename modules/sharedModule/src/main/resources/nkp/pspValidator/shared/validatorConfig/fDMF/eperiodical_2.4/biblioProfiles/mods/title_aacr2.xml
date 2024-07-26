@@ -40,6 +40,19 @@
         </expectedAttributes>
         <expectedElements>
             <element name="mods:titleInfo">
+                <expectedAttributes>
+                    <attribute name="type" mandatory="false">
+                        <expectedContent>
+                            <oneOf>
+                                <value>abbreviated</value>
+                                <value>alternative</value>
+                                <value>translated</value>
+                                <value>uniform</value>
+                            </oneOf>
+                        </expectedContent>
+                    </attribute>
+                </expectedAttributes>
+
                 <expectedElements>
                     <element name="mods:title">
                         <expectedContent/>

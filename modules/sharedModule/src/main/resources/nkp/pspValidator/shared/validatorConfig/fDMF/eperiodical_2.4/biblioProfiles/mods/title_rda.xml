@@ -44,6 +44,7 @@
                     <attribute name="type" mandatory="false">
                         <expectedContent>
                             <oneOf>
+                                <value>abbreviated</value>
                                 <value>alternative</value>
                                 <value>translated</value>
                                 <value>uniform</value>
@@ -520,7 +521,6 @@
                             </attribute>
                             <attribute name="authority" mandatory="false">
                                 <expectedContent>
-                                    <!--v textu (str. 16) nejednoznačně uvedeny očekávané hodnoty-->
                                     <oneOf>
                                         <value>marcform</value>
                                         <value>marccategory</value>
