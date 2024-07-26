@@ -7,7 +7,7 @@
 >
 
     <info>
-        <text>DMF Elektronické publikace (monografie) 2.4  očekává MODS verze 3.6. Dále se zde upřesňují očekávaná metadata pro přílohu pro
+        <text>DMF Elektronické publikace (monografie) 2.4 očekává MODS verze 3.6. Dále se zde upřesňují očekávaná metadata pro přílohu pro
             záznamy zpracované podle katalogizačních pravidel AACR2.
         </text>
         <url>http://www.loc.gov/standards/mods/</url>
@@ -90,6 +90,11 @@
                     </element>
 
                     <element name="mods:nameIdentifier" mandatory="false">
+                        <expectedAttributes>
+                            <attribute name="type">
+                                <expectedContent/>
+                            </attribute>
+                        </expectedAttributes>
                         <expectedContent/>
                     </element>
 
