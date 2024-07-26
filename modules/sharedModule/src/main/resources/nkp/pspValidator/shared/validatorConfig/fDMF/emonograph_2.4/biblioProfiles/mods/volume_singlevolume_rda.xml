@@ -44,6 +44,7 @@
                     <attribute name="type">
                         <expectedContent>
                             <oneOf>
+                                <value>abbreviated</value>
                                 <value>alternative</value>
                                 <value>translated</value>
                                 <value>uniform</value>
