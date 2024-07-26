@@ -155,7 +155,7 @@
                 </expectedContent>
             </element>
 
-            <element name="mods:genre" specification="text()='electronic_title'"/>
+            <element name="mods:genre" specification="text()='electronic title'"/>
 
             <element name="mods:originInfo" specification="@eventType='publication'" mandatory="false">
                 <expectedAttributes>

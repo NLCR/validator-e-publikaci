@@ -159,7 +159,7 @@
                 <expectedContent/>
             </element>
 
-            <element name="mods:genre" specification="text()='electronic_article'">
+            <element name="mods:genre" specification="text()='electronic article'">
                 <expectedAttributes>
                     <attribute name="type" mandatory="false">
                         <expectedContent>

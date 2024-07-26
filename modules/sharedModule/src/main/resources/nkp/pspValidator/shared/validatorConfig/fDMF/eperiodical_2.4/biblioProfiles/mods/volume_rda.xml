@@ -115,14 +115,14 @@
                 </expectedElements>
             </element>
 
-            <element name="mods:genre" specification="text()='electronic_volume'"/>
+            <element name="mods:genre" specification="text()='electronic volume'"/>
 
             <element name="mods:originInfo">
                 <expectedElements>
                     <element name="mods:dateIssued">
                         <expectedAttributes>
                             <!--
-                            TODO: tady je vnitřní spor v textu DMF (str. 20).
+                            TODO: tady je vnitřní spor v textu DMF_ebornperiodika_2.4.pdf (str. 21).
                             Jednak se uvádí, že point je povinný (M),
                             ale o řádek výše se pro dateIssued uvádí, že jde o DATUM nebo rozsah datumů, takže ne jen rozsah.
                             A pro ne-rozsah point nedává smysl, jedině, že by byly stejné hodnoty pro start i end.
