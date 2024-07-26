@@ -405,12 +405,10 @@
                             <attribute name="authority" mandatory="false">
                                 <expectedContent>
                                     <oneOf>
-                                        <!--nejasne, co vlastne plati, viz strana 32-->
                                         <value>marcform</value>
                                         <value>marccategory</value>
                                         <value>marcsmd</value>
                                         <value>gmd</value>
-
                                         <value>rdamedia</value>
                                         <value>rdacarrier</value>
                                     </oneOf>
