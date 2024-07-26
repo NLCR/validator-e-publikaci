@@ -418,16 +418,6 @@
                 <expectedElements>
                     <element name="mods:form">
                         <expectedAttributes>
-                            <!--na strane 28 je to formulovane divne: popisujeme prece zaznamy katalogizovane podle RDA, tak "pouze pro zaznamy v RDA"?-->
-                            <attribute name="type">
-                                <expectedContent>
-                                    <oneOf>
-                                        <value>media</value>
-                                        <value>carrier</value>
-                                    </oneOf>
-                                </expectedContent>
-                            </attribute>
-                            <!--na strane 28 je to formulovane divne - cela tabulka je o RDA, ale v textu se pise o obecnych hodnotach a dale o tom, co plati pro RDA-->
                             <attribute name="authority" mandatory="false">
                                 <expectedContent>
                                     <oneOf>
@@ -440,6 +430,15 @@
                                     </oneOf>
                                 </expectedContent>
                             </attribute>
+                            <attribute name="type">
+                                <expectedContent>
+                                    <oneOf>
+                                        <value>media</value>
+                                        <value>carrier</value>
+                                    </oneOf>
+                                </expectedContent>
+                            </attribute>
+
                         </expectedAttributes>
                         <expectedContent/>
                     </element>
