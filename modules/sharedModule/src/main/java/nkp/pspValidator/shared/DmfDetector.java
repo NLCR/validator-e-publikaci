@@ -24,8 +24,8 @@ public class DmfDetector {
     public static final String DEFAULT_MONOGRAPH_VERSION = "1.0";
     public static final String DEFAULT_PERIODICAL_VERSION = "1.4";
     public static final String DEFAULT_SOUND_RECORDING_VERSION = "0.2";
-    public static final String DEFAULT_EMONOGRAPH_VERSION = "2.3";
-    public static final String DEFAULT_EPERIODICAL_VERSION = "2.3";
+    public static final String DEFAULT_EMONOGRAPH_VERSION = "2.4";
+    public static final String DEFAULT_EPERIODICAL_VERSION = "2.4";
 
     /**
      * Validátor zkontroluje hlavní mets soubor, konkrétně kořenový element <mets:mets> na hodnotu atributu TYPE. Platí:

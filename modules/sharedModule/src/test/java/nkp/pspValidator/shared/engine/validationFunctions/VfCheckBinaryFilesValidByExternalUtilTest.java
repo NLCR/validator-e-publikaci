@@ -116,7 +116,7 @@ public class VfCheckBinaryFilesValidByExternalUtilTest {
 
         detectImageTools(externalUtilManager);
         ValidatorConfigurationManager validatorConfigManager = new ValidatorConfigurationManager(FDMD_ROOT);
-        FdmfConfiguration fdmfConfig = new FdmfRegistry(validatorConfigManager).getFdmfConfig(new Dmf(Dmf.Type.EMONOGRAPH, "2.3"));
+        FdmfConfiguration fdmfConfig = new FdmfRegistry(validatorConfigManager).getFdmfConfig(new Dmf(Dmf.Type.EMONOGRAPH, "2.4"));
         fdmfConfig.initBinaryFileProfiles(externalUtilManager);
         Validator validator = ValidatorFactory.buildValidator(fdmfConfig, new File("/tmp"), validatorConfigManager.getDictionaryManager());
         return validator.getEngine();
