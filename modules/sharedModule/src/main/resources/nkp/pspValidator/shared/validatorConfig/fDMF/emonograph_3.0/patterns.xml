@@ -57,21 +57,11 @@
 
     <pattern-def name="ORIGINAL-COPY-PDF_FILENAME">
         <description>Vzor pro jména PDF souborů v rámci adresáře ORIGINAL-DIR.</description>
-        <!--
-        Oproti emonograph_2.3 je už jednoznačně uveden prefix "oc", už ne "OC" (viz DMF_ebornmonografie_2.4.pdf, str. 8 vs DMF_ebornmonografie_2.3.pdf, str. 7).
-        https://old.ndk.cz/standardy-digitalizace/DMF_ebornmonografie_2.3.pdf
-        https://old.ndk.cz/standardy-digitalizace/DMF_ebornmonografie_2.4.pdf
-        -->
         <expression caseSensitive="true">oc.+\.pdf</expression>
     </pattern-def>
 
     <pattern-def name="ORIGINAL-COPY-EPUB_FILENAME">
         <description>Vzor pro jména EPUB souborů v rámci adresáře ORIGINAL-DIR.</description>
-        <!--
-        Oproti emonograph_2.3 je už jednoznačně uveden prefix "oc", už ne "OC" (viz DMF_ebornmonografie_2.4.pdf, str. 8 vs DMF_ebornmonografie_2.3.pdf, str. 7).
-        https://old.ndk.cz/standardy-digitalizace/DMF_ebornmonografie_2.3.pdf
-        https://old.ndk.cz/standardy-digitalizace/DMF_ebornmonografie_2.4.pdf
-        -->
         <expression caseSensitive="true">oc.+\.epub</expression>
     </pattern-def>
 
