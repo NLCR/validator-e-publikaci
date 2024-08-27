@@ -3,7 +3,7 @@
         xmlns="http://www.nkp.cz/validatorEpublikaci/2.2.3/metadataProfile"
         name="Primary METS header"
         validatorVersion="2.2.3"
-        dmf="eperiodical_2.4"
+        dmf="eperiodical_2.5"
 >
 
     <info>

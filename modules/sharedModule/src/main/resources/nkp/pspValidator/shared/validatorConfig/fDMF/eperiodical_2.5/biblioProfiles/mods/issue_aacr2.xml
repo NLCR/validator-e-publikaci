@@ -3,11 +3,11 @@
         xmlns="http://www.nkp.cz/validatorEpublikaci/2.2.3/metadataProfile"
         name="MODS issue (AACR2)"
         validatorVersion="2.2.3"
-        dmf="eperiodical_2.4"
+        dmf="eperiodical_2.5"
 >
 
     <info>
-        <text>DMF Elektronické publikace (periodika) 2.4 očekává MODS verze 3.6. Dále se zde upřesňují očekávaná metadata pro číslo periodika
+        <text>DMF Elektronické publikace (periodika) 2.5 očekává MODS verze 3.6. Dále se zde upřesňují očekávaná metadata pro číslo periodika
             pro záznamy zpracované podle katalogizačních pravidel AACR2.
         </text>
         <url>http://www.loc.gov/standards/mods/</url>

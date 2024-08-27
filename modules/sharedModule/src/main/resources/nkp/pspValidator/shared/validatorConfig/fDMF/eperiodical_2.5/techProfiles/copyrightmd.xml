@@ -3,12 +3,12 @@
         xmlns="http://www.nkp.cz/validatorEpublikaci/2.2.3/metadataProfile"
         name="Copyright MD"
         validatorVersion="2.2.3"
-        dmf="eperiodical_2.4"
+        dmf="eperiodical_2.5"
 >
 
     <info>
         <text>
-            Profil pro validaci Copyrigh MD záznamu stránky v sekundárním METSu pro DMF Periodika 1.7.1.
+            Profil pro validaci Copyright MD záznamu stránky v sekundárním METSu pro DMF Elektronické publikace (periodika) 2.5.
         </text>
         <url description="popis formátu copyrightMD">http://www.cdlib.org/groups/rmg/</url>
         <url description="XSD pro copyrightMD 0.91">http://www.cdlib.org/groups/rmg/docs/copyrightMD.xsd</url>

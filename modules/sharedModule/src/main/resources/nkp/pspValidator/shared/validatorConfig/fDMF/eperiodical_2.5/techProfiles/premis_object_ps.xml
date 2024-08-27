@@ -3,12 +3,12 @@
         xmlns="http://www.nkp.cz/validatorEpublikaci/2.2.3/metadataProfile"
         name="PREMIS Object pro PS (primární sken)"
         validatorVersion="2.2.3"
-        dmf="eperiodical_2.4"
+        dmf="eperiodical_2.5"
 >
 
     <info>
         <text>
-            Profil pro validaci PREMIS Object záznamu primárního skenu (PS) stránky v sekundárním METSu pro DMF Periodika 1.7.1.
+            Profil pro validaci PREMIS Object záznamu primárního skenu (PS) stránky v sekundárním METSu pro DMF Elektronické publikace (periodika) 2.5.
         </text>
         <url description="popis formátu PREMIS">http://www.loc.gov/standards/premis/</url>
         <url description="XSD pro PREMIS 2.2">http://www.loc.gov/standards/premis/v2/premis-v2-2.xsd</url>

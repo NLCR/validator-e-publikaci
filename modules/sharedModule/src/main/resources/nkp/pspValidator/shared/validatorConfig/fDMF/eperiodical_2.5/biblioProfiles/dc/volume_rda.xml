@@ -3,10 +3,10 @@
         xmlns="http://www.nkp.cz/validatorEpublikaci/2.2.3/metadataProfile"
         name="DC volume (RDA)"
         validatorVersion="2.2.3"
-        dmf="eperiodical_2.4"
+        dmf="eperiodical_2.5"
 >
     <info>
-        <text>DMF Elektronické publikace (periodika) 2.4 očekává Dublin Core verze 1.1. Dále se zde upřesňují očekávaná metadata pro ročník
+        <text>DMF Elektronické publikace (periodika) 2.5 očekává Dublin Core verze 1.1. Dále se zde upřesňují očekávaná metadata pro ročník
             periodika pro záznamy zpracované podle katalogizačních pravidel RDA.
         </text>
         <url description="popis Dublin Core 1.1">http://dublincore.org/documents/dces/</url>
