@@ -3,11 +3,11 @@
         xmlns="http://www.nkp.cz/validatorEpublikaci/2.2.3/metadataProfile"
         name="MODS chapter (AACR2)"
         validatorVersion="2.2.3"
-        dmf="emonograph_2.4"
+        dmf="emonograph_3.0"
 >
 
     <info>
-        <text>DMF Elektronické publikace (monografie) 2.4  očekává MODS verze 3.6. Dále se zde upřesňují očekávaná metadata pro vnitřní část typu
+        <text>DMF Elektronické publikace (monografie) 3.0  očekává MODS verze 3.6. Dále se zde upřesňují očekávaná metadata pro vnitřní část typu
             kapitola pro záznamy zpracované podle katalogizačních pravidel AACR2.
         </text>
         <url>http://www.loc.gov/standards/mods/</url>

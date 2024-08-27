@@ -3,10 +3,10 @@
         xmlns="http://www.nkp.cz/validatorEpublikaci/2.2.3/metadataProfile"
         name="DC volume of single volume monograph (AACR2)"
         validatorVersion="2.2.3"
-        dmf="emonograph_2.4"
+        dmf="emonograph_3.0"
 >
     <info>
-        <text>DMF Elektronické publikace (monografie) 2.4  očekává Dublin Core verze 1.1. Dále se zde upřesňují očekávaná metadata pro svazek
+        <text>DMF Elektronické publikace (monografie) 3.0  očekává Dublin Core verze 1.1. Dále se zde upřesňují očekávaná metadata pro svazek
             vícesvazkové monografie pro záznamy zpracované podle katalogizačních pravidel AACR2.
         </text>
         <url description="popis Dublin Core 1.1">http://dublincore.org/documents/dces/</url>

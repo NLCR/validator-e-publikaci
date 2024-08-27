@@ -1,6 +1,6 @@
 <fDMF xmlns="http://www.nkp.cz/validatorEpublikaci/2.2.3/fdmfConfig"
       validatorVersion="2.2.3"
-      dmf="emonograph_2.4"
+      dmf="emonograph_3.0"
 >
     <description>
         Zde jsou definovány validační pravidla. K samotným validacím se používají validační funkce, jejichž parametry
