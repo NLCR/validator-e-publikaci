@@ -37,6 +37,7 @@
             </element>
 
             <element name="dc:creator"
+                     mandatory="false"
                      errorMessage="Očekáván povinný element dc:creator obsahující jméno tvůrce.">
                 <expectedContent/>
             </element>
@@ -62,7 +63,7 @@
                 <expectedContent/>
             </element>
 
-            <element name="dc:format" mandatory="false">
+            <element name="dc:format" mandatory="true">
                 <expectedContent/>
             </element>
 
@@ -78,5 +79,3 @@
     </rootElement>
 
 </metadataProfile>
-
-	

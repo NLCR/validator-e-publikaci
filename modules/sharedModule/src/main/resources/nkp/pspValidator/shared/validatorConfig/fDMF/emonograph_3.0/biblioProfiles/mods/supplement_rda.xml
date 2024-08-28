@@ -32,16 +32,21 @@
 
     <rootElement name="mods:mods">
         <expectedAttributes>
-            <attribute name="ID">
+            <attribute name="ID" mandatory="true">
                 <expectedContent>
                     <regexp>MODS_SUPPL_[0-9]{4}</regexp>>
                 </expectedContent>
             </attribute>
+            <attribute name="version" mandatory="false">
+                <expectedContent>
+                    <value>3.6</value>
+                </expectedContent>
+            </attribute>
         </expectedAttributes>
         <expectedElements>
-            <element name="mods:titleInfo">
+            <element name="mods:titleInfo" mandatory="true">
                 <expectedElements>
-                    <element name="mods:title">
+                    <element name="mods:title" mandatory="true">
                         <expectedContent/>
                     </element>
 
@@ -61,7 +66,7 @@
 
             <element name="mods:name" specification="not(mods:etal)" mandatory="false">
                 <expectedAttributes>
-                    <attribute name="type">
+                    <attribute name="type" mandatory="true">
                         <expectedContent>
                             <oneOf>
                                 <value>personal</value>
@@ -73,7 +78,7 @@
                     </attribute>
                 </expectedAttributes>
                 <expectedElements>
-                    <element name="mods:namePart">
+                    <element name="mods:namePart" mandatory="true">
                         <expectedAttributes>
                             <attribute name="type" mandatory="false">
                                 <expectedContent>
@@ -106,7 +111,7 @@
                         <expectedElements>
                             <element name="mods:roleTerm" mandatory="false">
                                 <expectedAttributes>
-                                    <attribute name="type">
+                                    <attribute name="type" mandatory="true">
                                         <expectedContent>
                                             <value>code</value>
                                         </expectedContent>
@@ -152,7 +157,7 @@
                 </expectedContent>
             </element>
 
-            <element name="mods:genre" specification="text()='supplement'"/>
+            <element name="mods:genre" specification="text()='supplement'" mandatory="true"/>
 
             <!--origin info-->
 
@@ -439,7 +444,7 @@
                                     </oneOf>
                                 </expectedContent>
                             </attribute>
-                            <attribute name="type">
+                            <attribute name="type" mandatory="false">
                                 <expectedContent>
                                     <oneOf>
                                         <value>media</value>
@@ -517,33 +522,22 @@
                 </expectedElements>
             </element>
 
-            <!--Mezinarodni desetinne trideni-->
-            <element name="mods:classification" specification="@authority='udc'" mandatory="false">
+            <element name="mods:classification" mandatory="false">
                 <expectedAttributes>
-                    <attribute name="authority"/>
-                    <attribute name="edition"/>
-                </expectedAttributes>
-                <expectedContent/>
-            </element>
+                    <attribute name="authority" mandatory="true">
+                        <expectedContent>
+                            <oneOf>
+                                <value>udc</value>
+                                <value>Konspekt</value>
+                            </oneOf>
+                        </expectedContent>
+                    </attribute>
 
-            <!--Konspekt-->
-            <element name="mods:classification" specification="@authority='Konspekt'" mandatory="false">
-                <expectedAttributes>
-                    <attribute name="authority"/>
-                    <attribute name="edition">
+                    <attribute name="edition" mandatory="false">
                         <expectedContent>
                             <value>Konspekt</value>
                         </expectedContent>
                     </attribute>
-                </expectedAttributes>
-                <expectedContent/>
-            </element>
-
-            <!--ani Mezinarodni desetinne trideni ani Konspekt-->
-            <element name="mods:classification" specification="@authority!='udc' and @authority!='Konspekt'" mandatory="false">
-                <expectedAttributes>
-                    <attribute name="authority"/>
-                    <attribute name="edition"/>
                 </expectedAttributes>
                 <expectedContent/>
             </element>
@@ -640,65 +634,6 @@
                 <expectedContent/>
             </element>
 
-            <element name="mods:part" specification="@type='pageNumber" mandatory="false">
-                <expectedAttributes>
-                    <attribute name="type"/>
-                </expectedAttributes>
-                <expectedElements>
-                    <element name="mods:detail" mandatory="false">
-                        <expectedElements>
-                            <element name="mods:number">
-                                <expectedContent/>
-                            </element>
-                        </expectedElements>
-                    </element>
-                    <element name="mods:extent" mandatory="false">
-                        <expectedElements>
-                            <element name="mods:start" mandatory="false">
-                                <expectedContent/>
-                            </element>
-                            <element name="mods:end" mandatory="false">
-                                <expectedContent/>
-                            </element>
-                            <element name="mods:total" mandatory="false">
-                                <expectedAttributes>
-                                    <attribute name="unit">
-                                        <expectedContent>
-                                            <value>pages</value>
-                                        </expectedContent>
-                                    </attribute>
-                                </expectedAttributes>
-                                <expectedContent/>
-                            </element>
-                        </expectedElements>
-                    </element>
-                </expectedElements>
-            </element>
-
-            <element name="mods:part" specification="@type='pageIndex" mandatory="false">
-                <expectedAttributes>
-                    <attribute name="type"/>
-                </expectedAttributes>
-                <expectedElements>
-                    <element name="mods:detail" mandatory="false">
-                        <expectedElements>
-                            <element name="mods:number">
-                                <expectedContent/>
-                            </element>
-                        </expectedElements>
-                    </element>
-                    <element name="mods:extent" mandatory="false">
-                        <expectedElements>
-                            <element name="mods:start" mandatory="false">
-                                <expectedContent/>
-                            </element>
-                            <element name="mods:end" mandatory="false">
-                                <expectedContent/>
-                            </element>
-                        </expectedElements>
-                    </element>
-                </expectedElements>
-            </element>
 
             <element name="mods:recordInfo">
                 <expectedElements>
@@ -779,5 +714,3 @@
     </rootElement>
 
 </metadataProfile>
-
-	
