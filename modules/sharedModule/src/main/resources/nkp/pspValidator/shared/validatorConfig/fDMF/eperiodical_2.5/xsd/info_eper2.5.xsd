@@ -33,8 +33,7 @@
                                         <xs:restriction base="xs:string">
                                             <xs:enumeration value="isbn"/>
                                             <xs:enumeration value="issn"/>
-                                            <xs:enumeration value="ccnb"/>
-                                            <xs:enumeration value="urnnbn"/>
+                                            <xs:enumeration value="ccnb"/>                                            
                                             <xs:enumeration value="uuid"/>
                                         </xs:restriction>
                                     </xs:simpleType>
