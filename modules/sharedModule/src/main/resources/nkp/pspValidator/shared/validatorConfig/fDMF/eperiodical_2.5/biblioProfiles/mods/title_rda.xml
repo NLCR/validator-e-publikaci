@@ -196,7 +196,7 @@
                                 <expectedContent/>
                             </attribute>
                             <!--
-                           Změna oproti textu (str. 15)
+                           Změna oproti textu (str. 14)
                            Point nechávám nepovinný, protože dateIssued může být jediné datum, ne nutně rozsah.
                            -->
                             <attribute name="point" mandatory="false"/>
@@ -719,6 +719,9 @@
                                         </expectedContent>
                                     </attribute>
                                 </expectedAttributes>
+                                <expectedContent>
+                                    <fromDictionary name="iso6392languageCodes"/>
+                                </expectedContent>
                             </element>
                         </expectedElements>
                     </element>
@@ -754,20 +757,18 @@
                 </expectedElements>
             </element>
 
-            <!--Mezinarodni desetinne trideni-->
-            <element name="mods:classification" specification="@authority='udc'" mandatory="false">
+            <element name="mods:classification" mandatory="false">
                 <expectedAttributes>
-                    <attribute name="authority"/>
-                    <attribute name="edition"/>
-                </expectedAttributes>
-                <expectedContent/>
-            </element>
+                    <attribute name="authority" mandatory="true">
+                        <expectedContent>
+                            <oneOf>
+                                <value>udc</value>
+                                <value>Konspekt</value>
+                            </oneOf>
+                        </expectedContent>
+                    </attribute>
 
-            <!--Konspekt-->
-            <element name="mods:classification" specification="@authority='Konspekt'" mandatory="false">
-                <expectedAttributes>
-                    <attribute name="authority"/>
-                    <attribute name="edition">
+                    <attribute name="edition" mandatory="false">
                         <expectedContent>
                             <value>Konspekt</value>
                         </expectedContent>
