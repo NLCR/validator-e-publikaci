@@ -91,7 +91,7 @@
 
                     <element name="mods:nameIdentifier" mandatory="false">
                         <expectedAttributes>
-                            <attribute name="type">
+                            <attribute name="type" mandatory="false">
                                 <expectedContent/>
                             </attribute>
                         </expectedAttributes>
@@ -398,7 +398,7 @@
                 <expectedElements>
                     <element name="mods:form">
                         <expectedAttributes>
-                            <attribute name="type">
+                            <attribute name="type" mandatory="false">
                                 <expectedContent>
                                     <oneOf>
                                         <value>media</value>
@@ -485,20 +485,18 @@
                 </expectedElements>
             </element>
 
-            <!--Mezinarodni desetinne trideni-->
-            <element name="mods:classification" specification="@authority='udc'" mandatory="false">
+            <element name="mods:classification" mandatory="false">
                 <expectedAttributes>
-                    <attribute name="authority"/>
-                    <attribute name="edition"/>
-                </expectedAttributes>
-                <expectedContent/>
-            </element>
+                    <attribute name="authority" mandatory="true">
+                        <expectedContent>
+                            <oneOf>
+                                <value>udc</value>
+                                <value>Konspekt</value>
+                            </oneOf>
+                        </expectedContent>
+                    </attribute>
 
-            <!--Konspekt-->
-            <element name="mods:classification" specification="@authority='Konspekt'" mandatory="false">
-                <expectedAttributes>
-                    <attribute name="authority"/>
-                    <attribute name="edition">
+                    <attribute name="edition" mandatory="false">
                         <expectedContent>
                             <value>Konspekt</value>
                         </expectedContent>
@@ -679,5 +677,3 @@
     </rootElement>
 
 </metadataProfile>
-
-	
