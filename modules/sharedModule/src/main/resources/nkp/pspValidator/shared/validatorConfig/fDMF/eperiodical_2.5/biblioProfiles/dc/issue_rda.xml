@@ -73,6 +73,10 @@
                 <expectedContent/>
             </element>
 
+            <element name="dc:language" mandatory="false">
+                <expectedContent/>
+            </element>
+
             <element name="dc:source" mandatory="false">
                 <expectedContent/>
             </element>
