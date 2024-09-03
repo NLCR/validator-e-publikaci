@@ -112,7 +112,7 @@
 
                     <element name="mods:nameIdentifier" mandatory="false">
                         <expectedAttributes>
-                            <attribute name="type">
+                            <attribute name="type" mandatory="false">
                                 <expectedContent/>
                             </attribute>
                         </expectedAttributes>
@@ -162,7 +162,7 @@
                         <expectedContent>
                             <oneOf>
                                 <value>news</value>
-                                <value>table of content</value>
+                                <value>tableOfContents</value>
                                 <value>advertisement</value>
                                 <value>abstract</value>
                                 <value>introduction</value>
@@ -171,14 +171,16 @@
                                 <value>bibliography</value>
                                 <value>editorsNote</value>
                                 <value>preface</value>
-                                <value>main article</value>
+                                <value>mainArticle</value>
                                 <value>index</value>
                                 <value>unspecified</value>
                             </oneOf>
                         </expectedContent>
                     </attribute>
                 </expectedAttributes>
-                <expectedContent/>
+                <expectedContent>
+                    <value>electronic article</value>
+                </expectedContent>
             </element>
 
             <element name="mods:language" mandatory="false">
@@ -229,9 +231,8 @@
             <element name="mods:subject" mandatory="false">
                 <expectedAttributes>
                     <attribute name="authority" mandatory="false">
-                        <expectedContent>
-                            <value>Konspekt</value>
-                        </expectedContent>
+                        <!--spravne by zde mel byt vyber ze slovniku https://www.loc.gov/standards/sourcelist/subject.html-->
+                        <expectedContent/>
                     </attribute>
                 </expectedAttributes>
                 <expectedElements>
@@ -264,20 +265,18 @@
                 </expectedElements>
             </element>
 
-            <!--Mezinarodni desetinne trideni-->
-            <element name="mods:classification" specification="@authority='udc'" mandatory="false">
+            <element name="mods:classification" mandatory="false">
                 <expectedAttributes>
-                    <attribute name="authority"/>
-                    <attribute name="edition"/>
-                </expectedAttributes>
-                <expectedContent/>
-            </element>
+                    <attribute name="authority" mandatory="true">
+                        <expectedContent>
+                            <oneOf>
+                                <value>udc</value>
+                                <value>Konspekt</value>
+                            </oneOf>
+                        </expectedContent>
+                    </attribute>
 
-            <!--Konspekt-->
-            <element name="mods:classification" specification="@authority='Konspekt'" mandatory="false">
-                <expectedAttributes>
-                    <attribute name="authority"/>
-                    <attribute name="edition">
+                    <attribute name="edition" mandatory="false">
                         <expectedContent>
                             <value>Konspekt</value>
                         </expectedContent>
@@ -366,7 +365,7 @@
                 </expectedElements>
             </element>
 
-            <element name="mods:relatedItem" mandatory="false" ignoreUnexpectedChildElements="true"/>
+            <element name="mods:relatedItem" specification="not(@type='references')" mandatory="false" ignoreUnexpectedChildElements="true"/>
 
             <element name="mods:recordInfo">
                 <expectedElements>
@@ -433,6 +432,245 @@
                     </element>
                 </expectedElements>
             </element>
+
+            <element name="mods:relatedItem" specification="@type='references' and not(mods:note[@type='source note'])" mandatory="false">
+                <expectedAttributes>
+                    <attribute name="type"/>
+                    <attribute name="ID" mandatory="false">
+                        <expectedContent>
+                            <regexp>ref[0-9]{4}</regexp>
+                        </expectedContent>
+                    </attribute>
+                </expectedAttributes>
+
+                <expectedElements>
+                    <element name="mods:titleInfo" mandatory="true">
+                        <expectedElements>
+
+                            <element name="mods:title" mandatory="true">
+                                <expectedContent/>
+                            </element>
+        
+                            <element name="mods:partNumber" mandatory="false">
+                                <expectedContent/>
+                            </element>
+
+                        </expectedElements>
+                    </element>
+
+                    <element name="mods:name" mandatory="false">
+                        
+                        <expectedElements>
+
+                            <element name="mods:namePart" mandatory="true">
+                                <expectedAttributes>
+                                    <attribute name="type" mandatory="false">
+                                        <expectedContent>
+                                            <oneOf>
+                                                <value>family</value>
+                                                <value>given</value>
+                                            </oneOf>
+                                        </expectedContent>
+                                    </attribute>
+                                </expectedAttributes>
+                                <expectedContent/>
+                            </element>
+
+                        </expectedElements>
+                    </element>
+                    
+                    <element name="mods:originInfo" mandatory="false">
+                        <expectedElements>
+                            <element name="mods:dateIssued" mandatory="false">
+                                <expectedContent/>
+                            </element>
+
+                            <element name="mods:edition" mandatory="false">
+                                <expectedContent/>
+                            </element>
+
+
+                        </expectedElements>
+                    </element>
+
+                    <element name="mods:identifier" mandatory="false">
+                        <expectedAttributes>
+                            <attribute name="type" mandatory="true">
+                                <expectedContent>
+                                    <oneOf>
+                                        <value>doi</value>
+                                        <value>isbn</value>
+                                    </oneOf>
+                                </expectedContent>
+                            </attribute>
+                        </expectedAttributes>
+                        <expectedContent/>
+                    </element>
+
+                    <element name="mods:part" mandatory="false">
+                        <expectedElements>
+                            <element name="mods:extent" mandatory="true">
+
+                                <expectedAttributes>
+                                    <attribute name="unit" mandatory="true">
+                                        <expectedContent>
+                                            <value>pages</value>
+                                        </expectedContent>
+                                    </attribute>
+                                </expectedAttributes>
+
+                                <expectedElements>
+                                    <element name="mods:start" mandatory="true">
+                                        <expectedContent/>
+                                    </element>
+                                    <element name="mods:end" mandatory="false">
+                                        <expectedContent/>
+                                    </element>
+                                </expectedElements>
+
+                            </element>
+                        </expectedElements>
+                    </element>
+
+                    <element name="mods:relatedItem" mandatory="false">
+                        <expectedAttributes>
+                            <attribute name="type" mandatory="true">
+                                <expectedContent>
+                                    <value>host</value>
+                                </expectedContent>
+                            </attribute>
+                        </expectedAttributes>
+
+                        <expectedElements>
+                            <element name="mods:titleInfo" mandatory="false">
+                                <expectedElements>
+                                    
+                                    <element name="mods:title" mandatory="true">
+                                        <expectedContent/>
+                                    </element>
+
+                                </expectedElements>                                
+                            </element>
+
+                            <element name="mods:originInfo" mandatory="false">
+                                <expectedElements>
+
+                                    <element name="mods:dateIssued" mandatory="false">
+                                        <expectedContent/>
+                                    </element>
+
+                                    <element name="mods:edition" mandatory="false">
+                                        <expectedContent/>
+                                    </element>
+                                    
+                                </expectedElements>
+                            </element>
+
+                            <element name="mods:identifier" mandatory="false">
+                                <expectedAttributes>
+                                    <attribute name="type" mandatory="true">
+                                        <expectedContent>
+                                            <oneOf>
+                                                <value>isbn</value>
+                                                <value>issn</value>
+                                            </oneOf>
+                                        </expectedContent>
+                                    </attribute>
+                                </expectedAttributes>
+                                <expectedContent/>
+                            </element>
+
+                            <!--nejprve zkousime, zda vubec mods:part ma povinny mods:detail-->
+                            <element name="mods:part" mandatory="false">
+                                <expectedElements>
+                                    <element name="mods:detail" mandatory="true">
+                                        <expectedAttributes>
+                                            <attribute name="type" mandatory="true">
+                                                <expectedContent>
+                                                    <oneOf>
+                                                        <value>volume</value>
+                                                        <value>issue</value>
+                                                    </oneOf>
+                                                </expectedContent>
+                                            </attribute>
+                                        </expectedAttributes>
+                                    </element>
+                                </expectedElements>
+
+                            </element>
+
+                            <!--az pak zkousime matchnout mods:part k volume nebo mods:part k issue-->
+                            <element name="mods:part" specification="mods:detail[@type='volume']" mandatory="false">
+                                <expectedElements>
+                                    <element name="mods:detail" mandatory="true">
+                                        <expectedAttributes>
+                                            <attribute name="type" mandatory="true">
+                                                <expectedContent>
+                                                    <value>volume</value>
+                                                </expectedContent>
+                                            </attribute>
+                                        </expectedAttributes>
+
+                                        <expectedElements>
+                                            <element name="mods:number" mandatory="true">
+                                                <expectedContent/>
+                                            </element>
+                                        </expectedElements>
+                                    </element>
+                                </expectedElements>
+                            </element>
+
+                            <element name="mods:part" specification="mods:detail[@type='issue']" mandatory="false">
+                                <expectedElements>
+                                    <element name="mods:detail" mandatory="true">
+                                        <expectedAttributes>
+                                            <attribute name="type" mandatory="true">
+                                                <expectedContent>
+                                                    <value>issue</value>
+                                                </expectedContent>
+                                            </attribute>
+                                        </expectedAttributes>
+
+                                        <expectedElements>
+                                            <element name="mods:number" mandatory="true">
+                                                <expectedContent/>
+                                            </element>
+                                        </expectedElements>
+                                    </element>
+                                </expectedElements>
+                            </element>
+
+                        </expectedElements>
+                    </element>                    
+                    
+                </expectedElements>
+
+                <!--mods:note[@type='source note'] sem nedavame, meni pravidla pro cely mods:relatedItem. Proto musi byt zvlast definovan mods:relatedItem s obsazenym mods:note-->
+            </element>
+
+            <element name="mods:relatedItem" specification="@type='references' and mods:note[@type='source note']" mandatory="false">
+                <expectedAttributes>
+                    <attribute name="type"/>
+                    <attribute name="ID" mandatory="false">
+                        <expectedContent>
+                            <regexp>ref[0-9]{4}</regexp>
+                        </expectedContent>
+                    </attribute>
+                </expectedAttributes>
+                <expectedElements>
+                    <element name="mods:note">
+                        <expectedAttributes>
+                            <attribute name="type" mandatory="true">
+                                <expectedContent>
+                                    <value>source note</value>
+                                </expectedContent>
+                            </attribute>
+                        </expectedAttributes>
+                    </element>
+                </expectedElements>
+            </element>
+
+            
 
         </expectedElements>
     </rootElement>
