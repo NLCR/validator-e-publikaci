@@ -95,6 +95,11 @@
                     </element>
 
                     <element name="mods:nameIdentifier" mandatory="false">
+                        <expectedAttributes>
+                            <attribute name="type" mandatory="false">
+                                <expectedContent/>
+                            </attribute>
+                        </expectedAttributes>
                         <expectedContent/>
                     </element>
 
@@ -372,5 +377,3 @@
     </rootElement>
 
 </metadataProfile>
-
-	
