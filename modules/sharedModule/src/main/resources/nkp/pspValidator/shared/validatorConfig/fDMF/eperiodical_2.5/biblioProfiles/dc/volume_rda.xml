@@ -21,7 +21,7 @@
     <rootElement name="oai_dc:dc">
         <expectedElements>
 
-            <element name="dc:description" mandatory="false">
+            <element name="dc:description" errorMessage="Očekáváno pořadové vydání ročníku" mandatory="true">
                 <expectedContent/>
             </element>
 

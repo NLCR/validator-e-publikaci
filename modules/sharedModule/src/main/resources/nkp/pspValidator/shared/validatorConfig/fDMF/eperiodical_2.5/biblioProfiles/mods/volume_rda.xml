@@ -55,11 +55,10 @@
                         </expectedContent>
                     </attribute>
 
-                    <attribute name="usage">
-                        <expectedContent>
-                            <!--neni jasne, jestli je hodnota 'primary' povinna, nebo jen doporucena-->
-                            <!--<value>primary</value>-->
-                        </expectedContent>
+                    <attribute name="usage" mandatory="false">
+                        <recommendedContent>                            
+                            <value>primary</value>
+                        </recommendedContent>
                     </attribute>
                 </expectedAttributes>
                 <expectedElements>
@@ -120,14 +119,7 @@
             <element name="mods:originInfo">
                 <expectedElements>
                     <element name="mods:dateIssued">
-                        <expectedAttributes>
-                            <!--
-                            TODO: tady je vnitřní spor v textu DMF_ebornperiodika_2.4.pdf (str. 21).
-                            Jednak se uvádí, že point je povinný (M),
-                            ale o řádek výše se pro dateIssued uvádí, že jde o DATUM nebo rozsah datumů, takže ne jen rozsah.
-                            A pro ne-rozsah point nedává smysl, jedině, že by byly stejné hodnoty pro start i end.
-                            Proto zde nechávám @point nepovinný.
-                            -->
+                        <expectedAttributes>                            
                             <attribute name="point" mandatory="false"/>
                             <attribute name="qualifier" mandatory="false"/>
                         </expectedAttributes>
