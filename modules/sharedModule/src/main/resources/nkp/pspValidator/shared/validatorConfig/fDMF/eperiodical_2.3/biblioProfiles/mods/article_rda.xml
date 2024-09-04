@@ -223,9 +223,7 @@
             <element name="mods:subject" mandatory="false">
                 <expectedAttributes>
                     <attribute name="authority" mandatory="false">
-                        <expectedContent>
-                            <value>Konspekt</value>
-                        </expectedContent>
+                        <expectedContent/>
                     </attribute>
                 </expectedAttributes>
                 <expectedElements>
@@ -366,5 +364,3 @@
     </rootElement>
 
 </metadataProfile>
-
-	
