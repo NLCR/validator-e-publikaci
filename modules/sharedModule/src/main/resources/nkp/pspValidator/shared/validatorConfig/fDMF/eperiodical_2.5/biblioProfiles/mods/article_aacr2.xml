@@ -182,6 +182,13 @@
                                 <value>main article</value>
                                 <value>index</value>
                                 <value>unspecified</value>
+                                <!--hodnoty pouze v PPP:-->
+                                <value>editorial</value>
+                                <value>obituary</value>
+                                <value>bibliographicalPortrait</value>
+                                <value>colophon</value>
+                                <value>interview</value>
+                                <value>anotation</value>
                             </oneOf>
                         </expectedContent>
                     </attribute>

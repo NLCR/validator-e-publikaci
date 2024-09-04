@@ -174,6 +174,13 @@
                                 <value>mainArticle</value>
                                 <value>index</value>
                                 <value>unspecified</value>
+                                <!--hodnoty pouze v PPP:-->
+                                <value>editorial</value>
+                                <value>obituary</value>
+                                <value>bibliographicalPortrait</value>
+                                <value>colophon</value>
+                                <value>interview</value>
+                                <value>anotation</value>
                             </oneOf>
                         </expectedContent>
                     </attribute>
@@ -450,7 +457,7 @@
                             <element name="mods:title" mandatory="true">
                                 <expectedContent/>
                             </element>
-        
+
                             <element name="mods:partNumber" mandatory="false">
                                 <expectedContent/>
                             </element>
@@ -459,7 +466,7 @@
                     </element>
 
                     <element name="mods:name" mandatory="false">
-                        
+
                         <expectedElements>
 
                             <element name="mods:namePart" mandatory="true">
@@ -478,7 +485,7 @@
 
                         </expectedElements>
                     </element>
-                    
+
                     <element name="mods:originInfo" mandatory="false">
                         <expectedElements>
                             <element name="mods:dateIssued" mandatory="false">
@@ -544,12 +551,12 @@
                         <expectedElements>
                             <element name="mods:titleInfo" mandatory="false">
                                 <expectedElements>
-                                    
+
                                     <element name="mods:title" mandatory="true">
                                         <expectedContent/>
                                     </element>
 
-                                </expectedElements>                                
+                                </expectedElements>
                             </element>
 
                             <element name="mods:originInfo" mandatory="false">
@@ -562,7 +569,7 @@
                                     <element name="mods:edition" mandatory="false">
                                         <expectedContent/>
                                     </element>
-                                    
+
                                 </expectedElements>
                             </element>
 
@@ -641,8 +648,8 @@
                             </element>
 
                         </expectedElements>
-                    </element>                    
-                    
+                    </element>
+
                 </expectedElements>
 
                 <!--mods:note[@type='source note'] sem nedavame, meni pravidla pro cely mods:relatedItem. Proto musi byt zvlast definovan mods:relatedItem s obsazenym mods:note-->
@@ -670,11 +677,9 @@
                 </expectedElements>
             </element>
 
-            
+
 
         </expectedElements>
     </rootElement>
 
 </metadataProfile>
-
-	
