@@ -394,7 +394,7 @@
                                     </attribute>
                                     <attribute name="MIMETYPE" mandatory="true">
                                         <expectedContent>
-                                            <value>text/html</value>
+                                            <value>text/xml</value>
                                         </expectedContent>
                                     </attribute>
                                 </expectedAttributes>
