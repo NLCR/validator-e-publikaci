@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadataProfile
-        xmlns="http://www.nkp.cz/validatorEpublikaci/2.2.3/metadataProfile"
+        xmlns="http://www.nkp.cz/validatorEpublikaci/2.3/metadataProfile"
         name="MODS volume of single volume monograph (RDA)"
-        validatorVersion="2.2.3"
+        validatorVersion="2.3"
         dmf="emonograph_2.4"
 >
 
@@ -130,7 +130,7 @@
 
                     <element name="mods:nameIdentifier" mandatory="false">
                         <expectedAttributes>
-                            <attribute name="type">
+                            <attribute name="type" mandatory="false">
                                 <expectedContent/>
                             </attribute>
                         </expectedAttributes>
@@ -850,5 +850,3 @@
     </rootElement>
 
 </metadataProfile>
-
-	

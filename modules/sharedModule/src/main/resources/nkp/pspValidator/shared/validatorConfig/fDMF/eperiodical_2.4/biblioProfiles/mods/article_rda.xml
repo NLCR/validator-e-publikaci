@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadataProfile
-        xmlns="http://www.nkp.cz/validatorEpublikaci/2.2.3/metadataProfile"
+        xmlns="http://www.nkp.cz/validatorEpublikaci/2.3/metadataProfile"
         name="MODS internal part - article (RDA)"
-        validatorVersion="2.2.3"
+        validatorVersion="2.3"
         dmf="eperiodical_2.4"
 >
 
@@ -112,7 +112,7 @@
 
                     <element name="mods:nameIdentifier" mandatory="false">
                         <expectedAttributes>
-                            <attribute name="type">
+                            <attribute name="type" mandatory="false">
                                 <expectedContent/>
                             </attribute>
                         </expectedAttributes>
@@ -229,9 +229,7 @@
             <element name="mods:subject" mandatory="false">
                 <expectedAttributes>
                     <attribute name="authority" mandatory="false">
-                        <expectedContent>
-                            <value>Konspekt</value>
-                        </expectedContent>
+                        <expectedContent/>
                     </attribute>
                 </expectedAttributes>
                 <expectedElements>
@@ -438,5 +436,3 @@
     </rootElement>
 
 </metadataProfile>
-
-	
