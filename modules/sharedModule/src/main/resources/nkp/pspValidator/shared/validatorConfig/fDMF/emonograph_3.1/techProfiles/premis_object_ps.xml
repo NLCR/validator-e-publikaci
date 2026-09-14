@@ -86,6 +86,7 @@
                                                      repeatable="false">
                                                 <expectedContent>
                                                     <value>deleted</value>
+                                                    <value>bit-level</value>
                                                 </expectedContent>
                                             </element>
 
