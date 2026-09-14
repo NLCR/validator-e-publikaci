@@ -75,6 +75,7 @@
                                                 <value>organization</value>
                                                 <value>person</value>
                                                 <value>software</value>
+                                                <value>hardware</value>
                                             </oneOf>
                                         </recommendedContent>
                                     </element>
