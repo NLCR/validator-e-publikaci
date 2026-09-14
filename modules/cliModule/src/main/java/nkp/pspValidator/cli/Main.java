@@ -145,6 +145,15 @@ public class Main {
                 .create());
         options.addOption(OptionBuilder
                 .withDescription(replaceUmlaut(
+                        "Preferovaná verze DMF pro validaci skládaných periodik. " +
+                                "Použije se k validaci, pokud je balík typu Skládané Periodikum, data balíku neobsahují informaci o vhodné verzi DMF Skládané Periodikum " +
+                                "a parametr --forced-dmf-comper-version není vyplněn."))
+                .hasArg()
+                .withArgName("VERZE")
+                .withLongOpt(Params.PREFERRED_DMF_COMPER_VERSION)
+                .create());
+        options.addOption(OptionBuilder
+                .withDescription(replaceUmlaut(
                         "Preferovaná verze DMF pro validaci e-periodik. " +
                                 "Použije se k validaci, pokud je balík typu E-Periodikum, data balíku neobsahují informaci o vhodné verzi DMF E-Periodikum " +
                                 "a parametr --forced-dmf-eper-version není vyplněn."))
@@ -185,6 +194,14 @@ public class Main {
                 .hasArg()
                 .withArgName("VERZE")
                 .withLongOpt(Params.FORCED_DMF_EMON_VERSION)
+                .create());
+        options.addOption(OptionBuilder
+                .withDescription(replaceUmlaut(
+                        "Vynucená verze DMF pro validaci skládaných periodik. " +
+                                "Použije se k validaci všech balíků typu Skládané Periodikum bez ohledu na data balíků a hodnotu parametru --preferred-dmf-comper-version."))
+                .hasArg()
+                .withArgName("VERZE")
+                .withLongOpt(Params.FORCED_DMF_COMPER_VERSION)
                 .create());
         options.addOption(OptionBuilder
                 .withDescription(replaceUmlaut(
@@ -436,6 +453,10 @@ public class Main {
                 if (line.hasOption(Params.PREFERRED_DMF_EMON_VERSION)) {
                     preferDmfEmonVersion = line.getOptionValue(Params.PREFERRED_DMF_EMON_VERSION);
                 }
+                String preferDmfComPerVersion = null;
+                if (line.hasOption(Params.PREFERRED_DMF_COMPER_VERSION)) {
+                    preferDmfComPerVersion = line.getOptionValue(Params.PREFERRED_DMF_COMPER_VERSION);
+                }
                 String preferDmfEperVersion = null;
                 if (line.hasOption(Params.PREFERRED_DMF_EPER_VERSION)) {
                     preferDmfEperVersion = line.getOptionValue(Params.PREFERRED_DMF_EPER_VERSION);
@@ -457,6 +478,10 @@ public class Main {
                 String forceDmfEmonVersion = null;
                 if (line.hasOption(Params.FORCED_DMF_EMON_VERSION)) {
                     forceDmfEmonVersion = line.getOptionValue(Params.FORCED_DMF_EMON_VERSION);
+                }
+                String forceDmfComPerVersion = null;
+                if (line.hasOption(Params.FORCED_DMF_COMPER_VERSION)) {
+                    forceDmfComPerVersion = line.getOptionValue(Params.FORCED_DMF_COMPER_VERSION);
                 }
                 String forceDmfEperVersion = null;
                 if (line.hasOption(Params.FORCED_DMF_EPER_VERSION)) {
@@ -552,11 +577,13 @@ public class Main {
                 //dmfDetectorParams.forcedDmfPerVersion = forceDmfPerVersion;
                 //dmfDetectorParams.forcedDmfSRVersion = forceDmfSrVersion;
                 dmfDetectorParams.forcedDmfEmonVersion = forceDmfEmonVersion;
+                dmfDetectorParams.forcedDmfComPerVersion = forceDmfComPerVersion;
                 dmfDetectorParams.forcedDmfEperVersion = forceDmfEperVersion;
                 //dmfDetectorParams.preferredDmfMonVersion = preferDmfMonVersion;
                 //dmfDetectorParams.preferredDmfPerVersion = preferDmfPerVersion;
                 //dmfDetectorParams.preferredDmfSRVersion = preferDmfSrVersion;
                 dmfDetectorParams.preferredDmfEmonVersion = preferDmfEmonVersion;
+                dmfDetectorParams.preferredDmfComPerVersion = preferDmfComPerVersion;
                 dmfDetectorParams.preferredDmfEperVersion = preferDmfEperVersion;
 
                 PrintStream out = System.out;

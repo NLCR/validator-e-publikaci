@@ -31,6 +31,12 @@ public class PspZipValidationConfigurationDialogController extends DialogControl
     CheckBox forcedEmonVersionCheckBox;
 
     @FXML
+    ChoiceBox forcedComPerVersionChoiceBox;
+
+    @FXML
+    CheckBox forcedComPerVersionCheckBox;
+
+    @FXML
     ChoiceBox forcedEperVersionChoiceBox;
 
     @FXML
@@ -41,6 +47,12 @@ public class PspZipValidationConfigurationDialogController extends DialogControl
 
     @FXML
     CheckBox preferredEmonVersionCheckBox;
+
+    @FXML
+    ChoiceBox preferredComPerVersionChoiceBox;
+
+    @FXML
+    CheckBox preferredComPerVersionCheckBox;
 
     @FXML
     ChoiceBox preferredEperVersionChoiceBox;
@@ -105,16 +117,22 @@ public class PspZipValidationConfigurationDialogController extends DialogControl
         ConfigurationManager mgr = getConfigurationManager();
         //forced
         boolean forcedEmonVersionEnabled = mgr.getBooleanOrDefault(ConfigurationManager.PROP_FORCE_EMON_VERSION_ENABLED, false);
+        boolean forcedComPerVersionEnabled = mgr.getBooleanOrDefault(ConfigurationManager.PROP_FORCE_COMPER_VERSION_ENABLED, false);
         boolean forcedEperVersionEnabled = mgr.getBooleanOrDefault(ConfigurationManager.PROP_FORCE_EPER_VERSION_ENABLED, false);
         forcedEmonVersionCheckBox.setSelected(forcedEmonVersionEnabled);
         forcedEmonVersionChoiceBox.setDisable(!forcedEmonVersionEnabled);
+        forcedComPerVersionCheckBox.setSelected(forcedComPerVersionEnabled);
+        forcedComPerVersionChoiceBox.setDisable(!forcedComPerVersionEnabled);
         forcedEperVersionCheckBox.setSelected(forcedEperVersionEnabled);
         forcedEperVersionChoiceBox.setDisable(!forcedEperVersionEnabled);
         //preferred
         boolean preferredEmonVersionEnabled = mgr.getBooleanOrDefault(ConfigurationManager.PROP_PREFER_EMON_VERSION_ENABLED, false);
+        boolean preferredComPerVersionEnabled = mgr.getBooleanOrDefault(ConfigurationManager.PROP_PREFER_COMPER_VERSION_ENABLED, false);        
         boolean preferredEperVersionEnabled = mgr.getBooleanOrDefault(ConfigurationManager.PROP_PREFER_EPER_VERSION_ENABLED, false);
         preferredEmonVersionCheckBox.setSelected(preferredEmonVersionEnabled);
         preferredEmonVersionChoiceBox.setDisable(!preferredEmonVersionEnabled);
+        preferredComPerVersionCheckBox.setSelected(preferredComPerVersionEnabled);
+        preferredComPerVersionChoiceBox.setDisable(!preferredComPerVersionEnabled);        
         preferredEperVersionCheckBox.setSelected(preferredEperVersionEnabled);
         preferredEperVersionChoiceBox.setDisable(!preferredEperVersionEnabled);
         //logs
@@ -166,6 +184,27 @@ public class PspZipValidationConfigurationDialogController extends DialogControl
                 forcedEmonVersionChoiceBox.getSelectionModel().selectFirst();
             }
         }
+        //forced - composed-Periodical
+        List<String> forcedComPerVersions = new ArrayList<>();
+        forcedComPerVersions.addAll(main.getValidationDataManager().getFdmfRegistry().getComPerFdmfVersions());
+        Collections.sort(forcedComPerVersions, new VersionComparator());
+        if (forcedComPerVersions != null) {
+            ObservableList<String> comperVersionsObservable = FXCollections.observableArrayList(forcedComPerVersions);
+            forcedComPerVersionChoiceBox.setItems(comperVersionsObservable);
+            String version = mgr.getStringOrDefault(ConfigurationManager.PROP_FORCE_COMPER_VERSION_CODE, null);
+            boolean found = false;
+            if (version != null) {
+                for (int i = 0; i < comperVersionsObservable.size(); i++) {
+                    if (version.equals(comperVersionsObservable.get(i))) {
+                        forcedComPerVersionChoiceBox.getSelectionModel().select(i);
+                        found = true;
+                    }
+                }
+            }
+            if (!found) {
+                forcedComPerVersionChoiceBox.getSelectionModel().selectFirst();
+            }
+        }
         //forced - E-Periodical
         List<String> forcedEperVersions = new ArrayList<>();
         forcedEperVersions.addAll(main.getValidationDataManager().getFdmfRegistry().getEperiodicalFdmfVersions());
@@ -206,6 +245,27 @@ public class PspZipValidationConfigurationDialogController extends DialogControl
             }
             if (!found) {
                 preferredEmonVersionChoiceBox.getSelectionModel().selectFirst();
+            }
+        }
+        //preferred - composed-Periodical
+        List<String> preferredComPerVersions = new ArrayList<>();
+        preferredComPerVersions.addAll(main.getValidationDataManager().getFdmfRegistry().getComPerFdmfVersions());
+        Collections.sort(preferredComPerVersions, new VersionComparator());
+        if (preferredComPerVersions != null) {
+            ObservableList<String> comperVersionsObservable = FXCollections.observableArrayList(preferredComPerVersions);
+            preferredComPerVersionChoiceBox.setItems(comperVersionsObservable);
+            String version = mgr.getStringOrDefault(ConfigurationManager.PROP_PREFER_COMPER_VERSION_CODE, null);
+            boolean found = false;
+            if (version != null) {
+                for (int i = 0; i < comperVersionsObservable.size(); i++) {
+                    if (version.equals(comperVersionsObservable.get(i))) {
+                        preferredComPerVersionChoiceBox.getSelectionModel().select(i);
+                        found = true;
+                    }
+                }
+            }
+            if (!found) {
+                preferredComPerVersionChoiceBox.getSelectionModel().selectFirst();
             }
         }
         //preferred - E-Periodical
@@ -276,8 +336,10 @@ public class PspZipValidationConfigurationDialogController extends DialogControl
                 //TODO:
                 /*params.forcedDmfMonVersion = forcedMonVersionChoiceBox.isDisabled() ? null : (String) forcedMonVersionChoiceBox.getSelectionModel().getSelectedItem();
                 params.forcedDmfPerVersion = forcedPerVersionChoiceBox.isDisabled() ? null : (String) forcedPerVersionChoiceBox.getSelectionModel().getSelectedItem();
+                params.forcedDmfComPerVersion = forcedComPerVersionChoiceBox.isDisabled() ? null : (String) forcedComPerVersionChoiceBox.getSelectionModel().getSelectedItem();
                 params.forcedDmfSRVersion = forcedSRVersionChoiceBox.isDisabled() ? null : (String) forcedSRVersionChoiceBox.getSelectionModel().getSelectedItem();
                 params.preferredDmfMonVersion = preferredMonVersionChoiceBox.isDisabled() ? null : (String) preferredMonVersionChoiceBox.getSelectionModel().getSelectedItem();
+                params.preferredDmfComPerVersion = preferredComPerVersionChoiceBox.isDisabled() ? null : (String) preferredComPerVersionChoiceBox.getSelectionModel().getSelectedItem();
                 params.preferredDmfPerVersion = preferredPerVersionChoiceBox.isDisabled() ? null : (String) preferredPerVersionChoiceBox.getSelectionModel().getSelectedItem();
                 params.preferredDmfSRVersion = preferredSRVersionChoiceBox.isDisabled() ? null : (String) preferredSRVersionChoiceBox.getSelectionModel().getSelectedItem();*/
                 int verbosity = getSelectedVerbosity();
@@ -312,7 +374,13 @@ public class PspZipValidationConfigurationDialogController extends DialogControl
             getConfigurationManager().setBoolean(ConfigurationManager.PROP_FORCE_EMON_VERSION_ENABLED, forced);
         }
     }
-
+    public void forcedComPerVersionChanged(ActionEvent actionEvent) {
+        boolean forced = forcedComPerVersionCheckBox.isSelected();
+        forcedComPerVersionChoiceBox.setDisable(!forced);
+        if (getConfigurationManager() != null) {
+            getConfigurationManager().setBoolean(ConfigurationManager.PROP_FORCE_COMPER_VERSION_ENABLED, forced);
+        }
+    }
     public void forcedEperVersionChanged(ActionEvent actionEvent) {
         boolean forced = forcedEperVersionCheckBox.isSelected();
         forcedEperVersionChoiceBox.setDisable(!forced);
@@ -327,7 +395,12 @@ public class PspZipValidationConfigurationDialogController extends DialogControl
             getConfigurationManager().setString(ConfigurationManager.PROP_FORCE_EMON_VERSION_CODE, version);
         }
     }
-
+    public void forcedComPerVersionChoiceboxChanged(ActionEvent actionEvent) {
+        String version = (String) forcedComPerVersionChoiceBox.getSelectionModel().getSelectedItem();
+        if (getConfigurationManager() != null) {
+            getConfigurationManager().setString(ConfigurationManager.PROP_FORCE_COMPER_VERSION_CODE, version);
+        }
+    }
     public void forcedEperVersionChoiceboxChanged(ActionEvent actionEvent) {
         String version = (String) forcedEperVersionChoiceBox.getSelectionModel().getSelectedItem();
         if (getConfigurationManager() != null) {
@@ -340,6 +413,14 @@ public class PspZipValidationConfigurationDialogController extends DialogControl
         preferredEmonVersionChoiceBox.setDisable(!preferred);
         if (getConfigurationManager() != null) {
             getConfigurationManager().setBoolean(ConfigurationManager.PROP_PREFER_EMON_VERSION_ENABLED, preferred);
+        }
+    }
+
+    public void preferredComPerVersionChanged(ActionEvent actionEvent) {
+        boolean preferred = preferredComPerVersionCheckBox.isSelected();
+        preferredComPerVersionChoiceBox.setDisable(!preferred);
+        if (getConfigurationManager() != null) {
+            getConfigurationManager().setBoolean(ConfigurationManager.PROP_PREFER_COMPER_VERSION_ENABLED, preferred);
         }
     }
 
@@ -358,6 +439,12 @@ public class PspZipValidationConfigurationDialogController extends DialogControl
         }
     }
 
+    public void preferredComPerVersionChoiceboxChanged(ActionEvent actionEvent) {
+        String version = (String) preferredComPerVersionChoiceBox.getSelectionModel().getSelectedItem();
+        if (getConfigurationManager() != null) {
+            getConfigurationManager().setString(ConfigurationManager.PROP_PREFER_COMPER_VERSION_CODE, version);
+        }
+    }
     public void preferredEperVersionChoiceboxChanged(ActionEvent actionEvent) {
         String version = (String) preferredEperVersionChoiceBox.getSelectionModel().getSelectedItem();
         if (getConfigurationManager() != null) {

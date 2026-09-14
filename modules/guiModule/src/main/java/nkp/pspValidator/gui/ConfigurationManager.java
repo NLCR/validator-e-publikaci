@@ -50,10 +50,14 @@ public class ConfigurationManager {
     public static final String PROP_FORCE_EMON_VERSION_CODE = "force.emonograph.version.code";
     public static final String PROP_FORCE_EPER_VERSION_ENABLED = "force.eperiodical.version.enabled";
     public static final String PROP_FORCE_EPER_VERSION_CODE = "force.eperiodical.version.code";
+    public static final String PROP_FORCE_COMPER_VERSION_ENABLED = "force.composed_periodical.version.enabled";
+    public static final String PROP_FORCE_COMPER_VERSION_CODE = "force.composed_periodical.version.code";
     public static final String PROP_PREFER_EMON_VERSION_ENABLED = "prefer.emonograph.version.enabled";
     public static final String PROP_PREFER_EMON_VERSION_CODE = "prefer.emonograph.version.code";
     public static final String PROP_PREFER_EPER_VERSION_ENABLED = "prefer.eperiodical.version.enabled";
     public static final String PROP_PREFER_EPER_VERSION_CODE = "prefer.eperiodical.version.code";
+    public static final String PROP_PREFER_COMPER_VERSION_ENABLED = "prefer.composed_periodical.version.enabled";
+    public static final String PROP_PREFER_COMPER_VERSION_CODE = "prefer.composed_periodical.version.code";
     public static final String PROP_PSP_VALIDATION_CREATE_TXT_LOG = "psp_validation.create_txt_log";
     public static final String PROP_PSP_VALIDATION_CREATE_XML_LOG = "psp_validation.create_xml_log";
     public static final String PROP_LOG_DIR = "validation.log_dir";

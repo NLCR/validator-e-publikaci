@@ -13,6 +13,7 @@ import java.io.FilenameFilter;
 import java.io.IOException;
 import java.util.regex.Pattern;
 
+import static nkp.pspValidator.shared.Dmf.Type.COMPERIODICAL;
 import static nkp.pspValidator.shared.Dmf.Type.EMONOGRAPH;
 import static nkp.pspValidator.shared.Dmf.Type.EPERIODICAL;
 
@@ -24,8 +25,9 @@ public class DmfDetector {
     public static final String DEFAULT_MONOGRAPH_VERSION = "1.0";
     public static final String DEFAULT_PERIODICAL_VERSION = "1.4";
     public static final String DEFAULT_SOUND_RECORDING_VERSION = "0.2";
-    public static final String DEFAULT_EMONOGRAPH_VERSION = "3.0";
-    public static final String DEFAULT_EPERIODICAL_VERSION = "2.5";
+    public static final String DEFAULT_EMONOGRAPH_VERSION = "3.1";
+    public static final String DEFAULT_EPERIODICAL_VERSION = "2.6";
+    public static final String DEFAULT_COMPERIODICAL_VERSION = "1.3";
 
     /**
      * Validátor zkontroluje hlavní mets soubor, konkrétně kořenový element <mets:mets> na hodnotu atributu TYPE. Platí:
@@ -42,6 +44,8 @@ public class DmfDetector {
             String docType = ((String) xPathExpression.evaluate(metsDoc, XPathConstants.STRING)).trim();
             if ("electronic_monograph".equals(docType)) {
                 return EMONOGRAPH;
+            } else if ("electronic_coll_journal".equals(docType)) {
+                return COMPERIODICAL;
             } else if ("electronic_periodical".equals(docType)) {
                 return EPERIODICAL;
             } else {
@@ -143,6 +147,9 @@ public class DmfDetector {
             case EMONOGRAPH: {
                 return chooseVersion(EMONOGRAPH, pspRoot, params.forcedDmfEmonVersion, params.preferredDmfEmonVersion, DEFAULT_EMONOGRAPH_VERSION);
             }
+            case COMPERIODICAL: {
+                return chooseVersion(COMPERIODICAL, pspRoot, params.forcedDmfComPerVersion, params.preferredDmfComPerVersion, DEFAULT_COMPERIODICAL_VERSION);
+            }
             case EPERIODICAL: {
                 return chooseVersion(EPERIODICAL, pspRoot, params.forcedDmfEperVersion, params.preferredDmfEperVersion, DEFAULT_EPERIODICAL_VERSION);
             }
@@ -172,11 +179,13 @@ public class DmfDetector {
         public String preferredDmfPerVersion;
         public String preferredDmfSRVersion;*/
         public String preferredDmfEmonVersion;
+        public String preferredDmfComPerVersion;
         public String preferredDmfEperVersion;
         /*public String forcedDmfMonVersion;
         public String forcedDmfPerVersion;
         public String forcedDmfSRVersion;*/
         public String forcedDmfEmonVersion;
+        public String forcedDmfComPerVersion;
         public String forcedDmfEperVersion;
     }
 

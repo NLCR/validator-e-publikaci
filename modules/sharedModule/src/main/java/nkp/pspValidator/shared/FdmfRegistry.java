@@ -17,6 +17,7 @@ public class FdmfRegistry {
     private final Map<String, FdmfConfiguration> periodicalFdmfByVersion = new HashMap<>();
     private final Map<String, FdmfConfiguration> soundRecordingFdmfByVersion = new HashMap<>();*/
     private final Map<String, FdmfConfiguration> emonographFdmfByVersion = new HashMap<>();
+    private final Map<String, FdmfConfiguration> comperFdmfByVersion = new HashMap<>();
     private final Map<String, FdmfConfiguration> eperiodicalFdmfByVersion = new HashMap<>();
 
     public FdmfRegistry(ValidatorConfigurationManager validatorConfigManager) throws ValidatorConfigurationException {
@@ -36,6 +37,9 @@ public class FdmfRegistry {
         for (FdmfConfiguration fdmfConfig : emonographFdmfByVersion.values()) {
             fdmfConfig.initBinaryFileProfiles(externalUtilManager);
         }
+        for (FdmfConfiguration fdmfConfig : comperFdmfByVersion.values()) {
+            fdmfConfig.initBinaryFileProfiles(externalUtilManager);
+        }
         for (FdmfConfiguration fdmfConfig : eperiodicalFdmfByVersion.values()) {
             fdmfConfig.initBinaryFileProfiles(externalUtilManager);
         }
@@ -46,6 +50,7 @@ public class FdmfRegistry {
         loadFdmfConfigs(validatorConfigManager, "periodical", periodicalFdmfByVersion);
         loadFdmfConfigs(validatorConfigManager, "sound_recording", soundRecordingFdmfByVersion);*/
         loadFdmfConfigs(validatorConfigManager, "emonograph", emonographFdmfByVersion);
+        loadFdmfConfigs(validatorConfigManager, "composed_perio", comperFdmfByVersion);        
         loadFdmfConfigs(validatorConfigManager, "eperiodical", eperiodicalFdmfByVersion);
     }
 
@@ -77,6 +82,10 @@ public class FdmfRegistry {
         return emonographFdmfByVersion.keySet();
     }
 
+    public Set<String> getComPerFdmfVersions() {
+        return comperFdmfByVersion.keySet();
+    }
+
     public Set<String> getEperiodicalFdmfVersions() {
         return eperiodicalFdmfByVersion.keySet();
     }
@@ -95,6 +104,10 @@ public class FdmfRegistry {
 
     public FdmfConfiguration getEmonographFdmfConfig(String dmfVersion) {
         return emonographFdmfByVersion.get(dmfVersion);
+    }
+
+    public FdmfConfiguration getComPerFdmfConfig(String dmfVersion) {
+        return comperFdmfByVersion.get(dmfVersion);
     }
 
     public FdmfConfiguration getEperiodicalFdmfConfig(String dmfVersion) {
@@ -130,6 +143,14 @@ public class FdmfRegistry {
             }*/
             case EMONOGRAPH: {
                 FdmfConfiguration file = emonographFdmfByVersion.get(dmf.getVersion());
+                if (file == null) {
+                    throw new UnknownFdmfException(dmf);
+                } else {
+                    return file;
+                }
+            }
+            case COMPERIODICAL: {
+                FdmfConfiguration file = comperFdmfByVersion.get(dmf.getVersion());
                 if (file == null) {
                     throw new UnknownFdmfException(dmf);
                 } else {

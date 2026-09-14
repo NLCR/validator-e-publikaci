@@ -57,6 +57,13 @@ public class SkippedManagerImpl implements SkippedManager {
         for (String version : emonVersions) {
             result.add(new Dmf(Dmf.Type.EMONOGRAPH, version));
         }
+        //composed-periodical
+        List<String> comperVersions = new ArrayList<>();
+        comperVersions.addAll(mgr.getFdmfRegistry().getComPerFdmfVersions());
+        Collections.sort(comperVersions, new VersionComparator());
+        for (String version : comperVersions) {
+            result.add(new Dmf(Dmf.Type.COMPERIODICAL, version));
+        }
         //e-periodical
         List<String> eperVersions = new ArrayList<>();
         eperVersions.addAll(mgr.getFdmfRegistry().getEperiodicalFdmfVersions());
