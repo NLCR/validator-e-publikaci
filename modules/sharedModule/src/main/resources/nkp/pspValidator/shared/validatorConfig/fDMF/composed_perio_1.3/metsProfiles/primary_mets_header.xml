@@ -29,7 +29,7 @@
             <attribute name="LABEL" mandatory="true"/>
             <attribute name="TYPE" mandatory="true">
                 <expectedContent>
-                    <value>electronic_periodical</value>
+                    <value>electronic_coll_journal</value>
                 </expectedContent>
             </attribute>
             <attribute name="xsi:schemaLocation" mandatory="false"/>
