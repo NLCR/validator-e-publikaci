@@ -211,6 +211,9 @@
                     <value name="file" type="FILE">
                         <value-ref name="ORIGINAL-DIR_FILE"/>
                     </value>
+                    <value name="file" type="FILE">
+                        <value-ref name="ORIGINALDATA-DIR_FILE"/>
+                    </value>
                 </params>
             </validation>
         </rule>

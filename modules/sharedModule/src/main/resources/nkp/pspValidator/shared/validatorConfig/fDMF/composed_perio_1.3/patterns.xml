@@ -48,6 +48,11 @@
         <description>Vzor pro jméno souboru ORIGINAL.</description>
         <expression caseSensitive="true">original</expression>
     </pattern-def>
+    
+    <pattern-def name="ORIGINALDATA-DIR_FILENAME">
+        <description>Vzor pro jméno souboru ORIGINALDATA.</description>
+        <expression caseSensitive="true">originaldata</expression>
+    </pattern-def>
 
     <pattern-def name="TOLERATED_TL_FILENAME">
         <description>Vzory pro jména tolerovaných souborů.</description>
