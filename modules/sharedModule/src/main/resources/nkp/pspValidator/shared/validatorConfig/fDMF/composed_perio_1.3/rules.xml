@@ -1705,7 +1705,11 @@
                         <value-ref name="PRIMARY-METS_FILE"/>
                     </value>
                     <value name="entity_type" type="ENTITY_TYPE">ARTICLE</value>
-                    <value name="profile_detection_xpath" type="STRING">concat('article',null)</value>
+                    <value name="profile_detection_xpath" type="STRING">
+                        concat(
+                        substring('article_digitized', 1 div boolean(./mods:genre[not(@type = 'peer-reviewed') and text()='article'])),
+                        substring('article_eborn', 1 div boolean(./mods:genre[not(@type = 'peer-reviewed') and text()='electronic article']))
+                        )</value>
                     <value name="xsd_file_dc" type="FILE">
                         <value-ref name="DC_XSD_FILE"/>
                     </value>
